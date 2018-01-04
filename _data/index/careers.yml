@@ -1,5 +1,20 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
+
+- name:
+    detail: University of Chicago
+    #i18n: company_b
+  desc:
+    detail: Research on data migration for diverse database management systems (DBMSs).
+    #i18n: company_b_desc
+  date:
+    detail: July - current 2015
+    #i18n: company_b_date
+  job:
+    detail: PhD student
+    #i18n: company_b_job
+  icon: fa-plus-square
+
 - name:
     detail: Google
     #i18n: Google
@@ -25,20 +40,6 @@
     #i18n: company_b_date
   job:
     detail: Research Intern at Data Management, Exploration and Mining (DMX) group
-    #i18n: company_b_job
-  icon: fa-plus-square
-
-- name:
-    detail: University of Chicago
-    #i18n: company_b
-  desc:
-    detail: Research on data migration for diverse database management systems (DBMSs).
-    #i18n: company_b_desc
-  date:
-    detail: July 2015
-    #i18n: company_b_date
-  job:
-    detail: PhD student
     #i18n: company_b_job
   icon: fa-plus-square
 
@@ -74,7 +75,7 @@
     detail: Barclays Investment Bank
     #i18n: company_b
   desc:
-    detail: Created a system for validating and suggesting underlyings for different financial products.
+    detail: Created a system for validating and suggesting underlyings for complex financial products.
     #i18n: company_b_desc
   date:
     detail: June - August 2013
