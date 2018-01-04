@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: <https://adam-dziedzic.github.io//sitemap.xml>
+Sitemap: <http://localhost:4000/sitemap.xml>

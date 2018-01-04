@@ -3,10 +3,10 @@
   <channel>
     <title>ady</title>
     <description>Adam's home page.</description>
-    <link>https://adam-dziedzic.github.io///</link>
-    <atom:link href="https://adam-dziedzic.github.io///feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jan 2018 16:43:36 -0600</pubDate>
-    <lastBuildDate>Thu, 04 Jan 2018 16:43:36 -0600</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 04 Jan 2018 17:57:26 -0600</pubDate>
+    <lastBuildDate>Thu, 04 Jan 2018 17:57:26 -0600</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -56,8 +56,8 @@
 &lt;p&gt;If you like this repository, I appreciate you star this repository. Please don’t hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!😊&lt;/p&gt;
 </description>
         <pubDate>Tue, 31 Jan 2017 00:00:00 -0600</pubDate>
-        <link>https://adam-dziedzic.github.io///html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</link>
-        <guid isPermaLink="true">https://adam-dziedzic.github.io///html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</guid>
+        <link>http://localhost:4000//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</link>
+        <guid isPermaLink="true">http://localhost:4000//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</guid>
         
         <category>Jalpc</category>
         
