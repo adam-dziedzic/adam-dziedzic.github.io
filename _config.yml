@@ -1,1 +1,70 @@
-theme: jekyll-theme-minimal
+# Welcome to Jekyll!
+
+# Website settings
+title: ady
+description: Adam's home page.
+keywords: Adam, homepage, webpage, page, web
+baseurl:  /Jalpc # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
+url: https://jarrekk.github.io/Jalpc  # url should be 'http://<github_username>.github.io/homepage' as before
+# url: http://127.0.0.1:4000
+img_path: /Jalpc/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+
+# author -- index page "about me" section
+author:  # change following line to your infomation.
+  name: Adam Dziedzic  # Be used at blog posts' author.
+  first_name: Adam  # Be used at index page about me section.
+  last_name: Dziedzic  # Be used at index page about me section.
+  avatar: /static/assets/img/landing/adam2.jpg  # upload your avatar at directory and edit it.
+  github_username: adam-dziedzic  # Leave blank if you don't have now
+  linkedin_id: adziedzic # Leave blank if you don't have now
+  facebook_username: adam.cajf  # Leave blank if you don't have now
+  twitter_username: adam_dziedzic  # Leave blank if you don't have now
+  email: ady@uchicago.edu  # Leave blank if you don't have now
+  cv:  # An online CV can be printed as PDF, leave blank if you don't have now
+  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
+  skill_icon1:
+    - name: icon-apache
+    - name: fa-linux
+  skill_icon2:
+    - name: fa-linux
+    - name: icon-apache
+  desc: I'm a PhD student at the University of Chicago, advised by Prof. Aaron Elmore. I'm passionate about empowering users with data driven decisions. Currently, my research is focused on data migration between diverse database systems and I work on the BigDAWG project. I obtained my Bachelor's and Master's degrees from Warsaw University of Technology. I was also studying at DTU in Denmark and worked in the DIAS group at EPFL. Previously, I had internships at CERN, Barclays Investment Bank in London, Microsoft Research and Google. I spent the rest of my waking hours on reading books, taking MOOC courses, especially on Machine & Deep Learning, enjoying many sports, playing a guitar and practising some dances.  # Describe yourself.
+
+# comment
+disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
+  name: jalpc
+
+# analytics
+## google analytics
+ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
+  # id:
+
+## google optimize
+go:
+  # id:
+
+## growingIO
+gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
+  # id:
+
+## donation
+donation: on  # type 'on'/'off' to choice display donation button at post page or not
+
+## carousels
+index_carousel: on  # index page carousel switch
+blog_carousel: on  # blog page carousel switch
+
+# scss
+sass:
+  style: compressed
+
+# Build settings
+encoding: utf-8
+
+# other settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
