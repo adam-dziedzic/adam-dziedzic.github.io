@@ -1,29 +1,142 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
-    i18n: company_a
+    detail: Google
+    #i18n: Google
   desc:
-    detail: I worked at Company A ...
-    i18n: company_a_desc
+    detail: Eliminated a performance cliff in the F1 database for the aggregation queries.
+    #i18n: company_a_desc
   date:
-    detail: Apr. 2016
-    i18n: company_a_date
+    detail: June - September 2017
+    #i18n: company_a_date
   job:
-    detail: CTO
-    i18n: company_a_job
+    detail: PhD Software Engineering Intern at Data Infrastructure and Analysis team
+    #i18n: company_a_job
   icon: fa-plus-square
 
 - name:
-    detail: Company B
-    i18n: company_b
+    detail: Microsoft Research
+    #i18n: company_b
   desc:
-    detail: I worked at Company B ...
-    i18n: company_b_desc
+    detail: Carried out research on hybrid physical designs for diverse workloads.
+    #i18n: company_b_desc
   date:
-    detail: Jun. 2015
-    i18n: company_b_date
+    detail: March - June 2015
+    #i18n: company_b_date
   job:
-    detail: Full Stack Developer
-    i18n: company_b_job
+    detail: Research Intern at Data Management, Exploration and Mining (DMX) group
+    #i18n: company_b_job
   icon: fa-plus-square
+
+- name:
+    detail: University of Chicago
+    #i18n: company_b
+  desc:
+    detail: Research on data migration for diverse database management systems (DBMSs).
+    #i18n: company_b_desc
+  date:
+    detail: July 2015
+    #i18n: company_b_date
+  job:
+    detail: PhD student
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: EPFL
+    #i18n: company_b
+  desc:
+    detail: Research on data loading to diverse database management systems (DBMSs).
+    #i18n: company_b_desc
+  date:
+    detail: October 2014 - June 2015
+    #i18n: company_b_date
+  job:
+    detail: Research Intern
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: Warsaw University of Technology
+    #i18n: company_b
+  desc:
+    detail: Student
+    #i18n: company_b_desc
+  date:
+    detail: October 2007 - September 2014
+    #i18n: company_b_date
+  job:
+    detail: Obtained Bachelor and Master' degrees. Worked on research projects.
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: Barclays Investment Bank
+    #i18n: company_b
+  desc:
+    detail: Created a system for validating and suggesting underlyings for different financial products.
+    #i18n: company_b_desc
+  date:
+    detail: June - August 2013
+    #i18n: company_b_date
+  job:
+    detail: Intern Analyst
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: CERN
+    #i18n: company_b
+  desc:
+    detail: Developed a system to store information on configuration and management of non-host devices at CERN Computer Centre.
+    #i18n: company_b_desc
+  date:
+    detail: April - December 2012
+    #i18n: company_b_date
+  job:
+    detail: Technical Student at IT Department
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: Mobile Startup
+    #i18n: company_b
+  desc:
+    detail: Worked on an app providing aspects of music social interactions.
+    #i18n: company_b_desc
+  date:
+    detail: March 2012
+    #i18n: company_b_date
+  job:
+    detail: Udarnik
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: Tekten
+    #i18n: company_b
+  desc:
+    detail: Designed a database and developed application for a telecom company in Java and PL/SQL.
+    #i18n: company_b_desc
+  date:
+    detail: July 2010
+    #i18n: company_b_date
+  job:
+    detail: Designer and Software Engineer
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: Torn
+    #i18n: company_b
+  desc:
+    detail: Worked on a financial and accounting system project.
+    #i18n: company_b_desc
+  date:
+    detail: July - September 2009
+    #i18n: company_b_date
+  job:
+    detail: Software Engineer
+    #i18n: company_b_job
+  icon: fa-plus-square
+
