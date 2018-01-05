@@ -20,8 +20,8 @@
 # - src: landing/uchicago.jpg
 #   title: University of Chicago
 
-- src: landing/uchicago.png
-  title: University of Chicago
+- src: landing/sas2.png
+  title: Flight
 
 - src: landing/new_york3.jpg
   title: New York
