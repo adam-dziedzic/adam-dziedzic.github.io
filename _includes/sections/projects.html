@@ -18,7 +18,7 @@
             <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
             {% endif %}
               <div class="team-member">
-                  <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                  <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-average" alt="{{ project.name }}">
                   <h4>
                   {% if project.url %}
                   <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
@@ -38,13 +38,13 @@
                   {% endif %}
 		  {% if project.paper %}
 		      <a href="{{ project.paper | prepend: site.baseurl }}"><img src="{{ site.baseurl }}/static/assets/img/landing/pdficon_small.png"
-alt="paper"><\a>
+alt="paper">paper</a>
 		  {% endif %}
 		  {% if project.paper %}
-		      <a href="{{ project.slides | prepend: site.baseurl }}"><img src="{{ site.baseurl }}/static/assets/img/landing/slides_small.png" alt="slides"><\a>
+		      <a href="{{ project.slides | prepend: site.baseurl }}"><img src="{{ site.baseurl }}/static/assets/img/landing/slides_small.png" alt="slides">slides</a>
 	          {% endif %}
 		  {% if project.paper %}
-		      <a href="{{ project.bibtex | prepend: site.baseurl }}"><img src="{{ site.baseurl }}/static/assets/img/landing/tex.png" alt="bibtex"><\a>
+		      <a href="{{ project.bibtex | prepend: site.baseurl }}"><img src="{{ site.baseurl }}/static/assets/img/landing/tex.png" alt="bibtex">bibtex</a>
 	          {% endif %}
               </div>
           </div>
