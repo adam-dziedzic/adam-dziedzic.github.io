@@ -2,8 +2,20 @@
 # Add items for each banner image in the carousel
 #
 # Images are expected to be located in `static/assets/img/`.
-- src: landing/header_one.jpg
-  title: first banner image
+- src: landing/new_york.jpg
+  title: New York
 
-- src: landing/header_two.jpg
-  title: second banner image
+- src: landing/markov.jpg
+  title: Markov enaquality
+
+- src: landing/sas.jpg
+  title: Flight with SAS
+
+- src: landing/chicago.jpg
+  title: Chicago
+
+- src: landing/probability.jpg
+  title: Probability
+
+- src: landing/uchicago.jpg
+  title: University of Chicago
