@@ -3,6 +3,7 @@
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name: BigDAWG
   #i18n: jalpc
+  url: "http://bigdawg.mit.edu"
   gh_user: bigdawg-istc
   repo: bigdawg
   img: /static/assets/img/landing/bigdawg.png
