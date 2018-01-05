@@ -36,6 +36,15 @@
                       <div style="height: 10px;"></div>
                   </div>
                   {% endif %}
+		  {% if project.paper %}
+		      <a href="{{ project.paper | prepend: site.baseurl }}"><img src="{{ pdficon_small.png | prepend: site.baseurl }}"\><\a>
+		  {% endif %}
+		  {% if project.paper %}
+		      <a href="{{ project.slides | prepend: site.baseurl }}"><img src="{{ slides_small.png | prepend: site.baseurl }}"\><\a>
+	          {% endif %}
+		  {% if project.paper %}
+		      <a href="{{ project.bibtex | prepend: site.baseurl }}"><img src="{{ tex.png | prepend: site.baseurl }}"\><\a>
+	          {% endif %}
               </div>
           </div>
       {% endfor %}
