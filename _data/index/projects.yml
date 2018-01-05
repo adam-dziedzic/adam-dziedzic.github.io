@@ -8,8 +8,9 @@
   img: /static/assets/img/landing/bigdawg.png
   desc: An open source project from researchers within the Intel Science and Technology Center for Big Data (ISTC). BigDAWG is a reference implementation of a polystore database. A polystore system is any database management system (DBMS) that is built on top of multiple, heterogeneous, integrated storage engines. I worked on the scaffolding of the system and then implemented a cast operator to move data between diverse DBMSs.
 
-- name: Data Migration
+- name: Data Loading
   #i18n: cpython
+  url: "https://adam-dziedzic.github.io/static/assets/papers/dziedzic_adms16_data_loading.pdf"
   img: /static/assets/img/landing/dataloading.jpg
   desc: An automated testing infrastructure was built to benchmark the loading performance of several commercial and open-source databases, perform an in-depth analysis to identify bottlenecks of the data loading process and investigate novel techniques which could be used to accelerate DBMS data loading.
   paper: /static/assets/papers/dziedzic_adms16_data_loading.pdf
