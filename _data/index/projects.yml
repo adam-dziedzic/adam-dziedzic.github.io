@@ -14,4 +14,4 @@
   desc: An automated testing infrastructure was built to benchmark the loading performance of several commercial and open-source databases, perform an in-depth analysis to identify bottlenecks of the data loading process and investigate novel techniques which could be used to accelerate DBMS data loading.
   paper: /static/assets/papers/dziedzic_adms16_data_loading.pdf
   slides: /static/assets/slides/loading-adms-presentation.pdf
-  bibtex: /static/assets/slides/data_loading.txt
+  bibtex: /static/assets/abstracts/data_loading.txt
