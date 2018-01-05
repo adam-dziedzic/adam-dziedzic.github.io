@@ -2,7 +2,7 @@
 - last_name: Dziedzic
   first_name: Adam
   desc: PhD student at the University of Chicago
-        Office in Ryerson 177
-        Please send me an email to set up a meeting.
+  office: Ryerson 177
+  map: "https://maps.uchicago.edu/?location=Ryerson+Laboratory"
   website: https://adam-dziedzic.github.io/
   email: ady@uchicago.edu

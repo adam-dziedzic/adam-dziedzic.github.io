@@ -21,7 +21,11 @@
             <h4><span class="navy">{{ contact.last_name }}</span> {{ contact.first_name }}</h4>
             <p>{{ contact.desc }}</p>
 	    {% if contact.office %}
-	    <p>Office: {{ contact.office }}</p>
+	        {% if contact.map %}
+	            <p>Office: <a href="{{ contact.map }}">{{ contact.office }}</a></p>
+	        {% else %}
+                    <p>Office: {{ contact.office }}</p>
+		{% endif %}
 	    {% endif %}
             <ul class="list-inline social-icon">
                 <li><a href="{{ contact.website }}" target="blank"><i class="fa fa-link"></i></a>
