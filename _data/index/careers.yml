@@ -112,6 +112,20 @@
     detail: Udarnik
     #i18n: company_b_job
   icon: fa-plus-square
+  
+- name:
+    detail: Technical University of Denmark
+    #i18n: company_b
+  desc:
+    detail: Student
+    #i18n: company_b_desc
+  date:
+    detail: August 2010 - January 2011
+    #i18n: company_b_date
+  job:
+    detail: Erasmus program (took courses on logic programming, applied statistics, web 2.0 and mobile interactions, spatial databases, java programming).
+    #i18n: company_b_job
+  icon: fa-plus-square
 
 - name:
     detail: Tekten
