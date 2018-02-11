@@ -3,11 +3,38 @@
   <channel>
     <title>ady</title>
     <description>Adam's home page.</description>
-    <link>http://127.0.0.1:4000//</link>
-    <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jan 2018 19:49:03 -0600</pubDate>
-    <lastBuildDate>Thu, 04 Jan 2018 19:49:03 -0600</lastBuildDate>
-    <generator>Jekyll v3.7.0</generator>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 10 Feb 2018 21:10:42 -0600</pubDate>
+    <lastBuildDate>Sat, 10 Feb 2018 21:10:42 -0600</lastBuildDate>
+    <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Fastests mixing Markov chain on a graph</title>
+        <description>&lt;p&gt;I talked to my friend who studied statistics about my course on convex optimization. He asked about a type of problems that we are trying to solve in the course. The first one that came to my mind was on fastest mixing Markov chain on a graph. I think that I there are many bits and pieces that are really required to fully understand the problem (depending on your background), but I will try to dissect the problem to the smallest possible parts to make each of them clear, and finally show you the whole picture of beautiful Markov chains combined with convex optimization.&lt;/p&gt;
+
+&lt;p&gt;The idea is that we are provided an undirected graph &lt;script type=&quot;math/tex&quot;&gt;G=(V,E)&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; represents vertices and &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt; edges. The problem is to find the probability transition matrix &lt;script type=&quot;math/tex&quot;&gt;P&lt;/script&gt; that minimizes the time until which we attain the equilibrium dirstribution for the Markov chain (which means that after a few jumps in the Markov chain, you don’t know where the next jump could end, i.e. on which node). In other words (plainly), a Markov chain is a graph in which with pair of vertices we associate probability of transition from one vertex to another. In a typical case, the transition probabilities can be different between the same vertices, depending on which direction we jump, thus it is usually the case: &lt;script type=&quot;math/tex&quot;&gt;P_{ij} \ne P_{ji}&lt;/script&gt;. However, in this problem we assume that the graph is undirected and the probabilities of jumps between all pairs of vertices is the same: &lt;script type=&quot;math/tex&quot;&gt;P_{ij} = P_{ji}&lt;/script&gt;. We also allow self-loops, so you can jump out from a vertex and jump in to the same vertex in a transition, this is associated with the probability &lt;script type=&quot;math/tex&quot;&gt;P_{ii}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;What are our assumptions? The Markov chain has &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; vertices and we define the current state by &lt;script type=&quot;math/tex&quot;&gt;X(t) \in {1,2,...,n}&lt;/script&gt;, where t a non-negative integer (you can think about it as a time step which can be much larger than n, as it expresses which node we were occuping at a given point in time). The probablities for each vertex sum up to 1 (you add all probabilities associated with edges connected to the given vertex).&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{ij} = probability (X(t+1) = i | X(t) = j), \ i,j = 1,...,n&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{ij} \ge 0&lt;/script&gt;
+
+&lt;p&gt;Fastests mixing Markov chain on a graph”&lt;/p&gt;
+
+&lt;p&gt;Credits: Prof. Stephen Boyd for his book on convex optimization, Prof. Nati Srebro (for the main introduction to the problem), Blake Woodworth (for explaining why we have to normalize eigenvectors), Angela Wu (for explaining how to isolate eigenvalues).&lt;/p&gt;
+</description>
+        <pubDate>Fri, 09 Feb 2018 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000//html/2018/02/09/Fastest-Mixing-Markov-Chain-On-A-Graph.html</link>
+        <guid isPermaLink="true">http://localhost:4000//html/2018/02/09/Fastest-Mixing-Markov-Chain-On-A-Graph.html</guid>
+        
+        <category>markov</category>
+        
+        
+        <category>HTML</category>
+        
+      </item>
     
       <item>
         <title>3 Steps (2 minutes) to Setup Your Personal Website with Jalpc</title>
@@ -56,8 +83,8 @@
 &lt;p&gt;If you like this repository, I appreciate you star this repository. Please don’t hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!😊&lt;/p&gt;
 </description>
         <pubDate>Tue, 31 Jan 2017 00:00:00 -0600</pubDate>
-        <link>http://127.0.0.1:4000//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</guid>
+        <link>http://localhost:4000//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</link>
+        <guid isPermaLink="true">http://localhost:4000//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</guid>
         
         <category>Jalpc</category>
         
