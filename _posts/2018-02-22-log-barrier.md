@@ -5,7 +5,7 @@ date:   2018-02-22
 desc: "Gradient and Hessian for log-barrier methods"
 keywords: "log barrier method optimization derivative hessian oracle"
 categories: [HTML]
-tags: [markov]
+tags: [log-barrier optimization convexity interior-point-method]
 icon: icon-html
 ---
 
