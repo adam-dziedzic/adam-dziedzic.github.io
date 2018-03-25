@@ -33,13 +33,9 @@ $$
 The expression of Euclidean dinstance between a shaplet and new-time series as a convolution:
 
 $$
-\begin{gather}
-  \begin{align}
-  ||T,f||[i] &= \sum_{j=1}^m(t_{i+j-1} - f_{m+1-j})^2
-  &= \sum_{j=1}^{m}t^2_}i+j-1} + \sum_{j=1}^{m}f^2_{m+1-j} - 2 \sum_{j=1}^{m}t_{i+j-1}f_{m+1-j}
-  &= \sum_{j=1}^{m} t^2_{i+j-1} + \sum_{j=1}^mf_j^2 - 2(T \cdot f)[i]
-  \end{align}
-\end{gather}
+  ||T,f||_{2}[i] = \sum_{j=1}^m(t_{i+j-1} - f_{m+1-j})^2 \\
+  = \sum_{j=1}^{m}t^2_}i+j-1} + \sum_{j=1}^{m}f^2_{m+1-j} - 2 \sum_{j=1}^{m}t_{i+j-1}f_{m+1-j} \\
+  = \sum_{j=1}^{m} t^2_{i+j-1} + \sum_{j=1}^mf_j^2 - 2(T \cdot f)[i]
 $$
 
 $$\sum_{j=1}^{m} t^2_{i+j-1} $$ is a constant for each time-series (the L2 norm of the time-series).
