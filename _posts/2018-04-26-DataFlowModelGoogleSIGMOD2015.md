@@ -149,21 +149,7 @@ In the paper: some Jujutsu moves - take the attack and claim this is exactly wha
 
 15. Streaming used for real time recommendation.
 
-16. Example section:
-
-Processing time (y axis), event time (x axis) - when things really happen, processing time lags event time.
-
-They show values instead of when the event happened.
-
-Ideal - processing time aligned with the event time.
-
-The skew between the ideal time and the processing time.
-
-Watermarks are used to trigger the operations on the windows.
-
-For the system - how your actual watermark is generated - aggressive enough! Trade-off between how exact you're and how you generate the results.
-
-Confidence - how much - the probability of more data showing up.
+16. Example section: Processing time (y axis), event time (x axis) - when things really happen, processing time lags event time. They show values instead of when the event happened. Ideal - processing time aligned with the event time. The skew between the ideal time and the processing time. Watermarks are used to trigger the operations on the windows. For the system - how your actual watermark is generated - aggressive enough! Trade-off between how exact you're and how you generate the results. Confidence - how much - the probability of more data showing up.
 
 17. 6 different ways how we see the streaming system at Google. Big joins of the log tables - the answers were so wrong we couldn't trust it, sessioning thing, billing (fact that you had to deal with the old data), statistics collection (do not need the exact answer), recommendation engine does not have to be perfect, stock market example - based on the shape of the data.
 
