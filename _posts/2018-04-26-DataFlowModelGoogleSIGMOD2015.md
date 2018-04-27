@@ -1,3 +1,14 @@
+---
+layout: post
+title:  "The Data Flow model: A Practical Approach to Balancing Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-order Data Processing"
+date:   2018-04-26
+desc: "notes on a paper"
+keywords: "databaes streaming google sigmod 2015"
+categories: [HTML]
+tags: [databaes streaming google sigmod 2015]
+icon: icon-html
+---
+
 # The Data Flow model: A Practical Approach to Balancing Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-order Data Processing
 
 ## These are my notes on the paper:
@@ -111,9 +122,10 @@ In the paper: some Jujutsu moves - take the attack and claim this is exactly wha
    1. time domain: event and processing time
    2. a) accumulating vs. b) discard vs. c) accumulating and retracting - what do you do for the new windows in terms of the past data
 
-Accumulate - add to my previous value
-Discard - run the relational algebra - I get a new answer and discard the old one.
-Accumulate and retract - ignore the previous value and treat the new value as the source of the truth
+4. More details: 
+   1. Accumulate - add to my previous value.
+   2. Discard - run the relational algebra - I get a new answer and discard the old one.
+   3. Accumulate and retract - ignore the previous value and treat the new value as the source of the truth.
 
 5. Processing time - these two times are relevant - skew between them changes as the system runs.
 
