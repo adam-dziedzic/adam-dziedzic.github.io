@@ -9,7 +9,7 @@ tags: [databaes nlp word2vec word-embeddings IBM Watson]
 icon: icon-html
 ---
 
-## Notes on papers: [https://arxiv.org/find/cs/1/au:+Shmueli_O/0/1/0/all/0/1](cognitive databases), that is on using embeddings to extend Relational Query Processing.
+## Notes on papers: [cognitive databases](https://arxiv.org/find/cs/1/au:+Shmueli_O/0/1/0/all/0/1), that is on using embeddings to extend Relational Query Processing.
 
 ## General idea
 
