@@ -9,7 +9,7 @@ tags: [databaes vldb microsoft 1997 auto-admin tuning DBMS]
 icon: icon-html
 ---
 
-# 
+### An Efficient, Cost-Driven Index Selection Tool for Microsoft SQL Server (VLDB 1997)
 
 ## These are my notes on the paper:
 
