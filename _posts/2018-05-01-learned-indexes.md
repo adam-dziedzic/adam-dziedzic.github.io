@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Learned indexes"
+title:  "Notes on a paper: Learned indexes"
 date:   2018-05-04
 desc: "notes on a paper"
 keywords: "machine-learning SIGMOD 2018 learned-indexes "
