@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Learned indexes"
+title:  "Notes on a paper: Learned indexes"
 date:   2018-05-04
 desc: "notes on a paper"
 keywords: "machine-learning SIGMOD 2018 learned-indexes "
@@ -37,7 +37,7 @@ One area that should be still explored is how to cater for workloads with many u
 8. The biggest challenge is the last-mile accuracy.
 9. It is not crystal clear how they train the staged models - they do give the loss functions but they do not do the full end-to-end training, I suppose for a model lower in the stage, only the search keys that go through the model in the current learning stage, contribute to the loss - but these keys taken into account for the less in a staged model might be very different through the learning process, i.e. fluctuate a lot, thus it is not explained when we stop training and if the loss really decreases and model converges.
 10. New leaf-node search strategies - does not seem to be like a great gain in performance.
-11. Why don't we use word embeddings for the indexing the strings?
+11. Why don't we use word embeddings for the indexing of strings?
 
 ## Other notes:
 1. Regarding the Clipper system - this paper states that you should never use TensorFlow for inference.
