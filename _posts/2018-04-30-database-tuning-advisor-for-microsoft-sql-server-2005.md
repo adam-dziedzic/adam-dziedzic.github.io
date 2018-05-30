@@ -41,7 +41,7 @@ If we are limited to only k indexes, but our tuning recommends many more, than w
 1. Column group restriction (a pre-processing step): similar to the data mining algorithm of frequent itemsets - aim is to find *interesting* columns, eliminate from consideration columns that can have only a marginal impact on the final configuration (e.g. take only the columns that appear in the queries, let's say, at least 2 times).
 2. Candidate selection: choose the best configuration (set of indexes, materialized views, partitioning) for each query in the workload separately. The configurations' cost is based on the "what-if" analysis carried out by the query optimizer.
 3. Merging: take into account the whole workload - especially the modification queries and the storage footprint constraints, propose another set of candidates (of indexes or materialized views) that could benefit the whole workload.
-4. Enumeration: finally consider all the candidates (from the candidate selection and the merging steps) to produce the final configuration. the Greedy $(m,k)$ schema is used for this purpose.
+4. Enumeration: finally consider all the candidates (from the candidate selection and the merging steps) to produce the final configuration. the Greedy $$(m,k)$$ schema is used for this purpose.
 
 ### Scaling to large workloads, 3 options:
 1. sample queries from the workload - this ignores how costly the queries are;
