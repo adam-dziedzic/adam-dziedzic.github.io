@@ -33,9 +33,9 @@ The workload is a set of SQL statements that execute against the database server
 2. Query optimizer cost model evolves over time, which makes the costing for hypothetical physical designs probably better.
 3. Via the query optimizer, we also take into account the hardware environment where queries will be executed (this hardware environment can be simulated, thus we can run the workload on a test server and tune it there for the environment of the production server).
 
-### Recap (from the previous papers on DTA): Falstart greedy search schema $(m,k)$.
+### Recap (from the previous papers on DTA): Falstart greedy search schema $$(m,k)$$.
 
-If we are limited to only k indexes, but our tuning recommends many more, than we have to narrow down the selection. It can be done by first choosing a small number $m$ of indexes, this is the best possible configuration of m indexes. Then, we add a single index at a time, choosing the one that decrease the overall workload cost the most, in a greedy fashion, until we reach the configuration with the required $k$ indexes.
+If we are limited to only k indexes, but our tuning recommends many more, than we have to narrow down the selection. It can be done by first choosing a small number $$m$$ of indexes, this is the best possible configuration of m indexes. Then, we add a single index at a time, choosing the one that decrease the overall workload cost the most, in a greedy fashion, until we reach the configuration with the required $$k$$ indexes.
 
 ### Steps of workload tuning in DTA:
 1. Column group restriction (a pre-processing step): similar to the data mining algorithm of frequent itemsets - aim is to find *interesting* columns, eliminate from consideration columns that can have only a marginal impact on the final configuration (e.g. take only the columns that appear in the queries, let's say, at least 2 times).
