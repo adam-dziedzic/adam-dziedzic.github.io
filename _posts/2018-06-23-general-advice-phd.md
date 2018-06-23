@@ -1,19 +1,15 @@
-
 ---
 layout: post
-title:  "PhD after 3rd year: a few pieces of advice"
-date:   2018-06-23
+title: "PhD after 3rd year: a few pieces of advice"
+date:  2018-06-23
 desc: "notes on PhD"
-keywords: "PhD goals life"
+keywords: "PhD life goals "
 categories: [HTML]
-tags: [PhD goals life]
+tags: [PhD life goals]
 icon: icon-html
-------
-<!---
-# PhD after 3rd year: a few pieces of advice
+---
 
-# PhD after 3rd year: a few pieces of advice
--->
+# Notes on phd:
 
 I was a panelist for a discussion titled: *"A Day in the Life of a PhD Student"*. It was addressed to students who consider pursuing PhD and currently take part in a summer research program. I really enjoy such discussion and hope that many students found helpful suggestions.
 
