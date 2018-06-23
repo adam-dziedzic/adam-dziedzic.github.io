@@ -9,7 +9,7 @@ tags: [databaes vldb microsoft 1997 auto-admin tuning DBMS]
 icon: icon-html
 ---
 
-### An Efficient, Cost-Driven Index Selection Tool for Microsoft SQL Server (VLDB 1997)
+# An Efficient, Cost-Driven Index Selection Tool for Microsoft SQL Server (VLDB 1997)
 
 ## These are my notes on the paper:
 
@@ -21,7 +21,7 @@ Determine the best configuration for each query independently. Treat each query 
 
 ### Configuration enumeration via a "falstart-greedy" algorithm
 
-The candidate index selection step gives a set of indexes for each query, the take the union of them and consider the configuration for the whole workload. If there is a constraint of max k indexes then we have to prune the set of all indexes. We do it via a greedy algorithm. (m,k) greedy algorithm: m - is a seed denoting a number <= k, thus we start with some number m of indexes (heuristic and experiments claim that it is good to start from m = 2). This m indexes are chose by full enumeration of all possible m indexes, and choosing an optimal set of m indexes. From this point on, we greedily try to add an index at a time, in each step trying to find the index that would end up with the biggest total reduction of the cost of the workload.
+The candidate index selection step gives a set of indexes for each query, then takes the union of them and considers the configuration for the whole workload. If there is a constraint of max k indexes then we have to prune the set of all indexes. We do it via a greedy algorithm. (m,k) greedy algorithm: m - is a seed denoting a number <= k, thus we start with some number m of indexes (heuristic and experiments claim that it is good to start from m = 2). This m indexes are chosen by full enumeration of all possible m indexes, and selecting an optimal set of m indexes. From this point on (after full search of the best possible m indexes), we greedily try to add an index at a time, in each step trying to find the index that would end up with the biggest total reduction of the cost of the workload.
 
 ### Consider multi-column indexes (e.g. a B+ tree on two columns)
 
