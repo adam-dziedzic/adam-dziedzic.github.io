@@ -1,6 +1,16 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+
+- name: Auto-recommendation of hybrid physical designs
+  #i18n: cpython
+  url: "https://dl.acm.org/citation.cfm?id=3190660"
+  img: /static/assets/img/hybrid-designs.png
+  desc: Commercial DBMSs, such as Microsoft SQL Server, cater to diverse workloads including transaction processing, decision support, and operational analytics. They also support variety in physical design structures such as B+ tree and columnstore. The benefits of B+ tree for OLTP workloads and columnstore for decision support workloads are well-understood. However, the importance of hybrid physical designs, consisting of both columnstore and B+ tree indexes on the same database, is not well-studied - a focus of this paper. We first quantify the trade-offs using carefully-crafted micro-benchmarks. This micro-benchmarking indicates that hybrid physical designs can result in orders of magnitude better performance depending on the workload. For complex real-world applications, choosing an appropriate combination of columnstore and B+ tree indexes for a database workload is challenging. We extend the Database Engine Tuning Advisor for Microsoft SQL Server to recommend a suitable combination of B+ tree and columnstore indexes for a given workload. Through extensive experiments using industry-standard benchmarks and several real-world customer workloads, we quantify how a physical design tool capable of recommending hybrid physical designs can result in orders of magnitude better execution costs compared to approaches that rely either on columnstore-only or B+ tree-only designs.
+  paper:  /static/assets/papers/dziedzic-sigmod2018-recommend-hybrid-designs.pdf
+  slides: /static/assets/slides/recommend-hybrid-designs-sigmod2018-presentation.pdf
+  bibtex: /static/assets/abstracts/hybrid_designs.txt
+
 - name: BigDAWG
   #i18n: jalpc
   url: "http://bigdawg.mit.edu"
@@ -8,6 +18,9 @@
   repo: bigdawg
   img: /static/assets/img/landing/bigdawg.png
   desc: An open source project from researchers within the Intel Science and Technology Center for Big Data (ISTC). BigDAWG is a reference implementation of a polystore database. A polystore system is any database management system (DBMS) that is built on top of multiple, heterogeneous, integrated storage engines. I worked on the scaffolding of the system and then implemented a cast operator to move data between diverse DBMSs.
+  paper:  /static/assets/papers/dziedzic_hpec16_data_migration.pdf
+  slides: /static/assets/slides/data-migration-hpec2016.pdf
+  bibtex: /static/assets/abstracts/data_migration.txt
 
 - name: Data Loading
   #i18n: cpython
@@ -17,4 +30,6 @@
   paper: /static/assets/papers/dziedzic_adms16_data_loading.pdf
   slides: /static/assets/slides/loading-adms-presentation.pdf
   bibtex: /static/assets/abstracts/data_loading.txt
+
+
 
