@@ -1,3 +1,4 @@
+<!---
 ---
 layout: post
 title:  "PhD after 3rd year: a few pieces of advice"
@@ -9,9 +10,10 @@ tags: [PhD goals life]
 icon: icon-html
 ------
 
-<!---
 # PhD after 3rd year: a few pieces of advice
 -->
+
+# PhD after 3rd year: a few pieces of advice
 
 I was a panelist for a discussion titled: *"A Day in the Life of a PhD Student"*. It was addressed to students who consider pursuing PhD and currently take part in a summer research program. I really enjoy such discussion and hope that many students found helpful suggestions.
 
@@ -26,7 +28,8 @@ Take the advantage before PhD and get a taste of research as an undergraduate on
 4. higher starting salary after PhD
 5. more interesting job after PhD
 6. most exciting for those of you who are hooked at discovery: seeing something that nobody else has seen before
-7. 
+
+
 ## PhD cons:
 1. highly competitive: working very hard (especially before paper deadlines or conferences - prepare presentation, poster, teaser talk, alone in the lab on a beautiful, sunny Saturday, mental stamina and determination to deal with the pressure, throw away 3 months of your work while somehow keeping your mental health intact)
 2. badly paid: about 5X less than your friends at Google or Microsoft: if you are in your thirties and have to pay the mortgage load then probably this stipend is not sufficient.
@@ -37,16 +40,11 @@ Take the advantage before PhD and get a taste of research as an undergraduate on
 ## What will you need?
 1. Strong reference letters
 2. A research publication under your belt from a summer research program is a very strong bonus 
-3. A few potential advisers:
-   the adviser-student relationship is a symbiosis.
+3. A few potential advisers: the adviser-student relationship is a symbiosis.
+   
 ## Challenges:
 1. You have to decide which problems are worth working on: develop a taste for a problem.
 2. How to review papers: train your own binary classifier to cast a paper as bad or good.
-
-## It is said that in practice there are three stages in a PhD. 
-1. In the first stage you look at a related paper’s reference section and you haven’t read most of the papers. 
-2. In the second stage you recognize all the papers.
-3. In the third stage you had lunch with all the first authors of all the papers.
 
 ## Official stages:
 1. coursework + master’s thesis defence (up to the first quarter of 3rd year or the end of 2nd year)
@@ -55,10 +53,15 @@ Take the advantage before PhD and get a taste of research as an undergraduate on
 
 During the first phase, students take courses, write a Master's paper, and take an oral Master's exam. In the second phase, students work independently to identify specific research questions of interest, master the relevant literature, and take an oral candidacy exam. And during the third phase, students do independent research and write and defend a dissertation. Throughout the process students document successful research in publications as well as in their doctoral dissertations.
 
+## In practice there are slightly different three stages in a PhD:
+1. In the first stage you look at a related paper’s reference section and you haven’t read most of the papers. 
+2. In the second stage you recognize all the papers.
+3. In the third stage you had lunch with all the first authors of all the papers.
+
 ## Advisor:
 1. This is one of the most important choices – spend time on it and try to maintain a very good working relationship – it helps a lot.
 2. Points you into the right direction if you’re lost.
-3. A young on tenure-track advisor is hands-on (can give you comments such as use this tool or library or “you’re missing this on the right-hand side of the equation”), professors are usually more hand-off with comments like: “you should read more about it”.
+3. A young on tenure-track advisor is hands-on (can give you comments such as use this tool or library or "you’re missing this on the right-hand side of the equation"), professors are usually more hand-off with comments like: "you should read more about it".
 
 ## General advice on PhD:
 1. The real value of graduate school is in education, not in degree.
