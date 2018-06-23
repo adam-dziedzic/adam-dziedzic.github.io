@@ -1,4 +1,4 @@
-<!---
+
 ---
 layout: post
 title:  "PhD after 3rd year: a few pieces of advice"
@@ -9,11 +9,11 @@ categories: [HTML]
 tags: [PhD goals life]
 icon: icon-html
 ------
+<!---
+# PhD after 3rd year: a few pieces of advice
 
 # PhD after 3rd year: a few pieces of advice
 -->
-
-# PhD after 3rd year: a few pieces of advice
 
 I was a panelist for a discussion titled: *"A Day in the Life of a PhD Student"*. It was addressed to students who consider pursuing PhD and currently take part in a summer research program. I really enjoy such discussion and hope that many students found helpful suggestions.
 
