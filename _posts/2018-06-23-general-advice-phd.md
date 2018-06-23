@@ -8,6 +8,11 @@ categories: [HTML]
 tags: [PhD goals life]
 icon: icon-html
 ------
+
+<!---
+# PhD after 3rd year: a few pieces of advice
+-->
+
 I was a panelist for a discussion titled: *"A Day in the Life of a PhD Student"*. It was addressed to students who consider pursuing PhD and currently take part in a summer research program. I really enjoy such discussion and hope that many students found helpful suggestions.
 
 I was in a fortunate position of knowing since young age that I really wanted a PhD. Unfortunately it wasn’t for any very well-thought-through reason: first, I liked studying and I wanted to learn as much as possible. Second, I wanted to be an inventor. This requires more knowledge and skills that hopefully I can get during my PhD.
