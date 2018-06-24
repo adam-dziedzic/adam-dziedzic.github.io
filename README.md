@@ -1,4 +1,19 @@
-# Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
+# Adam's comments/navigation through the data for the blog:
+
+### General comment
+This blog web page has a very unintuitive structure. The main configuration is in: _config.yml - you can change your name, email, avatar, and other basic info.
+
+### Blog
+1. go to _data/blog.yml to add/drop blog categories (Blog, Html, Life, Python, C++, etc.)
+2. Use only a single category per blog post.
+3. go to blog/*.hmlt (for example: blog/blog.html) to change how the blog posts are displayed.
+
+### Stucture of the main page: Projects, About me, Contact, etc.
+1. The order of the sections for the main page is in _data/landing.yml (you can reorder the section about procjects, for example, to be at the end of the main personal page).
+2. To change any of the main sections (e.g. to add a project), go to the _data/index/projects.yml file.
+
+# Other info:
+## Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
