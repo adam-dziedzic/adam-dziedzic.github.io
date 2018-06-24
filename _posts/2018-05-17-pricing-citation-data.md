@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Price & cite data"
-date:   2018-05-17
+title: "Price and cite data"
+date:  2018-05-17
 desc: "notes on a paper"
-keywords: "databases pricing citation data-market"
+keywords: "databases pricing citation data-market "
 categories: [HTML]
 tags: [databases pricing citation data-market]
 icon: icon-html
-------
+---
 
 # These are my notes on the papers:
 1. Data Markets in the Cloud: An Opportunity for the Database Community. Magda Balazinska, Bill Howe, and Dan Suciu, VLDB 2011.
