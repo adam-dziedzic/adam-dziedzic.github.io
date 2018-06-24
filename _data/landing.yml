@@ -28,7 +28,7 @@
   i18n: nav.blog
   name: Blog
   tpl: blog.html
-  page: blog/
+  page: html/
   css: testimonials navy-section
 
 - id: contact
