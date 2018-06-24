@@ -4,7 +4,7 @@ title: "PhD after 3rd year: a few pieces of advice"
 date:  2018-06-23
 desc: "notes on PhD"
 keywords: "PhD life goals "
-categories: [HTML Blog]
+categories: [Life]
 tags: [PhD life goals]
 icon: icon-html
 ---
