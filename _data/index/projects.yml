@@ -16,7 +16,7 @@
   url: "http://bigdawg.mit.edu"
   gh_user: bigdawg-istc
   repo: bigdawg
-  img: /static/assets/img/landing/bigdawg.png
+  img: /static/assets/img/bigdawg2.png
   desc: An open source project from researchers within the Intel Science and Technology Center for Big Data (ISTC). BigDAWG is a reference implementation of a polystore database. A polystore system is any database management system (DBMS) that is built on top of multiple, heterogeneous, integrated storage engines. I worked on the scaffolding of the system and then implemented a cast operator to move data between diverse DBMSs.
   paper:  /static/assets/papers/dziedzic_hpec16_data_migration.pdf
   slides: /static/assets/slides/data-migration-hpec2016.pdf
