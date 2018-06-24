@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: ady
+title: Adam Dziedzic
 description: Adam's home page.
 keywords: Adam, homepage, webpage, page, web
 baseurl:  / # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
@@ -21,7 +21,7 @@ author:  # change following line to your infomation.
   twitter_username: adam_dziedzic  # Leave blank if you don't have now
   email: ady@uchicago.edu  # Leave blank if you don't have now
   cv:  # An online CV can be printed as PDF, leave blank if you don't have now
-  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
+  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome1.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-apache
     - name: fa-linux
