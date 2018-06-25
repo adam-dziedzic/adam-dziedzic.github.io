@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://localhost:4000/html/2018/06/25/spectral-pooling.html</loc>
+        <loc>http://localhost:4000/machine-learning/2018/06/25/spectral-pooling.html</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/ml/2018/06/24/parsevals-identity.html</loc>
+        <loc>http://localhost:4000/machine-learning/2018/06/24/parsevals-identity.html</loc>
     </url>
 
     <url>
@@ -83,10 +83,6 @@
     </url>
 
     <url>
-        <loc>http://localhost:4000/ml/</loc>
-    </url>
-
-    <url>
         <loc>http://localhost:4000/blog/</loc>
     </url>
 
@@ -108,6 +104,10 @@
 
     <url>
         <loc>http://localhost:4000/life/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/machine-learning/</loc>
     </url>
 
     <url>

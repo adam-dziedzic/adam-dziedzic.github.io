@@ -4,7 +4,7 @@ title: "Parseval's identity"
 date:  2018-06-24
 desc: "Machine Learning theory"
 keywords: "deep learning machine learning frequency domain fft CNN convolution linear algebra LA"
-categories: [ML]
+categories: [Machine-learning]
 tags: [deep learning machine learning frequency domain fft CNN convolution linear algebra LA]
 icon: icon-html
 ---

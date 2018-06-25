@@ -8,8 +8,9 @@
 - name: Life
   href: /life/
 
-- name: Machine Learning
-  href: /ml/
+# this changes the name of the section on the header of the blog
+- name: machine-learning
+  href: /machine-learning/
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
 # - name: Python

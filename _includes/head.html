@@ -19,15 +19,15 @@
     {% endif %}
   </title>
   <!-- favicon -->
-  <link rel="shortcut icon" href="{{ "static/assets/img/favicon.ico" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.ico" | prepend: project.baseurl }}">
 
   <!-- Main CSS -->
-  <link href="{{ "static/assets/app-20171204.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{ "static/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/static/assets/app-20171204.min.css" | prepend: project.baseurl }}" rel="stylesheet">
+  <link href="{{ "/static/css/custom.css" | prepend: project.baseurl }}" rel="stylesheet">
 
   <!-- Main Scripts -->
-  <script src="{{"static/assets/app-20171204.min.js"| prepend: site.baseurl }}"></script>
-  <script src="{{"static/assets/blog-20171204.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"/static/assets/app-20171204.min.js"| prepend: project.baseurl }}"></script>
+  <script src="{{"/static/assets/blog-20171204.min.js"| prepend: project.baseurl }}"></script>
   <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 

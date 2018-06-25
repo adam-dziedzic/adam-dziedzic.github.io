@@ -4,7 +4,7 @@ title: "Spectral representations for Convolutional Neural Networks"
 date:  2018-06-25
 desc: "Notes on a paper"
 keywords: "deep learning machine learning frequency domain fft CNN convolution "
-categories: [HTML]
+categories: [Machine-learning]
 tags: [deep learning machine learning frequency domain fft CNN convolution]
 icon: icon-html
 ---
