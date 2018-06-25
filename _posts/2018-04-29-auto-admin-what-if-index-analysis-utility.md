@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "AutoAdmin "What-if" Index Analysis Utility"
+title:  "AutoAdmin What-if Index Analysis Utility"
 date:   2018-04-29
 desc: "notes on a paper"
 keywords: "databaes sigmod microsoft 1998 auto-admin tuning DBMS"
