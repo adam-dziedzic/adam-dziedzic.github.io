@@ -6,6 +6,10 @@
     </url>
 
     <url>
+        <loc>http://localhost:4000/ml/2018/06/24/parsevals-identity.html</loc>
+    </url>
+
+    <url>
         <loc>http://localhost:4000/life/2018/06/23/general-advice-phd.html</loc>
     </url>
 
@@ -76,6 +80,10 @@
 
     <url>
         <loc>http://localhost:4000/404.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/ml/</loc>
     </url>
 
     <url>
