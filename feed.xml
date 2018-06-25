@@ -5,29 +5,45 @@
     <description>Adam's home page.</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Jun 2018 10:32:07 -0500</pubDate>
-    <lastBuildDate>Mon, 25 Jun 2018 10:32:07 -0500</lastBuildDate>
+    <pubDate>Mon, 25 Jun 2018 14:23:54 -0500</pubDate>
+    <lastBuildDate>Mon, 25 Jun 2018 14:23:54 -0500</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
         <title>Spectral representations for Convolutional Neural Networks</title>
-        <description>&lt;h1 id=&quot;notes-on-a-paper&quot;&gt;Notes on a paper:&lt;/h1&gt;
+        <description>&lt;!---
+In the local web browser:
+   http://127.0.0.1:4000/html/2018/06/25/spectral-pooling.html
+---&gt;
+
+&lt;h1 id=&quot;notes-on-a-paper&quot;&gt;Notes on a paper:&lt;/h1&gt;
 &lt;p&gt;This paper presents a very interesting idea of replacing pooling layers such as max or avg ones with spectral pooling, where the input to the pooling layer is transformed to the frequency domain via FFT, then by the heuristic that the energy of the input in the frequency domain for natural signal or images follows the inverse power law where the most information is cumulated in the low frequencies and the noise is usually represented in the high frequencies, we truncated the signal by discarding the high frequency coefficients. Finally, the truncated signal is transformed back to the time/spatial domain via the inverse FFT.&lt;/p&gt;
 
-&lt;h1 id=&quot;background&quot;&gt;Background:&lt;/h1&gt;
-&lt;p&gt;A square matrix &lt;script type=&quot;math/tex&quot;&gt;A=[A_1\;A_2\;\cdots\;A_n]&lt;/script&gt; (&lt;script type=&quot;math/tex&quot;&gt;A_i&lt;/script&gt; for the ith column vector of &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;) is unitary if its inverse is equal to its conjugate transpose, i.e., &lt;script type=&quot;math/tex&quot;&gt;A^{-1}=A^{*T}=A^{H}&lt;/script&gt;, where the superscript &lt;script type=&quot;math/tex&quot;&gt;^H&lt;/script&gt; denotes the Hermitian operation. In particular, if a unitary matrix is real &lt;script type=&quot;math/tex&quot;&gt;A=A^*&lt;/script&gt;, then &lt;script type=&quot;math/tex&quot;&gt;A^{-1}=A^T&lt;/script&gt; and it is orthogonal. Both the column and row vectors ( &lt;script type=&quot;math/tex&quot;&gt;A_i, i=1,\cdots,n&lt;/script&gt;) of a unitary or orthogonal matrix are orthogonal (perpendicular to each other) and normalized (of unit length), or orthonormal, i.e., their inner product satisfies: &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-&lt;A_i, A_j&gt; = A_i^{H}A_j %]]&gt;&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-&lt;A_i,A_j&gt;=A_i^{*T} A_j=\delta_{i,j}=\left\{
-\begin{array}{ll}
-1 &amp; \mbox{if } i=j  \\
-0 &amp; \mbox{otherwise}
-\end{array}
-\right %]]&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&quot;background&quot;&gt;Background:&lt;/h2&gt;
 
+&lt;h3 id=&quot;unitary-transforms-matrices&quot;&gt;Unitary transforms (matrices)&lt;/h3&gt;
+&lt;p&gt;A square matrix &lt;script type=&quot;math/tex&quot;&gt;A=[A_1\;A_2\;\cdots\;A_n]&lt;/script&gt; (&lt;script type=&quot;math/tex&quot;&gt;A_i&lt;/script&gt; for the ith column vector of &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;) is unitary if its inverse is equal to its conjugate transpose, i.e., &lt;script type=&quot;math/tex&quot;&gt;A^{-1}=A^{*T}=A^{H}&lt;/script&gt;, where the superscript &lt;script type=&quot;math/tex&quot;&gt;^H&lt;/script&gt; denotes the Hermitian operation. In particular, if a unitary matrix is real &lt;script type=&quot;math/tex&quot;&gt;A=A^*&lt;/script&gt;, then &lt;script type=&quot;math/tex&quot;&gt;A^{-1}=A^T&lt;/script&gt; and it is orthogonal. Both the column and row vectors ( &lt;script type=&quot;math/tex&quot;&gt;A_i, i=1,\cdots,n&lt;/script&gt;) of a unitary or orthogonal matrix are orthogonal (perpendicular to each other) and normalized (of unit length), or orthonormal, i.e., their inner product satisfies: &lt;script type=&quot;math/tex&quot;&gt;(A_i, A_j) = A_i^{H}A_j&lt;/script&gt;&lt;/p&gt;
+
+&lt;!---
+$$
+\begin{align*}
+\left( \begin{array}{ccc}
+      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
+      \vdots &amp; \ddots &amp; \vdots \\
+      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
+    \end{array} \right)
+\end{align*}
+$$
+---&gt;
 &lt;p&gt;These &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; orthonormal vectors can be used as the basis vectors of the n-dimensional vector space.&lt;/p&gt;
 
 &lt;p&gt;source: &lt;a href=&quot;http://fourier.eng.hmc.edu/e101/lectures/Image_Processing/node15.html&quot;&gt;lectures on Fourier Transorm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;parsevals-theorem&quot;&gt;Parseval’s theorem&lt;/h3&gt;
+
+&lt;p&gt;Fourier transform is unitary, thus the sum (or integral) of the square of a function is equal to the sum (or integral) of the square of its transform. Let &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; be the Discrete Fourier Transform of the sequence &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, then we have:
+&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=0}^{n-1} |x_i|^2 = \sum_{F=0}^{n-1}|X_F|^2&lt;/script&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Mon, 25 Jun 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000//html/2018/06/25/spectral-pooling.html</link>
@@ -37,6 +53,49 @@
         
         
         <category>HTML</category>
+        
+      </item>
+    
+      <item>
+        <title>Parseval's identity</title>
+        <description>&lt;p&gt;Geometrically, it is the Pythagorean theorem for inner-product spaces. In its special case for a single vector &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; it can be written as:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum_{n} |\prec x,e_n \succ|^2 = ||x||^2&lt;/script&gt;
+
+&lt;p&gt;where&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\prec *,* \succ&lt;/script&gt;
+
+&lt;p&gt;represents an inner product and&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;||x||^{2} = \prec x, x \succ&lt;/script&gt;
+
+&lt;p&gt;This is directly analogous to the Pythagorean theorem, which asserts that the sum of the squares of the components of a vector in an orthonormal basis is equal to the squared length of the vector. Here, we project vector &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; on each of the basis vectors &lt;script type=&quot;math/tex&quot;&gt;e_i&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;In more general form, the Parseval’s identity is:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\prec u,v \succ = \sum_i \prec u,w_i \succ \prec w_i, v \succ&lt;/script&gt;
+
+&lt;p&gt;First, we prove that &lt;script type=&quot;math/tex&quot;&gt;c_i = \prec u, w_i \succ&lt;/script&gt;.
+The vectors &lt;script type=&quot;math/tex&quot;&gt;w_i&lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i=1,...,n&lt;/script&gt; are the orthonormal basis for inner-product vector space V. Then for any &lt;script type=&quot;math/tex&quot;&gt;u \in V&lt;/script&gt; there exists &lt;script type=&quot;math/tex&quot;&gt;c_1,c_2, ..., c_n&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;u = \sum_i c_i w_i&lt;/script&gt;. The coefficients &lt;script type=&quot;math/tex&quot;&gt;c_i&lt;/script&gt; are called Fourier coefficients. Let’s prove that &lt;script type=&quot;math/tex&quot;&gt;c_i = \prec v, w_i \succ&lt;/script&gt; using the orthogonormality (orthogonal and normal) vectors &lt;script type=&quot;math/tex&quot;&gt;w_i&lt;/script&gt;.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\prec v, w_i \succ = \prec \sum_{i=1}^{n} c_i w_i, w_i \succ = \sum_{i=1}^{n} c_i \prec w_i, w_i \succ = c_i&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\prec w_i, w_j \succ = 1 \mbox{ if } i=j \mbox{; } 0, \mbox{ otherwise}&lt;/script&gt;
+
+&lt;p&gt;Now, we prove the general form of Parseval’s identity:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\prec u,v \succ = \prec \sum_{i=1}^{n} c_i w_i, v \succ = \sum_{i=1}^{n} c_i \prec w_i, v \succ = \sum_{i=1}^{n} \prec v, w_i \succ \prec w_i, v \succ&lt;/script&gt;
+
+</description>
+        <pubDate>Sun, 24 Jun 2018 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000//ml/2018/06/24/parsevals-identity.html</link>
+        <guid isPermaLink="true">http://localhost:4000//ml/2018/06/24/parsevals-identity.html</guid>
+        
+        <category>deep learning machine learning frequency domain fft CNN convolution linear algebra LA</category>
+        
+        
+        <category>ML</category>
         
       </item>
     
