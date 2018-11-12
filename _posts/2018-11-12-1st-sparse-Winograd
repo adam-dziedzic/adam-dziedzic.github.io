@@ -16,3 +16,4 @@ Combine the sparsification with the Winograd convolution.
 Figure 1 presents a very simple comparison between the direct and Winograd convolutions. We have an input $$I = [i_1,i_2,i_3]$$ and
 a filter (weights) $$W=[w_1,w_2]$$. The direct convolution gives us: $$I*W = [i_1w_1 + i_2w_2, i_2w_1 + i_3w_2]$$. For the Winograd
 convolution, we have to generate matrices $$A,G,B$$ for the $$F(2,2)$$ transformations and then compute $$I*W = A^T[(GW) \odot (G^TI)]$$. 
+
