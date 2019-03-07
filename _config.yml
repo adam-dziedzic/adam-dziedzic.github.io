@@ -31,8 +31,6 @@ author:  # change following line to your infomation.
     - name: icon-apache
   desc: I'm a PhD student at the University of Chicago, advised by Prof. Sanjay Krishnan. I'm passionate about empowering users with data driven decisions. Currently, I work on the DeepLens project. 
   My previous research was focused on data loading and migration between diverse database systems and I worked on the BigDAWG system. I was an intern at Microsoft Resaerch and worked on recommendation of hybrid physical designs (B+ tree and Columnstores) for SQL Server. Currently, I work on intersection of databases and machine/deep learning. I obtained my Bachelor's and Master's degrees from Warsaw University of Technology in Poland. I was also studyinGGg at DTU (Technical University of Denmark) and carried out research on databases in the DIAS group at EPFL, Switzerland. Previously, I had internships at CERN (Geneva, Switzerland), Barclays Investment Bank in London (UK), Microsoft Research (Redmond, USA) and Google (Madison, USA). I spend the rest of my waking hours on reading books, taking MOOC courses, especially on Machine & Deep Learning, enjoying many sports, playing a guitar and practising Aikido.  # Describe yourself.
-  
-    # I also applied FFT-based compression during trainig and infrence for CNN models on the level of the convolution operation. We call this technique a band-limited training and inference. 
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
