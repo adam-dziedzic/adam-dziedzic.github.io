@@ -1,6 +1,6 @@
 # Adam's comments/navigation through the data for the blog:
 
-### General comment
+### General comments
 This blog web page has a very unintuitive structure. The main configuration is in: _config.yml - you can change your name, email, avatar, and other basic info.
 
 ### Blog
