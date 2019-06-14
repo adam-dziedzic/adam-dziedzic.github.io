@@ -2,7 +2,7 @@
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at 'static/assets/img/landing', and edit following img items.
 
-- name: 
+- name: Band-limited Training and Inference For Convolutional Nerual Networks
   #i18n: cpython
   url: http://proceedings.mlr.press/v97/dziedzic19a.html
   img: static/assets/img/blog/band-limit.png
