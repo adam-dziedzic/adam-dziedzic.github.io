@@ -40,10 +40,13 @@
 		      <a href="{{ project.paper | prepend: site.baseurl }}"><img src="{{ project.baseurl }}/static/assets/img/landing/pdficon_small.png"
 alt="paper">paper</a>
 		  {% endif %}
-		  {% if project.paper %}
+		  {% if project.slides %}
 		      <a href="{{ project.slides | prepend: site.baseurl }}"><img src="{{ project.baseurl }}/static/assets/img/landing/slides_small.png" alt="slides">slides</a>
 	          {% endif %}
-		  {% if project.paper %}
+                {% if project.talk %}
+                <a href="{{ project.talk | prepend: site.baseurl }}"><img src="{{ project.baseurl }}/static/assets/img/landing/camera_small.png" alt="talk">talk</a>
+            {% endif %}
+		  {% if project.bibtex %}
 		      <a href="{{ project.bibtex | prepend: site.baseurl }}"><img src="{{ project.baseurl }}/static/assets/img/landing/tex.png" alt="bibtex">bibtex</a>
 	          {% endif %}
               </div>

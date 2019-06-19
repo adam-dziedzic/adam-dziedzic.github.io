@@ -11,6 +11,7 @@ This blog web page has a very unintuitive structure. The main configuration is i
 ### Stucture of the main page: Projects, About me, Contact, etc.
 1. The order of the sections for the main page is in _data/landing.yml (you can reorder the section about procjects, for example, to be at the end of the main personal page).
 2. To change any of the main sections (e.g. to add a project), go to the _data/index/projects.yml file.
+3. If you want to change the html options, for example, for projects, go to: _includes/sections/projects.html.
 
 # Other info:
 ## Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
