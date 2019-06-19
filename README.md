@@ -6,7 +6,7 @@ This blog web page has a very unintuitive structure. The main configuration is i
 ### Blog
 1. go to _data/blog.yml to add/drop blog categories (Blog, Html, Life, Python, C++, etc.)
 2. Use only a single category per blog post.
-3. go to blog/*.hmlt (for example: blog/blog.html) to change how the blog posts are displayed.
+3. go to blog/*.html (for example: blog/blog.html) to change how the blog posts are displayed.
 
 ### Stucture of the main page: Projects, About me, Contact, etc.
 1. The order of the sections for the main page is in _data/landing.yml (you can reorder the section about procjects, for example, to be at the end of the main personal page).
