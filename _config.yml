@@ -17,7 +17,7 @@ author:  # change following line to your infomation.
   last_name: Dziedzic  # Be used at index page about me section.
   avatar: /static/assets/img/landing/adam2.jpg  # upload your avatar at directory and edit it.
   github_username: adam-dziedzic  # Leave blank if you don't have now
-  google_scholar: MRk-A4YAAAAJ
+  google_scholar_id: MRk-A4YAAAAJ
   linkedin_id: adziedzic # Leave blank if you don't have now
   facebook_username: adam.cajf  # Leave blank if you don't have now
   twitter_username: adam_dziedzic  # Leave blank if you don't have now

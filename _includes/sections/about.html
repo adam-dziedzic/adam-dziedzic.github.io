@@ -26,8 +26,8 @@
                     {% if site.author.github_username %}
                     <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a></li>
                     {% endif %}
-                    {% if site.author.github_username %}
-                    <li><a href="https://scholar.google.com/citations?user={{ site.author.google_scholar }}" target="blank"><i class="ai ai-google-scholar"></i></a></li>
+                    {% if site.author.google_scholar_id %}
+                    <li><a href="https://scholar.google.com/citations?user={{ site.author.google_scholar_id }}" target="blank"><i class="ai ai-google-scholar"></i></a></li>
                     {% endif %}
                     {% if site.author.linkedin_id %}
                     <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin_id }}" target="blank"><i class="fa fa-linkedin"></i></a></li>
