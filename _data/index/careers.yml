@@ -34,7 +34,7 @@
     detail: University of Chicago
     #i18n: company_b
   desc:
-    detail: Research on data migration for diverse database management systems (DBMSs).
+    detail: Research on the intersection of machine/deep learning and database management systems (DBMSs).
     #i18n: company_b_desc
   date:
     detail: July 2015 - August 2020
