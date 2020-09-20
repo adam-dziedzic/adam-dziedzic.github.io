@@ -2,13 +2,42 @@
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 
 - name:
+    detail: Vector Institute
+    #i18n: company_b
+  desc:
+    detail: Research on machine and deep learning
+    #i18n: company_b_desc
+  date:
+    detail: September 2020 - current
+    #i18n: company_b_date
+  job:
+    detail: Postdoctoral researcher
+    #i18n: company_b_job
+  icon: fa-plus-square
+  
+  
+- name:
+    detail: University of Toronto
+    #i18n: company_b
+  desc:
+    detail: Research on machine and deep learning
+    #i18n: company_b_desc
+  date:
+    detail: September 2020 - current
+    #i18n: company_b_date
+  job:
+    detail: Visiting researcher
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
     detail: University of Chicago
     #i18n: company_b
   desc:
-    detail: Research on data migration for diverse database management systems (DBMSs).
+    detail: Research on the intersection of machine/deep learning and database management systems (DBMSs).
     #i18n: company_b_desc
   date:
-    detail: July 2015 - current
+    detail: July 2015 - August 2020
     #i18n: company_b_date
   job:
     detail: PhD student
