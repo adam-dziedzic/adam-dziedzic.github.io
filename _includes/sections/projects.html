@@ -2,57 +2,88 @@
     <div class="row m-b-lg">
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
-            <h1><span data-i18n="projects.my_projects">Projects and Publications</span></h0>
+            <h1><span data-i18n="projects.my_projects">Projects</span></h0>
         </div>
     </div>
     <div class="row">
         {% for project in site.data.index.projects %}
-            {% assign loopindex = forloop.index | modulo: 2 %}
-            {% if forloop.last %}
-                {% if forloop.last == forloop.first %}
-            <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
-                {% else %}
-            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
-                {% endif %}
-            {% else %}
-            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
-            {% endif %}
+
+        <!--        1 column -->
+        <div class="col-sm-6 wow col-sm-offset-3 zoomIn user-my-margin">
+
+            <!--        2 columns-->
+            <!--            {% assign loopindex = forloop.index | modulo: 2 %}-->
+            <!--            {% if forloop.last %}-->
+            <!--                {% if forloop.last == forloop.first %}-->
+            <!--            <div class="col-sm-6 wow col-sm-offset-3 zoomIn">-->
+            <!--                {% else %}-->
+            <!--            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">-->
+            <!--                {% endif %}-->
+            <!--            {% else %}-->
+            <!--            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">-->
+            <!--            {% endif %}-->
+
             <div class="team-member">
-                  <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-average" alt="{{ project.name }}">
-                  <h4>
-                  {% if project.url %}
-                  <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
-                  {% elsif project.repo %}
-                  <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
-                  {% else %}
-                  <span class="navy">{{ project.name }}</span>
-                  {% endif %}
-                  </h4>
-                  <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
-                  {% if project.repo %}
-                  <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
-                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fa fa-star"></i> ...</a>&emsp;&emsp;
-                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" class="btn btn-white btn-xs fork"><i class="fa fa-code-fork"></i> ...</a>
-                      <div style="height: 10px;"></div>
-                  </div>
-                  {% endif %}
-		  {% if project.paper %}
-		      <a href="{{ project.paper | prepend: site.baseurl }}"><img src="{{ project.baseurl }}/static/assets/img/landing/pdficon_small.png"
-alt="paper">paper</a>
-		  {% endif %}
-		  {% if project.slides %}
-		      <a href="{{ project.slides | prepend: site.baseurl }}"><img src="{{ project.baseurl }}/static/assets/img/landing/aparat_small.png" alt="slides">slides</a>
-<!--                <a href="{{ project.slides | prepend: site.baseurl }}" target="blank"><i class="fa fa-presentation"></i> ...</a>-->
-	          {% endif %}
+                <!--                  <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-average" alt="{{ project.name }}">-->
+                <img src="{{ project.img | prepend: site.baseurl }}"
+                     class="img-responsive" alt="{{ project.name }}">
+                <h4>
+                    {% if project.url %}
+                    <a href="{{ project.url }}" target="_blank"><span
+                            class="navy">{{ project.name }}</span></a>
+                    {% elsif project.repo %}
+                    <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}"
+                       target="_blank"><span
+                            class="navy">{{ project.name }}</span></a>
+                    {% else %}
+                    <span class="navy">{{ project.name }}</span>
+                    {% endif %}
+                </h4>
+                <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span>
+                </p>
+                {% if project.repo %}
+                <div user="{{ project.gh_user }}" repo="{{ project.repo }}"
+                     class="ghbtn">
+                    <a target="_blank" style="width: 65px;"
+                       href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers"
+                       class="btn btn-white btn-xs star"><i
+                            class="fa fa-star"></i> ...</a>&emsp;&emsp;
+                    <a target="_blank" style="width: 65px;"
+                       href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network"
+                       class="btn btn-white btn-xs fork"><i
+                            class="fa fa-code-fork"></i> ...</a>
+                    <div style="height: 10px;"></div>
+                </div>
+                {% endif %}
+                {% if project.paper %}
+                <a href="{{ project.paper | prepend: site.baseurl }}"><img
+                        src="{{ project.baseurl }}/static/assets/img/landing/pdficon_small.png"
+                        alt="paper">paper</a>
+                {% endif %}
+                {% if project.slides %}
+                <a href="{{ project.slides | prepend: site.baseurl }}"><img
+                        src="{{ project.baseurl }}/static/assets/img/landing/aparat_small.png"
+                        alt="slides">slides</a>
+                <!--                <a href="{{ project.slides | prepend: site.baseurl }}" target="blank"><i class="fa fa-presentation"></i> ...</a>-->
+                {% endif %}
                 {% if project.talk %}
-                <a href="{{ project.talk | prepend: site.baseurl }}"><img src="{{ project.baseurl }}/static/assets/img/landing/camera_small.png" alt="talk">talk</a>
-            {% endif %}
-		  {% if project.bibtex %}
-		      <a href="{{ project.bibtex | prepend: site.baseurl }}"><img src="{{ project.baseurl }}/static/assets/img/landing/tex.png" alt="bibtex">bibtex</a>
-	          {% endif %}
-              </div>
-          </div>
-      {% endfor %}
+                <a href="{{ project.talk | prepend: site.baseurl }}"><img
+                        src="{{ project.baseurl }}/static/assets/img/landing/camera_small.png"
+                        alt="talk">talk</a>
+                {% endif %}
+                {% if project.talk_url %}
+                <a href="{{ project.talk_url }}" target="blank"><img
+                        src="{{ project.baseurl }}/static/assets/img/landing/camera_small.png"
+                        alt="talk">talk</a>
+                {% endif %}
+                {% if project.bibtex %}
+                <a href="{{ project.bibtex | prepend: site.baseurl }}"><img
+                        src="{{ project.baseurl }}/static/assets/img/landing/cite3.png"
+                        alt="bibtex">bibtex</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 <br>
