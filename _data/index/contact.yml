@@ -1,8 +1,9 @@
 # contact section data
 - last_name: Dziedzic
   first_name: Adam
-  desc: Postdoctoral Fellow at Vector Institute and University of Toronto
+  desc: Postdoctoral Fellow at the Vector Institute and the University of Toronto.
   office: Vector Institute, Toronto
   map: "https://goo.gl/maps/t7KbpM9PTBa1yYPA9"
-  website: http://people.cs.uchicago.edu/~ady
-  email: ady@vectorinstitute.ai
+  website: https://adam-dziedzic.com
+  mail_desc: The best way to contact me is through email.
+  email: adam.dziedzic@utoronto.ca

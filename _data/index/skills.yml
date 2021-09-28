@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: Databases, Java, C++, C, Python, Bash, Oracle, SQL Server, PostgreSQL, MonetDB, Vertica, VoltDB, S-Store, CouchDB, C#, Android, Emacs
-percentage: 100, 90, 90, 80, 80, 70, 80, 70, 90, 90, 80, 50, 60, 90, 50, 40, 60
+aspects: Databases, Java, C++, C, Python, PyTorch, PyCharm Bash, Oracle, SQL Server, PostgreSQL, MonetDB, Vertica, VoltDB, S-Store, CouchDB, C#, Android, Emacs, Vim, Ubuntu
+percentage: 100, 95, 90, 80, 95, 90, 80, 70, 80, 70, 90, 90, 80, 50, 60, 90, 50, 40, 60, 60, 60

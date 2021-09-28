@@ -23,7 +23,7 @@ author:  # change following line to your infomation.
   # facebook_username: adam.cajf  # Leave blank if you don't have now
   twitter_username: adam_dziedzic  # Leave blank if you don't have now
   email: adam.dziedzic@utoronto.ca  # Leave blank if you don't have now
-  cv:  # An online CV can be printed as PDF, leave blank if you don't have now
+  cv: /static/assets/cvs/AdamDziedzicCV.pdf # An online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome1.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-apache
