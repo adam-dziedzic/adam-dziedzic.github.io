@@ -8,6 +8,7 @@ baseurl:  / # if you have suburl as homepage like '/homepage', please change it 
 # baseurl: http://127.0.0.1:4000
 # url: https://adam-dziedzic.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
 url: http://127.0.0.1:4000
+# livereload: true
 img_path: /static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
@@ -19,9 +20,9 @@ author:  # change following line to your infomation.
   github_username: adam-dziedzic  # Leave blank if you don't have now
   google_scholar_id: MRk-A4YAAAAJ
   linkedin_id: adziedzic # Leave blank if you don't have now
-  facebook_username: adam.cajf  # Leave blank if you don't have now
+  # facebook_username: adam.cajf  # Leave blank if you don't have now
   twitter_username: adam_dziedzic  # Leave blank if you don't have now
-  email: ady@uchicago.edu  # Leave blank if you don't have now
+  email: adam.dziedzic@utoronto.ca  # Leave blank if you don't have now
   cv:  # An online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome1.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
@@ -53,8 +54,8 @@ gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your 
 donation: off  # type 'on'/'off' to choice display donation button at post page or not
 
 ## carousels
-index_carousel: on  # index page carousel switch, options: on/off
-blog_carousel: on  # blog page carousel switch, options: on/off
+# index_carousel: off  # index page carousel switch, options: on/off
+# blog_carousel: off  # blog page carousel switch, options: on/off
 
 # scss
 sass:

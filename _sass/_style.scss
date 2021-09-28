@@ -2417,7 +2417,8 @@ body {
     border-color: transparent;
     transition: all .3s ease-in-out 0s;
     .nav li a {
-      color: #fff;
+      /* color: #fff; */
+      color: #3385FF;
       font-family: 'Open Sans', helvetica, arial, sans-serif;
       font-weight: 700;
       letter-spacing: 1px;
@@ -2433,23 +2434,26 @@ body {
     .navbar-nav > {
       .active > a {
         background: 0 0;
-        color: #fff;
+        /* color: #fff; */
+        color: #0d1470;
         border-top: 6px solid #3385FF;
         &:hover {
           background: 0 0;
-          color: #fff;
+          color: #000000;
           border-top: 6px solid #3385FF;
         }
       }
       li > a {
         &:focus, &:hover {
-          color: #3385FF;
+          /* color: #3385FF; */
+          color: #000000;
           background: inherit;
         }
       }
       .active > a:focus {
         background: 0 0;
-        color: #fff;
+        /* color: #fff; */
+        color: #000000;
       }
     }
     &.navbar-scroll .navbar-nav > .active > a:focus {

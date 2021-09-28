@@ -3,6 +3,22 @@
 ### General comments
 This blog web page has a very unintuitive structure. The main configuration is in: _config.yml - you can change your name, email, avatar, and other basic info.
 
+Use command to build the website:
+
+On Windows:
+```angular2html
+bundle exec jekyll serve --force_polling --livereload
+```
+
+Do Live reload:
+```angular2html
+build jekyll serve --port 5000 --incremental --livereload
+```
+
+`--incremental` Incremental regeneration helps shorten build times by only generating documents and pages that were updated since the previous build.
+
+`--livereload` reload lively after every change
+
 ### Blog
 1. go to _data/blog.yml to add/drop blog categories (Blog, Html, Life, Python, C++, etc.)
 2. Use only a single category per blog post.
