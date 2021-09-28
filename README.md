@@ -5,6 +5,10 @@ This blog web page has a very unintuitive structure. The main configuration is i
 
 Use command to build the website:
 
+I also installed the wsd gem, as pointed here: https://jekyllrb.com/docs/installation/windows/#auto-regeneration
+
+`gem install wsd`
+
 On Windows:
 ```angular2html
 bundle exec jekyll serve --force_polling --livereload
