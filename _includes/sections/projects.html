@@ -8,23 +8,8 @@
     <div class="row">
         {% for project in site.data.index.projects %}
 
-        <!--        1 column -->
         <div class="col-sm-6 wow col-sm-offset-3 zoomIn user-my-margin">
-
-            <!--        2 columns-->
-            <!--            {% assign loopindex = forloop.index | modulo: 2 %}-->
-            <!--            {% if forloop.last %}-->
-            <!--                {% if forloop.last == forloop.first %}-->
-            <!--            <div class="col-sm-6 wow col-sm-offset-3 zoomIn">-->
-            <!--                {% else %}-->
-            <!--            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">-->
-            <!--                {% endif %}-->
-            <!--            {% else %}-->
-            <!--            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">-->
-            <!--            {% endif %}-->
-
             <div class="team-member">
-                <!--                  <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-average" alt="{{ project.name }}">-->
                 <img src="{{ project.img | prepend: site.baseurl }}"
                      class="img-responsive" alt="{{ project.name }}">
                 <h4>
@@ -64,7 +49,6 @@
                 <a href="{{ project.slides | prepend: site.baseurl }}"><img
                         src="{{ project.baseurl }}/static/assets/img/landing/aparat_small.png"
                         alt="slides">slides</a>
-                <!--                <a href="{{ project.slides | prepend: site.baseurl }}" target="blank"><i class="fa fa-presentation"></i> ...</a>-->
                 {% endif %}
                 {% if project.talk %}
                 <a href="{{ project.talk | prepend: site.baseurl }}"><img

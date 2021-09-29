@@ -12,15 +12,21 @@ here: https://jekyllrb.com/docs/installation/windows/#auto-regeneration
 
 `gem install wdm`
 
+Ultimate command, never fails and rebuilds everything from scratch:
+
+```shell
+bundle exec jekyll serve --force_polling --livereload --trace
+```
+
 On Windows:
 
-```angular2html
+```shell
 bundle exec jekyll serve --force_polling --livereload --incremental
 ```
 
 Do Live reload:
 
-```angular2html
+```shell
 build jekyll serve --port 5000 --incremental --livereload
 ```
 
@@ -28,6 +34,53 @@ build jekyll serve --port 5000 --incremental --livereload
 generating documents and pages that were updated since the previous build.
 
 `--livereload` reload lively after every change
+
+### Coding, Deployment, Trouble Shooting
+
+1. If there is Uncaught ReferenceError: and something is not defined then there
+   is a JavaScript library missing. Go to _sites and double click on index.html.
+   Check the website locally. Open this _site/index.html in your web browser and
+   inspect it. What is the error? It shows the exact line. For example, Chart
+   was missing from a Chart.js JavaScript library.
+2. To deploy the website you need to put index.html and all other files/folders
+   from _sites in the main root branch. Maintain the .git folder! You have
+   another folder code/adam-dziedzic.github.io-master which should contain the
+   final deployment files. More about [deployment](https://github.com/randymorris/randymorris.github.com).
+   ```shell
+       git publish-website # which consists of the following steps
+       git branch -D master
+       git checkout -b master
+       git filter-branch --subdirectory-filter _site/ -f
+       git checkout source
+       git push --all origin
+   ```
+   Other sources:
+   - https://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/
+   - https://github.com/robwierzbowski/grunt-build-control
+   - https://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/
+    - 
+3. Check if you can use /docs from git hub pages instead of copying the _sites
+   folder.
+4. Add the accordion from bootstrap for years of publications. https://getbootstrap.com/docs/4.3/components/collapse/
+4. Learn the grid system in bootstrap: https://getbootstrap.com/docs/4.1/layout/grid/   
+5. Add section Videos to your website.
+6. Add more inputs for your publications.
+7. Go through the tutorial on jekyll.
+8. Read thoroughly the deployment for github pages.
+9. Create the website for CaPC.
+10. Add a section about coding with pointer to github: https://maruan.alshedivat.com/code/
+10. Add your more personal website.    
+11. Add section about your past projects.
+12. Add section with your best photos.
+13. Buy domain for your family and create e-mail addresses for them.
+14. Creating a custom 404 page for your GitHub Pages site
+15. Change the colors of the buttons starting from the btn-info, which is green. Add blud, orange, red, etc.
+16. Check Marcin Wachulski website.
+17. The main style CSS sheet is 
+18. `_includes` have the html pages - how to arange stuff.
+19. `index` have the real data easily aranged.
+20. 
+
 
 ### Blog
 
@@ -46,7 +99,7 @@ generating documents and pages that were updated since the previous build.
    data/index/projects.yml file.
 3. If you want to change the html options, for example, for projects, go to: _
    includes/sections/projects.html.
-4. If you add a new project, the image should be resized so that its height is 
+4. If you add a new project, the image should be resized so that its height is
    200px.
 
 # Other info:
