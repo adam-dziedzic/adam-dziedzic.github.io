@@ -42,7 +42,7 @@ generating documents and pages that were updated since the previous build.
    Check the website locally. Open this _site/index.html in your web browser and
    inspect it. What is the error? It shows the exact line. For example, Chart
    was missing from a Chart.js JavaScript library.
-2. To deploy the website you need to put index.html and all other files/folders
+2. We cannot deploy this as it is directly to github pages because the `jekyll-scholar` is not enabled plugin officially on github. Check Gemfile to see the plugin and also `_plugins/ext.rb`. It has to be added to the `_plugins`, otherwise the `jekyll-scholar` does not work. To deploy the website you need to put index.html and all other files/folders
    from _sites in the main root branch. Maintain the .git folder! You have
    another folder code/adam-dziedzic.github.io-master which should contain the
    final deployment files. More about [deployment](https://github.com/randymorris/randymorris.github.com).
@@ -76,10 +76,14 @@ generating documents and pages that were updated since the previous build.
 14. Creating a custom 404 page for your GitHub Pages site
 15. Change the colors of the buttons starting from the btn-info, which is green. Add blud, orange, red, etc.
 16. Check Marcin Wachulski website.
-17. The main style CSS sheet is 
-18. `_includes` have the html pages - how to arange stuff.
-19. `index` have the real data easily aranged.
-20. 
+17. The main style CSS sheet is: `_sass/style.scss`
+17. The bacic templates for html pages are in `_layouts`.    
+18. `_includes` have the html pages - how to arrange stuff.
+19. `_data/index` have the real data easily arranged, also `_data/landing.yml`.
+20. To add blog posts, go to `_posts`.
+21. CNAME file is for domain resolution between Google and GitHub.
+22. `_config.yml` contains the basic and main information/data for the website.
+23. Gemfile is important for plugins.
 
 
 ### Blog
