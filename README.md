@@ -46,6 +46,8 @@ generating documents and pages that were updated since the previous build.
    data/index/projects.yml file.
 3. If you want to change the html options, for example, for projects, go to: _
    includes/sections/projects.html.
+4. If you add a new project, the image should be resized so that its height is 
+   200px.
 
 # Other info:
 
