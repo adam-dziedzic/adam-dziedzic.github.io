@@ -1,0 +1,12 @@
+@INPROCEEDINGS{7761594,
+author={A. Dziedzic and A. J. Elmore and M. Stonebraker},
+booktitle={2016 IEEE High Performance Extreme Computing Conference (HPEC)},
+title={Data transformation and migration in polystores},
+year={2016},
+volume={},
+number={},
+pages={1-6},
+keywords={SQL;data handling;database management systems;Accumulo;PostgreSQL;S-Store;SciDB;data migration tool;data mobility;data processing;data transformation;data-intensive applications;database systems;outline research opportunities;polystores;Arrays;Data mining;Distributed databases;Engines;Relational databases;Transforms},
+doi={10.1109/HPEC.2016.7761594},
+ISSN={},
+month={Sept},}
