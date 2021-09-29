@@ -84,7 +84,7 @@ generating documents and pages that were updated since the previous build.
 21. CNAME file is for domain resolution between Google and GitHub.
 22. `_config.yml` contains the basic and main information/data for the website.
 23. Gemfile is important for plugins.
-
+24. Update your CV. Add info about talks.
 
 ### Blog
 
