@@ -42,6 +42,17 @@ generating documents and pages that were updated since the previous build.
    Check the website locally. Open this _site/index.html in your web browser and
    inspect it. What is the error? It shows the exact line. For example, Chart
    was missing from a Chart.js JavaScript library.
+2. The easiest way to deploy the webpage is to run `deploy.sh`. The github pages are directed to serve from `docs/` folder. The commands are as follows:
+   ```shell
+   timestamp=`date "+%Y-%m-%d-%H:%M:%S"`
+    cd docs
+    rm -r *
+    cp -r ../_site/* .
+    git add *
+    cd ..
+    git commit -am "deploy at timestamp: ${timestamp}"
+    git push origin source
+   ```
 2. We cannot deploy this as it is directly to github pages because the `jekyll-scholar` is not enabled plugin officially on github. Check Gemfile to see the plugin and also `_plugins/ext.rb`. It has to be added to the `_plugins`, otherwise the `jekyll-scholar` does not work. To deploy the website you need to put index.html and all other files/folders
    from _sites in the main root branch. Maintain the .git folder! You have
    another folder code/adam-dziedzic.github.io-master which should contain the
