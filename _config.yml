@@ -6,13 +6,14 @@ description: Adam's home page.
 keywords: Adam, homepage, webpage, page, web
 baseurl: / # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 # baseurl: http://127.0.0.1:4000
+# baseurl: https://adam-dziedzic.github.io/
 # url: https://adam-dziedzic.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
 url: http://127.0.0.1:4000
 # livereload: true
 img_path: static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
-author: # change following line to your infomation.
+author: # change following line to your information.
   name: Adam Dziedzic  # Be used at blog posts' author.
   first_name: Adam  # Be used at index page about me section.
   last_name: Dziedzic  # Be used at index page about me section.
