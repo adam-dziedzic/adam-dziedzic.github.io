@@ -21,6 +21,9 @@
 {% elsif entry.type == "inproceedings" %}
     <em>In {{entry.booktitle}}</em>
 {% endif %}
+{% if entry.year %}
+    <em> {{entry.year}} </em>
+{% endif %}
 {% if entry.pub_type == "Conference" or  entry.pub_type == "Journal" %}
 <span class="badge badge-pill badge-primary">{{entry.pub_type}}</span>
 {% elsif entry.pub_type == "Workshop" %}
@@ -45,6 +48,14 @@
     {% if entry.journal contains "arXiv" %}
     <a style="margin-top:0.5em" class="btn btn-info btn-sm" href="https://arxiv.org/abs/{{ arxiv_str[1] }}" target="_blank" role="button"><img src="static/assets/svgs/file.svg" alt="" width="20" height="20" title="PDF"> Paper</a>
     {% endif %}
+    {% if entry.abstract %}
+    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-{{entry.key}}-abstract" aria-expanded="false" aria-controls="collapse-{{entry.key}}-abstract">
+       Abstract
+    </button>
+    {% endif %}
+    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-{{entry.key}}-bibtex" aria-expanded="false" aria-controls="collapse-{{entry.key}}-bibtex">
+        BibTeX
+    </button>
     {% if entry.poster_url %}
     <a style="margin-top:0.5em" class="btn btn-info btn-sm" href="{{ entry.poster_url }}" target="_blank" role="button"><img src="static/assets/svgs/poster.svg" alt="" width="20" height="20" title="PDF"> Poster</a>
     {% endif %}
@@ -63,15 +74,6 @@
     {% if entry.supp_url %}
     <a style="margin-top:0.5em" class="btn btn-info btn-sm" href="{{ entry.supp_url }}" target="_blank" role="button"><img src="static/assets/svgs/supp.svg" alt="" width="20" height="20" title="PDF"> Supplementary Material</a>
     {% endif %}
-    {% if entry.abstract %}
-    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-{{entry.key}}-abstract" aria-expanded="false" aria-controls="collapse-{{entry.key}}-abstract">
-       Abstract
-    </button>
-    {% endif %}
-
-    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-{{entry.key}}-bibtex" aria-expanded="false" aria-controls="collapse-{{entry.key}}-bibtex">
-        BibTeX
-    </button>
 </p>
 
 <div class="collapse" id="collapse-{{entry.key}}-abstract" style="padding-bottom:1em">

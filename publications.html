@@ -1,0 +1,17 @@
+---
+title: publications
+years: [2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
+layout: bibliography
+permalink: /publications
+---
+
+<h3>Publications</h3>
+
+An up-to-date list is available on <a href="https://scholar.google.com/citations?user={{ site.author.google_scholar_id }}" target="_blank"><span>Google Scholar</span></a>
+
+{% for y in page.years %}
+  <hr />
+  <h3  id="{{y}}" class="pubyear">{{y}}</h3>
+  {% bibliography -f main_papers.bib -q @*[year={{y}}]* %}
+  {% bibliography -f rest_papers.bib -q @*[year={{y}}]* %}
+{% endfor %}

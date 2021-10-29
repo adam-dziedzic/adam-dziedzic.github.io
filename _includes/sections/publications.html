@@ -2,16 +2,20 @@
     <div class="row m-b-lg">
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
-            <h1><span data-i18n="projects.my_projects">Publications</span></h0>
+            <h1><span
+                    data-i18n="projects.my_projects">Selected Publications</span></h0>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6 wow col-sm-offset-3 zoomIn user-my-margin">
-            {% for year in (2014..2021) reversed %}
-              <hr />
-              <h3  id="{{y}}">{{year}}</h3>
-              {% bibliography -f papers -q @*[year={{year}}]* %}
-            {% endfor %}
+            <h4>Please also check the <a
+                    href="{{ '/publications/' | prepend: project.baseurl }}"
+                    target="_blank">Full List</a>
+                of my publications and the <a
+                        href="https://scholar.google.com/citations?user={{ site.author.google_scholar_id }}"
+                        target="_blank"><span>Google Scholar</span></a> profile.
+            </h4>
+            {% bibliography -f main_papers.bib %}
         </div>
     </div>
 </div>
