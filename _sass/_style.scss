@@ -354,7 +354,7 @@ button.dim {
 }
 
 .btn {
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 .btn-primary.btn-outline {
@@ -2833,3 +2833,6 @@ body {
   }
 }
 
+.btn-info-pad {
+  padding: 3px 8px;
+}
