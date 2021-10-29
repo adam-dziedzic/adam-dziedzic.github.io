@@ -15,19 +15,19 @@ here: https://jekyllrb.com/docs/installation/windows/#auto-regeneration
 Ultimate command, never fails and rebuilds everything from scratch:
 
 ```shell
-bundle exec jekyll serve --force_polling --livereload --trace
+bundle exec jekyll serve --force_polling --livereload --trace --destination docs --incremental
 ```
 
 On Windows:
 
 ```shell
-bundle exec jekyll serve --force_polling --livereload --incremental
+bundle exec jekyll serve --force_polling --livereload --incremental --destination docs
 ```
 
 Do Live reload:
 
 ```shell
-build jekyll serve --port 5000 --incremental --livereload
+build jekyll serve --port 5000 --incremental --livereload --destination docs
 ```
 
 `--incremental` Incremental regeneration helps shorten build times by only
@@ -42,21 +42,40 @@ generating documents and pages that were updated since the previous build.
    Check the website locally. Open this _site/index.html in your web browser and
    inspect it. What is the error? It shows the exact line. For example, Chart
    was missing from a Chart.js JavaScript library.
-2. The easiest way to deploy the webpage is to run `deploy.sh`. The github pages are directed to serve from `docs/` folder. The commands are as follows:
+2. The easiest way to deploy the webpage is to run `deploy.sh`. Deploy the
+   static website to the `docs/` directory. The github pages are directed to
+   serve from `docs/` folder. The commands are as follows:
+   ```shell
+    timestamp=$(date "+%Y-%m-%d-%H:%M:%S")
+    git add *
+    git commit -am "deploy at timestamp: ${timestamp}"
+    git push origin source
+   ``` 
+
+3. Old version with a standard destination of building the static website to
+   the `_site` folder:
+
    ```shell
    timestamp=`date "+%Y-%m-%d-%H:%M:%S"`
+    mkdir docs
     cd docs
-    rm -r *
     cp -r ../_site/* .
     git add *
     cd ..
     git commit -am "deploy at timestamp: ${timestamp}"
     git push origin source
+    rm -r docs
    ```
-2. We cannot deploy this as it is directly to github pages because the `jekyll-scholar` is not enabled plugin officially on github. Check Gemfile to see the plugin and also `_plugins/ext.rb`. It has to be added to the `_plugins`, otherwise the `jekyll-scholar` does not work. To deploy the website you need to put index.html and all other files/folders
-   from _sites in the main root branch. Maintain the .git folder! You have
-   another folder code/adam-dziedzic.github.io-master which should contain the
-   final deployment files. More about [deployment](https://github.com/randymorris/randymorris.github.com).
+
+2. We cannot deploy this as it is directly to github pages because
+   the `jekyll-scholar` is not enabled plugin officially on github. Check
+   Gemfile to see the plugin and also `_plugins/ext.rb`. It has to be added to
+   the `_plugins`, otherwise the `jekyll-scholar` does not work. To deploy the
+   website you need to put index.html and all other files/folders from _sites in
+   the main root branch. Maintain the .git folder! You have another folder
+   code/adam-dziedzic.github.io-master which should contain the final deployment
+   files. More
+   about [deployment](https://github.com/randymorris/randymorris.github.com).
    ```shell
        git publish-website # which consists of the following steps
        git branch -D master
@@ -66,29 +85,33 @@ generating documents and pages that were updated since the previous build.
        git push --all origin
    ```
    Other sources:
-   - https://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/
-   - https://github.com/robwierzbowski/grunt-build-control
-   - https://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/
-    - 
+    - https://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/
+    - https://github.com/robwierzbowski/grunt-build-control
+    - https://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/
+    -
 3. Check if you can use /docs from git hub pages instead of copying the _sites
    folder.
-4. Add the accordion from bootstrap for years of publications. https://getbootstrap.com/docs/4.3/components/collapse/
-4. Learn the grid system in bootstrap: https://getbootstrap.com/docs/4.1/layout/grid/   
+4. Add the accordion from bootstrap for years of
+   publications. https://getbootstrap.com/docs/4.3/components/collapse/
+4. Learn the grid system in
+   bootstrap: https://getbootstrap.com/docs/4.1/layout/grid/
 5. Add section Videos to your website.
 6. Add more inputs for your publications.
 7. Go through the tutorial on jekyll.
 8. Read thoroughly the deployment for github pages.
 9. Create the website for CaPC.
-10. Add a section about coding with pointer to github: https://maruan.alshedivat.com/code/
-10. Add your more personal website.    
+10. Add a section about coding with pointer to
+    github: https://maruan.alshedivat.com/code/
+10. Add your more personal website.
 11. Add section about your past projects.
 12. Add section with your best photos.
 13. Buy domain for your family and create e-mail addresses for them.
 14. Creating a custom 404 page for your GitHub Pages site
-15. Change the colors of the buttons starting from the btn-info, which is green. Add blud, orange, red, etc.
+15. Change the colors of the buttons starting from the btn-info, which is green.
+    Add blud, orange, red, etc.
 16. Check Marcin Wachulski website.
 17. The main style CSS sheet is: `_sass/style.scss`
-17. The bacic templates for html pages are in `_layouts`.    
+17. The bacic templates for html pages are in `_layouts`.
 18. `_includes` have the html pages - how to arrange stuff.
 19. `_data/index` have the real data easily arranged, also `_data/landing.yml`.
 20. To add blog posts, go to `_posts`.
@@ -96,7 +119,8 @@ generating documents and pages that were updated since the previous build.
 22. `_config.yml` contains the basic and main information/data for the website.
 23. Gemfile is important for plugins.
 24. Update your CV. Add info about talks.
-25. Change icons for projects: data loading & big dawg to more 'scientific' ones.
+25. Change icons for projects: data loading & big dawg to more 'scientific'
+    ones.
 
 ### Blog
 
