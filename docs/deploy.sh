@@ -1,8 +1,6 @@
-timestamp=`date "+%Y-%m-%d-%H:%M:%S"`
-cd docs
-rm -r *
-cp -r ../_site/* .
+timestamp=$(date "+%Y-%m-%d-%H:%M:%S")
+mv _site docs
 git add *
-cd ..
 git commit -am "deploy at timestamp: ${timestamp}"
 git push origin source
+mv docs _site
