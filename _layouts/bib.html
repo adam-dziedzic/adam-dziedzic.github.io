@@ -44,6 +44,8 @@
     <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="{{ entry.paper_url }}" target="_blank" role="button"><img src="{{ site.url }}/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Thesis</a>
     {% elsif entry.paper_url %}
     <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="{{ entry.paper_url }}" target="_blank" role="button"><img src="{{ site.url }}/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    {% elsif entry.url %}
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="{{ entry.url }}" target="_blank" role="button"><img src="{{ site.url }}/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     {% endif %}
     {% assign arxiv_str = entry.journal | split: ":" %}
     {% if entry.journal contains "arXiv" %}

@@ -82,4 +82,4 @@ scholar:
   source: ./bibliography
   order: descending
   sort_by: [ year, month ]
-  bibtex_skip_fields: [ abstract, month_numeric, paper_url, code_url, supp_url, video_url, blog_url, poster_url, slides_url, tags, pub_type, pub_note ]
+  bibtex_skip_fields: [ abstract, month_numeric, url, paper_url, code_url, supp_url, video_url, blog_url, poster_url, slides_url, tags, pub_type, pub_note ]
