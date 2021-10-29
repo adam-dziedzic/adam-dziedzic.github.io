@@ -8,7 +8,10 @@ baseurl: / # if you have suburl as homepage like '/homepage', please change it t
 # baseurl: http://127.0.0.1:4000
 # baseurl: https://adam-dziedzic.github.io/
 # url: https://adam-dziedzic.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
-url: http://127.0.0.1:4000
+host: 127.0.0.1
+port: 4000
+# url: http://127.0.0.1:4000
+url: https://adam-dziedzic.github.io
 # livereload: true
 img_path: static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
@@ -78,5 +81,5 @@ scholar:
   bibliography_template: bib
   source: ./bibliography
   order: descending
-  sort_by: [year, month]
-  bibtex_skip_fields: [abstract, month_numeric, paper_url, code_url, supp_url, video_url, blog_url, poster_url, slides_url, tags, pub_type, pub_note]
+  sort_by: [ year, month ]
+  bibtex_skip_fields: [ abstract, month_numeric, paper_url, code_url, supp_url, video_url, blog_url, poster_url, slides_url, tags, pub_type, pub_note ]

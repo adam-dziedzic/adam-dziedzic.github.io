@@ -12,6 +12,16 @@ here: https://jekyllrb.com/docs/installation/windows/#auto-regeneration
 
 `gem install wdm`
 
+Build and serve the site locally:
+```shell
+bundle exec jekyll serve --host localhost --port 4000 --incremental --livereload --destination docs
+```
+
+Build the site for deployment:
+```shell
+jekyll build --destination docs
+```
+
 Ultimate command, never fails and rebuilds everything from scratch:
 
 ```shell
@@ -27,7 +37,7 @@ bundle exec jekyll serve --force_polling --livereload --incremental --destinatio
 Do Live reload:
 
 ```shell
-build jekyll serve --port 5000 --incremental --livereload --destination docs
+bundle exec jekyll serve --port 5000 --incremental --livereload --destination docs
 ```
 
 `--incremental` Incremental regeneration helps shorten build times by only

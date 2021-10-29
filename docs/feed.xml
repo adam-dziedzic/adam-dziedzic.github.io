@@ -3,10 +3,10 @@
   <channel>
     <title>Adam Dziedzic</title>
     <description>Adam's home page.</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Oct 2021 14:59:58 -0400</pubDate>
-    <lastBuildDate>Fri, 29 Oct 2021 14:59:58 -0400</lastBuildDate>
+    <link>https://adam-dziedzic.github.io//</link>
+    <atom:link href="https://adam-dziedzic.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 29 Oct 2021 15:36:05 -0400</pubDate>
+    <lastBuildDate>Fri, 29 Oct 2021 15:36:05 -0400</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -45,8 +45,8 @@
 &lt;p&gt;The 1st reviewer of this paper noticed that: “The idea of ‘warm starting’ each new minibatch with the perturbation values from the previous minibatch is not particularly founded, and no justification or ablation study is provided to analyze the impact of this choice. What happens when no warm start is used? How much does the final attack differ from the initialization value? Is this pushing the attack towards some notion of universal perturbation?” This observation was thouroughly exploited in the the paper on fast adversarial training: https://openreview.net/pdf?id=BJx040EFvH&lt;/p&gt;
 </description>
         <pubDate>Sun, 16 Feb 2020 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000//html/2020/02/16/Free-adversarial-training.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2020/02/16/Free-adversarial-training.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2020/02/16/Free-adversarial-training.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2020/02/16/Free-adversarial-training.html</guid>
         
         <category>deep learning machine learning adversarial training</category>
         
@@ -104,8 +104,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 23 Aug 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//machine-learning/2018/08/23/optasia-video-analysis.html</link>
-        <guid isPermaLink="true">http://localhost:4000//machine-learning/2018/08/23/optasia-video-analysis.html</guid>
+        <link>https://adam-dziedzic.github.io//machine-learning/2018/08/23/optasia-video-analysis.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//machine-learning/2018/08/23/optasia-video-analysis.html</guid>
         
         <category>deep learning machine learning databases</category>
         
@@ -151,8 +151,8 @@ $$
 
 </description>
         <pubDate>Mon, 25 Jun 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//machine-learning/2018/06/25/spectral-pooling.html</link>
-        <guid isPermaLink="true">http://localhost:4000//machine-learning/2018/06/25/spectral-pooling.html</guid>
+        <link>https://adam-dziedzic.github.io//machine-learning/2018/06/25/spectral-pooling.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//machine-learning/2018/06/25/spectral-pooling.html</guid>
         
         <category>deep learning machine learning frequency domain fft CNN convolution</category>
         
@@ -194,8 +194,8 @@ The vectors \(w_i\) for \(i=1,...,n\) are the orthonormal basis for inner-produc
 
 </description>
         <pubDate>Sun, 24 Jun 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//machine-learning/2018/06/24/parsevals-identity.html</link>
-        <guid isPermaLink="true">http://localhost:4000//machine-learning/2018/06/24/parsevals-identity.html</guid>
+        <link>https://adam-dziedzic.github.io//machine-learning/2018/06/24/parsevals-identity.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//machine-learning/2018/06/24/parsevals-identity.html</guid>
         
         <category>deep learning machine learning frequency domain fft CNN convolution linear algebra LA</category>
         
@@ -299,8 +299,8 @@ The vectors \(w_i\) for \(i=1,...,n\) are the orthonormal basis for inner-produc
 
 </description>
         <pubDate>Sat, 23 Jun 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//life/2018/06/23/general-advice-phd.html</link>
-        <guid isPermaLink="true">http://localhost:4000//life/2018/06/23/general-advice-phd.html</guid>
+        <link>https://adam-dziedzic.github.io//life/2018/06/23/general-advice-phd.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//life/2018/06/23/general-advice-phd.html</guid>
         
         <category>PhD life goals</category>
         
@@ -343,8 +343,8 @@ The vectors \(w_i\) for \(i=1,...,n\) are the orthonormal basis for inner-produc
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 17 May 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/05/17/pricing-citation-data.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/05/17/pricing-citation-data.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/05/17/pricing-citation-data.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/05/17/pricing-citation-data.html</guid>
         
         <category>databases pricing citation data-market</category>
         
@@ -491,8 +491,8 @@ The vectors \(w_i\) for \(i=1,...,n\) are the orthonormal basis for inner-produc
 
 </description>
         <pubDate>Tue, 15 May 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/05/15/graphx.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/05/15/graphx.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/05/15/graphx.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/05/15/graphx.html</guid>
         
         <category>osdi2014 graphs databases graphx spark</category>
         
@@ -610,8 +610,8 @@ The client application parameter server executed the data movements in the backg
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 10 May 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/05/10/GeePS.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/05/10/GeePS.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/05/10/GeePS.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/05/10/GeePS.html</guid>
         
         <category>machine-learning Euro 2014 databases optimization param-server parameter-server parameter server</category>
         
@@ -647,8 +647,8 @@ are key to simplifying the adoption of a wide range of ML methods.  In general, 
 &lt;/ol&gt;
 </description>
         <pubDate>Tue, 08 May 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/05/08/parameter-server.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/05/08/parameter-server.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/05/08/parameter-server.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/05/08/parameter-server.html</guid>
         
         <category>machine-learning OSDI 2014 databases optimization param-server parameter-server parameter server</category>
         
@@ -692,8 +692,8 @@ are key to simplifying the adoption of a wide range of ML methods.  In general, 
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 06 May 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/05/06/Spark-Streaming.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/05/06/Spark-Streaming.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/05/06/Spark-Streaming.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/05/06/Spark-Streaming.html</guid>
         
         <category>streaming databases SOSP 2013 spark mike</category>
         
@@ -745,8 +745,8 @@ are key to simplifying the adoption of a wide range of ML methods.  In general, 
 
 </description>
         <pubDate>Fri, 04 May 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/05/04/learned-indexes.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/05/04/learned-indexes.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/05/04/learned-indexes.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/05/04/learned-indexes.html</guid>
         
         <category>machine-learning SIGMOD 2018 learned-indexes</category>
         
@@ -858,8 +858,8 @@ are key to simplifying the adoption of a wide range of ML methods.  In general, 
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/05/01/clipper.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/05/01/clipper.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/05/01/clipper.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/05/01/clipper.html</guid>
         
         <category>machine-learning NSDI 2017</category>
         
@@ -938,8 +938,8 @@ are key to simplifying the adoption of a wide range of ML methods.  In general, 
 
 </description>
         <pubDate>Mon, 30 Apr 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/04/30/database-tuning-advisor-for-microsoft-sql-server-2005.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/04/30/database-tuning-advisor-for-microsoft-sql-server-2005.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/04/30/database-tuning-advisor-for-microsoft-sql-server-2005.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/04/30/database-tuning-advisor-for-microsoft-sql-server-2005.html</guid>
         
         <category>database Microsoft msr DTA SQL Server tuning advisor DBMS vldb 2004</category>
         
@@ -970,8 +970,8 @@ are key to simplifying the adoption of a wide range of ML methods.  In general, 
 
 </description>
         <pubDate>Sun, 29 Apr 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/04/29/efficient-cost-driven-index-selection-for-SQL-Server.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/04/29/efficient-cost-driven-index-selection-for-SQL-Server.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/04/29/efficient-cost-driven-index-selection-for-SQL-Server.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/04/29/efficient-cost-driven-index-selection-for-SQL-Server.html</guid>
         
         <category>databaes vldb microsoft 1997 auto-admin tuning DBMS</category>
         
@@ -1075,8 +1075,8 @@ In other words, application of NLP (Natural Language Processing) based machine l
 
 </description>
         <pubDate>Sun, 29 Apr 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/04/29/cognitive-databases.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/04/29/cognitive-databases.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/04/29/cognitive-databases.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/04/29/cognitive-databases.html</guid>
         
         <category>databaes nlp word2vec word-embeddings IBM Watson</category>
         
@@ -1140,8 +1140,8 @@ In other words, application of NLP (Natural Language Processing) based machine l
 &lt;p&gt;Thus, the most useful command provided is: Esimtate Configuration (set of indexes) of &lt;workload_name&gt; for &lt;configuration_name&gt;&lt;/configuration_name&gt;&lt;/workload_name&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 Apr 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/04/29/auto-admin-what-if-index-analysis-utility.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/04/29/auto-admin-what-if-index-analysis-utility.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/04/29/auto-admin-what-if-index-analysis-utility.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/04/29/auto-admin-what-if-index-analysis-utility.html</guid>
         
         <category>databaes sigmod microsoft 1998 auto-admin tuning DBMS</category>
         
@@ -1365,8 +1365,8 @@ In the paper: some Jujutsu moves - take the attack and claim this is exactly wha
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 26 Apr 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//html/2018/04/26/DataFlowModelGoogleSIGMOD2015.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/04/26/DataFlowModelGoogleSIGMOD2015.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/04/26/DataFlowModelGoogleSIGMOD2015.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/04/26/DataFlowModelGoogleSIGMOD2015.html</guid>
         
         <category>databaes streaming google sigmod 2015</category>
         
@@ -1399,8 +1399,8 @@ In the paper: some Jujutsu moves - take the attack and claim this is exactly wha
 \end{gather*}\]
 </description>
         <pubDate>Thu, 22 Feb 2018 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000//html/2018/02/22/log-barrier.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/02/22/log-barrier.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/02/22/log-barrier.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/02/22/log-barrier.html</guid>
         
         <category>log-barrier optimization convexity interior-point-method</category>
         
@@ -1447,8 +1447,8 @@ In the paper: some Jujutsu moves - take the attack and claim this is exactly wha
 &lt;p&gt;Fastests mixing Markov chain on a graph, credits: Prof. Stephen Boyd for his book on convex optimization, Prof. Nati Srebro (for the main introduction to the problem), Blake Woodworth (for explaining why we have to normalize eigenvectors), Angela Wu (for explaining how to isolate eigenvalues).&lt;/p&gt;
 </description>
         <pubDate>Fri, 09 Feb 2018 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000//html/2018/02/09/Fastest-Mixing-Markov-Chain-On-A-Graph.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/02/09/Fastest-Mixing-Markov-Chain-On-A-Graph.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/02/09/Fastest-Mixing-Markov-Chain-On-A-Graph.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/02/09/Fastest-Mixing-Markov-Chain-On-A-Graph.html</guid>
         
         <category>markov</category>
         
@@ -1524,8 +1524,8 @@ In the paper: some Jujutsu moves - take the attack and claim this is exactly wha
 
 </description>
         <pubDate>Mon, 05 Feb 2018 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000//html/2018/02/05/Multi-Scale-Convolutional-Neural-Networks-For-Time-Series-Classification.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2018/02/05/Multi-Scale-Convolutional-Neural-Networks-For-Time-Series-Classification.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2018/02/05/Multi-Scale-Convolutional-Neural-Networks-For-Time-Series-Classification.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2018/02/05/Multi-Scale-Convolutional-Neural-Networks-For-Time-Series-Classification.html</guid>
         
         <category>cnn time-series</category>
         
@@ -1581,8 +1581,8 @@ In the paper: some Jujutsu moves - take the attack and claim this is exactly wha
 &lt;p&gt;If you like this repository, I appreciate you star this repository. Please don’t hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!😊&lt;/p&gt;
 </description>
         <pubDate>Tue, 31 Jan 2017 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</link>
-        <guid isPermaLink="true">http://localhost:4000//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</guid>
+        <link>https://adam-dziedzic.github.io//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</link>
+        <guid isPermaLink="true">https://adam-dziedzic.github.io//html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</guid>
         
         <category>Jalpc</category>
         
