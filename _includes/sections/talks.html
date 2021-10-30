@@ -26,25 +26,33 @@
                     <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
 
             {% endif %}
-                        <div class="team-member">
-                            <h3><span class="navy">{{ talk.name }}</span></h3>
-                        </div>
 
                     {% if talk.slidelive %}
+
+                        <div class="team-member">
+                            <h3><span class="navy"><a href="https://slideslive.com/{{talk.slidelive}}" target="_blank">{{ talk.name }}</a></span></h3>
+                        </div>
+
                         <div class="youtube-wrapper iframe">
-                            <div id="presentation-embed-{{ talk.slidelive }}"></div>
-                            <script src='https://slideslive.com/embed_presentation.js'></script>
-                            <script>
-                                embed = new SlidesLiveEmbed('presentation-embed-{{ talk.slidelive }}', {
-                                    presentationId: '{{ talk.slidelive }}',
-                                    autoPlay: false,
-                                    verticalEnabled: true,
-                                    startTime: '{{ talk.startTime }}'
-                                });
-                            </script>
+                            <iframe src="https://www.youtube.com/embed/{{ talk.url }}" allowfullscreen></iframe>
+
+<!--                            <div id="presentation-embed-{{ talk.slidelive }}"></div>-->
+<!--                            <script src='https://slideslive.com/embed_presentation.js'></script>-->
+<!--                            <script>-->
+<!--                                embed = new SlidesLiveEmbed('presentation-embed-{{ talk.slidelive }}', {-->
+<!--                                    presentationId: '{{ talk.slidelive }}',-->
+<!--                                    autoPlay: false,-->
+<!--                                    verticalEnabled: true,-->
+<!--                                    startTime: '{{ talk.startTime }}'-->
+<!--                                });-->
+<!--                            </script>-->
                         </div>
 
                     {% else %}
+
+                        <div class="team-member">
+                            <h3><span class="navy"><a href="https://www.youtube.com/watch?v={{talk.url}}" target="_blank">{{ talk.name }}</a></span></h3>
+                        </div>
 
                         <div class="youtube-wrapper iframe">
                             <iframe src="https://www.youtube.com/embed/{{ talk.url }}" allowfullscreen></iframe>
