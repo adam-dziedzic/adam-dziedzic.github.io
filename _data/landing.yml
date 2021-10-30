@@ -11,17 +11,29 @@
   name: Publications
   tpl: publications.html
 
+- id: talks
+  i18n: nav.talks
+  name: Talks
+  tpl: talks.html
+  css: project
+
+#- id: career
+#  i18n: nav.career
+#  name: Experience
+#  tpl: career.html
+#  css: timeline
+
+- id: experience
+  i18n: nav.experience
+  name: Experience
+  tpl: experience.html
+  css: timeline
+
 - id: projects
   i18n: nav.projects
   name: Projects
   tpl: projects.html
   css: project
-
-- id: career
-  i18n: nav.career
-  name: Experience
-  tpl: career.html
-  css: timeline
 
 #- id: skills
 #  i18n: nav.skills

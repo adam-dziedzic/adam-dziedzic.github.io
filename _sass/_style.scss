@@ -1830,6 +1830,22 @@ ul.clear-list:first-child {
   padding-bottom: 50px;
 }
 
+.user-video-margin {
+  padding-bottom: 20px;
+}
+
+.user-experience-margin {
+  padding-bottom: 20px;
+}
+
+.user-project-margin {
+  padding-bottom: 40px;
+}
+
+.user-experience {
+  color: #3385FF;
+}
+
 .mail-box {
   background-color: #fff;
   border: 1px solid #e7eaec;
@@ -2835,4 +2851,47 @@ body {
 
 .btn-info-pad {
   padding: 3px 8px;
+}
+
+.youtube-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: scale(1, 1);
+}
+
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slidelive-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: scale(1, 1);
 }

@@ -5,40 +5,55 @@
             <h1><span data-i18n="videos.my_videos">Research Talks</span></h1>
         </div>
     </div>
-    <h4>These video resources are a good overview of my research interests.</h4>
     <div class="row">
-        {% for project in site.data.index.projects %}
-        {% assign loopindex = forloop.index | modulo: 2 %}
-        {% if forloop.last %}
-        {% if forloop.last == forloop.first %}
         <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
-            {% else %}
-            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
-                {% endif %}
-                {% else %}
-                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
-                    {% endif %}
-                    <div class="team-member">
-                        <img src="{{ project.img | prepend: site.baseurl }}"
-                             class="img-responsive img-average"
-                             alt="{{ project.name }}">
-                        <h4>
-                            {% if project.url %}
-                            <a href="{{ project.url }}" target="_blank"><span
-                                    class="navy">{{ project.name }}</span></a>
-                            {% elsif project.repo %}
-                            <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}"
-                               target="_blank"><span class="navy">{{ project.name }}</span></a>
-                            {% else %}
-                            <span class="navy">{{ project.name }}</span>
-                            {% endif %}
-                        </h4>
-                        <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <h3>These video resources are a good overview of my research interests.</h3>
         </div>
+        {% for talk in site.data.index.talks %}
+
+            {% assign loopindex = forloop.index | modulo: 2 %}
+
+            {% if forloop.last %}
+
+                {% if forloop.last == forloop.first %}
+                    <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
+                {% else %}
+                    <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
+                {% endif %}
+
+            {% else %}
+
+                    <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+
+            {% endif %}
+                        <div class="team-member">
+                            <h3><span class="navy">{{ talk.name }}</span></h3>
+                        </div>
+
+                    {% if talk.slidelive %}
+                        <div class="youtube-wrapper iframe">
+                            <div id="presentation-embed-{{ talk.slidelive }}"></div>
+                            <script src='https://slideslive.com/embed_presentation.js'></script>
+                            <script>
+                                embed = new SlidesLiveEmbed('presentation-embed-{{ talk.slidelive }}', {
+                                    presentationId: '{{ talk.slidelive }}',
+                                    autoPlay: false,
+                                    verticalEnabled: true,
+                                    startTime: '{{ talk.startTime }}'
+                                });
+                            </script>
+                        </div>
+
+                    {% else %}
+
+                        <div class="youtube-wrapper iframe">
+                            <iframe src="https://www.youtube.com/embed/{{ talk.url }}" allowfullscreen></iframe>
+                        </div>
+
+                    {% endif %}
+
+                        <div class="user-video-margin"></div>
+                    </div>
         {% endfor %}
     </div>
 </div>

@@ -38,7 +38,6 @@
 <span class="badge badge-pill badge-info">{{entry.pub_note}}</span>
 {% endif %}
 
-{% include base.html %}
 <p>
     {% if entry.paper_url and entry.pub_type == "Thesis" %}
     <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="{{ entry.paper_url }}" target="_blank" role="button"><img src="{{ site.url }}/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Thesis</a>
