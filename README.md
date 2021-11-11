@@ -45,8 +45,12 @@ generating documents and pages that were updated since the previous build.
 
 `--livereload` reload lively after every change
 
+### Additional info:
+1. The main style CSS sheet is: `_sass/style.scss`
+
 ### Coding, Deployment, Trouble Shooting
 
+1. Add links to the titles of the talks.
 1. If there is Uncaught ReferenceError: and something is not defined then there
    is a JavaScript library missing. Go to _sites and double click on index.html.
    Check the website locally. Open this _site/index.html in your web browser and
@@ -105,8 +109,6 @@ generating documents and pages that were updated since the previous build.
    publications. https://getbootstrap.com/docs/4.3/components/collapse/
 4. Learn the grid system in
    bootstrap: https://getbootstrap.com/docs/4.1/layout/grid/
-5. Add section Videos to your website.
-6. Add more inputs for your publications.
 7. Go through the tutorial on jekyll.
 8. Read thoroughly the deployment for github pages.
 9. Create the website for CaPC.
@@ -118,9 +120,8 @@ generating documents and pages that were updated since the previous build.
 13. Buy domain for your family and create e-mail addresses for them.
 14. Creating a custom 404 page for your GitHub Pages site
 15. Change the colors of the buttons starting from the btn-info, which is green.
-    Add blud, orange, red, etc.
+    Add blue, orange, red, etc.
 16. Check Marcin Wachulski website.
-17. The main style CSS sheet is: `_sass/style.scss`
 17. The bacic templates for html pages are in `_layouts`.
 18. `_includes` have the html pages - how to arrange stuff.
 19. `_data/index` have the real data easily arranged, also `_data/landing.yml`.
@@ -131,6 +132,8 @@ generating documents and pages that were updated since the previous build.
 24. Update your CV. Add info about talks.
 25. Change icons for projects: data loading & big dawg to more 'scientific'
     ones.
+28. Add blog about PATE
+29. Add blog about CaPC
 
 ### Blog
 
