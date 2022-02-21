@@ -162,3 +162,12 @@
       abstract = {This document outlines the research vision of the collaborative research center for Privacy-preserving Machine Learning. While federated machine learning starts to be deployed, its security and privacy implications are not well understood today. Our goal is to conduct research enabling the future of decentralized machine learning: Underpinning Federated ML with robust privacy guarantees and efficient algoritms to achieve those guarantees. Exploring knowledge transfer and collaborative ML beyond Federated machine learning that suffers from a central controller as its root of trust.  Exploring Graph Neural Networks and their privacy implications. Ensuring robustness against malicious participants that may steal models or may try to poison maching learning models during training. This research will then be validated in case studies and deployed in open source frameworks to allow further experimentation and deployment on a wider scale.},
 }
 
+@misc{PrivateMultiWinnerVoting2021,
+      title={Private Multi-Winner Voting For Machine Learning},
+      author={Adam Dziedzic and Christopher A Choquette-Choo and Natalie Dullerud and Vinith Menon Suriyakumar and Ali Shahin Shamsabadi and Muhammad Ahmad Kaleem and Somesh Jha and Nicolas Papernot and Xiao Wang},
+      year={2021},
+      url = {https://openreview.net/pdf?id=JedTK_aOaRa},
+      abstract = {Private multi-winner voting is the task of revealing k-hot binary vectors that satisfy a bounded differential privacy guarantee. This task has been understudied in the machine learning literature despite its prevalence in many domains such as healthcare. We propose three new privacy-preserving multi-label mechanisms: Binary, and Powerset voting. Binary voting operates independently per label through composition. voting bounds votes optimally in their norm. Powerset voting operates over the entire binary vector by viewing the possible outcomes as a power set. We theoretically analyze tradeoffs showing that Powerset voting requires strong correlations between labels to outperform Binary voting. We use these mechanisms to enable privacy-preserving multi-label learning by extending the canonical single-label technique: PATE. We empirically compare our techniques with DPSGD on large real-world healthcare data and standard multi-label benchmarks. We find that our techniques outperform all others in the centralized setting. We enable multi-label CaPC and show that our mechanisms can be used to collaboratively improve models in a multi-site (distributed) setting.}
+}
+
+
