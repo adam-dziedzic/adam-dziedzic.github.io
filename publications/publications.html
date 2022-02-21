@@ -13,6 +13,5 @@ An up-to-date list is available on <a
 
 {% for y in page.years %}
 <h3 id="{{y}}" class="pubyear">{{y}}</h3>
-{% bibliography -f main_papers.bib -q @*[year={{y}}]* %}
-{% bibliography -f rest_papers.bib -q @*[year={{y}}]* %}
+{% bibliography -f all_papers.bib -q @*[year={{y}}]* %}
 {% endfor %}

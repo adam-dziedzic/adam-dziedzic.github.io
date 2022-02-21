@@ -1,3 +1,155 @@
+@inproceedings{dziedzic2015bigdawg,
+    title = {BigDAWG: a Polystore for Diverse Interactive Applications},
+    author = {Dziedzic, Adam and Duggan, Jennie and Elmore, Aaron J. and Gadepally, Vijay and Stonebraker, Michael},
+    booktitle = {DSIA (IEEE Viz Data Systems for Interactive Analysis)},
+    year = {2015},
+    abstract = {Interactive analytics requires low latency queries in the presence of diverse, complex, and constantly evolving workloads.
+To address these challenges, we introduce a polystore, BigDAWG, that tightly couples diverse database systems, data models, and
+query languages through use of semantically grouped Islands of Information. BigDAWG, which stands for the Big Data Working
+Group, seeks to provide location transparency by matching the right system for each workload using black-box model of query and
+system performance. In this paper we introduce BigDAWG as a solution to diverse web-based interactive applications and motivate
+our key challenges in building BigDAWG. BigDAWG continues to evolve and, where applicable, we have noted the current status of
+its implementation.},
+    url = {http://adam-dziedzic.com/static/assets/papers/dziedzic2015-bigdawg.pdf},
+
+}
+
+@inproceedings{dziedzic2016dbms,
+    title = {DBMS Data Loading: An Analysis on Modern Hardware},
+    author = {Dziedzic, Adam and Karpathiotakis, Manos and Alagiannis, Ioannis and Appuswamy, Raja and Ailamaki, Anastasia},
+    booktitle = {ADMS (Accelerating analytics and Data Management Systems)},
+    year = {2016},
+    slides_url = {http://adam-dziedzic.com/static/assets/slides/loading-adms-presentation.pdf},
+    url = {http://adam-dziedzic.com/static/assets/papers/dziedzic_adms16_data_loading.pdf},
+    abstract = {Data loading has traditionally been considered a one-time deal - an offline process out of the critical path of query execution. The architecture of
+DBMS is aligned with this assumption. Nevertheless, the rate in which data is
+produced and gathered nowadays has nullified the one-off assumption, and has
+turned data loading into a major bottleneck of the data analysis pipeline.
+This paper analyzes the behavior of modern DBMSs in order to quantify their
+ability to fully exploit multicore processors and modern storage hardware during
+data loading. We examine multiple state-of-the-art DBMSs, a variety of hardware
+configurations, and a combination of synthetic and real-world datasets to identify bottlenecks in the data loading process and to provide guidelines on how
+to accelerate data loading. Our findings show that modern DBMSs are unable to
+saturate the available hardware resources. We therefore identify opportunities to
+accelerate data loading.},
+}
+
+@inproceedings{dziedzic2016transformation,
+    title = {Data Transformation and Migration in Polystores},
+    author = {Dziedzic, Adam and Elmore, Aaron and Stonebraker, Michael},
+    booktitle = {HPEC (IEEE High Performance Extreme Computing)},
+    year = {2016},
+    organization = {IEEE},
+    url = {http://adam-dziedzic.com/static/assets/papers/dziedzic_hpec16_data_migration.pdf},
+    abstract = {Ever increasing data size and new requirements
+in data processing has fostered the development of many new
+database systems. The result is that many data-intensive applications are underpinned by different engines. To enable data
+mobility there is a need to transfer data between systems easily
+and efficiently. We analyze the state-of-the-art of data migration
+and outline research opportunities for a rapid data transfer. Our
+experiments explore data migration between a diverse set of
+databases, including PostgreSQL, SciDB, S-Store and Accumulo.
+Each of the systems excels at specific application requirements,
+such as transactional processing, numerical computation, streaming data, and large scale text processing. Providing an efficient
+data migration tool is essential to take advantage of superior
+processing from that specialized databases. Our goal is to build
+such a data migration framework that will take advantage of
+recent advancement in hardware and software.},
+    slides_url = {http://adam-dziedzic.com/static/assets/slides/data-migration-hpec2016.pdf},
+    poster_url = {http://adam-dziedzic.com/static/assets/posters/Portage-nedb2016-Poster5.pdf},
+}
+
+@inproceedings{mattson2017demonstrating,
+    title = {Demonstrating the BigDAWG Polystore System for Ocean Metagenomics Analysis.},
+    author = {Mattson, Tim and Gadepally, Vijay and She, Zuohao and Dziedzic, Adam and Parkhurst, Jeff},
+    booktitle = {CIDR (Conference on Innovative Data Systems Research)},
+    year = {2017},
+    abstract = {In most Big Data applications, the data is heterogeneous. As we have been arguing in a series of papers, storage engines should be well suited to the data they hold. Therefore, a system supporting Big Data applications should be able to expose multiple storage engines through a single interface. We call such systems, polystore systems. Our reference implementation of the polystore concept is called BigDAWG (short for the Big Data Analytics Working Group). In this demonstration, we will show the BigDAWG system and a number of polystore applications built to help ocean metage-nomics researchers handle their heterogenous Big Data.},
+    url = {http://adam-dziedzic.com/static/assets/papers/p120-mattson-cidr17.pdf},
+}
+
+@inproceedings{dziedzic2018index,
+    title = {Columnstore and B+ Tree - Are Hybrid Physical Designs Important?},
+    author = {Dziedzic, Adam and Wang, Jingjing and Das, Sudipto and Ding, Bolin and Narasayya, Vivek R. and Syamala, Manoj},
+    booktitle = {SIGMOD (ACM Special Interest Group on Management of Data)},
+    year = {2018},
+    slides_url = {http://adam-dziedzic.com/static/assets/slides/recommend-hybrid-designs-sigmod2018-presentation.pdf},
+    url = {http://adam-dziedzic.com/static/assets/papers/dziedzic-sigmod2018-recommend-hybrid-designs.pdf},
+    abstract = {Commercial DBMSs, such as Microsoft SQL Server, cater to diverse workloads including
+ transaction processing, decision support, and operational analytics. They also support
+ variety in physical design structures such as B+ tree and columnstore. The benefits
+ of B+ tree for OLTP workloads and columnstore for decision support workloads are well-understood.
+ However, the importance of hybrid physical designs, consisting of both columnstore
+ and B+ tree indexes on the same database, is not well-studied --- a focus of this
+ paper. We first quantify the trade-offs using carefully-crafted micro-benchmarks.
+ This micro-benchmarking indicates that hybrid physical designs can result in orders
+ of magnitude better performance depending on the workload. For complex real-world
+ applications, choosing an appropriate combination of columnstore and B+ tree indexes
+ for a database workload is challenging. We extend the Database Engine Tuning Advisor
+ for Microsoft SQL Server to recommend a suitable combination of B+ tree and columnstore
+ indexes for a given workload. Through extensive experiments using industry-standard
+ benchmarks and several real-world customer workloads, we quantify how a physical design
+ tool capable of recommending hybrid physical designs can result in orders of magnitude
+ better execution costs compared to approaches that rely either on columnstore-only
+ or B+ tree-only designs.},
+}
+
+@inproceedings{dziedzic2019band,
+    title = {Band-limited Training and Inference for Convolutional Neural Networks},
+    author = {Dziedzic, Adam and Paparizzos, Ioannis and Krishnan, Sanjay and Elmore, Aaron and Franklin, Michael},
+    booktitle = {ICML (International Conference on Machine Learning)},
+    year = {2019},
+    video_url = {https://adam-dziedzic.com/static/assets/talks/band-limit-video.html},
+    url = {https://adam-dziedzic.com/static/assets/papers/band-limit.pdf},
+    slides_url = {https://adam-dziedzic.com/static/assets/slides/band-limit.pdf},
+    abstract = {The convolutional layers are core building blocks of neural network architectures. In general, a convolutional filter applies to the entire frequency spectrum of the input data. We explore artificially constraining the frequency spectra of these filters and data, called band-limiting, during training. The frequency domain constraints apply to both the feed-forward and back-propagation steps. Experimentally, we observe that Convolutional Neural Networks (CNNs) are resilient to this compression scheme and results suggest that CNNs learn to leverage lower-frequency components. In particular, we found: (1) band-limited training can effectively control the resource usage (GPU and memory); (2) models trained with band-limited layers retain high prediction accuracy; and (3) requires no modification to existing training algorithms or neural network architectures to use unlike other compression schemes.},
+}
+
+@inproceedings{hendrycks-etal-2020-pretrained,
+    title = "Pretrained Transformers Improve Out-of-Distribution Robustness",
+    author = "Hendrycks, Dan  and
+      Liu, Xiaoyuan  and
+      Wallace, Eric  and
+      Dziedzic, Adam  and
+      Krishnan, Rishabh  and
+      Song, Dawn",
+    booktitle = " ACL (Association for Computational Linguistics)",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "ACL (Association for Computational Linguistics)",
+    url = "https://aclanthology.org/2020.acl-main.244",
+    doi = "10.18653/v1/2020.acl-main.244",
+    pages = "2744--2751",
+    abstract = "Although pretrained Transformers such as BERT achieve high accuracy on in-distribution examples, do they generalize to new distributions? We systematically measure out-of-distribution (OOD) generalization for seven NLP datasets by constructing a new robustness benchmark with realistic distribution shifts. We measure the generalization of previous models including bag-of-words models, ConvNets, and LSTMs, and we show that pretrained Transformers{'} performance declines are substantially smaller. Pretrained transformers are also more effective at detecting anomalous or OOD examples, while many previous models are frequently worse than chance. We examine which factors affect robustness, finding that larger models are not necessarily more robust, distillation can be harmful, and more diverse pretraining data can enhance robustness. Finally, we show where future work can improve OOD robustness.",
+    video_url = {https://slideslive.com/38929340/pretrained-transformers-improve-outofdistribution-robustness},
+    code_url = {https://github.com/adam-dziedzic/NLP-Robustness-1},
+    slides_url = {https://adam-dziedzic.com/static/assets/slides/ood_robustness.pdf},
+}
+
+@inproceedings{capc2021iclr,
+    title = {CaPC Learning: Confidential and Private Collaborative Learning},
+    author = {Christopher A. Choquette-Choo and Natalie Dullerud and Adam Dziedzic and Yunxiang Zhang and Somesh Jha and Nicolas Papernot and Xiao Wang},
+    booktitle = {ICLR (International Conference on Learning Representations)},
+    year = {2021},
+    url = {https://openreview.net/forum?id=h2EbJ4_wMVq},
+    abstract = {Machine learning benefits from large training datasets, which may not always be possible to collect by any single entity, especially when using privacy-sensitive data. In many contexts, such as healthcare and finance, separate parties may wish to collaborate and learn from each other's data but are prevented from doing so due to privacy regulations. Some regulations prevent explicit sharing of data between parties by joining datasets in a central location (confidentiality). Others also limit implicit sharing of data, e.g., through model predictions (privacy). There is currently no method that enables machine learning in such a setting, where both confidentiality and privacy need to be preserved, to prevent both explicit and implicit sharing of data. Federated learning only provides confidentiality, not privacy, since gradients shared still contain private information. Differentially private learning assumes unreasonably large datasets. Furthermore, both of these learning paradigms produce a central model whose architecture was previously agreed upon by all parties rather than enabling collaborative learning where each party learns and improves their own local model. We introduce Confidential and Private Collaborative (CaPC) learning, the first method provably achieving both confidentiality and privacy in a collaborative setting. We leverage secure multi-party computation (MPC), homomorphic encryption (HE), and other techniques in combination with privately aggregated teacher models. We demonstrate how CaPC allows participants to collaborate without having to explicitly join their training sets or train a central model. Each party is able to improve the accuracy and fairness of their model, even in settings where each party has a model that performs well on their own dataset or when datasets are not IID and model architectures are heterogeneous across parties.},
+    video_url = {https://www.youtube.com/watch?v=0yWeY39cPLo},
+    code_url = {https://github.com/cleverhans-lab/capc-demo},
+    blog_url = {http://www.cleverhans.io/2021/05/01/capc.html},
+    slides_url = {https://adam-dziedzic.com/static/assets/slides/capc2.pdf},
+}
+
+@inproceedings{pow2022iclr,
+    title = {Increasing the Cost of Model Extraction with Calibrated Proof of Work},
+    author = {Adam Dziedzic and Muhammad Ahmad Kaleem and Yu Shen Lu and Nicolas Papernot},
+    booktitle = {ICLR (International Conference on Learning Representations) [SPOTLIGTH]},
+    year = {2022},
+    url = {https://openreview.net/forum?id=EAy7C1cgE1L},
+    abstract = {In model extraction attacks, adversaries can steal a machine learning model exposed via a public API by repeatedly querying it and adjusting their own model based on obtained predictions. To prevent model stealing, existing defenses focus on detecting malicious queries, truncating, or distorting outputs, thus necessarily introducing a tradeoff between robustness and model utility for legitimate users. Instead, we propose to impede model extraction by requiring users to complete a proof-of-work before they can read the model's predictions. This deters attackers by greatly increasing (even up to 100x) the computational effort needed to leverage query access for model extraction. Since we calibrate the effort required to complete the proof-of-work to each query, this only introduces a slight overhead for regular users (up to 2x). To achieve this, our calibration applies tools from differential privacy to measure the information revealed by a query. Our method requires no modification of the victim model and can be applied by machine learning practitioners to guard their publicly exposed models against being easily stolen.},
+    code_url = {https://openreview.net/attachment?id=EAy7C1cgE1L&name=supplementary_material},
+}
+
 @inproceedings{dziedzic2014analysis,
     title = {Analysis and comparison of NoSQL databases with an introduction to consistent references in Big Data storage systems},
     author = {Dziedzic, Adam and Mulawka, Jan},
