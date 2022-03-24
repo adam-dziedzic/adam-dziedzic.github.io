@@ -1,7 +1,4 @@
 # talks page section - content
-- name: "Increasing the Cost of Model Extraction with Calibrated Proof of Work"
-  url: 8D7SpGa5jTw
-
 - name: "Confidential and Private Collaborative Learning"
   url: 0yWeY39cPLo
 
@@ -16,3 +13,5 @@
 - name: "Overview: Adaptive & Robust Neural Networks"
   url: DgQTYe5Snkg
 
+- name: "Increasing the Cost of Model Extraction with Calibrated Proof of Work"
+  url: 8D7SpGa5jTw
