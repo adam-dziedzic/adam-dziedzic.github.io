@@ -204,6 +204,120 @@ Nicolas Papernot
     </div>
 </div>
 
+</li>
+<li><b>Dataset Inference for Self-Supervised Models</b><br/>
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Haonan Duan,
+
+
+
+
+
+
+Muhammad Ahmad Kaleem,
+
+
+
+
+
+
+Nikita Dhawan,
+
+
+
+
+
+
+Jonas Guan,
+
+
+
+
+
+
+Yannis Cattan,
+
+
+
+
+
+
+Franziska Boenisch,
+
+
+
+
+
+
+Nicolas Papernot
+
+
+
+<br/>
+
+    <em>In NeurIPS (Neural Information Processing Systems)</em>
+
+
+    <em> 2022 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2209.09024" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-datasetinference2022neurips-abstract" aria-expanded="false" aria-controls="collapse-datasetinference2022neurips-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-datasetinference2022neurips-bibtex" aria-expanded="false" aria-controls="collapse-datasetinference2022neurips-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-datasetinference2022neurips-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Self-supervised models are increasingly prevalent in machine learning (ML) since they reduce the need for expensively labeled data. Because of their versatility in downstream applications, they are increasingly used as a service exposed via public APIs. At the same time, these encoder models are particularly vulnerable to model stealing attacks due to the high dimensionality of vector representations they output. Yet, encoders remain undefended: existing mitigation strategies for stealing attacks focus on supervised learning. We introduce a new dataset inference defense, which uses the private training set of the victim encoder model to attribute its ownership in the event of stealing. The intuition is that the log-likelihood of an encoder’s output representations is higher on the victim’s training data than on test data if it is stolen from the victim, but not if it is independently trained. We compute this log-likelihood using density estimation models. As part of our evaluation, we also propose measuring the fidelity of stolen encoders and quantifying the effectiveness of the theft detection without involving downstream tasks; instead, we leverage mutual information and distance measurements. Our extensive empirical results in the vision domain demonstrate that dataset inference is a promising direction for defending self-supervised models against model stealing.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-datasetinference2022neurips-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{datasetinference2022neurips,
+  title = {Dataset Inference for Self-Supervised Models},
+  author = {Dziedzic, Adam and Duan, Haonan and Kaleem, Muhammad Ahmad and Dhawan, Nikita and Guan, Jonas and Cattan, Yannis and Boenisch, Franziska and Papernot, Nicolas},
+  booktitle = {NeurIPS (Neural Information Processing Systems)},
+  year = {2022}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
 </li></ol>
 
 <h3 id="2021" class="pubyear">2021</h3>
