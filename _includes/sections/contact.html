@@ -28,6 +28,11 @@
 		{% endif %}
 	    {% endif %}
             <p>{{ contact.mail_desc }}</p>
+
+            {% if contact.public_key %}
+                <p><a href="{{ contact.public_key }}" target="_blank">Public key.</a></p>
+		    {% endif %}
+
             <ul class="list-inline social-icon">
                 <li><a href="mailto:{{ contact.email }}"><i class="fa fa-envelope-o"></i></a>
                 </li>
