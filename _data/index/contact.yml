@@ -6,5 +6,5 @@
   map: "https://goo.gl/maps/t7KbpM9PTBa1yYPA9"
   website: https://adam-dziedzic.com
   mail_desc: The best way to contact me is through email.
-  public_key: "https://adam-dziedzic.com/static/assets/pgp/Adam_Dziedzic_0xDB755B3D_public_2022.asc"
+  public_key: "static/assets/pgp/Adam_Dziedzic_0xDB755B3D_public_2022.asc"
   email: adam.dziedzic@utoronto.ca
