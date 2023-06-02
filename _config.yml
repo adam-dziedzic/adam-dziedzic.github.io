@@ -84,3 +84,5 @@ scholar:
   order: descending
   sort_by: [ year, month ]
   bibtex_skip_fields: [ abstract, month_numeric, url, paper_url, code_url, supp_url, video_url, blog_url, poster_url, slides_url, tags, pub_type, pub_note ]
+
+years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
