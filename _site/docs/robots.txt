@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: <https://adam-dziedzic.github.io/sitemap.xml>
