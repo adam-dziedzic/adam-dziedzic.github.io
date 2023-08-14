@@ -140,19 +140,6 @@ recent advancement in hardware and software.},
     slides_url = {https://adam-dziedzic.com/static/assets/slides/capc2.pdf},
 }
 
-@inproceedings{pow2022iclr,
-    title = {Increasing the Cost of Model Extraction with Calibrated Proof of Work},
-    author = {Adam Dziedzic and Muhammad Ahmad Kaleem and Yu Shen Lu and Nicolas Papernot},
-    booktitle = {ICLR (International Conference on Learning Representations) [SPOTLIGTH]},
-    year = {2022},
-    url = {https://openreview.net/forum?id=EAy7C1cgE1L},
-    abstract = {In model extraction attacks, adversaries can steal a machine learning model exposed via a public API by repeatedly querying it and adjusting their own model based on obtained predictions. To prevent model stealing, existing defenses focus on detecting malicious queries, truncating, or distorting outputs, thus necessarily introducing a tradeoff between robustness and model utility for legitimate users. Instead, we propose to impede model extraction by requiring users to complete a proof-of-work before they can read the model's predictions. This deters attackers by greatly increasing (even up to 100x) the computational effort needed to leverage query access for model extraction. Since we calibrate the effort required to complete the proof-of-work to each query, this only introduces a slight overhead for regular users (up to 2x). To achieve this, our calibration applies tools from differential privacy to measure the information revealed by a query. Our method requires no modification of the victim model and can be applied by machine learning practitioners to guard their publicly exposed models against being easily stolen.},
-    code_url = {https://github.com/cleverhans-lab/model-extraction-pow},
-    slides_url = {https://adam-dziedzic.com/static/assets/slides/ICLR-PoW-Defense-2022-03-15-18-00.pdf},
-    video_url = {https://youtu.be/8D7SpGa5jTw},
-    blog_url = {http://www.cleverhans.io/2022/04/21/pow-defense.html},
-}
-
 @inproceedings{dziedzic2014analysis,
     title = {Analysis and comparison of NoSQL databases with an introduction to consistent references in Big Data storage systems},
     author = {Dziedzic, Adam and Mulawka, Jan},
@@ -323,6 +310,19 @@ recent advancement in hardware and software.},
     year = {2021},
     url = {https://openreview.net/pdf?id=JedTK_aOaRa},
     abstract = {Private multi-winner voting is the task of revealing k-hot binary vectors that satisfy a bounded differential privacy guarantee. This task has been understudied in the machine learning literature despite its prevalence in many domains such as healthcare. We propose three new privacy-preserving multi-label mechanisms: Binary, and Powerset voting. Binary voting operates independently per label through composition. voting bounds votes optimally in their norm. Powerset voting operates over the entire binary vector by viewing the possible outcomes as a power set. We theoretically analyze tradeoffs showing that Powerset voting requires strong correlations between labels to outperform Binary voting. We use these mechanisms to enable privacy-preserving multi-label learning by extending the canonical single-label technique: PATE. We empirically compare our techniques with DPSGD on large real-world healthcare data and standard multi-label benchmarks. We find that our techniques outperform all others in the centralized setting. We enable multi-label CaPC and show that our mechanisms can be used to collaboratively improve models in a multi-site (distributed) setting.}
+}
+
+@inproceedings{pow2022iclr,
+    title = {Increasing the Cost of Model Extraction with Calibrated Proof of Work},
+    author = {Adam Dziedzic and Muhammad Ahmad Kaleem and Yu Shen Lu and Nicolas Papernot},
+    booktitle = {ICLR (International Conference on Learning Representations) [SPOTLIGTH]},
+    year = {2022},
+    url = {https://openreview.net/forum?id=EAy7C1cgE1L},
+    abstract = {In model extraction attacks, adversaries can steal a machine learning model exposed via a public API by repeatedly querying it and adjusting their own model based on obtained predictions. To prevent model stealing, existing defenses focus on detecting malicious queries, truncating, or distorting outputs, thus necessarily introducing a tradeoff between robustness and model utility for legitimate users. Instead, we propose to impede model extraction by requiring users to complete a proof-of-work before they can read the model's predictions. This deters attackers by greatly increasing (even up to 100x) the computational effort needed to leverage query access for model extraction. Since we calibrate the effort required to complete the proof-of-work to each query, this only introduces a slight overhead for regular users (up to 2x). To achieve this, our calibration applies tools from differential privacy to measure the information revealed by a query. Our method requires no modification of the victim model and can be applied by machine learning practitioners to guard their publicly exposed models against being easily stolen.},
+    code_url = {https://github.com/cleverhans-lab/model-extraction-iclr},
+    slides_url = {https://adam-dziedzic.com/static/assets/slides/ICLR-PoW-Defense-2022-03-15-18-00.pdf},
+    video_url = {https://youtu.be/8D7SpGa5jTw},
+    blog_url = {http://www.cleverhans.io/2022/04/21/pow-defense.html},
 }
 
 @inproceedings{sslextractions2022icml,
