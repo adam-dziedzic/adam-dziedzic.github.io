@@ -2,13 +2,27 @@
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 
 - name:
+    detail: CISPA Helmholtz Center for Information Security
+    #i18n: company_b
+  desc:
+    detail: Research on collaborative, private, and robust Machine Learning.
+    #i18n: company_b_desc
+  date:
+    detail: September 2023 - current
+    #i18n: company_b_date
+  job:
+    detail: Assistant Professor
+    #i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
     detail: University of Toronto & Vector Institute
     #i18n: company_b
   desc:
     detail: Research on collaborative, private, and robust Machine Learning.
     #i18n: company_b_desc
   date:
-    detail: September 2020 - current
+    detail: September 2020 - August 2023
     #i18n: company_b_date
   job:
     detail: Postdoctoral researcher
