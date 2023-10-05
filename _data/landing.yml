@@ -42,8 +42,8 @@
   page: blog/
   css: testimonials navy-section
 
-#- id: contact
-#  i18n: nav.contact
-#  name: Contact
-#  tpl: contact.html
-#  css: contact
+- id: contact
+  i18n: nav.contact
+  name: Contact
+  tpl: contact.html
+  css: contact

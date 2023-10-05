@@ -1,0 +1,6 @@
+# contact section data
+- last_name: Dziedzic
+  first_name: Adam
+  mail_desc: The best way to contact me is through email.
+  public_key: "static/assets/pgp/Adam_Dziedzic_0xDB755B3D_public_2022.asc"
+  email: adam.dziedzic@cispa.de
