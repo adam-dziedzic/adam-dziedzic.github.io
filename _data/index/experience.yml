@@ -5,13 +5,13 @@
     detail: CISPA Helmholtz Center for Information Security
     #i18n: company_b
   desc:
-    detail: Research on collaborative, private, and robust Machine Learning.
+    detail: My research is focused on secure and trustworthy Machine Learning as a Service (MLaaS). I design robust and reliable machine learning methods for training and inference of ML models while preserving data privacy and model confidentiality.
     #i18n: company_b_desc
   date:
     detail: September 2023 - current
     #i18n: company_b_date
   job:
-    detail: Assistant Professor
+    detail: Tenure Track Faculty Member
     #i18n: company_b_job
   icon: fa-plus-square
 

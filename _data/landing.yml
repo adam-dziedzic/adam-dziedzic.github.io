@@ -17,12 +17,6 @@
   tpl: talks.html
   css: project
 
-#- id: career
-#  i18n: nav.career
-#  name: Experience
-#  tpl: career.html
-#  css: timeline
-
 - id: experience
   i18n: nav.experience
   name: Experience
@@ -48,8 +42,8 @@
   page: blog/
   css: testimonials navy-section
 
-- id: contact
-  i18n: nav.contact
-  name: Contact
-  tpl: contact.html
-  css: contact
+#- id: contact
+#  i18n: nav.contact
+#  name: Contact
+#  tpl: contact.html
+#  css: contact
