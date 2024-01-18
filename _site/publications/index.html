@@ -68,7 +68,7 @@ Adam Dziedzic
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2202.10517" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2202.10517" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -189,7 +189,7 @@ Xiao Wang
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2211.15410" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2211.15410" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -203,10 +203,10 @@ Xiao Wang
     </button>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/AdamDziedzicPrivateMultiWinnerVoting.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/AdamDziedzicPrivateMultiWinnerVoting.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://youtu.be/Tcb-npdLdIA" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://youtu.be/Tcb-npdLdIA" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
     
     
     
@@ -229,6 +229,415 @@ Xiao Wang
   author = {Dziedzic, Adam and Choquette-Choo, Christopher A and Dullerud, Natalie and Suriyakumar, Vinith Menon and Shamsabadi, Ali Shahin and Kaleem, Muhammad Ahmad and Jha, Somesh and Papernot, Nicolas and Wang, Xiao},
   booktitle = {Privacy Enhancing Technologies Symposium (PETS)},
   year = {2023}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders</b><br/>
+
+
+
+
+Jan Dubiński,
+
+
+
+
+
+
+Stanisław Pawlak,
+
+
+
+
+
+
+Franziska Boenisch,
+
+
+
+
+
+
+Tomasz Trzcinski,
+
+
+
+
+
+
+Adam Dziedzic
+
+
+
+<br/>
+
+    <em>In Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)</em>
+
+
+    <em> 2023 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/b4b.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-dubinski2023bucks-abstract" aria-expanded="false" aria-controls="collapse-dubinski2023bucks-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-dubinski2023bucks-bibtex" aria-expanded="false" aria-controls="collapse-dubinski2023bucks-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-dubinski2023bucks-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Machine Learning as a Service (MLaaS) APIs provide ready-to-use and high-utility encoders that generate vector representations for given inputs. Since these encoders are very costly to train, they become lucrative targets for model stealing attacks during which an adversary leverages query access to the API to replicate the encoder locally at a fraction of the original training costs. We propose *Bucks for Buckets (B4B)*, the first *active defense* that prevents stealing while the attack is happening without degrading representation quality for legitimate API users. Our defense relies on the observation that the representations returned to adversaries who try to steal the encoder’s functionality cover a significantly larger fraction of the embedding space than representations of legitimate users who utilize the encoder to solve a particular downstream task. B4B leverages this to adaptively adjust the utility of the returned representations according to a user’s coverage of the embedding space. To prevent adaptive adversaries from eluding our defense by simply creating multiple user accounts (sybils), B4B also individually transforms each user’s representations. This prevents the adversary from directly aggregating representations over multiple accounts to create their stolen encoder copy. Our active defense opens a new path towards securely sharing and democratizing encoders over public APIs.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-dubinski2023bucks-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{dubinski2023bucks,
+  title = {Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders},
+  author = {Dubiński, Jan and Pawlak, Stanisław and Boenisch, Franziska and Trzcinski, Tomasz and Dziedzic, Adam},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2023}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Robust and Actively Secure Serverless Collaborative Learning</b><br/>
+
+
+
+
+Nicholas Franzese,
+
+
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Christopher A. Choquette-Choo,
+
+
+
+
+
+
+Mark R. Thomas,
+
+
+
+
+
+
+Muhammad Ahmad Kaleem,
+
+
+
+
+
+
+Stephan Rabanser,
+
+
+
+
+
+
+Congyu Fang,
+
+
+
+
+
+
+Somesh Jha,
+
+
+
+
+
+
+Nicolas Papernot,
+
+
+
+
+
+
+Xiao Wang
+
+
+
+<br/>
+
+    <em>In Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)</em>
+
+
+    <em> 2023 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/p2plearning.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-franzeses2023p2pml-abstract" aria-expanded="false" aria-controls="collapse-franzeses2023p2pml-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-franzeses2023p2pml-bibtex" aria-expanded="false" aria-controls="collapse-franzeses2023p2pml-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-franzeses2023p2pml-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Collaborative machine learning (ML) is widely used to enable institutions to learn better models from distributed data. While collaborative approaches to learning intuitively protect user data, they remain vulnerable to either the server, the clients, or both, deviating from the protocol. Indeed, because the protocol is asymmetric, a malicious server can abuse its power to reconstruct client data points. Conversely, malicious clients can corrupt learning with malicious updates. Thus, both clients and servers require a guarantee when the other cannot be trusted to fully cooperate. In this work, we propose a peer-to-peer (P2P) learning scheme that is secure against malicious servers and robust to malicious clients. Our core contribution is a generic framework that transforms any (compatible) algorithm for robust aggregation of model updates to the setting where servers and clients can act maliciously. Finally, we demonstrate the computational efficiency of our approach even with 1-million parameter models trained by 100s of peers on standard datasets.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-franzeses2023p2pml-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{franzeses2023p2pml,
+  title = {Robust and Actively Secure Serverless Collaborative Learning},
+  author = {Franzese, Nicholas and Dziedzic, Adam and Choquette-Choo, Christopher A. and Thomas, Mark R. and Kaleem, Muhammad Ahmad and Rabanser, Stephan and Fang, Congyu and Jha, Somesh and Papernot, Nicolas and Wang, Xiao},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2023}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Flocks of Stochastic Parrots: Differentially Private Prompt Learning for Large Language Models</b><br/>
+
+
+
+
+Haonan Duan,
+
+
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Nicolas Papernot,
+
+
+
+
+
+
+Franziska Boenisch
+
+
+
+<br/>
+
+    <em>In Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)</em>
+
+
+    <em> 2023 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/DifferentiallyPrivatePromptsForLLMs.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-duan2023flocks-abstract" aria-expanded="false" aria-controls="collapse-duan2023flocks-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-duan2023flocks-bibtex" aria-expanded="false" aria-controls="collapse-duan2023flocks-bibtex">
+        BibTeX
+    </button>
+    
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/PrivacyLLMs.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://youtu.be/_PhQVdV42Js?si=eoqWKa331JTzrq5H" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
+    
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/cleverhans-lab/PrivatePrompts" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF"> Code</a>
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-duan2023flocks-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Large language models (LLMs) are excellent in-context learners. However, the sensitivity of data contained in prompts raises privacy concerns. Our work first shows that these concerns are valid: we instantiate a simple but highly effective membership inference attack against the data used to prompt LLMs. To address this vulnerability, one could forego prompting and resort to fine-tuning LLMs with known algorithms for private gradient descent. However, this comes at the expense of the practicality and efficiency offered by prompting. Therefore, we propose to privately learn to prompt. We first show that soft prompts can be obtained privately through gradient descent on downstream data. However, this is not the case for discrete prompts. Thus, we orchestrate a noisy vote among an ensemble of LLMs presented with different prompts, i.e., a flock of stochastic parrots. The vote privately transfers the flock’s knowledge into a single public prompt. We show that LLMs prompted with our private algorithms closely match the non-private baselines. For example, using GPT3 as the base model, we achieve a downstream accuracy of 92.7% on the sst2 dataset with strong differential privacy guarantees vs. 95.2% for the non-private baseline. Through our experiments, we also show that our prompt-based approach is easily deployed with existing commercial APIs.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-duan2023flocks-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{duan2023flocks,
+  title = {Flocks of Stochastic Parrots: Differentially Private Prompt Learning for Large Language Models},
+  author = {Duan, Haonan and Dziedzic, Adam and Papernot, Nicolas and Boenisch, Franziska},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2023}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Have it your way: Individualized Privacy Assignment for DP-SGD</b><br/>
+
+
+
+
+Franziska Boenisch,
+
+
+
+
+
+
+Christopher Mühl,
+
+
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Roy Rinberg,
+
+
+
+
+
+
+Nicolas Papernot
+
+
+
+<br/>
+
+    <em>In Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)</em>
+
+
+    <em> 2023 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/idpsgd.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-boenisch2023idpsgd-abstract" aria-expanded="false" aria-controls="collapse-boenisch2023idpsgd-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-boenisch2023idpsgd-bibtex" aria-expanded="false" aria-controls="collapse-boenisch2023idpsgd-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-boenisch2023idpsgd-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            When training a machine learning model with differential privacy, one sets a privacy budget. This budget represents a maximal privacy violation that any user is willing to face by contributing their data to the training set. We argue that this approach is limited because different users may have different privacy expectations. Thus, setting a uniform privacy budget across all points may be overly conservative for some users or, conversely, not sufficiently protective for others. In this paper, we capture these preferences through individualized privacy budgets. To demonstrate their practicality, we introduce a variant of Differentially Private Stochastic Gradient Descent (DP-SGD) which supports such individualized budgets. DP-SGD is the canonical approach to training models with differential privacy. We modify its data sampling and gradient noising mechanisms to arrive at our approach, which we call Individualized DP-SGD (IDP-SGD). Because IDP-SGD provides privacy guarantees tailored to the preferences of individual users and their data points, we find it empirically improves privacy-utility trade-offs.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-boenisch2023idpsgd-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{boenisch2023idpsgd,
+  title = {Have it your way: Individualized Privacy Assignment for DP-SGD},
+  author = {Boenisch, Franziska and Mühl, Christopher and Dziedzic, Adam and Rinberg, Roy and Papernot, Nicolas},
+  year = {2023},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+  eprint = {2303.17046},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.LG}
 }
 </pre>
         </div>
@@ -281,7 +690,7 @@ Nicolas Papernot
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://openreview.net/forum?id=EAy7C1cgE1L" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://openreview.net/forum?id=EAy7C1cgE1L" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -295,16 +704,16 @@ Nicolas Papernot
     </button>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/ICLR-PoW-Defense-2022-03-15-18-00.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/ICLR-PoW-Defense-2022-03-15-18-00.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://youtu.be/8D7SpGa5jTw" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://youtu.be/8D7SpGa5jTw" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/cleverhans-lab/model-extraction-pow" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF"> Code</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/cleverhans-lab/model-extraction-iclr" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF"> Code</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://www.cleverhans.io/2022/04/21/pow-defense.html" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/blog.svg" alt="" width="15" height="15" title="PDF"> Blog Post</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://www.cleverhans.io/2022/04/21/pow-defense.html" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/blog.svg" alt="" width="15" height="15" title="PDF"> Blog Post</a>
     
     
 </p>
@@ -382,7 +791,7 @@ Nicolas Papernot
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2205.07890" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2205.07890" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -496,7 +905,7 @@ Nicolas Papernot
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2209.09024" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2209.09024" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -510,10 +919,10 @@ Nicolas Papernot
     </button>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="DataSetInferenceForSelfSupervisedModels.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="DataSetInferenceForSelfSupervisedModels.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://youtu.be/5-8kwLdvWkE?t=2361" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://youtu.be/5-8kwLdvWkE?t=2361" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
     
     
     
@@ -609,7 +1018,7 @@ Xiao Wang
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://openreview.net/forum?id=h2EbJ4_wMVq" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://openreview.net/forum?id=h2EbJ4_wMVq" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -623,16 +1032,16 @@ Xiao Wang
     </button>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/capc2.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/capc2.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://www.youtube.com/watch?v=0yWeY39cPLo" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://www.youtube.com/watch?v=0yWeY39cPLo" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/cleverhans-lab/capc-demo" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF"> Code</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/cleverhans-lab/capc-demo" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF"> Code</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://www.cleverhans.io/2021/05/01/capc.html" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/blog.svg" alt="" width="15" height="15" title="PDF"> Blog Post</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://www.cleverhans.io/2021/05/01/capc.html" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/blog.svg" alt="" width="15" height="15" title="PDF"> Blog Post</a>
     
     
 </p>
@@ -752,7 +1161,7 @@ Dino Samartzis
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jor.24829" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jor.24829" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -867,7 +1276,7 @@ Nicolas Papernot
     
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2108.02010" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2108.02010" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-travers2021exploitability-abstract" aria-expanded="false" aria-controls="collapse-travers2021exploitability-abstract">
@@ -968,11 +1377,11 @@ Nicolas Papernot
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2112.02918" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2112.02918" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2112.02918" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2112.02918" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-boenisch2021curious-abstract" aria-expanded="false" aria-controls="collapse-boenisch2021curious-abstract">
@@ -1169,7 +1578,7 @@ Reza Shokri
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://www.private-ai.org/blog/wp-content/uploads/2021/11/Visionpaper_final_single-pages.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://www.private-ai.org/blog/wp-content/uploads/2021/11/Visionpaper_final_single-pages.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -1287,7 +1696,7 @@ Xiao Wang
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://openreview.net/pdf?id=JedTK_aOaRa" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://openreview.net/pdf?id=JedTK_aOaRa" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -1388,7 +1797,7 @@ Dawn Song
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://aclanthology.org/2020.acl-main.244" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://aclanthology.org/2020.acl-main.244" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -1402,13 +1811,13 @@ Dawn Song
     </button>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/ood_robustness.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/ood_robustness.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://slideslive.com/38929340/pretrained-transformers-improve-outofdistribution-robustness" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://slideslive.com/38929340/pretrained-transformers-improve-outofdistribution-robustness" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/adam-dziedzic/NLP-Robustness-1" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF"> Code</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/adam-dziedzic/NLP-Robustness-1" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF"> Code</a>
     
     
     
@@ -1485,7 +1894,7 @@ Sanjay Krishnan
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/Machine_Learning_based_detection_of_multiple_Wi-Fi.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/Machine_Learning_based_detection_of_multiple_Wi-Fi.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -1562,7 +1971,7 @@ Sanjay Krishnan
     
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2002.03080" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2002.03080" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-dziedzic2020empirical-abstract" aria-expanded="false" aria-controls="collapse-dziedzic2020empirical-abstract">
@@ -1719,7 +2128,7 @@ Adam Dziedzic
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://knowledge.uchicago.edu/record/2637?ln=en" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://knowledge.uchicago.edu/record/2637?ln=en" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -1810,7 +2219,7 @@ Michael Franklin
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/band-limit.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/band-limit.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -1824,10 +2233,10 @@ Michael Franklin
     </button>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/band-limit.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/band-limit.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/talks/band-limit-video.html" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/talks/band-limit-video.html" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF"> Video</a>
     
     
     
@@ -1921,7 +2330,7 @@ Rui Liu
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://dl.acm.org/doi/abs/10.1145/3352020.3352022" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://dl.acm.org/doi/abs/10.1145/3352020.3352022" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -2027,7 +2436,7 @@ Manoj Syamala
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/dziedzic-sigmod2018-recommend-hybrid-designs.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/dziedzic-sigmod2018-recommend-hybrid-designs.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -2041,7 +2450,7 @@ Manoj Syamala
     </button>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/slides/recommend-hybrid-designs-sigmod2018-presentation.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/slides/recommend-hybrid-designs-sigmod2018-presentation.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
     
@@ -2124,7 +2533,7 @@ Aaron J Elmore
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/deeplens.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/deeplens.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -2219,7 +2628,7 @@ Jeff Parkhurst
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/p120-mattson-cidr17.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/p120-mattson-cidr17.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -2351,7 +2760,7 @@ Michael Stonebraker
     
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/1701.05799" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/1701.05799" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-obrien2017bigdawg-bibtex" aria-expanded="false" aria-controls="collapse-obrien2017bigdawg-bibtex">
@@ -2477,7 +2886,7 @@ Michael Stonebraker
     
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/1707.00721" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/1707.00721" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-gadepally2017version-bibtex" aria-expanded="false" aria-controls="collapse-gadepally2017version-bibtex">
@@ -2662,7 +3071,7 @@ Adam Dziedzic
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://newtraell.cs.uchicago.edu/files/ms_paper/ady.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://newtraell.cs.uchicago.edu/files/ms_paper/ady.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -2875,7 +3284,7 @@ Anastasia Ailamaki
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/dziedzic_adms16_data_loading.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/dziedzic_adms16_data_loading.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -2889,7 +3298,7 @@ Anastasia Ailamaki
     </button>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/slides/loading-adms-presentation.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/slides/loading-adms-presentation.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
     
@@ -2966,7 +3375,7 @@ Michael Stonebraker
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/dziedzic_hpec16_data_migration.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/dziedzic_hpec16_data_migration.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -2979,10 +3388,10 @@ Michael Stonebraker
         BibTeX
     </button>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/posters/Portage-nedb2016-Poster5.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/poster.svg" alt="" width="15" height="15" title="PDF"> Poster</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/posters/Portage-nedb2016-Poster5.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/poster.svg" alt="" width="15" height="15" title="PDF"> Poster</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/slides/data-migration-hpec2016.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/slides/data-migration-hpec2016.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF"> Slides</a>
     
     
     
@@ -3091,7 +3500,7 @@ Aaron Elmore
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/dziedzic-s-store-hpec.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/dziedzic-s-store-hpec.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -3186,7 +3595,7 @@ Michael Stonebraker
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/dziedzic2015-bigdawg.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://adam-dziedzic.com/static/assets/papers/dziedzic2015-bigdawg.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     
@@ -3266,7 +3675,7 @@ Jan Mulawka
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/nosql.pdf" target="_blank" role="button"><img src="http://localhost:4000/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/nosql.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
     
     
     

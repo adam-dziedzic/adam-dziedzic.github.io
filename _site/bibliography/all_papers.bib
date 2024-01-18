@@ -140,19 +140,6 @@ recent advancement in hardware and software.},
     slides_url = {https://adam-dziedzic.com/static/assets/slides/capc2.pdf},
 }
 
-@inproceedings{pow2022iclr,
-    title = {Increasing the Cost of Model Extraction with Calibrated Proof of Work},
-    author = {Adam Dziedzic and Muhammad Ahmad Kaleem and Yu Shen Lu and Nicolas Papernot},
-    booktitle = {ICLR (International Conference on Learning Representations) [SPOTLIGTH]},
-    year = {2022},
-    url = {https://openreview.net/forum?id=EAy7C1cgE1L},
-    abstract = {In model extraction attacks, adversaries can steal a machine learning model exposed via a public API by repeatedly querying it and adjusting their own model based on obtained predictions. To prevent model stealing, existing defenses focus on detecting malicious queries, truncating, or distorting outputs, thus necessarily introducing a tradeoff between robustness and model utility for legitimate users. Instead, we propose to impede model extraction by requiring users to complete a proof-of-work before they can read the model's predictions. This deters attackers by greatly increasing (even up to 100x) the computational effort needed to leverage query access for model extraction. Since we calibrate the effort required to complete the proof-of-work to each query, this only introduces a slight overhead for regular users (up to 2x). To achieve this, our calibration applies tools from differential privacy to measure the information revealed by a query. Our method requires no modification of the victim model and can be applied by machine learning practitioners to guard their publicly exposed models against being easily stolen.},
-    code_url = {https://github.com/cleverhans-lab/model-extraction-pow},
-    slides_url = {https://adam-dziedzic.com/static/assets/slides/ICLR-PoW-Defense-2022-03-15-18-00.pdf},
-    video_url = {https://youtu.be/8D7SpGa5jTw},
-    blog_url = {http://www.cleverhans.io/2022/04/21/pow-defense.html},
-}
-
 @inproceedings{dziedzic2014analysis,
     title = {Analysis and comparison of NoSQL databases with an introduction to consistent references in Big Data storage systems},
     author = {Dziedzic, Adam and Mulawka, Jan},
@@ -325,6 +312,19 @@ recent advancement in hardware and software.},
     abstract = {Private multi-winner voting is the task of revealing k-hot binary vectors that satisfy a bounded differential privacy guarantee. This task has been understudied in the machine learning literature despite its prevalence in many domains such as healthcare. We propose three new privacy-preserving multi-label mechanisms: Binary, and Powerset voting. Binary voting operates independently per label through composition. voting bounds votes optimally in their norm. Powerset voting operates over the entire binary vector by viewing the possible outcomes as a power set. We theoretically analyze tradeoffs showing that Powerset voting requires strong correlations between labels to outperform Binary voting. We use these mechanisms to enable privacy-preserving multi-label learning by extending the canonical single-label technique: PATE. We empirically compare our techniques with DPSGD on large real-world healthcare data and standard multi-label benchmarks. We find that our techniques outperform all others in the centralized setting. We enable multi-label CaPC and show that our mechanisms can be used to collaboratively improve models in a multi-site (distributed) setting.}
 }
 
+@inproceedings{pow2022iclr,
+    title = {Increasing the Cost of Model Extraction with Calibrated Proof of Work},
+    author = {Adam Dziedzic and Muhammad Ahmad Kaleem and Yu Shen Lu and Nicolas Papernot},
+    booktitle = {ICLR (International Conference on Learning Representations) [SPOTLIGTH]},
+    year = {2022},
+    url = {https://openreview.net/forum?id=EAy7C1cgE1L},
+    abstract = {In model extraction attacks, adversaries can steal a machine learning model exposed via a public API by repeatedly querying it and adjusting their own model based on obtained predictions. To prevent model stealing, existing defenses focus on detecting malicious queries, truncating, or distorting outputs, thus necessarily introducing a tradeoff between robustness and model utility for legitimate users. Instead, we propose to impede model extraction by requiring users to complete a proof-of-work before they can read the model's predictions. This deters attackers by greatly increasing (even up to 100x) the computational effort needed to leverage query access for model extraction. Since we calibrate the effort required to complete the proof-of-work to each query, this only introduces a slight overhead for regular users (up to 2x). To achieve this, our calibration applies tools from differential privacy to measure the information revealed by a query. Our method requires no modification of the victim model and can be applied by machine learning practitioners to guard their publicly exposed models against being easily stolen.},
+    code_url = {https://github.com/cleverhans-lab/model-extraction-iclr},
+    slides_url = {https://adam-dziedzic.com/static/assets/slides/ICLR-PoW-Defense-2022-03-15-18-00.pdf},
+    video_url = {https://youtu.be/8D7SpGa5jTw},
+    blog_url = {http://www.cleverhans.io/2022/04/21/pow-defense.html},
+}
+
 @inproceedings{sslextractions2022icml,
     title = {On the Difficulty of Defending Self-Supervised Learning against Model Extraction},
     author = {Adam Dziedzic and Nikita Dhawan and Muhammad Ahmad Kaleem and Jonas Guan and Nicolas Papernot},
@@ -364,3 +364,56 @@ recent advancement in hardware and software.},
     slides_url = {https://adam-dziedzic.com/static/assets/slides/AdamDziedzicPrivateMultiWinnerVoting.pdf},
     video_url = {https://youtu.be/Tcb-npdLdIA},
 }
+
+
+@inproceedings{dubinski2023bucks,
+title={Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders},
+author={Dubiński, Jan and Pawlak, Stanisław and Boenisch, Franziska and Trzcinski, Tomasz and Dziedzic, Adam},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+year={2023},
+url={https://adam-dziedzic.com/static/assets/papers/b4b.pdf},
+    abstract={Machine Learning as a Service (MLaaS) APIs provide ready-to-use and high-utility encoders that generate vector representations for given inputs. Since these encoders are very costly to train, they become lucrative targets for model stealing attacks during which an adversary leverages query access to the API to replicate the encoder locally at a fraction of the original training costs. We propose *Bucks for Buckets (B4B)*, the first *active defense* that prevents stealing while the attack is happening without degrading representation quality for legitimate API users. Our defense relies on the observation that the representations returned to adversaries who try to steal the encoder's functionality cover a significantly larger fraction of the embedding space than representations of legitimate users who utilize the encoder to solve a particular downstream task. B4B leverages this to adaptively adjust the utility of the returned representations according to a user's coverage of the embedding space. To prevent adaptive adversaries from eluding our defense by simply creating multiple user accounts (sybils), B4B also individually transforms each user's representations. This prevents the adversary from directly aggregating representations over multiple accounts to create their stolen encoder copy. Our active defense opens a new path towards securely sharing and democratizing encoders over public APIs.},
+}
+
+@inproceedings{franzeses2023p2pml,
+title={Robust and Actively Secure Serverless Collaborative Learning},
+author={Franzese, Nicholas and Dziedzic, Adam and Choquette-Choo, Christopher A. and Thomas, Mark R. and Kaleem, Muhammad Ahmad and Rabanser, Stephan and Fang, Congyu and Jha, Somesh and Papernot, Nicolas and Wang, Xiao},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+year={2023},
+url={https://adam-dziedzic.com/static/assets/papers/p2plearning.pdf},
+    abstract={Collaborative machine learning (ML) is widely used to enable institutions to learn better models from distributed data. While collaborative approaches to learning intuitively protect user data, they remain vulnerable to either the server, the clients, or both, deviating from the protocol. Indeed, because the protocol is asymmetric, a malicious server can abuse its power to reconstruct client data points. Conversely, malicious clients can corrupt learning with malicious updates. Thus, both clients and servers require a guarantee when the other cannot be trusted to fully cooperate. In this work, we propose a peer-to-peer (P2P) learning scheme that is secure against malicious servers and robust to malicious clients. Our core contribution is a generic framework that transforms any (compatible) algorithm for robust aggregation of model updates to the setting where servers and clients can act maliciously. Finally, we demonstrate the computational efficiency of our approach even with 1-million parameter models trained by 100s of peers on standard datasets.},
+}
+
+@inproceedings{duan2023flocks,
+title={Flocks of Stochastic Parrots: Differentially Private Prompt Learning for Large Language Models},
+author={Duan, Haonan, and Dziedzic, Adam and Papernot, Nicolas and Boenisch, Franziska},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+year={2023},
+url={https://adam-dziedzic.com/static/assets/papers/DifferentiallyPrivatePromptsForLLMs.pdf},
+abstract={Large language models (LLMs) are excellent in-context learners. However, the sensitivity of data contained in prompts raises privacy concerns. Our work first shows that these concerns are valid: we instantiate a simple but highly effective membership inference attack against the data used to prompt LLMs. To address this vulnerability, one could forego prompting and resort to fine-tuning LLMs with known algorithms for private gradient descent. However, this comes at the expense of the practicality and efficiency offered by prompting. Therefore, we propose to privately learn to prompt. We first show that soft prompts can be obtained privately through gradient descent on downstream data. However, this is not the case for discrete prompts. Thus, we orchestrate a noisy vote among an ensemble of LLMs presented with different prompts, i.e., a flock of stochastic parrots. The vote privately transfers the flock's knowledge into a single public prompt. We show that LLMs prompted with our private algorithms closely match the non-private baselines. For example, using GPT3 as the base model, we achieve a downstream accuracy of 92.7\% on the sst2 dataset with strong differential privacy guarantees vs. 95.2\% for the non-private baseline. Through our experiments, we also show that our prompt-based approach is easily deployed with existing commercial~APIs.},
+code_url={https://github.com/cleverhans-lab/PrivatePrompts},
+video_url={https://youtu.be/_PhQVdV42Js?si=eoqWKa331JTzrq5H},
+slides_url={https://adam-dziedzic.com/static/assets/slides/PrivacyLLMs.pdf}
+}
+
+@inproceedings{boenisch2023idpsgd,
+      title={Have it your way: Individualized Privacy Assignment for DP-SGD},
+      author={Franziska Boenisch and Christopher Mühl and Dziedzic, Adam and Roy Rinberg and Nicolas Papernot},
+      year={2023},
+      booktitle={Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+      eprint={2303.17046},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url = {https://adam-dziedzic.com/static/assets/papers/idpsgd.pdf},
+    abstract={When training a machine learning model with differential privacy, one sets a privacy budget. This budget represents a maximal privacy violation that any user is willing to face by contributing their data to the training set. We argue that this approach is limited because different users may have different privacy expectations. Thus, setting a uniform privacy budget across all points may be overly conservative for some users or, conversely, not sufficiently protective for others. In this paper, we capture these preferences through individualized privacy budgets. To demonstrate their practicality, we introduce a variant of Differentially Private Stochastic Gradient Descent (DP-SGD) which supports such individualized budgets. DP-SGD is the canonical approach to training models with differential privacy. We modify its data sampling and gradient noising mechanisms to arrive at our approach, which we call Individualized DP-SGD (IDP-SGD). Because IDP-SGD provides privacy guarantees tailored to the preferences of individual users and their data points, we find it empirically improves privacy-utility trade-offs.},
+}
+
+@inproceedings{wang2024memorization,
+title={Memorization in Self-Supervised Learning Improves Downstream Generalization},
+author={Wenhao Wang and Muhammad Ahmad Kaleem and Adam Dziedzic and Michael Backes and Nicolas Papernot and Franziska Boenisch},
+booktitle={The Twelfth International Conference on Learning Representations (ICLR)},
+year={2024},
+url={https://adam-dziedzic.com/static/assets/papers/MemorizationSSL.pdf},
+abstract={Self-supervised learning (SSL) has recently received significant attention due to its ability to train high-performance encoders purely on unlabeled data---often scraped from the internet. This data can still be sensitive and empirical evidence suggests that SSL encoders memorize private information of their training data and can disclose them at inference time. Since existing theoretical definitions of memorization from supervised learning rely on labels, they do not transfer to SSL. To address this gap, we propose \name, a framework for defining memorization within SSL. Our definition compares the difference in alignment of representations for data points and their augmented views returned by both encoders that were trained on these data points and encoders that were not. Through comprehensive empirical analysis on diverse encoder architectures and datasets we highlight that even though SSL relies on large datasets and strong augmentations---both known in supervised learning as regularization techniques that reduce overfitting---still significant fractions of training data points experience high memorization. Through our empirical results, we show that this memorization is essential for encoders to achieve higher generalization performance on different downstream tasks.},
+}
+
