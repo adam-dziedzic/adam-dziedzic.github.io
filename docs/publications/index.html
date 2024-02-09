@@ -17,6 +17,224 @@ An up-to-date list is available on <a
         target="_blank"><span>Google Scholar</span></a>
 
 
+<h3 id="2024" class="pubyear">2024</h3>
+<ol class="bibliography"><li><b>Memorization in Self-Supervised Learning Improves Downstream Generalization</b><br/>
+
+
+
+
+Wenhao Wang,
+
+
+
+
+
+
+Muhammad Ahmad Kaleem,
+
+
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Michael Backes,
+
+
+
+
+
+
+Nicolas Papernot,
+
+
+
+
+
+
+Franziska Boenisch
+
+
+
+<br/>
+
+    <em>In The Twelfth International Conference on Learning Representations (ICLR)</em>
+
+
+    <em> 2024 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/MemorizationSSL.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-wang2024memorization-abstract" aria-expanded="false" aria-controls="collapse-wang2024memorization-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-wang2024memorization-bibtex" aria-expanded="false" aria-controls="collapse-wang2024memorization-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/sprintml/MemorizationSSL" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF"> Code</a>
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-wang2024memorization-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Self-supervised learning (SSL) has recently received significant attention due to its ability to train high-performance encoders purely on unlabeled data—often scraped from the internet. This data can still be sensitive and empirical evidence suggests that SSL encoders memorize private information of their training data and can disclose them at inference time. Since existing theoretical definitions of memorization from supervised learning rely on labels, they do not transfer to SSL. To address this gap, we propose SSLMem, a framework for defining memorization within SSL. Our definition compares the difference in alignment of representations for data points and their augmented views returned by both encoders that were trained on these data points and encoders that were not. Through comprehensive empirical analysis on diverse encoder architectures and datasets we highlight that even though SSL relies on large datasets and strong augmentations—both known in supervised learning as regularization techniques that reduce overfitting—still significant fractions of training data points experience high memorization. Through our empirical results, we show that this memorization is essential for encoders to achieve higher generalization performance on different downstream tasks.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-wang2024memorization-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{wang2024memorization,
+  title = {Memorization in Self-Supervised Learning Improves Downstream Generalization},
+  author = {Wang, Wenhao and Kaleem, Muhammad Ahmad and Dziedzic, Adam and Backes, Michael and Papernot, Nicolas and Boenisch, Franziska},
+  booktitle = {The Twelfth International Conference on Learning Representations (ICLR)},
+  year = {2024}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Decentralised, Collaborative, and Privacy-preserving Machine Learning for Multi-Hospital Data</b><br/>
+
+
+
+
+Congyu Fang,
+
+
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Lin Zhang,
+
+
+
+
+
+
+Laura Oliva,
+
+
+
+
+
+
+Amol Verma,
+
+
+
+
+
+
+Fahad Razak,
+
+
+
+
+
+
+Nicolas Papernot,
+
+
+
+
+
+
+Bo Wang
+
+
+
+<br/>
+
+    <em>In eBioMedicine</em>
+
+
+    <em> 2024 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/collaborationHospitals.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-fang2024collaborative-abstract" aria-expanded="false" aria-controls="collapse-fang2024collaborative-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-fang2024collaborative-bibtex" aria-expanded="false" aria-controls="collapse-fang2024collaborative-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-fang2024collaborative-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Machine Learning (ML) has demonstrated its great potential on medical data analysis. Large datasets collected from diverse sources and settings are essential for ML models in healthcare to achieve better accuracy and generalizability. Sharing data across different healthcare institutions is challenging because of complex and varying privacy and regulatory requirements. Hence, it is hard but crucial to allow multiple parties to collaboratively train an ML model leveraging the private datasets available at each party without the need for direct sharing of those datasets or compromising the privacy of the datasets through collaboration. In this paper, we address this challenge by proposing Decentralized, Collaborative, and Privacy-preserving ML for Multi-Hospital Data (DeCaPH). It offers the following key benefits: (1) it allows different parties to collaboratively train an ML model without transferring their private datasets; (2) it safeguards patient privacy by limiting the potential privacy leakage arising from any contents shared across the parties during the training process; and (3) it facilitates the ML model training without relying on a centralized server. We demonstrate the generalizability and power of DeCaPH on three distinct tasks using real-world distributed medical datasets: patient mortality prediction using electronic health records, cell-type classification using single-cell human genomes, and pathology identification using chest radiology images. We demonstrate that the ML models trained with DeCaPH framework have an improved utility-privacy trade-off, showing it enables the models to have good performance while preserving the privacy of the training data points. In addition, the ML models trained with DeCaPH framework in general outperform those trained solely with the private datasets from individual parties, showing that DeCaPH enhances the model generalizability.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-fang2024collaborative-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{fang2024collaborative,
+  title = {Decentralised, Collaborative, and Privacy-preserving Machine Learning for Multi-Hospital Data},
+  author = {Fang, Congyu and Dziedzic, Adam and Zhang, Lin and Oliva, Laura and Verma, Amol and Razak, Fahad and Papernot, Nicolas and Wang, Bo},
+  booktitle = {eBioMedicine},
+  year = {2024}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li></ol>
+
 <h3 id="2023" class="pubyear">2023</h3>
 <ol class="bibliography"><li><b>Individualized PATE: Differentially Private Machine Learning with Individual Privacy Guarantees</b><br/>
 
