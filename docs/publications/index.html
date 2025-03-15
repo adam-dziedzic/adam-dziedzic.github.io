@@ -17,6 +17,459 @@ An up-to-date list is available on <a
         target="_blank"><span>Google Scholar</span></a>
 
 
+<h3 id="2025" class="pubyear">2025</h3>
+<ol class="bibliography"><li><b>Differentially Private Prototypes for Private Transfer Learning</b><br/>
+
+
+
+
+Dariush Wahdany,
+
+
+
+
+
+
+Matthew Jagielski,
+
+
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Franziska Boenisch
+
+
+
+<br/>
+
+    <em>In The 39th Annual AAAI Conference on Artificial Intelligence</em>
+
+
+    <em> 2025 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/DPPL.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-wahdany2024dppl-abstract" aria-expanded="false" aria-controls="collapse-wahdany2024dppl-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-wahdany2024dppl-bibtex" aria-expanded="false" aria-controls="collapse-wahdany2024dppl-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-wahdany2024dppl-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Machine learning (ML) models have been shown to leak private information from their training datasets. Differential Privacy (DP), typically implemented through the differential private stochastic gradient descent algorithm (DP-SGD), has become the standard solution to bound leakage from the models. Despite recent improvements, DP-SGD-based approaches for private learning still usually struggle in the high privacy (epsilon<1) and low data regimes, and when the private training datasets are imbalanced. To overcome these limitations, we propose Differentially Private Prototype Learning (DPPL) as a new paradigm for private transfer learning. DPPL leverages publicly pre-trained encoders to extract features from private data and generates DP prototypes that represent each private class in the embedding space and can be publicly released for inference. Since our DP prototypes can be obtained from only a few private training data points and without iterative noise addition, they offer high-utility predictions and strong privacy guarantees even under the notion of pure DP. We additionally show that privacy-utility trade-offs can be further improved when leveraging the public data beyond pre-training of the encoder: in particular, we can privately sample our DP prototypes from the publicly available data points used to train the encoder. Our experimental evaluation with four state-of-the-art encoders, four vision datasets, and under different data and imbalancedness regimes demonstrate DPPL’s high performance under strong privacy guarantees in challenging private learning setups.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-wahdany2024dppl-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{wahdany2024dppl,
+  title = {Differentially Private Prototypes for Private Transfer Learning},
+  author = {Wahdany, Dariush and Jagielski, Matthew and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {The 39th Annual AAAI Conference on Artificial Intelligence},
+  year = {2025}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Precise Parameter Localization for Textual Generation in Diffusion Models</b><br/>
+
+
+
+
+ Staniszewski,
+
+
+
+
+
+
+Bartosz Cywiński,
+
+
+
+
+
+
+Franziska Boenisch,
+
+
+
+
+
+
+Kamil Deja,
+
+
+
+
+
+
+Adam Dziedzic
+
+
+
+<br/>
+
+    <em>In The Thirteenth International Conference on Learning Representations</em>
+
+
+    <em> 2025 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/diffused_text.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-staniszewski2025precise-abstract" aria-expanded="false" aria-controls="collapse-staniszewski2025precise-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-staniszewski2025precise-bibtex" aria-expanded="false" aria-controls="collapse-staniszewski2025precise-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-staniszewski2025precise-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Novel diffusion models (DMs) can synthesize photo-realistic images with integrated high-quality text. Surprisingly, we demonstrate through attention activation patching that only less than 1% of DMs’ parameters contained in attention layers influence the generation of textual content within the images. Building on this observation, by precisely targeting cross and joint attention layers of DMs, we improve the efficiency and performance of textual generation. We introduce several applications that benefit from localizing the layers responsible for textual content generation. We first show that a LoRA-based fine-tuning solely of the localized layers enhances, even more, the general text-generation capabilities of large DMs while preserving the quality and diversity of the DMs’ generations. Then, we demonstrate how we can use the localized layers to edit textual content in generated images. Finally, we extend this idea to the practical use case of preventing the generation of toxic text in a cost-free manner. In contrast to prior work, our localization approach is broadly applicable across various diffusion model architectures, including U-Net (e.g., LDM and SDXL) and transformer-based (e.g., DeepFloyd IF and Stable Diffusion 3), utilizing diverse text encoders (e.g., from CLIP and the large language models like T5).
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-staniszewski2025precise-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{staniszewski2025precise,
+  title = {Precise Parameter Localization for Textual Generation in Diffusion Models},
+  author = {{\L}ukasz Staniszewski and Cywi{\'n}ski, Bartosz and Boenisch, Franziska and Deja, Kamil and Dziedzic, Adam},
+  booktitle = {The Thirteenth International Conference on Learning Representations},
+  year = {2025}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Captured by Captions: On Memorization and its Mitigation in CLIP Models</b><br/>
+
+
+
+
+Wenhao Wang,
+
+
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Grace C. Kim,
+
+
+
+
+
+
+Michael Backes,
+
+
+
+
+
+
+Franziska Boenisch
+
+
+
+<br/>
+
+    <em>In The Thirteenth International Conference on Learning Representations</em>
+
+
+    <em> 2025 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/memorization_clip.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-wang2025captured-abstract" aria-expanded="false" aria-controls="collapse-wang2025captured-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-wang2025captured-bibtex" aria-expanded="false" aria-controls="collapse-wang2025captured-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-wang2025captured-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Multi-modal models, such as CLIP, have demonstrated strong performance in aligning visual and textual representations, excelling in tasks like image retrieval and zero-shot classification. Despite this success, the mechanisms by which these models utilize training data, particularly the role of memorization, remain unclear. In uni-modal models, both supervised and self-supervised, memorization has been shown to be essential for generalization. However, it is not well understood how these findings would apply to CLIP, which incorporates elements from both supervised learning via captions that provide a supervisory signal similar to labels, and from self-supervised learning via the contrastive objective. To bridge this gap in understanding, we propose a formal definition of memorization in CLIP (CLIPMem) and use it to quantify memorization in CLIP models. Our results indicate that CLIP’s memorization behavior falls between the supervised and self-supervised paradigms, with "mis-captioned" samples exhibiting highest levels of memorization. Additionally, we find that the text encoder contributes more to memorization than the image encoder, suggesting that mitigation strategies should focus on the text domain. Building on these insights, we propose multiple strategies to reduce memorization while at the same time improving utility—something that had not been shown before for traditional learning paradigms where reducing memorization typically results in utility decrease.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-wang2025captured-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{wang2025captured,
+  title = {Captured by Captions: On Memorization and its Mitigation in {CLIP} Models},
+  author = {Wang, Wenhao and Dziedzic, Adam and Kim, Grace C. and Backes, Michael and Boenisch, Franziska},
+  booktitle = {The Thirteenth International Conference on Learning Representations},
+  year = {2025}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Differentially Private Federated Learning with Time-Adaptive Privacy Spending</b><br/>
+
+
+
+
+Shahrzad Kiani,
+
+
+
+
+
+
+Nupur Kulkarni,
+
+
+
+
+
+
+Adam Dziedzic,
+
+
+
+
+
+
+Stark Draper,
+
+
+
+
+
+
+Franziska Boenisch
+
+
+
+<br/>
+
+    <em>In The Thirteenth International Conference on Learning Representations (ICLR)</em>
+
+
+    <em> 2025 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/papers/time_adaptive_dp_fl.pdf" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-kiani2025differentially-abstract" aria-expanded="false" aria-controls="collapse-kiani2025differentially-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-kiani2025differentially-bibtex" aria-expanded="false" aria-controls="collapse-kiani2025differentially-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-kiani2025differentially-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Federated learning (FL) with differential privacy (DP) provides a framework for collaborative machine learning, enabling clients to train a shared model while adhering to strict privacy constraints. The framework allows each client to have an individual privacy guarantee, e.g., by adding different amounts of noise to each client’s model updates. One underlying assumption is that all clients spend their privacy budgets uniformly over time (learning rounds). However, it has been shown in the literature that learning in early rounds typically focuses on more coarse-grained features that can be learned at lower signal-to-noise ratios while later rounds learn fine-grained features that benefit from higher signal-to-noise ratios. Building on this intuition, we propose a time-adaptive DP-FL framework that expends the privacy budget non-uniformly across both time and clients. Our framework enables each client to save privacy budget in early rounds so as to be able to spend more in later rounds when additional accuracy is beneficial in learning more fine-grained features. We theoretically prove utility improvements in the case that clients with stricter privacy budgets spend budgets unevenly across rounds, compared to clients with more relaxed budgets, who have sufficient budgets to distribute their spend more evenly. Our practical experiments on standard benchmark datasets support our theoretical results and show that, in practice, our algorithms improve the privacy-utility trade-offs compared to baseline schemes.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-kiani2025differentially-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{kiani2025differentially,
+  title = {Differentially Private Federated Learning with Time-Adaptive Privacy Spending},
+  author = {Kiani, Shahrzad and Kulkarni, Nupur and Dziedzic, Adam and Draper, Stark and Boenisch, Franziska},
+  booktitle = {The Thirteenth International Conference on Learning Representations (ICLR)},
+  year = {2025}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>CDI: Copyrighted Data Identification in Diffusion Models</b><br/>
+
+
+
+
+Jan Dubiński,
+
+
+
+
+
+
+Antoni Kowalczuk,
+
+
+
+
+
+
+Franziska Boenisch,
+
+
+
+
+
+
+Adam Dziedzic
+
+
+
+<br/>
+
+    <em>In The IEEE CVF Computer Vision and Pattern Recognition Conference (CVPR)</em>
+
+
+    <em> 2025 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2411.12858" target="_blank" role="button"><img src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF"> Paper</a>
+    
+    
+    
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-dubinski2024cdi-abstract" aria-expanded="false" aria-controls="collapse-dubinski2024cdi-abstract">
+       Abstract
+    </button>
+    
+    <button style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-dubinski2024cdi-bibtex" aria-expanded="false" aria-controls="collapse-dubinski2024cdi-bibtex">
+        BibTeX
+    </button>
+    
+    
+    
+    
+    
+    
+</p>
+
+<div class="collapse" id="collapse-dubinski2024cdi-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Diffusion Models (DMs) benefit from large and diverse datasets for their training. Since this data is often scraped from the Internet without permission from the data owners, this raises concerns about copyright and intellectual property protections. While (illicit) use of data is easily detected for training samples perfectly re-created by a DM at inference time, it is much harder for data owners to verify if their data was used for training when the outputs from the suspect DM are not close replicas. Conceptually, membership inference attacks (MIAs), which detect if a given data point was used during training, present themselves as a suitable tool to address this challenge. However, we demonstrate that existing MIAs are not strong enough to reliably determine the membership of individual images in large, state-of-the-art DMs. To overcome this limitation, we propose CDI, a framework for data owners to identify whether their dataset was used to train a given DM. CDI relies on dataset inference techniques, i.e., instead of using the membership signal from a single data point, CDI leverages the fact that most data owners, such as providers of stock photography, visual media companies, or even individual artists, own datasets with multiple publicly exposed data points which might all be included in the training of a given DM. By selectively aggregating signals from existing MIAs and using new handcrafted methods to extract features for these datasets, feeding them to a scoring model, and applying rigorous statistical testing, CDI allows data owners with as little as 70 data points to identify with a confidence of more than 99% whether their data was used to train a given DM. Thereby, CDI represents a valuable tool for data owners to claim illegitimate use of their copyrighted data.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-dubinski2024cdi-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{dubinski2024cdi,
+  title = {CDI: Copyrighted Data Identification in Diffusion Models},
+  author = {Dubiński, Jan and Kowalczuk, Antoni and Boenisch, Franziska and Dziedzic, Adam},
+  booktitle = {The IEEE CVF Computer Vision and Pattern Recognition Conference (CVPR)},
+  year = {2025}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li></ol>
+
 <h3 id="2024" class="pubyear">2024</h3>
 <ol class="bibliography"><li><b>Memorization in Self-Supervised Learning Improves Downstream Generalization</b><br/>
 
