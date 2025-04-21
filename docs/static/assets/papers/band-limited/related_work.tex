@@ -1,0 +1,53 @@
+\section{Related work}
+%\vspace{0.25em}
+\textbf{Model Compression: } The idea of model compression to reduce the memory footprint or feed-forward (inference) latency has been extensively studied (also related to distillation) ~\cite{he2018amc, hinton2015distilling, sindhwani2015structured, chen2015compressing}. 
+The ancillary benefits of compression and distillation, such as adversarial robustness, have also been noted in prior work~\cite{huang2017adversarial, madry2017towards, papernot2015distillation}%\footnote{Defensive distillation does not result in model compression since the teacher model and distilled models are identical in size.}
+. 
+One of the first approaches was called weight pruning~\cite{han2015deep}, but recently, the community is moving towards convolution-approximation methods~\cite{liu2018efficient,chen2016compressing}. We see an opportunity for a detailed study of the training dynamics with both filter and signal compression in convolutional networks. We carefully control this approximation by tracking the spectral energy level preserved.
+%\vspace{0.25em}
+\newline
+\textbf{Reduced Precision Training: } We see band-limited neural network training as a form of reduced-precision training~\cite{hubara2017quantized, sato2017depth, alistarh2018convergence, de2018high}. Our focus is to understand how a spectral-domain approximation affects model training, and hypothesize that such compression is more stable and gracefully degrades compared to harsher alternatives.
+%\vspace{0.25em}
+\newline
+\textbf{Spectral Properties of CNNs: }
+\label{whyFFTConvolution}
+There is substantial recent interest in studying the spectral properties of CNNs~\cite{rippel2015spectral,rahaman2018spectral,xu2018training}, with applications to better initialization techniques, theoretical understanding of CNN capacity, and eventually, better training methodologies. More practically, FFT-based convolution implementations have been long supported in popular deep learning frameworks (especially in cases where filters are large in size). Recent work further suggests that FFT-based convolutions might be useful on smaller filters as well on CPU architectures~\cite{aleks2018fft}. 
+%\vspace{0.25em}
+\newline
+\textbf{Data transformations: }
+\label{frequencyRepresentation} Input data and filters can be represented in Winograd, FFT, DCT, Wavelet or other domains. In our work we investigate the most popular FFT-based frequency representation that is natively supported in many deep learning frameworks (e.g., PyTorch) and highly optimized~\cite{fbfftLong}. Winograd domain was first explored in~\cite{Lavin2016FastConvolution} for faster convolution but this domain does not expose the notion of frequencies. An alternative DCT representation is commonly used for image compression. It can be extracted from JPEG images and provided as an input to a model. However, for the method proposed in~\cite{dctUber2018NIPS}, the JPEG quality used during encoding is 100\%. The convolution via DCT~\cite{DCT2007} is also more expensive than via FFT. %The 3 different types of DCT coefficients are then  transformed (e.g., up-sampled), late concatenated, or ran through different blocks of ResNet-50 architecture to accelerate training and inference while achieving higher accuracy than standard architecture with RGB inputs. We plan on exploring DCT inputs with convolution and compression in DCT domain.
+%\vspace{0.25em}
+\newline
+\textbf{Small vs Large Filters: }
+FFT-based convolution is a standard algorithm included in popular libraries, such as cuDNN\footnote{\url{https://developer.nvidia.com/cudnn}}. While alternative convolutional algorithms~\cite{Lavin2016FastConvolution} are more efficient for small filter sizes (e.g., 3x3), the larger filters are also significant. (1) During the backward pass, the gradient acts as a large convolutional filter. (2) The trade-offs are chipset-dependent and~\cite{aleks2018fft} suggest using FFTs on CPUs. (3) For ImageNet, both ResNet and DenseNet use 7x7 filters in their 1st layers (improvement via FFT noted by~\cite{fbfftLong}), which can be combined with spectral pooling~\cite{spectralPooling}. (4) The theoretical properties of the Fourier domain are well-understood, and this study elicits frequency domain properties of CNNs.
+
+\iffalse
+\label{sec:spectralPooling}
+\begin{figure}[t]
+  \centering    
+  % \includegraphics[width=\linewidth]{figures/adamSpectralPooling3.pdf} % width=\linewidth]
+%   \includegraphics[trim={5cm 0 0 0},clip,scale=0.2]{figures/adamSpectralPooling3.pdf} % width=\linewidth]
+  \includegraphics[trim={1cm 0 0 0},clip,scale=0.25]{figures/Compress2DLena/Figure2-Grayscale-Grid-pooling-ryerson-pytorch-spectrum-final-4.png} % width=\linewidth]
+  \caption{{\it Schematic diagram comparing max pooling with spectral pooling (implemented in TensorFlow) and 2D compression in the frequency domain implemented in PyTorch.}}    
+  \label{fig:spectralPooling} 
+\end{figure}
+
+\begin{figure}[t]
+  \centering                      
+  % \includegraphics[width=\linewidth]{figures/adamSpectralPooling3.pdf} % width=\linewidth]
+  \includegraphics[trim={0cm 0 0 0},clip,scale=0.17]{figures/spectralPoolingVsSpectralConvolution.png} % width=\linewidth]
+  \caption{{\it Comparing our method of compression for FFT-based convolution with spectral pooling.}}
+  \label{fig:spectralPoolingVsSpectralConvolution}                         
+\end{figure}
+
+Our focus in on how to apply compression in the frequency domain to convolution. . Their first contribution is to find a way how to implement the pooling layer in the frequency domain. This technique has a few advantages: (1) the output size can be adjusted to the required size (2) the loss of information in the output can be tightly controlled (3) for the same output size, the spectral pooling preserves much more information than the max pooling - it is visually presented in Figure~\ref{fig:spectralPooling}. The major drawback of spectral pooling is that if it is applied separately, than going forth and back between the time/spatial and spectral domains is computationally expensive. Thus, the spectral pooling should be incorporated as part of FFT-based convolution. Interestingly enough, when we compare the spectral pooling and our compression in the convolution layers, we see that both methods are very similar - for example, for the second convolutional layer, the only difference between our method and spectral pooling is that we also apply compression to the filter (which is not the case for spectral pooling). This is shown in Figure~\ref{fig:spectralPoolingVsSpectralConvolution}. One important difference is that if we do convolution via FFT, then we reduce some features that can be applied in direct convolution. For example, we cannot do any striding for the FFT based convolution. However, pooling via FFT enables us to control tightly how much of the dimensionality reduction is done via pooling.
+
+The paper~\cite{fftCNN} shows that the whole CNN can be learned in the frequency domain with the FFT needed only on the boundaries of the network. Kernels (for convolution) are kept small in the spatial domain and converted to the frequency domain only when needed for the forward or backward passes. They use sinc (cardinal sinusoid function) to interpolate kernels to the size of an image (or the input map to convolution). Experiments show the same accuracy of CNNs in both the frequency and the spatial domains. They use the spectral (FFT based) pooling which is about applying compression in the frequency domain. Instead of ReLU non-linearity (which requires convolution in the frequency domain), they approximate tanh and sigmoid by linear functions.
+
+The convolution operation can be also accelerated by the Winograd's minimal filtering algorithm~\cite{Lavin2016FastConvolution}. Lavin and Gray present an efficient convolution in the Winograd domain and an algebraic framework for studying the arithmetic complexity of the operation. The authors show experimentally that their approach is the fastest convnet implementation available for GPUs. For most used filter sizes 3x3, the algorithm requires only a single multiplication per an input element whereas the FFT based approach requires about 1.5 real multiplies. Moreover, the memory requirements are much less for the Winograd convolution, for example, for $F(2x2,3x3)$ transformations, the Winograd convolution either does not use any global memory workspace or up to 16 MB when a filter transform kernel is run first and stored in a workspace
+buffer. In contrast, the FFT-based convolution used up to 2.6 GB of additional memory in their experiments.
+
+The paper~\cite{sparseWinograd} shows how to effectively apply sparse methods on Winograd transform for convolution layers. The main challenge tackled in the paper is on how to train convolution layers so that the resulting Winograd kernels are sparse. They try to achieve the best of two worlds, less arithmetic complexity through the use of Winograd transformation and lower memory footprint by pruning Winograd parameters by more than 90\%. These goals are worthwile only if the final accuracy level is maintained. They not only use the Winograd algorithm as a faster approach to convolution computation but advocate the Winograd layer and show how to backpropagate the gradients through it. The Winograd based convolution tiles the input and transforms both the tiled input and the kernel, followed by the element-wise multiplication\footnote{also called a Hadamard product} and final transformation by simple matrices to arrive at the desired result. The achieved speed-up is 5.4X, 2.1X and 1.5X in comparison to \textit{DenseDirect}, \textit{DenseWinograd}, and \textit{SparseDirect} convolutions, respectively. They achieve the accuracy of only 0.1\% worse than the original AlexNet but are able to achieve sparsity on the level of 90+\%. The \textit{DenseWinograd} method was evaluated on CPU only. \TODO{Is it the case that~\cite{liu2018efficient} just adds the sparsification of the input in the form of the ReLU operation in the Winograd domain on the activation map and the sparsification of the filter is the same in both papers?}
+
+There is a discrepancy in the results presented by~\cite{intel-gray} and \cite{aleks2018fft}. The former claims that Winograd based convolution is faster than the FFT based one on CPUs while the latter work shows an opposite outcome.
+\fi

@@ -1,0 +1,10 @@
+\begin{abstract}
+  The convolutional layers are core building blocks of neural network architectures. In general, a convolutional filter applies to the entire frequency spectrum of the input data. We explore artificially constraining the frequency spectra of these filters and data, called band-limiting, during training. 
+  The frequency domain constraints apply to both the feed-forward and back-propagation steps. Experimentally, we observe that Convolutional Neural Networks (CNNs) are resilient to this compression scheme and results suggest that CNNs learn to leverage lower-frequency components. In particular, we found: (1) band-limited training can effectively control the resource usage (GPU and memory); (2) models trained with band-limited layers retain high prediction accuracy; and (3) requires no modification to existing training algorithms or neural network architectures to use unlike other compression schemes. 
+  %Convolutional layers are an integral part of neural network architectures. Convolution operations in temporal or spatial domains correspond to element-wise multiplications in the Fourier domain, and in general, both the signal and filter densely cover the full Fourier spectra.
+  %We explore explicitly band-limiting, or compressing, the Fourier domain representation of convolutional layers during model training.
+  %The technique leverages an FFT-based convolution that discards a fraction of Fourier coefficients during both feedforward evaluation and backpropagation.
+  %Surprisingly, in both 1D and 2D cases, results suggest that CNNs are resilient to such compression, and may even train faster in the early stages of training. 
+  %\textbf{We experiment with X, Y, and Z and observe A,B,C.}
+  %This insight sheds light on potential ways to reduce the memory footprint and the number of floating point operations (especially costly multiplications) while training popular CNN architectures. 
+\end{abstract}

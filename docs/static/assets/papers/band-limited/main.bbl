@@ -1,0 +1,279 @@
+\begin{thebibliography}{40}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aberger et~al.()Aberger, De~Sa, Leszczynski, Marzoev, Olukotun,
+  R{\'e}, and Zhang]{abergerhigh}
+Aberger, C.~R., De~Sa, C., Leszczynski, M., Marzoev, A., Olukotun, K., R{\'e},
+  C., and Zhang, J.
+\newblock High-accuracy low-precision training.
+
+\bibitem[Agrawal et~al.(1993)Agrawal, Faloutsos, and
+  Swami]{agrawal1993efficient}
+Agrawal, R., Faloutsos, C., and Swami, A.
+\newblock Efficient similarity search in sequence databases.
+\newblock In \emph{International conference on foundations of data organization
+  and algorithms}, pp.\  69--84. Springer, 1993.
+
+\bibitem[Alistarh et~al.(2018)Alistarh, De~Sa, and
+  Konstantinov]{alistarh2018convergence}
+Alistarh, D., De~Sa, C., and Konstantinov, N.
+\newblock The convergence of stochastic gradient descent in asynchronous shared
+  memory.
+\newblock \emph{arXiv preprint arXiv:1803.08841}, 2018.
+
+\bibitem[Bi\'{n}kowski et~al.(2017)Bi\'{n}kowski, Marti, and
+  Donnat]{binkowskiLong}
+Bi\'{n}kowski, M., Marti, G., and Donnat, P.
+\newblock Autoregressive convolutional neural networks for asynchronous time
+  series.
+\newblock \emph{CoRR}, abs/1703.04122, 2017.
+\newblock URL \url{http://arxiv.org/abs/1703.04122}.
+
+\bibitem[Carlini \& Wagner(2017)Carlini and Wagner]{Carlini2017Towars}
+Carlini, N. and Wagner, D.~A.
+\newblock Towards evaluating the robustness of neural networks.
+\newblock \emph{2017 IEEE Symposium on Security and Privacy (SP)}, pp.\
+  39--57, 2017.
+
+\bibitem[Chen et~al.(2015{\natexlab{a}})Chen, Wilson, Tyree, Weinberger, and
+  Chen]{chen2015compressing}
+Chen, W., Wilson, J., Tyree, S., Weinberger, K., and Chen, Y.
+\newblock Compressing neural networks with the hashing trick.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  2285--2294, 2015{\natexlab{a}}.
+
+\bibitem[Chen et~al.(2016)Chen, Wilson, Tyree, Weinberger, and
+  Chen]{chen2016compressing}
+Chen, W., Wilson, J., Tyree, S., Weinberger, K.~Q., and Chen, Y.
+\newblock Compressing convolutional neural networks in the frequency domain.
+\newblock In \emph{Proceedings of the 22nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pp.\  1475--1484. ACM, 2016.
+
+\bibitem[Chen et~al.(2015{\natexlab{b}})Chen, Keogh, Hu, Begum, Bagnall, Mueen,
+  and Batista]{UCRArchive}
+Chen, Y., Keogh, E., Hu, B., Begum, N., Bagnall, A., Mueen, A., and Batista, G.
+\newblock The ucr time series classification archive, July 2015{\natexlab{b}}.
+\newblock \url{www.cs.ucr.edu/~eamonn/time\_series\_data/}.
+
+\bibitem[De~Sa et~al.(2018)De~Sa, Leszczynski, Zhang, Marzoev, Aberger,
+  Olukotun, and R{\'e}]{de2018high}
+De~Sa, C., Leszczynski, M., Zhang, J., Marzoev, A., Aberger, C.~R., Olukotun,
+  K., and R{\'e}, C.
+\newblock High-accuracy low-precision training.
+\newblock \emph{arXiv preprint arXiv:1803.03383}, 2018.
+
+\bibitem[Engstrom et~al.(2017)Engstrom, Tran, Tsipras, Schmidt, and
+  Madry]{madry2017rotation}
+Engstrom, L., Tran, B., Tsipras, D., Schmidt, L., and Madry, A.
+\newblock A rotation and a translation suffice: Fooling cnns with simple
+  transformations, 2017.
+
+\bibitem[Faloutsos et~al.(1994)Faloutsos, Ranganathan, and
+  Manolopoulos]{Faloutsos94}
+Faloutsos, C., Ranganathan, M., and Manolopoulos, Y.
+\newblock Fast subsequence matching in time-series databases.
+\newblock In \emph{Proceedings of the 1994 ACM SIGMOD International Conference
+  on Management of Data}, SIGMOD '94, pp.\  419--429, New York, NY, USA, 1994.
+  ACM.
+\newblock ISBN 0-89791-639-5.
+\newblock \doi{10.1145/191839.191925}.
+\newblock URL \url{http://doi.acm.org/10.1145/191839.191925}.
+
+\bibitem[Friedman(1937)]{friedman1937use}
+Friedman, M.
+\newblock The use of ranks to avoid the assumption of normality implicit in the
+  analysis of variance.
+\newblock \emph{Journal of the american statistical association}, 32\penalty0
+  (200):\penalty0 675--701, 1937.
+
+\bibitem[Gueguen et~al.(2018)Gueguen, Sergeev, Kadlec, Liu, and
+  Yosinski]{dctUber2018NIPS}
+Gueguen, L., Sergeev, A., Kadlec, B., Liu, R., and Yosinski, J.
+\newblock Faster neural networks straight from jpeg.
+\newblock In Bengio, S., Wallach, H., Larochelle, H., Grauman, K.,
+  Cesa-Bianchi, N., and Garnett, R. (eds.), \emph{Advances in Neural
+  Information Processing Systems 31}, pp.\  3937--3948. Curran Associates,
+  Inc., 2018.
+
+\bibitem[Han et~al.(2015)Han, Mao, and Dally]{han2015deep}
+Han, S., Mao, H., and Dally, W.~J.
+\newblock Deep compression: Compressing deep neural networks with pruning,
+  trained quantization and huffman coding.
+\newblock \emph{arXiv preprint arXiv:1510.00149}, 2015.
+
+\bibitem[He et~al.(2018)He, Lin, Liu, Wang, Li, and Han]{he2018amc}
+He, Y., Lin, J., Liu, Z., Wang, H., Li, L.-J., and Han, S.
+\newblock Amc: Automl for model compression and acceleration on mobile devices.
+\newblock In \emph{Proceedings of the European Conference on Computer Vision
+  (ECCV)}, pp.\  784--800, 2018.
+
+\bibitem[Hinton et~al.(2015)Hinton, Vinyals, and Dean]{hinton2015distilling}
+Hinton, G., Vinyals, O., and Dean, J.
+\newblock Distilling the knowledge in a neural network.
+\newblock \emph{arXiv preprint arXiv:1503.02531}, 2015.
+
+\bibitem[Huang et~al.(2017)Huang, Papernot, Goodfellow, Duan, and
+  Abbeel]{huang2017adversarial}
+Huang, S., Papernot, N., Goodfellow, I., Duan, Y., and Abbeel, P.
+\newblock Adversarial attacks on neural network policies.
+\newblock \emph{arXiv preprint arXiv:1702.02284}, 2017.
+
+\bibitem[Hubara et~al.(2017)Hubara, Courbariaux, Soudry, El-Yaniv, and
+  Bengio]{hubara2017quantized}
+Hubara, I., Courbariaux, M., Soudry, D., El-Yaniv, R., and Bengio, Y.
+\newblock Quantized neural networks: Training neural networks with low
+  precision weights and activations.
+\newblock \emph{The Journal of Machine Learning Research}, 18\penalty0
+  (1):\penalty0 6869--6898, 2017.
+
+\bibitem[Kamper et~al.(2016)Kamper, Wang, and Livescu]{KamperLivescu2016}
+Kamper, H., Wang, W., and Livescu, K.
+\newblock Deep convolutional acoustic word embeddings using word-pair side
+  information.
+\newblock \emph{2016 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP)}, pp.\  4950--4954, 2016.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{KrizhevskyImageNet2012}
+Krizhevsky, A., Sutskever, I., and Hinton, G.~E.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In \emph{Proceedings of the 25th International Conference on Neural
+  Information Processing Systems - Volume 1}, NIPS'12, pp.\  1097--1105, USA,
+  2012. Curran Associates Inc.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=2999134.2999257}.
+
+\bibitem[Lavin \& Gray(2016)Lavin and Gray]{Lavin2016FastConvolution}
+Lavin, A. and Gray, S.
+\newblock Fast algorithms for convolutional neural networks.
+\newblock \emph{2016 IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pp.\  4013--4021, 2016.
+
+\bibitem[Li et~al.(2017)Li, Park, and Tang]{sparseWinograd}
+Li, S.~R., Park, J., and Tang, P. T.~P.
+\newblock Enabling sparse winograd convolution by native pruning.
+\newblock \emph{CoRR}, abs/1702.08597, 2017.
+\newblock URL \url{http://arxiv.org/abs/1702.08597}.
+
+\bibitem[Liu et~al.(2018)Liu, Pool, Han, and Dally]{liu2018efficient}
+Liu, X., Pool, J., Han, S., and Dally, W.~J.
+\newblock Efficient sparse-winograd convolutional neural networks.
+\newblock \emph{arXiv preprint arXiv:1802.06367}, 2018.
+
+\bibitem[Madry et~al.(2017)Madry, Makelov, Schmidt, Tsipras, and
+  Vladu]{madry2017towards}
+Madry, A., Makelov, A., Schmidt, L., Tsipras, D., and Vladu, A.
+\newblock Towards deep learning models resistant to adversarial attacks.
+\newblock \emph{arXiv preprint arXiv:1706.06083}, 2017.
+
+\bibitem[Mathieu et~al.(2013)Mathieu, Henaff, and LeCun]{mathieu2013fast}
+Mathieu, M., Henaff, M., and LeCun, Y.
+\newblock Fast training of convolutional networks through ffts.
+\newblock \emph{arXiv preprint arXiv:1312.5851}, 2013.
+
+\bibitem[Nemenyi(1962)]{nemenyi1962distribution}
+Nemenyi, P.
+\newblock Distribution-free multiple comparisons.
+\newblock In \emph{Biometrics}, volume~18, pp.\  263. INTERNATIONAL BIOMETRIC
+  SOC 1441 I ST, NW, SUITE 700, WASHINGTON, DC 20005-2210, 1962.
+
+\bibitem[Papernot et~al.(2015)Papernot, McDaniel, Wu, Jha, and
+  Swami]{papernot2015distillation}
+Papernot, N., McDaniel, P., Wu, X., Jha, S., and Swami, A.
+\newblock Distillation as a defense to adversarial perturbations against deep
+  neural networks.
+\newblock \emph{arXiv preprint arXiv:1511.04508}, 2015.
+
+\bibitem[Rahaman et~al.(2018)Rahaman, Arpit, Baratin, Draxler, Lin, Hamprecht,
+  Bengio, and Courville]{rahaman2018spectral}
+Rahaman, N., Arpit, D., Baratin, A., Draxler, F., Lin, M., Hamprecht, F.~A.,
+  Bengio, Y., and Courville, A.
+\newblock On the spectral bias of deep neural networks.
+\newblock \emph{arXiv preprint arXiv:1806.08734}, 2018.
+
+\bibitem[Rauber et~al.(2017)Rauber, Brendel, and Bethge]{foolbox}
+Rauber, J., Brendel, W., and Bethge, M.
+\newblock Foolbox: A python toolbox to benchmark the robustness of machine
+  learning models.
+\newblock \emph{arXiv preprint arXiv:1707.04131}, 2017.
+\newblock URL \url{http://arxiv.org/abs/1707.04131}.
+
+\bibitem[{Reju} et~al.(2007){Reju}, {Koh}, and {Soon}]{DCT2007}
+{Reju}, V.~G., {Koh}, S.~N., and {Soon}, I.~Y.
+\newblock Convolution using discrete sine and cosine transforms.
+\newblock \emph{IEEE Signal Processing Letters}, 14\penalty0 (7):\penalty0
+  445--448, July 2007.
+\newblock ISSN 1070-9908.
+
+\bibitem[Rippel et~al.(2015{\natexlab{a}})Rippel, Snoek, and
+  Adams]{rippel2015spectral}
+Rippel, O., Snoek, J., and Adams, R.~P.
+\newblock Spectral representations for convolutional neural networks.
+\newblock In \emph{Advances in neural information processing systems}, pp.\
+  2449--2457, 2015{\natexlab{a}}.
+
+\bibitem[Rippel et~al.(2015{\natexlab{b}})Rippel, Snoek, and
+  Adams]{spectralPooling}
+Rippel, O., Snoek, J., and Adams, R.~P.
+\newblock Spectral representations for convolutional neural networks.
+\newblock In \emph{Proceedings of the 28th International Conference on Neural
+  Information Processing Systems - Volume 2}, NIPS'15, pp.\  2449--2457,
+  Cambridge, MA, USA, 2015{\natexlab{b}}. MIT Press.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=2969442.2969513}.
+
+\bibitem[Sato et~al.(2017)Sato, Young, and Patterson]{sato2017depth}
+Sato, K., Young, C., and Patterson, D.
+\newblock An in-depth look at google’s first tensor processing unit (tpu).
+\newblock \emph{Google Cloud Big Data and Machine Learning Blog}, 12, 2017.
+
+\bibitem[Sindhwani et~al.(2015)Sindhwani, Sainath, and
+  Kumar]{sindhwani2015structured}
+Sindhwani, V., Sainath, T., and Kumar, S.
+\newblock Structured transforms for small-footprint deep learning.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pp.\
+  3088--3096, 2015.
+
+\bibitem[Torralba \& Oliva(2003)Torralba and Oliva]{imageStatistics2003}
+Torralba, A. and Oliva, A.
+\newblock Statistics of natural image categories.
+\newblock \emph{Network: Computation in Neural Systems}, 14\penalty0
+  (3):\penalty0 391--412, 2003.
+
+\bibitem[Vasilache et~al.(2015)Vasilache, Johnson, Mathieu, Chintala, Piantino,
+  and LeCun]{fbfftLong}
+Vasilache, N., Johnson, J., Mathieu, M., Chintala, S., Piantino, S., and LeCun,
+  Y.
+\newblock Fast convolutional nets with fbfft: {A} {GPU} performance evaluation.
+\newblock \emph{ICLR}, abs/1412.7580, 2015.
+\newblock URL \url{http://arxiv.org/abs/1412.7580}.
+
+\bibitem[Wang et~al.(2018)Wang, Choi, Brand, Chen, and
+  Gopalakrishnan]{wang2018training}
+Wang, N., Choi, J., Brand, D., Chen, C.-Y., and Gopalakrishnan, K.
+\newblock Training deep neural networks with 8-bit floating point numbers.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pp.\
+  7686--7695, 2018.
+
+\bibitem[Wang et~al.(2017)Wang, Yan, and Oates]{FCN2017}
+Wang, Z., Yan, W., and Oates, T.
+\newblock Time series classification from scratch with deep neural networks: A
+  strong baseline.
+\newblock \emph{2017 International Joint Conference on Neural Networks
+  (IJCNN)}, May 2017.
+\newblock \doi{10.1109/ijcnn.2017.7966039}.
+\newblock URL \url{http://dx.doi.org/10.1109/IJCNN.2017.7966039}.
+
+\bibitem[Xu et~al.(2018)Xu, Zhang, and Xiao]{xu2018training}
+Xu, Z.-Q.~J., Zhang, Y., and Xiao, Y.
+\newblock Training behavior of deep neural network in frequency domain.
+\newblock \emph{arXiv preprint arXiv:1807.01251}, 2018.
+
+\bibitem[Zlateski et~al.(2018)Zlateski, Jia, Li, and Durand]{aleks2018fft}
+Zlateski, A., Jia, Z., Li, K., and Durand, F.
+\newblock Fft convolutions are faster than winograd on modern cpus, here is
+  why, 2018.
+
+\end{thebibliography}
