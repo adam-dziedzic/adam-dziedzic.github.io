@@ -204,7 +204,7 @@ author={Dubiński, Jan and Pawlak, Stanisław and Boenisch, Franziska and Trzcin
 booktitle={Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
 year={2023},
 url={https://adam-dziedzic.com/static/assets/papers/b4b.pdf},
-abstract={Machine Learning as a Service (MLaaS) APIs provide ready-to-use and high-utility encoders that generate vector representations for given inputs. Since these encoders are very costly to train, they become lucrative targets for model stealing attacks during which an adversary leverages query access to the API to replicate the encoder locally at a fraction of the original training costs. We propose *Bucks for Buckets (B4B)*, the first *active defense* that prevents stealing while the attack is happening without degrading representation quality for legitimate API users. Our defense relies on the observation that the representations returned to adversaries who try to steal the encoder's functionality cover a significantly larger fraction of the embedding space than representations of legitimate users who utilize the encoder to solve a particular downstream task. B4B leverages this to adaptively adjust the utility of the returned representations according to a user's coverage of the embedding space. To prevent adaptive adversaries from eluding our defense by simply creating multiple user accounts (sybils), B4B also individually transforms each user's representations. This prevents the adversary from directly aggregating representations over multiple accounts to create their stolen encoder copy. Our active defense opens a new path towards securely sharing and democratizing encoders over public APIs.},
+abstract={Machine Learning as a Service (MLaaS) APIs provide ready-to-use and high-utility encoders that generate vector representations for given inputs. Since these encoders are very costly to train, they become lucrative targets for model stealing attacks during which an adversary leverages query access to the API to replicate the encoder locally at a fraction of the original training costs. We propose Bucks for Buckets (B4B), the first active defense that prevents stealing while the attack is happening without degrading representation quality for legitimate API users. Our defense relies on the observation that the representations returned to adversaries who try to steal the encoder's functionality cover a significantly larger fraction of the embedding space than representations of legitimate users who utilize the encoder to solve a particular downstream task. B4B leverages this to adaptively adjust the utility of the returned representations according to a user's coverage of the embedding space. To prevent adaptive adversaries from eluding our defense by simply creating multiple user accounts (sybils), B4B also individually transforms each user's representations. This prevents the adversary from directly aggregating representations over multiple accounts to create their stolen encoder copy. Our active defense opens a new path towards securely sharing and democratizing encoders over public APIs.},
 poster_url={https://adam-dziedzic.com/static/assets/posters/b4b.pdf},
 code_url={https://github.com/adam-dziedzic/B4B},
 video_url={https://youtu.be/c242vlN-luI?si=lTCxB76uw71kyGkR},
@@ -355,13 +355,47 @@ abstract={Federated learning (FL) with differential privacy (DP) provides a fram
 }
 
 @inproceedings{dubinski2024cdi,
-      title={CDI: Copyrighted Data Identification in Diffusion Models}, 
+      title={{CDI: Copyrighted Data Identification in Diffusion Models}}, 
       author={Jan Dubiński and Antoni Kowalczuk and Franziska Boenisch and Adam Dziedzic},
       booktitle={The IEEE CVF Computer Vision and Pattern Recognition Conference (CVPR)},
       year={2025},
       url={https://arxiv.org/abs/2411.12858}, 
       abstract={Diffusion Models (DMs) benefit from large and diverse datasets for their training. Since this data is often scraped from the Internet without permission from the data owners, this raises concerns about copyright and intellectual property protections. While (illicit) use of data is easily detected for training samples perfectly re-created by a DM at inference time, it is much harder for data owners to verify if their data was used for training when the outputs from the suspect DM are not close replicas. Conceptually, membership inference attacks (MIAs), which detect if a given data point was used during training, present themselves as a suitable tool to address this challenge. However, we demonstrate that existing MIAs are not strong enough to reliably determine the membership of individual images in large, state-of-the-art DMs. To overcome this limitation, we propose CDI, a framework for data owners to identify whether their dataset was used to train a given DM. CDI relies on dataset inference techniques, i.e., instead of using the membership signal from a single data point, CDI leverages the fact that most data owners, such as providers of stock photography, visual media companies, or even individual artists, own datasets with multiple publicly exposed data points which might all be included in the training of a given DM. By selectively aggregating signals from existing MIAs and using new handcrafted methods to extract features for these datasets, feeding them to a scoring model, and applying rigorous statistical testing, CDI allows data owners with as little as 70 data points to identify with a confidence of more than 99% whether their data was used to train a given DM. Thereby, CDI represents a valuable tool for data owners to claim illegitimate use of their copyrighted data.},
 }
+
+@article{hayes2025strongMIALLMs,
+    title={Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models},
+    author={Jamie Hayes and Ilia Shumailov and Christopher A. Choquette-Choo and Matthew Jagielski and George Kaissis and Katherine Lee and Milad Nasr and Sahra Ghalebikesabi and Niloofar Mireshghallah and Meenatchi Sundaram Mutu Selva Annamalai and Igor Shilov and Matthieu Meeus and Yves-Alexandre de Montjoye and Franziska Boenisch and Adam Dziedzic and A. Feder Cooper},
+    year={2025},
+    eprint={2505.18773},
+    archivePrefix={arXiv},
+    primaryClass={cs.CR},
+    url={https://arxiv.org/abs/2505.18773},
+    abstract={State-of-the-art membership inference attacks (MIAs) typically require training many reference models, making it difficult to scale these attacks to large pre-trained language models (LLMs). As a result, prior research has either relied on weaker attacks that avoid training reference models (e.g., fine-tuning attacks), or on stronger attacks applied to small-scale models and datasets. However, weaker attacks have been shown to be brittle - achieving close-to-arbitrary success - and insights from strong attacks in simplified settings do not translate to today's LLMs. These challenges have prompted an important question: are the limitations observed in prior work due to attack design choices, or are MIAs fundamentally ineffective on LLMs? We address this question by scaling LiRA - one of the strongest MIAs - to GPT-2 architectures ranging from 10M to 1B parameters, training reference models on over 20B tokens from the C4 dataset. Our results advance the understanding of MIAs on LLMs in three key ways: (1) strong MIAs can succeed on pre-trained LLMs; (2) their effectiveness, however, remains limited (e.g., AUC<0.7) in practical settings; and, (3) the relationship between MIA success and related privacy metrics is not as straightforward as prior work has suggested.}
+}
+
+@inproceedings{kowalczuk2025privacyIARs,
+    title={Privacy Attacks on Image AutoRegressive Models},
+    author={Antoni Kowalczuk and Jan Dubiński and Franziska Boenisch and Adam Dziedzic},
+    year={2025},
+    booktitle={Forty-Second International Conference on Machine Learning (ICML)},
+    url={https://adam-dziedzic.com/static/assets/papers/PrivacyAttacksIARs.pdf},
+    abstract={Image AutoRegressive generation has emerged as a new powerful paradigm with image autoregressive models (IARs) matching state-of-the-art diffusion models (DMs) in image quality (FID: 1.48 vs. 1.58) while allowing for a higher generation speed. However, the privacy risks associated with IARs remain unexplored, raising concerns regarding their responsible deployment. To address this gap, we conduct a comprehensive privacy analysis of IARs, comparing their privacy risks to the ones of DMs as reference points. Concretely, we develop a novel membership inference attack (MIA) that achieves a remarkably high success rate in detecting training images (with a True Positive Rate at False Positive Rate = 1% of 86.38% vs. 6.38% for DMs with comparable attacks). We leverage our novel MIA to provide dataset inference (DI) for IARs, and show that it requires as few as 6 samples to detect dataset membership (compared to 200 for DI in DMs), confirming a higher information leakage in IARs. Finally, we are able to extract hundreds of training data points from an IAR (e.g., 698 from VAR-d30). Our results suggest a fundamental privacy-utility trade-off: while IARs excel in image generation quality and speed, they are empirically significantly more vulnerable to privacy attacks compared to DMs that achieve similar performance.},
+    code_url = {https://github.com/sprintml/privacy_attacks_against_iars},
+}
+
+@inproceedings{zhao2025posthocDI,
+    title = {Unlocking Post-hoc Dataset Inference with Synthetic Data},
+    author = {Bihe Zhao and Pratyush Maini and Franziska Boenisch and Adam Dziedzic},
+    year={2025},
+    booktitle={Forty-Second International Conference on Machine Learning (ICML)},
+    url={https://adam-dziedzic.com/static/assets/papers/PostHocDatasetInference.pdf},
+    abstract={The remarkable capabilities of Large Language Models (LLMs) can be mainly attributed to their massive training datasets, which are often scraped from the internet without respecting data owners’ intellectual property rights. Dataset Inference (DI) offers a potential remedy by identifying whether a suspect dataset was used in training, thereby enabling data owners to verify unauthorized use. However, existing DI methods require a private set—known to be absent from training—that closely matches the compromised dataset’s distribution. Such in-distribution, held-out data is rarely available in practice, severely limiting the applicability of DI. In this work, we address this challenge by synthetically generating the required held-out set. Our approach tackles two key obstacles: (1) creating high-quality synthetic data that accurately reflects the original distribution, which we achieve via a data generator trained on a carefully designed suffix completion task, and (2) bridging likelihood gaps between real and synthetic data, which is realized through post-hoc calibration. Extensive experiments on diverse text datasets show that our synthetic held-out set enables DI to detect the training sets with high confidence, while maintaining a low false positive rate. This result empowers copyright owners to make legitimate claims on data usage and demonstrates our method’s reliability for real-world litigations.},
+    code_url = {https://github.com/sprintml/PostHocDatasetInference},
+}
+
+
+
 
 
 
