@@ -527,9 +527,10 @@ abstract={Federated learning (FL) with differential privacy (DP) provides a fram
       abstract={Diffusion Models (DMs) benefit from large and diverse datasets for their training. Since this data is often scraped from the Internet without permission from the data owners, this raises concerns about copyright and intellectual property protections. While (illicit) use of data is easily detected for training samples perfectly re-created by a DM at inference time, it is much harder for data owners to verify if their data was used for training when the outputs from the suspect DM are not close replicas. Conceptually, membership inference attacks (MIAs), which detect if a given data point was used during training, present themselves as a suitable tool to address this challenge. However, we demonstrate that existing MIAs are not strong enough to reliably determine the membership of individual images in large, state-of-the-art DMs. To overcome this limitation, we propose CDI, a framework for data owners to identify whether their dataset was used to train a given DM. CDI relies on dataset inference techniques, i.e., instead of using the membership signal from a single data point, CDI leverages the fact that most data owners, such as providers of stock photography, visual media companies, or even individual artists, own datasets with multiple publicly exposed data points which might all be included in the training of a given DM. By selectively aggregating signals from existing MIAs and using new handcrafted methods to extract features for these datasets, feeding them to a scoring model, and applying rigorous statistical testing, CDI allows data owners with as little as 70 data points to identify with a confidence of more than 99% whether their data was used to train a given DM. Thereby, CDI represents a valuable tool for data owners to claim illegitimate use of their copyrighted data.},
 }
 
-@article{hayes2025strongMIALLMs,
+@inproceedings{hayes2025strongMIALLMs,
     title={Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models},
     author={Jamie Hayes and Ilia Shumailov and Christopher A. Choquette-Choo and Matthew Jagielski and George Kaissis and Katherine Lee and Milad Nasr and Sahra Ghalebikesabi and Niloofar Mireshghallah and Meenatchi Sundaram Mutu Selva Annamalai and Igor Shilov and Matthieu Meeus and Yves-Alexandre de Montjoye and Franziska Boenisch and Adam Dziedzic and A. Feder Cooper},
+    booktitle={Preprint},
     year={2025},
     eprint={2505.18773},
     archivePrefix={arXiv},
@@ -562,7 +563,7 @@ abstract={Federated learning (FL) with differential privacy (DP) provides a fram
 
 @inproceedings{wang2025post,
     title = {Efficient and Privacy-Preserving Soft Prompt Transfer for LLMs},
-    author = {Xun Wang, Jing Xu, Franziska Boenisch, Michael Backes, Christopher A. Choquette-Choo, Adam Dziedzic},
+    author = {Xun Wang and Jing Xu and Franziska Boenisch and Michael Backes and Christopher A. Choquette-Choo and Adam Dziedzic},
     year={2025},
     booktitle={Forty-Second International Conference on Machine Learning (ICML)},
     url={https://adam-dziedzic.com/static/assets/papers/post.pdf},
@@ -570,6 +571,7 @@ abstract={Federated learning (FL) with differential privacy (DP) provides a fram
     code_url = {https://github.com/sprintml/POST},
     tldr = {A method for efficient and privacy-preserving transfer of soft prompts tuned on a distilled small model to a larger model using public data.}
 }
+
 
 
 
