@@ -318,20 +318,35 @@ abstract={Machine Learning (ML) has demonstrated its great potential on medical 
     abstract={Diffusion models (DMs) produce very detailed and high-quality images. Their power results from extensive training on large amounts of data, usually scraped from the internet without proper attribution or consent from content creators. Unfortunately, this practice raises privacy and intellectual property concerns, as DMs can memorize and later reproduce their potentially sensitive or copyrighted training images at inference time. Prior efforts prevent this issue by either changing the input to the diffusion process, thereby preventing the DM from generating memorized samples during inference, or removing the memorized data from training altogether. While those are viable solutions when the DM is developed and deployed in a secure and constantly monitored environment, they hold the risk of adversaries circumventing the safeguards and are not effective when the DM itself is publicly released. To solve the problem, we introduce NeMo, the first method to localize memorization of individual data samples down to the level of neurons in DMs' cross-attention layers. Through our experiments, we make the intriguing finding that in many cases, single neurons are responsible for memorizing particular training samples. By deactivating these memorization neurons, we can avoid the replication of training data at inference time, increase the diversity in the generated outputs, and mitigate the leakage of private and copyrighted data. In this way, our NeMo contributes to a more responsible deployment of DMs.},
 }
 
-@inproceedings{wahdany2024dppl,
+@inproceedings{hayes2025strongMIALLMs,
+    title={Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models},
+    author={Jamie Hayes and Ilia Shumailov and Christopher A. Choquette-Choo and Matthew Jagielski and George Kaissis and Katherine Lee and Milad Nasr and Sahra Ghalebikesabi and Niloofar Mireshghallah and Meenatchi Sundaram Mutu Selva Annamalai and Igor Shilov and Matthieu Meeus and Yves-Alexandre de Montjoye and Franziska Boenisch and Adam Dziedzic and A. Feder Cooper},
+    booktitle={Preprint},
+    year={2025},
+    month={1},
+    eprint={2505.18773},
+    archivePrefix={arXiv},
+    primaryClass={cs.CR},
+    url={https://arxiv.org/abs/2505.18773},
+    abstract={State-of-the-art membership inference attacks (MIAs) typically require training many reference models, making it difficult to scale these attacks to large pre-trained language models (LLMs). As a result, prior research has either relied on weaker attacks that avoid training reference models (e.g., fine-tuning attacks), or on stronger attacks applied to small-scale models and datasets. However, weaker attacks have been shown to be brittle - achieving close-to-arbitrary success - and insights from strong attacks in simplified settings do not translate to today's LLMs. These challenges have prompted an important question: are the limitations observed in prior work due to attack design choices, or are MIAs fundamentally ineffective on LLMs? We address this question by scaling LiRA - one of the strongest MIAs - to GPT-2 architectures ranging from 10M to 1B parameters, training reference models on over 20B tokens from the C4 dataset. Our results advance the understanding of MIAs on LLMs in three key ways: (1) strong MIAs can succeed on pre-trained LLMs; (2) their effectiveness, however, remains limited (e.g., AUC<0.7) in practical settings; and, (3) the relationship between MIA success and related privacy metrics is not as straightforward as prior work has suggested.}
+}
+
+@inproceedings{wahdany2025dppl,
 title={Differentially Private Prototypes for Private Transfer Learning},
 author={Dariush Wahdany and Matthew Jagielski and Adam Dziedzic and Franziska Boenisch},
 booktitle={The 39th Annual AAAI Conference on Artificial Intelligence},
 year={2025},
+month={2},
 url={https://adam-dziedzic.com/static/assets/papers/DPPL.pdf},
 abstract={Machine learning (ML) models have been shown to leak private information from their training datasets. Differential Privacy (DP), typically implemented through the differential private stochastic gradient descent algorithm (DP-SGD), has become the standard solution to bound leakage from the models. Despite recent improvements, DP-SGD-based approaches for private learning still usually struggle in the high privacy (epsilon<1) and low data regimes, and when the private training datasets are imbalanced. To overcome these limitations, we propose Differentially Private Prototype Learning (DPPL) as a new paradigm for private transfer learning. DPPL leverages publicly pre-trained encoders to extract features from private data and generates DP prototypes that represent each private class in the embedding space and can be publicly released for inference. Since our DP prototypes can be obtained from only a few private training data points and without iterative noise addition, they offer high-utility predictions and strong privacy guarantees even under the notion of pure DP. We additionally show that privacy-utility trade-offs can be further improved when leveraging the public data beyond pre-training of the encoder: in particular, we can privately sample our DP prototypes from the publicly available data points used to train the encoder. Our experimental evaluation with four state-of-the-art encoders, four vision datasets, and under different data and imbalancedness regimes demonstrate DPPL's high performance under strong privacy guarantees in challenging private learning setups.},
 }
 
 @inproceedings{staniszewski2025precise,
 title={Precise Parameter Localization for Textual Generation in Diffusion Models},
-author={{\L}ukasz Staniszewski and Bartosz Cywi{\'n}ski and Franziska Boenisch and Kamil Deja and Adam Dziedzic},
+author={Łukasz Staniszewski and Bartosz Cywi{\'n}ski and Franziska Boenisch and Kamil Deja and Adam Dziedzic},
 booktitle={The Thirteenth International Conference on Learning Representations (ICLR)},
 year={2025},
+month={3},
 url={https://adam-dziedzic.com/static/assets/papers/diffused_text.pdf},
 abstract={Novel diffusion models (DMs) can synthesize photo-realistic images with integrated high-quality text. Surprisingly, we demonstrate through attention activation patching that only less than 1% of DMs' parameters contained in attention layers influence the generation of textual content within the images. Building on this observation, by precisely targeting cross and joint attention layers of DMs, we improve the efficiency and performance of textual generation. We introduce several applications that benefit from localizing the layers responsible for textual content generation. We first show that a LoRA-based fine-tuning solely of the localized layers enhances, even more, the general text-generation capabilities of large DMs while preserving the quality and diversity of the DMs' generations. Then, we demonstrate how we can use the localized layers to edit textual content in generated images. Finally, we extend this idea to the practical use case of preventing the generation of toxic text in a cost-free manner. In contrast to prior work, our localization approach is broadly applicable across various diffusion model architectures, including U-Net (e.g., LDM and SDXL) and transformer-based (e.g., DeepFloyd IF and Stable Diffusion 3), utilizing diverse text encoders (e.g., from CLIP and the large language models like T5).},
 }
@@ -341,6 +356,7 @@ title={Captured by Captions: On Memorization and its Mitigation in {CLIP} Models
 author={Wenhao Wang and Adam Dziedzic and Grace C. Kim and Michael Backes and Franziska Boenisch},
 booktitle={The Thirteenth International Conference on Learning Representations (ICLR)},
 year={2025},
+month={4},
 url={https://adam-dziedzic.com/static/assets/papers/memorization_clip.pdf},
 abstract={Multi-modal models, such as CLIP, have demonstrated strong performance in aligning visual and textual representations, excelling in tasks like image retrieval and zero-shot classification. Despite this success, the mechanisms by which these models utilize training data, particularly the role of memorization, remain unclear. In uni-modal models, both supervised and self-supervised, memorization has been shown to be essential for generalization. However, it is not well understood how these findings would apply to CLIP, which incorporates elements from both supervised learning via captions that provide a supervisory signal similar to labels, and from self-supervised learning via the contrastive objective. To bridge this gap in understanding, we propose a formal definition of memorization in CLIP (CLIPMem) and use it to quantify memorization in CLIP models. Our results indicate that CLIP’s memorization behavior falls between the supervised and self-supervised paradigms, with "mis-captioned" samples exhibiting highest levels of memorization. Additionally, we find that the text encoder contributes more to memorization than the image encoder, suggesting that mitigation strategies should focus on the text domain. Building on these insights, we propose multiple strategies to reduce memorization while at the same time improving utility---something that had not been shown before for traditional learning paradigms where reducing memorization typically results in utility decrease.},
 }
@@ -350,46 +366,31 @@ title={Differentially Private Federated Learning with Time-Adaptive Privacy Spen
 author={Shahrzad Kiani and Nupur Kulkarni and Adam Dziedzic and Stark Draper and Franziska Boenisch},
 booktitle={The Thirteenth International Conference on Learning Representations (ICLR)},
 year={2025},
+month={5},
 url={https://adam-dziedzic.com/static/assets/papers/time_adaptive_dp_fl.pdf},
 abstract={Federated learning (FL) with differential privacy (DP) provides a framework for collaborative machine learning, enabling clients to train a shared model while adhering to strict privacy constraints. The framework allows each client to have an individual privacy guarantee, e.g., by adding different amounts of noise to each client’s model updates. One underlying assumption is that all clients spend their privacy budgets uniformly over time (learning rounds). However, it has been shown in the literature that learning in early rounds typically focuses on more coarse-grained features that can be learned at lower signal-to-noise ratios while later rounds learn fine-grained features that benefit from higher signal-to-noise ratios. Building on this intuition, we propose a time-adaptive DP-FL framework that expends the privacy budget non-uniformly across both time and clients. Our framework enables each client to save privacy budget in early rounds so as to be able to spend more in later rounds when additional accuracy is beneficial in learning more fine-grained features. We theoretically prove utility improvements in the case that clients with stricter privacy budgets spend budgets unevenly across rounds, compared to clients with more relaxed budgets, who have sufficient budgets to distribute their spend more evenly. Our practical experiments on standard benchmark datasets support our theoretical results and show that, in practice, our algorithms improve the privacy-utility trade-offs compared to baseline schemes.}
 }
 
-@inproceedings{dubinski2024cdi,
-      title={{CDI: Copyrighted Data Identification in Diffusion Models}}, 
-      author={Jan Dubiński and Antoni Kowalczuk and Franziska Boenisch and Adam Dziedzic},
-      booktitle={The IEEE CVF Computer Vision and Pattern Recognition Conference (CVPR)},
-      year={2025},
-      url={https://arxiv.org/abs/2411.12858}, 
-      abstract={Diffusion Models (DMs) benefit from large and diverse datasets for their training. Since this data is often scraped from the Internet without permission from the data owners, this raises concerns about copyright and intellectual property protections. While (illicit) use of data is easily detected for training samples perfectly re-created by a DM at inference time, it is much harder for data owners to verify if their data was used for training when the outputs from the suspect DM are not close replicas. Conceptually, membership inference attacks (MIAs), which detect if a given data point was used during training, present themselves as a suitable tool to address this challenge. However, we demonstrate that existing MIAs are not strong enough to reliably determine the membership of individual images in large, state-of-the-art DMs. To overcome this limitation, we propose CDI, a framework for data owners to identify whether their dataset was used to train a given DM. CDI relies on dataset inference techniques, i.e., instead of using the membership signal from a single data point, CDI leverages the fact that most data owners, such as providers of stock photography, visual media companies, or even individual artists, own datasets with multiple publicly exposed data points which might all be included in the training of a given DM. By selectively aggregating signals from existing MIAs and using new handcrafted methods to extract features for these datasets, feeding them to a scoring model, and applying rigorous statistical testing, CDI allows data owners with as little as 70 data points to identify with a confidence of more than 99% whether their data was used to train a given DM. Thereby, CDI represents a valuable tool for data owners to claim illegitimate use of their copyrighted data.},
-}
 
-@inproceedings{hayes2025strongMIALLMs,
-    title={Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models},
-    author={Jamie Hayes and Ilia Shumailov and Christopher A. Choquette-Choo and Matthew Jagielski and George Kaissis and Katherine Lee and Milad Nasr and Sahra Ghalebikesabi and Niloofar Mireshghallah and Meenatchi Sundaram Mutu Selva Annamalai and Igor Shilov and Matthieu Meeus and Yves-Alexandre de Montjoye and Franziska Boenisch and Adam Dziedzic and A. Feder Cooper},
-    booktitle={Preprint},
-    year={2025},
-    eprint={2505.18773},
-    archivePrefix={arXiv},
-    primaryClass={cs.CR},
-    url={https://arxiv.org/abs/2505.18773},
-    abstract={State-of-the-art membership inference attacks (MIAs) typically require training many reference models, making it difficult to scale these attacks to large pre-trained language models (LLMs). As a result, prior research has either relied on weaker attacks that avoid training reference models (e.g., fine-tuning attacks), or on stronger attacks applied to small-scale models and datasets. However, weaker attacks have been shown to be brittle - achieving close-to-arbitrary success - and insights from strong attacks in simplified settings do not translate to today's LLMs. These challenges have prompted an important question: are the limitations observed in prior work due to attack design choices, or are MIAs fundamentally ineffective on LLMs? We address this question by scaling LiRA - one of the strongest MIAs - to GPT-2 architectures ranging from 10M to 1B parameters, training reference models on over 20B tokens from the C4 dataset. Our results advance the understanding of MIAs on LLMs in three key ways: (1) strong MIAs can succeed on pre-trained LLMs; (2) their effectiveness, however, remains limited (e.g., AUC<0.7) in practical settings; and, (3) the relationship between MIA success and related privacy metrics is not as straightforward as prior work has suggested.}
-}
 
-@inproceedings{kowalczuk2025privacyIARs,
-    title={Privacy Attacks on Image AutoRegressive Models},
-    author={Antoni Kowalczuk and Jan Dubiński and Franziska Boenisch and Adam Dziedzic},
+@inproceedings{wang2025post,
+    title = {Efficient and Privacy-Preserving Soft Prompt Transfer for LLMs},
+    author = {Xun Wang and Jing Xu and Franziska Boenisch and Michael Backes and Christopher A. Choquette-Choo and Adam Dziedzic},
     year={2025},
+    month={6},
     booktitle={Forty-Second International Conference on Machine Learning (ICML)},
-    url={https://adam-dziedzic.com/static/assets/papers/PrivacyAttacksIARs.pdf},
-    abstract={Image AutoRegressive generation has emerged as a new powerful paradigm with image autoregressive models (IARs) matching state-of-the-art diffusion models (DMs) in image quality (FID: 1.48 vs. 1.58) while allowing for a higher generation speed. However, the privacy risks associated with IARs remain unexplored, raising concerns regarding their responsible deployment. To address this gap, we conduct a comprehensive privacy analysis of IARs, comparing their privacy risks to the ones of DMs as reference points. Concretely, we develop a novel membership inference attack (MIA) that achieves a remarkably high success rate in detecting training images (with a True Positive Rate at False Positive Rate = 1% of 86.38% vs. 6.38% for DMs with comparable attacks). We leverage our novel MIA to provide dataset inference (DI) for IARs, and show that it requires as few as 6 samples to detect dataset membership (compared to 200 for DI in DMs), confirming a higher information leakage in IARs. Finally, we are able to extract hundreds of training data points from an IAR (e.g., 698 from VAR-d30). Our results suggest a fundamental privacy-utility trade-off: while IARs excel in image generation quality and speed, they are empirically significantly more vulnerable to privacy attacks compared to DMs that achieve similar performance.},
-    code_url = {https://github.com/sprintml/privacy_attacks_against_iars},
-    tldr = {We design new methods to assess the privacy leakage from the image autoregressive models and show that they provide better performance, however, also leak more private information than diffusion models.},
+    url={https://adam-dziedzic.com/static/assets/papers/post.pdf},
+    abstract={Prompting has become a dominant paradigm for adapting large language models (LLMs). While discrete (textual) prompts are widely used for their interpretability, soft (parameter) prompts have recently gained traction in APIs. This is because they can encode information from more training samples while minimizing the user's token usage, leaving more space in the context window for task-specific input. However, soft prompts are tightly coupled to the LLM they are tuned on, limiting their generalization to other LLMs. This constraint is particularly problematic for efficiency and privacy: (1) tuning prompts on each LLM incurs high computational costs, especially as LLMs continue to grow in size. Additionally, (2) when the LLM is hosted externally, soft prompt tuning often requires sharing private data with the LLM provider. For instance, this is the case with the NVIDIA NeMo API. To address these issues, we propose POST (Privacy Of Soft prompt Transfer), a framework that enables private tuning of soft prompts on a small model and subsequently transfers these prompts to a larger LLM. POST uses knowledge distillation to derive a small model directly from the large LLM to improve prompt transferability, tunes the soft prompt locally, optionally with differential privacy guarantees, and transfers it back to the larger LLM using a small public dataset. Our experiments show that POST reduces computational costs, preserves privacy, and effectively transfers high-utility soft prompts.},
+    code_url = {https://github.com/sprintml/POST},
+    tldr = {A method for efficient and privacy-preserving transfer of soft prompts tuned on a distilled small model to a larger model using public data.}
 }
+
 
 @inproceedings{zhao2025posthocDI,
     title = {Unlocking Post-hoc Dataset Inference with Synthetic Data},
     author = {Bihe Zhao and Pratyush Maini and Franziska Boenisch and Adam Dziedzic},
     year={2025},
+    month={7},
     booktitle={Forty-Second International Conference on Machine Learning (ICML)},
     url={https://adam-dziedzic.com/static/assets/papers/PostHocDatasetInference.pdf},
     abstract={The remarkable capabilities of Large Language Models (LLMs) can be mainly attributed to their massive training datasets, which are often scraped from the internet without respecting data owners’ intellectual property rights. Dataset Inference (DI) offers a potential remedy by identifying whether a suspect dataset was used in training, thereby enabling data owners to verify unauthorized use. However, existing DI methods require a private set—known to be absent from training—that closely matches the compromised dataset’s distribution. Such in-distribution, held-out data is rarely available in practice, severely limiting the applicability of DI. In this work, we address this challenge by synthetically generating the required held-out set. Our approach tackles two key obstacles: (1) creating high-quality synthetic data that accurately reflects the original distribution, which we achieve via a data generator trained on a carefully designed suffix completion task, and (2) bridging likelihood gaps between real and synthetic data, which is realized through post-hoc calibration. Extensive experiments on diverse text datasets show that our synthetic held-out set enables DI to detect the training sets with high confidence, while maintaining a low false positive rate. This result empowers copyright owners to make legitimate claims on data usage and demonstrates our method’s reliability for real-world litigations.},
@@ -397,16 +398,18 @@ abstract={Federated learning (FL) with differential privacy (DP) provides a fram
     tldr = {LLM dataset inference method without any i.i.d. held-out set by generating this set and performing post-hoc calibration.}
 }
 
-@inproceedings{wang2025post,
-    title = {Efficient and Privacy-Preserving Soft Prompt Transfer for LLMs},
-    author = {Xun Wang and Jing Xu and Franziska Boenisch and Michael Backes and Christopher A. Choquette-Choo and Adam Dziedzic},
+@inproceedings{kowalczuk2025privacyIARs,
+    title={Privacy Attacks on Image AutoRegressive Models},
+    author={Antoni Kowalczuk and Jan Dubiński and Franziska Boenisch and Adam Dziedzic},
     year={2025},
+    month={8},
     booktitle={Forty-Second International Conference on Machine Learning (ICML)},
-    url={https://adam-dziedzic.com/static/assets/papers/post.pdf},
-    abstract={Prompting has become a dominant paradigm for adapting large language models (LLMs). While discrete (textual) prompts are widely used for their interpretability, soft (parameter) prompts have recently gained traction in APIs. This is because they can encode information from more training samples while minimizing the user's token usage, leaving more space in the context window for task-specific input. However, soft prompts are tightly coupled to the LLM they are tuned on, limiting their generalization to other LLMs. This constraint is particularly problematic for efficiency and privacy: (1) tuning prompts on each LLM incurs high computational costs, especially as LLMs continue to grow in size. Additionally, (2) when the LLM is hosted externally, soft prompt tuning often requires sharing private data with the LLM provider. For instance, this is the case with the NVIDIA NeMo API. To address these issues, we propose POST (Privacy Of Soft prompt Transfer), a framework that enables private tuning of soft prompts on a small model and subsequently transfers these prompts to a larger LLM. POST uses knowledge distillation to derive a small model directly from the large LLM to improve prompt transferability, tunes the soft prompt locally, optionally with differential privacy guarantees, and transfers it back to the larger LLM using a small public dataset. Our experiments show that POST reduces computational costs, preserves privacy, and effectively transfers high-utility soft prompts.},
-    code_url = {https://github.com/sprintml/POST},
-    tldr = {A method for efficient and privacy-preserving transfer of soft prompts tuned on a distilled small model to a larger model using public data.}
+    url={https://adam-dziedzic.com/static/assets/papers/PrivacyAttacksIARs.pdf},
+    abstract={Image AutoRegressive generation has emerged as a new powerful paradigm with image autoregressive models (IARs) matching state-of-the-art diffusion models (DMs) in image quality (FID: 1.48 vs. 1.58) while allowing for a higher generation speed. However, the privacy risks associated with IARs remain unexplored, raising concerns regarding their responsible deployment. To address this gap, we conduct a comprehensive privacy analysis of IARs, comparing their privacy risks to the ones of DMs as reference points. Concretely, we develop a novel membership inference attack (MIA) that achieves a remarkably high success rate in detecting training images (with a True Positive Rate at False Positive Rate = 1% of 86.38% vs. 6.38% for DMs with comparable attacks). We leverage our novel MIA to provide dataset inference (DI) for IARs, and show that it requires as few as 6 samples to detect dataset membership (compared to 200 for DI in DMs), confirming a higher information leakage in IARs. Finally, we are able to extract hundreds of training data points from an IAR (e.g., 698 from VAR-d30). Our results suggest a fundamental privacy-utility trade-off: while IARs excel in image generation quality and speed, they are empirically significantly more vulnerable to privacy attacks compared to DMs that achieve similar performance.},
+    code_url = {https://github.com/sprintml/privacy_attacks_against_iars},
+    tldr = {We design new methods to assess the privacy leakage from the image autoregressive models and show that they provide better performance, however, also leak more private information than diffusion models.},
 }
+
 
 
 

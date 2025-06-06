@@ -83,11 +83,12 @@ kramdown:
 scholar:
   bibliography_template: bib
   source: ./bibliography
-  order: descending
+  order: descending, descending
   sort_by: [year, month]
   bibtex_skip_fields:
     [
       abstract,
+      month,
       month_numeric,
       url,
       paper_url,
@@ -100,9 +101,7 @@ scholar:
       tags,
       pub_type,
       pub_note,
+      tldr,
     ]
 
 years: [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
-
-
-
