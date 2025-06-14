@@ -233,6 +233,16 @@ endunless %} {% endif %} {% assign mem = nil %} {% endfor %}
 
 <div
   class="collapse"
+  id="collapse-{{entry.key}}-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">{{entry.tldr}}</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
   id="collapse-{{entry.key}}-abstract"
   style="padding-bottom: 1em"
 >
