@@ -18,17 +18,16 @@ An up-to-date list is available on <a
 
 
 <h3 id="2025" class="pubyear">2025</h3>
-<ol class="bibliography"><li><b>Efficient and Privacy-Preserving Soft Prompt Transfer for LLMs</b><br />
+<ol class="bibliography"><li><b>BitMark for Infinity: Watermarking Bitwise Autoregressive Image Generative Models</b><br />
   
- Xun Wang,     
- Jing Xu,     
+ Louis Kerner,     
+ Michel Meintz,     
+ Bihe Zhao,     
  Franziska Boenisch,     
- Michael Backes,     
- Christopher A. Choquette-Choo,     
  Adam Dziedzic   
 <br />
 
-<em>In Forty-Second International Conference on Machine Learning (ICML)</em>
+<em>In The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)</em>
  
 <em> 2025 </em>
    
@@ -38,7 +37,7 @@ An up-to-date list is available on <a
   <a
     style="margin-top: 0.2em"
     class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/post.pdf"
+    href="https://adam-dziedzic.com/static/assets/papers/BitMark.pdf"
     target="_blank"
     role="button"
     ><img
@@ -56,9 +55,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-wang2025post-tldr"
+    data-target="#collapse-kerner2025BitMark-tldr"
     aria-expanded="false"
-    aria-controls="collapse-wang2025post-tldr"
+    aria-controls="collapse-kerner2025BitMark-tldr"
   >
     TL;DR
   </button>
@@ -68,9 +67,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-wang2025post-abstract"
+    data-target="#collapse-kerner2025BitMark-abstract"
     aria-expanded="false"
-    aria-controls="collapse-wang2025post-abstract"
+    aria-controls="collapse-kerner2025BitMark-abstract"
   >
     Abstract
   </button>
@@ -80,63 +79,47 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-wang2025post-bibtex"
+    data-target="#collapse-kerner2025BitMark-bibtex"
     aria-expanded="false"
-    aria-controls="collapse-wang2025post-bibtex"
+    aria-controls="collapse-kerner2025BitMark-bibtex"
   >
     BibTeX
   </button>
-     
-  <a
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    href="https://github.com/sprintml/POST"
-    target="_blank"
-    role="button"
-    ><img
-      src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg"
-      alt=""
-      width="15"
-      height="15"
-      title="PDF"
-    />
-    Code</a
-  >
-    
+       
 </p>
 
 <div
   class="collapse"
-  id="collapse-wang2025post-tldr"
+  id="collapse-kerner2025BitMark-tldr"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">A method for efficient and privacy-preserving transfer of soft prompts tuned on a distilled small model to a larger model using public data.</div>
+    <div class="card-body">We introduce a bitwise, radioactive watermark for the Infinity image generative model and show that it remains robust against various attacks while preserving high image quality and generation speed.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-wang2025post-abstract"
+  id="collapse-kerner2025BitMark-abstract"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">Prompting has become a dominant paradigm for adapting large language models (LLMs). While discrete (textual) prompts are widely used for their interpretability, soft (parameter) prompts have recently gained traction in APIs. This is because they can encode information from more training samples while minimizing the user’s token usage, leaving more space in the context window for task-specific input. However, soft prompts are tightly coupled to the LLM they are tuned on, limiting their generalization to other LLMs. This constraint is particularly problematic for efficiency and privacy: (1) tuning prompts on each LLM incurs high computational costs, especially as LLMs continue to grow in size. Additionally, (2) when the LLM is hosted externally, soft prompt tuning often requires sharing private data with the LLM provider. For instance, this is the case with the NVIDIA NeMo API. To address these issues, we propose POST (Privacy Of Soft prompt Transfer), a framework that enables private tuning of soft prompts on a small model and subsequently transfers these prompts to a larger LLM. POST uses knowledge distillation to derive a small model directly from the large LLM to improve prompt transferability, tunes the soft prompt locally, optionally with differential privacy guarantees, and transfers it back to the larger LLM using a small public dataset. Our experiments show that POST reduces computational costs, preserves privacy, and effectively transfers high-utility soft prompts.</div>
+    <div class="card-body">State-of-the-art text-to-image models like Infinity generate photorealistic images at an unprecedented speed. These models operate in a bitwise autoregressive manner over a discrete set of tokens that is practically infinite in size. However, their impressive generative power comes with a growing risk: as their outputs increasingly populate the Internet, they are likely to be scraped and reused as training data-potentially by the very same models. This phenomenon has been shown to lead to model collapse, where repeated training on generated content, especially from the models’ own previous versions, causes a gradual degradation in performance. A promising mitigation strategy is watermarking, which embeds human-imperceptible yet detectable signals into generated images-enabling the identification of generated content. In this work, we introduce BitMark, a robust bitwise watermarking framework for Infinity. Our method embeds a watermark directly at the bit level of the token stream across multiple scales (also referred to as resolutions) during Infinity’s image generation process. Our bitwise watermark subtly influences the bits to preserve visual fidelity and generation speed while remaining robust against a spectrum of removal techniques. Furthermore, it exhibits high radioactivity, i.e., when watermarked generated images are used to train another image generative model, this second model’s outputs will also carry the watermark. The radioactive traces remain detectable even when only fine-tuning diffusion or image autoregressive models on images watermarked with our BitMark. Overall, our approach provides a principled step toward preventing model collapse in image generative models by enabling reliable detection of generated outputs.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-wang2025post-bibtex"
+  id="collapse-kerner2025BitMark-bibtex"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
     <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{wang2025post,
-  title = {Efficient and Privacy-Preserving Soft Prompt Transfer for LLMs},
-  author = {Wang, Xun and Xu, Jing and Boenisch, Franziska and Backes, Michael and Choquette-Choo, Christopher A. and Dziedzic, Adam},
+      <pre style="margin-bottom: 0em">@inproceedings{kerner2025BitMark,
+  title = {BitMark for Infinity: Watermarking Bitwise Autoregressive Image Generative Models},
+  author = {Kerner, Louis and Meintz, Michel and Zhao, Bihe and Boenisch, Franziska and Dziedzic, Adam},
   year = {2025},
-  booktitle = {Forty-Second International Conference on Machine Learning (ICML)}
+  booktitle = {The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)}
 }
 </pre>
     </div>
@@ -536,118 +519,6 @@ An up-to-date list is available on <a
 
 
 </li>
-<li><b>Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models</b><br />
-  
- Jamie Hayes,     
- Ilia Shumailov,     
- Christopher A. Choquette-Choo,     
- Matthew Jagielski,     
- George Kaissis,     
- Katherine Lee,     
- Milad Nasr,     
- Sahra Ghalebikesabi,     
- Niloofar Mireshghallah,     
- Meenatchi Sundaram Mutu Selva Annamalai,     
- Igor Shilov,     
- Matthieu Meeus,     
- Yves-Alexandre Montjoye,     
- Franziska Boenisch,     
- Adam Dziedzic,     
- A. Feder Cooper   
-<br />
-
-<em>In Preprint</em>
- 
-<em> 2025 </em>
-   
-
-<p>
-  
-  <a
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    href="https://arxiv.org/abs/2505.18773"
-    target="_blank"
-    role="button"
-    ><img
-      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
-      alt=""
-      width="15"
-      height="15"
-      title="PDF"
-    />
-    Paper</a
-  >
-      
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-hayes2025strongMIALLMs-abstract"
-    aria-expanded="false"
-    aria-controls="collapse-hayes2025strongMIALLMs-abstract"
-  >
-    Abstract
-  </button>
-  
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-hayes2025strongMIALLMs-bibtex"
-    aria-expanded="false"
-    aria-controls="collapse-hayes2025strongMIALLMs-bibtex"
-  >
-    BibTeX
-  </button>
-       
-</p>
-
-<div
-  class="collapse"
-  id="collapse-hayes2025strongMIALLMs-tldr"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body"></div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-hayes2025strongMIALLMs-abstract"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">State-of-the-art membership inference attacks (MIAs) typically require training many reference models, making it difficult to scale these attacks to large pre-trained language models (LLMs). As a result, prior research has either relied on weaker attacks that avoid training reference models (e.g., fine-tuning attacks), or on stronger attacks applied to small-scale models and datasets. However, weaker attacks have been shown to be brittle - achieving close-to-arbitrary success - and insights from strong attacks in simplified settings do not translate to today’s LLMs. These challenges have prompted an important question: are the limitations observed in prior work due to attack design choices, or are MIAs fundamentally ineffective on LLMs? We address this question by scaling LiRA - one of the strongest MIAs - to GPT-2 architectures ranging from 10M to 1B parameters, training reference models on over 20B tokens from the C4 dataset. Our results advance the understanding of MIAs on LLMs in three key ways: (1) strong MIAs can succeed on pre-trained LLMs; (2) their effectiveness, however, remains limited (e.g., AUC<0.7) in practical settings; and, (3) the relationship between MIA success and related privacy metrics is not as straightforward as prior work has suggested.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-hayes2025strongMIALLMs-bibtex"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{hayes2025strongMIALLMs,
-  title = {Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models},
-  author = {Hayes, Jamie and Shumailov, Ilia and Choquette-Choo, Christopher A. and Jagielski, Matthew and Kaissis, George and Lee, Katherine and Nasr, Milad and Ghalebikesabi, Sahra and Mireshghallah, Niloofar and Annamalai, Meenatchi Sundaram Mutu Selva and Shilov, Igor and Meeus, Matthieu and de Montjoye, Yves-Alexandre and Boenisch, Franziska and Dziedzic, Adam and Cooper, A. Feder},
-  booktitle = {Preprint},
-  year = {2025},
-  eprint = {2505.18773},
-  archiveprefix = {arXiv},
-  primaryclass = {cs.CR}
-}
-</pre>
-    </div>
-  </div>
-</div>
-
-
-</li>
 <li><b>Privacy Attacks on Image AutoRegressive Models</b><br />
   
  Antoni Kowalczuk,     
@@ -678,19 +549,7 @@ An up-to-date list is available on <a
     />
     Paper</a
   >
-     
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kowalczuk2025privacyIARs-tldr"
-    aria-expanded="false"
-    aria-controls="collapse-kowalczuk2025privacyIARs-tldr"
-  >
-    TL;DR
-  </button>
-   
+      
   <button
     style="margin-top: 0.2em"
     class="btn btn-info btn-info-pad"
@@ -739,7 +598,7 @@ An up-to-date list is available on <a
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">We design new methods to assess the privacy leakage from the image autoregressive models and show that they provide better performance, however, also leak more private information than diffusion models.</div>
+    <div class="card-body"></div>
   </div>
 </div>
 
@@ -890,6 +749,362 @@ An up-to-date list is available on <a
   author = {Zhao, Bihe and Maini, Pratyush and Boenisch, Franziska and Dziedzic, Adam},
   year = {2025},
   booktitle = {Forty-Second International Conference on Machine Learning (ICML)}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
+<li><b>Efficient and Privacy-Preserving Soft Prompt Transfer for LLMs</b><br />
+  
+ Xun Wang,     
+ Jing Xu,     
+ Franziska Boenisch,     
+ Michael Backes,     
+ Christopher A. Choquette-Choo,     
+ Adam Dziedzic   
+<br />
+
+<em>In Forty-Second International Conference on Machine Learning (ICML)</em>
+ 
+<em> 2025 </em>
+   
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/post.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-wang2025post-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-wang2025post-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-wang2025post-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-wang2025post-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-wang2025post-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-wang2025post-bibtex"
+  >
+    BibTeX
+  </button>
+     
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://github.com/sprintml/POST"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Code</a
+  >
+    
+</p>
+
+<div
+  class="collapse"
+  id="collapse-wang2025post-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">A method for efficient and privacy-preserving transfer of soft prompts tuned on a distilled small model to a larger model using public data.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-wang2025post-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">Prompting has become a dominant paradigm for adapting large language models (LLMs). While discrete (textual) prompts are widely used for their interpretability, soft (parameter) prompts have recently gained traction in APIs. This is because they can encode information from more training samples while minimizing the user’s token usage, leaving more space in the context window for task-specific input. However, soft prompts are tightly coupled to the LLM they are tuned on, limiting their generalization to other LLMs. This constraint is particularly problematic for efficiency and privacy: (1) tuning prompts on each LLM incurs high computational costs, especially as LLMs continue to grow in size. Additionally, (2) when the LLM is hosted externally, soft prompt tuning often requires sharing private data with the LLM provider. For instance, this is the case with the NVIDIA NeMo API. To address these issues, we propose POST (Privacy Of Soft prompt Transfer), a framework that enables private tuning of soft prompts on a small model and subsequently transfers these prompts to a larger LLM. POST uses knowledge distillation to derive a small model directly from the large LLM to improve prompt transferability, tunes the soft prompt locally, optionally with differential privacy guarantees, and transfers it back to the larger LLM using a small public dataset. Our experiments show that POST reduces computational costs, preserves privacy, and effectively transfers high-utility soft prompts.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-wang2025post-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{wang2025post,
+  title = {Efficient and Privacy-Preserving Soft Prompt Transfer for LLMs},
+  author = {Wang, Xun and Xu, Jing and Boenisch, Franziska and Backes, Michael and Choquette-Choo, Christopher A. and Dziedzic, Adam},
+  year = {2025},
+  booktitle = {Forty-Second International Conference on Machine Learning (ICML)}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
+<li><b>Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models</b><br />
+  
+ Jamie Hayes,     
+ Adam Dziedzic,     
+ A. Feder Cooper,     
+ Christopher A. Choquette-Choo,     
+ Franziska Boenisch,     
+ Georgios Kaissis,     
+ Igor Shilov,     
+ Ilia Shumailov,     
+ Katherine Lee,     
+ Matthew Jagielski,     
+ Matthieu Meeus,     
+ Meenatchi Sundaram Muthu Selva Annamalai,     
+ Niloofar Mireshghallah,     
+ Yves-Alexandre Montjoye,     
+ Milad Nasr   
+<br />
+
+<em>In The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)</em>
+ 
+<em> 2025 </em>
+   
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/StrongMIAsLLMs.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-hayes2025strongMIALLMs-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-hayes2025strongMIALLMs-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-hayes2025strongMIALLMs-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-hayes2025strongMIALLMs-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-hayes2025strongMIALLMs-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-hayes2025strongMIALLMs-bibtex"
+  >
+    BibTeX
+  </button>
+       
+</p>
+
+<div
+  class="collapse"
+  id="collapse-hayes2025strongMIALLMs-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">We scale strong membership inference attacks to large pre-trained language models and find that, while such attacks can succeed, their effectiveness remains limited in practical settings and their relationship to standard privacy metrics is more complex than previously thought.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-hayes2025strongMIALLMs-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">State-of-the-art membership inference attacks (MIAs) typically require training many reference models, making it difficult to scale these attacks to large pre-trained language models (LLMs). As a result, prior research has either relied on weaker attacks that avoid training reference models (e.g., fine-tuning attacks), or on stronger attacks applied to small-scale models and datasets. However, weaker attacks have been shown to be brittle - achieving close-to-arbitrary success - and insights from strong attacks in simplified settings do not translate to today’s LLMs. These challenges have prompted an important question: are the limitations observed in prior work due to attack design choices, or are MIAs fundamentally ineffective on LLMs? We address this question by scaling LiRA - one of the strongest MIAs - to GPT-2 architectures ranging from 10M to 1B parameters, training reference models on over 20B tokens from the C4 dataset. Our results advance the understanding of MIAs on LLMs in three key ways: (1) strong MIAs can succeed on pre-trained LLMs; (2) their effectiveness, however, remains limited (e.g., AUC<0.7) in practical settings; and, (3) the relationship between MIA success and related privacy metrics is not as straightforward as prior work has suggested.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-hayes2025strongMIALLMs-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{hayes2025strongMIALLMs,
+  title = {Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models},
+  author = {Hayes, Jamie and Dziedzic, Adam and Cooper, A. Feder and Choquette-Choo, Christopher A. and Boenisch, Franziska and Kaissis, Georgios and Shilov, Igor and Shumailov, Ilia and Lee, Katherine and Jagielski, Matthew and Meeus, Matthieu and Annamalai, Meenatchi Sundaram Muthu Selva and Mireshghallah, Niloofar and de Montjoye, Yves-Alexandre and Nasr, Milad},
+  booktitle = {The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2025}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
+<li><b>Memorization in Graph Neural Networks</b><br />
+  
+ Adarsh Jamadandi,     
+ Jing Xu,     
+ Adam Dziedzic,     
+ Franziska Boenisch   
+<br />
+
+<em>In The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)</em>
+ 
+<em> 2025 </em>
+   
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/MemorizationGNNs.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-Jamadandi2025memorizationGNNs-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-Jamadandi2025memorizationGNNs-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-Jamadandi2025memorizationGNNs-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-Jamadandi2025memorizationGNNs-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-Jamadandi2025memorizationGNNs-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-Jamadandi2025memorizationGNNs-bibtex"
+  >
+    BibTeX
+  </button>
+       
+</p>
+
+<div
+  class="collapse"
+  id="collapse-Jamadandi2025memorizationGNNs-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">We propose the first label memorization framework for node classification in GNNs and investigate the relationship between memorization and graph/node properties.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-Jamadandi2025memorizationGNNs-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">Deep neural networks (DNNs) have been shown to memorize their training data, yet similar analyses for graph neural networks (GNNs) remain largely under-explored. We introduce NCMemo (Node Classification Memorization), the first framework to quantify label memorization in semi-supervised node classification. We first establish an inverse relationship between memorization and graph homophily, i.e the property that connected nodes share similar labels/features. We find that lower homophily significantly increases memorization, indicating that GNNs rely on memorization to learn less homophilic graphs. Secondly, we analyze GNN training dynamics. We find that the increased memorization in low homophily graphs is tightly coupled to the GNNs’ implicit bias on using graph structure during learning. In low homophily regimes, this structure is less informative, hence inducing memorization of the node labels to minimize training loss. Finally, we show that nodes with higher label inconsistency in their feature-space neighborhood are significantly more prone to memorization. Building on our insights into the link between graph homophily and memorization, we investigate graph rewiring as a means to mitigate memorization. Our results demonstrate that this approach effectively reduces memorization without compromising model performance. Moreover, we show that it lowers the privacy risk for previously memorized data points in practice. Thus, our work not only advances understanding of GNN learning but also supports more privacy-preserving GNN deployment.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-Jamadandi2025memorizationGNNs-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{Jamadandi2025memorizationGNNs,
+  title = {Memorization in Graph Neural Networks},
+  author = {Jamadandi, Adarsh and Xu, Jing and Dziedzic, Adam and Boenisch, Franziska},
+  year = {2025},
+  booktitle = {The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)}
 }
 </pre>
     </div>
