@@ -433,6 +433,40 @@ abstract={Federated learning (FL) with differential privacy (DP) provides a fram
     tldr = {We design new methods to assess the privacy leakage from the image autoregressive models and show that they provide better performance, however, also leak more private information than diffusion models.},
 }
 
+@inproceedings{hayes2025strongMIALLMs,
+    title={Strong Membership Inference Attacks on Massive Datasets and (Moderately) Large Language Models},
+    author={Jamie Hayes and Adam Dziedzic and A. Feder Cooper and Christopher A. Choquette-Choo and Franziska Boenisch and Georgios Kaissis and Igor Shilov and Ilia Shumailov and Katherine Lee and Matthew Jagielski and Matthieu Meeus and Meenatchi Sundaram Muthu Selva Annamalai and Niloofar Mireshghallah and Yves-Alexandre de Montjoye and Milad Nasr },
+    booktitle={The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)},
+    year={2025},
+    month={10},
+    url={https://adam-dziedzic.com/static/assets/papers/StrongMIAsLLMs.pdf},
+    abstract={State-of-the-art membership inference attacks (MIAs) typically require training many reference models, making it difficult to scale these attacks to large pre-trained language models (LLMs). As a result, prior research has either relied on weaker attacks that avoid training reference models (e.g., fine-tuning attacks), or on stronger attacks applied to small-scale models and datasets. However, weaker attacks have been shown to be brittle - achieving close-to-arbitrary success - and insights from strong attacks in simplified settings do not translate to today's LLMs. These challenges have prompted an important question: are the limitations observed in prior work due to attack design choices, or are MIAs fundamentally ineffective on LLMs? We address this question by scaling LiRA - one of the strongest MIAs - to GPT-2 architectures ranging from 10M to 1B parameters, training reference models on over 20B tokens from the C4 dataset. Our results advance the understanding of MIAs on LLMs in three key ways: (1) strong MIAs can succeed on pre-trained LLMs; (2) their effectiveness, however, remains limited (e.g., AUC<0.7) in practical settings; and, (3) the relationship between MIA success and related privacy metrics is not as straightforward as prior work has suggested.},
+    tldr ={We scale strong membership inference attacks to large pre-trained language models and find that, while such attacks can succeed, their effectiveness remains limited in practical settings and their relationship to standard privacy metrics is more complex than previously thought.},
+}
+
+
+@inproceedings{Jamadandi2025memorizationGNNs,
+    title={Memorization in Graph Neural Networks},
+    author={Adarsh Jamadandi and Jing Xu and Adam Dziedzic and Franziska Boenisch},
+    year={2025},
+    month={11},
+    booktitle={The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)},
+    url={https://adam-dziedzic.com/static/assets/papers/MemorizationGNNs.pdf},
+    abstract={Deep neural networks (DNNs) have been shown to memorize their training data, yet similar analyses for graph neural networks (GNNs) remain largely under-explored. We introduce NCMemo (Node Classification Memorization), the first framework to quantify label memorization in semi-supervised node classification. We first establish an inverse relationship between memorization and graph homophily, i.e the property that connected nodes share similar labels/features. We find that lower homophily significantly increases memorization, indicating that GNNs rely on memorization to learn less homophilic graphs. Secondly, we analyze GNN training dynamics. We find that the increased memorization in low homophily graphs is tightly coupled to the GNNs' implicit bias on using graph structure during learning. In low homophily regimes, this structure is less informative, hence inducing memorization of the node labels to minimize training loss. Finally, we show that nodes with higher label inconsistency in their feature-space neighborhood are significantly more prone to memorization. Building on our insights into the link between graph homophily and memorization, we investigate graph rewiring as a means to mitigate memorization. Our results demonstrate that this approach effectively reduces memorization without compromising model performance. Moreover, we show that it lowers the privacy risk for previously memorized data points in practice. Thus, our work not only advances understanding of GNN learning but also supports more privacy-preserving GNN deployment.},
+    tldr = {We propose the first label memorization framework for node classification in GNNs and investigate the relationship between memorization and graph/node properties.},
+}
+
+@inproceedings{kerner2025BitMark,
+    title={BitMark for Infinity: Watermarking Bitwise Autoregressive Image Generative Models},
+    author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},
+    year={2025},
+    month={11},
+    booktitle={The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)},
+    url={https://adam-dziedzic.com/static/assets/papers/BitMark.pdf},
+    abstract={State-of-the-art text-to-image models like Infinity generate photorealistic images at an unprecedented speed. These models operate in a bitwise autoregressive manner over a discrete set of tokens that is practically infinite in size. However, their impressive generative power comes with a growing risk: as their outputs increasingly populate the Internet, they are likely to be scraped and reused as training data-potentially by the very same models. This phenomenon has been shown to lead to model collapse, where repeated training on generated content, especially from the models' own previous versions, causes a gradual degradation in performance. A promising mitigation strategy is watermarking, which embeds human-imperceptible yet detectable signals into generated images-enabling the identification of generated content. In this work, we introduce BitMark, a robust bitwise watermarking framework for Infinity. Our method embeds a watermark directly at the bit level of the token stream across multiple scales (also referred to as resolutions) during Infinity's image generation process. Our bitwise watermark subtly influences the bits to preserve visual fidelity and generation speed while remaining robust against a spectrum of removal techniques. Furthermore, it exhibits high radioactivity, i.e., when watermarked generated images are used to train another image generative model, this second model's outputs will also carry the watermark. The radioactive traces remain detectable even when only fine-tuning diffusion or image autoregressive models on images watermarked with our BitMark. Overall, our approach provides a principled step toward preventing model collapse in image generative models by enabling reliable detection of generated outputs.},
+    tldr = {We introduce a bitwise, radioactive watermark for the Infinity image generative model and show that it remains robust against various attacks while preserving high image quality and generation speed.},
+}
+
 
 
 
