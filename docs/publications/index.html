@@ -128,6 +128,103 @@ An up-to-date list is available on <a
 
 
 </li>
+<li><b>Differentially Private Prototypes for Private Transfer Learning</b><br />
+  
+ Dariush Wahdany,     
+ Matthew Jagielski,     
+ Adam Dziedzic,     
+ Franziska Boenisch   
+<br />
+
+<em>In The 39th Annual AAAI Conference on Artificial Intelligence</em>
+ 
+<em> 2025 </em>
+   
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/DPPL.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+      
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-wahdany2024dppl-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-wahdany2024dppl-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-wahdany2024dppl-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-wahdany2024dppl-bibtex"
+  >
+    BibTeX
+  </button>
+       
+</p>
+
+<div
+  class="collapse"
+  id="collapse-wahdany2024dppl-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body"></div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-wahdany2024dppl-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">Machine learning (ML) models have been shown to leak private information from their training datasets. Differential Privacy (DP), typically implemented through the differential private stochastic gradient descent algorithm (DP-SGD), has become the standard solution to bound leakage from the models. Despite recent improvements, DP-SGD-based approaches for private learning still usually struggle in the high privacy (epsilon<1) and low data regimes, and when the private training datasets are imbalanced. To overcome these limitations, we propose Differentially Private Prototype Learning (DPPL) as a new paradigm for private transfer learning. DPPL leverages publicly pre-trained encoders to extract features from private data and generates DP prototypes that represent each private class in the embedding space and can be publicly released for inference. Since our DP prototypes can be obtained from only a few private training data points and without iterative noise addition, they offer high-utility predictions and strong privacy guarantees even under the notion of pure DP. We additionally show that privacy-utility trade-offs can be further improved when leveraging the public data beyond pre-training of the encoder: in particular, we can privately sample our DP prototypes from the publicly available data points used to train the encoder. Our experimental evaluation with four state-of-the-art encoders, four vision datasets, and under different data and imbalancedness regimes demonstrate DPPL’s high performance under strong privacy guarantees in challenging private learning setups.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-wahdany2024dppl-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{wahdany2024dppl,
+  title = {Differentially Private Prototypes for Private Transfer Learning},
+  author = {Wahdany, Dariush and Jagielski, Matthew and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {The 39th Annual AAAI Conference on Artificial Intelligence},
+  year = {2025}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
 <li><b>Precise Parameter Localization for Textual Generation in Diffusion Models</b><br />
   
  Łukasz Staniszewski,     
@@ -1113,15 +1210,18 @@ An up-to-date list is available on <a
 
 
 </li>
-<li><b>Differentially Private Prototypes for Private Transfer Learning</b><br />
+<li><b>MUC: Machine Unlearning for Contrastive Learning with Black-box Evaluation</b><br />
   
- Dariush Wahdany,     
- Matthew Jagielski,     
+ Yihan Wang,     
+ Yiwei Lu,     
+ Guojun Zhang,     
+ Franziska Boenisch,     
  Adam Dziedzic,     
- Franziska Boenisch   
+ Yaoliang Yu,     
+ Xiao-Shan Gao   
 <br />
 
-<em>In The 39th Annual AAAI Conference on Artificial Intelligence</em>
+<em>Transactions on Machine Learning Research</em>
  
 <em> 2025 </em>
    
@@ -1131,7 +1231,7 @@ An up-to-date list is available on <a
   <a
     style="margin-top: 0.2em"
     class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/DPPL.pdf"
+    href="https://adam-dziedzic.com/static/assets/papers/MUC_Machine_Unlearning.pdf"
     target="_blank"
     role="button"
     ><img
@@ -1149,9 +1249,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-wahdany2024dppl-abstract"
+    data-target="#collapse-wang2025muc-abstract"
     aria-expanded="false"
-    aria-controls="collapse-wahdany2024dppl-abstract"
+    aria-controls="collapse-wang2025muc-abstract"
   >
     Abstract
   </button>
@@ -1161,9 +1261,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-wahdany2024dppl-bibtex"
+    data-target="#collapse-wang2025muc-bibtex"
     aria-expanded="false"
-    aria-controls="collapse-wahdany2024dppl-bibtex"
+    aria-controls="collapse-wang2025muc-bibtex"
   >
     BibTeX
   </button>
@@ -1172,7 +1272,7 @@ An up-to-date list is available on <a
 
 <div
   class="collapse"
-  id="collapse-wahdany2024dppl-tldr"
+  id="collapse-wang2025muc-tldr"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
@@ -1182,25 +1282,26 @@ An up-to-date list is available on <a
 
 <div
   class="collapse"
-  id="collapse-wahdany2024dppl-abstract"
+  id="collapse-wang2025muc-abstract"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">Machine learning (ML) models have been shown to leak private information from their training datasets. Differential Privacy (DP), typically implemented through the differential private stochastic gradient descent algorithm (DP-SGD), has become the standard solution to bound leakage from the models. Despite recent improvements, DP-SGD-based approaches for private learning still usually struggle in the high privacy (epsilon<1) and low data regimes, and when the private training datasets are imbalanced. To overcome these limitations, we propose Differentially Private Prototype Learning (DPPL) as a new paradigm for private transfer learning. DPPL leverages publicly pre-trained encoders to extract features from private data and generates DP prototypes that represent each private class in the embedding space and can be publicly released for inference. Since our DP prototypes can be obtained from only a few private training data points and without iterative noise addition, they offer high-utility predictions and strong privacy guarantees even under the notion of pure DP. We additionally show that privacy-utility trade-offs can be further improved when leveraging the public data beyond pre-training of the encoder: in particular, we can privately sample our DP prototypes from the publicly available data points used to train the encoder. Our experimental evaluation with four state-of-the-art encoders, four vision datasets, and under different data and imbalancedness regimes demonstrate DPPL’s high performance under strong privacy guarantees in challenging private learning setups.</div>
+    <div class="card-body">Machine unlearning offers effective solutions for revoking the influence of specific training data on pre-trained model parameters. While existing approaches address unlearning for classification and generative models, they overlook an important category of machine learning models: contrastive learning (CL) methods. This paper addresses this gap by introducing the Machine Unlearning for Contrastive Learning (MUC) framework and adapting existing methods. We identify limitations in current approaches, noting that several methods perform inadequately as unlearners and that existing evaluation tools insufficiently validate unlearning effects in contrastive learning. To address these issues, we propose Alignment Calibration (AC), a novel method that explicitly considers contrastive learning properties and optimizes towards new auditing metrics for easy verification of unlearning. Through empirical comparisons with baseline methods on SimCLR, MoCo, and CLIP, we demonstrate that AC: (1) achieves state-of-the-art performance, approximating exact unlearning (retraining); (2) enables data owners to clearly visualize unlearning effects through black-box evaluation. The code is available at  https://github.com/EhanW/Alignment-Calibration.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-wahdany2024dppl-bibtex"
+  id="collapse-wang2025muc-bibtex"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
     <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{wahdany2024dppl,
-  title = {Differentially Private Prototypes for Private Transfer Learning},
-  author = {Wahdany, Dariush and Jagielski, Matthew and Dziedzic, Adam and Boenisch, Franziska},
-  booktitle = {The 39th Annual AAAI Conference on Artificial Intelligence},
+      <pre style="margin-bottom: 0em">@article{wang2025muc,
+  title = {{MUC}: Machine Unlearning for Contrastive Learning with Black-box Evaluation},
+  author = {Wang, Yihan and Lu, Yiwei and Zhang, Guojun and Boenisch, Franziska and Dziedzic, Adam and Yu, Yaoliang and Gao, Xiao-Shan},
+  journal = {Transactions on Machine Learning Research},
+  issn = {2835-8856},
   year = {2025}
 }
 </pre>
@@ -1419,6 +1520,118 @@ An up-to-date list is available on <a
   title = {Decentralised, Collaborative, and Privacy-preserving Machine Learning for Multi-Hospital Data},
   author = {Fang, Congyu and Dziedzic, Adam and Zhang, Lin and Oliva, Laura and Verma, Amol and Razak, Fahad and Papernot, Nicolas and Wang, Bo},
   booktitle = {eBioMedicine},
+  year = {2024}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
+<li><b>Alignment Calibration: Machine Unlearning for Contrastive Learning under Auditing</b><br />
+  
+ Yihan Wang,     
+ Yiwei Lu,     
+ Guojun Zhang,     
+ Franziska Boenisch,     
+ Adam Dziedzic,     
+ Yaoliang Yu,     
+ Xiao-Shan Gao   
+<br />
+
+<em>In ICML 2024 Next Generation of AI Safety Workshop</em>
+ 
+<em> 2024 </em>
+   
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/Alignment_Calibration_Machine_Unlearning.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-wang2024alignment-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-wang2024alignment-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-wang2024alignment-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-wang2024alignment-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-wang2024alignment-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-wang2024alignment-bibtex"
+  >
+    BibTeX
+  </button>
+       
+</p>
+
+<div
+  class="collapse"
+  id="collapse-wang2024alignment-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">We propose an unlearning framework for contrastive learning.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-wang2024alignment-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">Machine unlearning provides viable solutions to revoke the effect of certain training data on pre-trained model parameters. Existing approaches provide unlearning recipes for classification and generative models. However, a category of important machine learning models, i.e., contrastive learning (CL) methods, is overlooked. In this paper, we fill this gap by first proposing the framework of Machine Unlearning for Contrastive learning (MUC) and adapting existing methods. Furthermore, we observe that several methods are mediocre unlearners and existing auditing tools may not be sufficient for data owners to validate the unlearning effects in contrastive learning. We thus propose a novel method called Alignment Calibration (AC) by explicitly considering the properties of contrastive learning and optimizing towards novel auditing metrics to easily verify unlearning. We empirically compare AC with baseline methods on SimCLR, MoCo and CLIP. We observe that AC addresses drawbacks of existing methods: (1) achieving state-of-the-art performance and approximating exact unlearning (retraining); (2) allowing data owners to clearly visualize the effect caused by unlearning through black-box auditing.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-wang2024alignment-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{wang2024alignment,
+  title = {Alignment Calibration: Machine Unlearning for Contrastive Learning under Auditing},
+  author = {Wang, Yihan and Lu, Yiwei and Zhang, Guojun and Boenisch, Franziska and Dziedzic, Adam and Yu, Yaoliang and Gao, Xiao-Shan},
+  booktitle = {ICML 2024 Next Generation of AI Safety Workshop},
   year = {2024}
 }
 </pre>
