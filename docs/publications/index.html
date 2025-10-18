@@ -225,6 +225,115 @@ An up-to-date list is available on <a
 
 
 </li>
+<li><b>Privacy Auditing for Large Language Models with Natural Identifiers</b><br />
+  
+ Lorenzo Rossi,     
+ Bartłomiej Marek,     
+ Franziska Boenisch,     
+ Adam Dziedzic   
+<br />
+
+<em>In ICLR 2025 Workshop on Navigating and Addressing Data Problems for Foundation Models</em>
+ 
+<em> 2025 </em>
+   
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/nids.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-rossi2025privacy-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-rossi2025privacy-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-rossi2025privacy-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-rossi2025privacy-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-rossi2025privacy-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-rossi2025privacy-bibtex"
+  >
+    BibTeX
+  </button>
+       
+</p>
+
+<div
+  class="collapse"
+  id="collapse-rossi2025privacy-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">We propose to leverage natural identifiers that are unique strings generated from random seeds, such as SSH keys, to enable reliable privacy auditing of pretrained LLMs.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-rossi2025privacy-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">The privacy auditing for large language models (LLMs) faces significant challenges. Membership inference attacks, once considered a practical privacy auditing tool, are unreliable for pretrained LLMs due to the lack of non-member data from the same distribution as the member data. Exacerbating the situation further, the dataset inference cannot be performed without such a non-member set. Finally, we lack a formal post hoc auditing of training privacy guarantees. Previous differential privacy auditing methods are impractical since they rely on inserting specially crafted canary data during training, making audits on already pre-trained LLMs impossible without expensive retraining. This work introduces natural identifiers (NIDs) as a novel solution to these challenges. NIDs are structured random strings, such as SSH keys, cryptographic hashes, and shortened URLs, which naturally occur in common LLM training datasets. Their format enables the generation of unlimited additional random strings from the same distribution, which can act as non-members or alternative canaries for audit. Leveraging this property, we show how NIDs support robust evaluation of membership inference attacks, enable dataset inference for any suspect set containing NIDs, and facilitate post hoc privacy auditing without retraining.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-rossi2025privacy-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{rossi2025privacy,
+  title = {Privacy Auditing for Large Language Models with Natural Identifiers},
+  author = {Rossi, Lorenzo and Marek, Bart{\l}omiej and Boenisch, Franziska and Dziedzic, Adam},
+  booktitle = {ICLR 2025 Workshop on Navigating and Addressing Data Problems for Foundation Models},
+  year = {2025}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
 <li><b>Are Watermarks For Diffusion Models Radioactive?</b><br />
   
  Jan Dubiński,     
