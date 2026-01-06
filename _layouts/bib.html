@@ -28,6 +28,9 @@ endunless %} {% endif %} {% assign mem = nil %} {% endfor %}
 <span class="badge badge-pill badge-danger">Preprint</span>
 {% endif %} {% if entry.pub_note %}
 <span class="badge badge-pill badge-info">{{entry.pub_note}}</span>
+{% endif %} {% if entry.award %}
+<b>{{entry.award}}</b>
+<br />
 {% endif %}
 
 <p>
