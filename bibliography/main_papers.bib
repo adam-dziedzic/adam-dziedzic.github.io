@@ -517,9 +517,38 @@ abstract={Federated learning (FL) with differential privacy (DP) provides a fram
     tldr = {We introduce a bitwise, radioactive watermark for the Infinity image generative model and show that it remains robust against various attacks while preserving high image quality and generation speed.},
 }
 
+@inproceedings{podhajski2026Stealing,
+title={On Stealing Graph Neural Network Models},
+author={Marcin Podhajski and Jan Dubiński and Franziska Boenisch and Adam Dziedzic and Agnieszka Pregowska and Tomasz Paweł Michalak},
+booktitle={The Fortieth AAAI Conference on Artificial Intelligence},
+year={2026},
+month={1},
+url={https://adam-dziedzic.com/static/assets/papers/StealingGraphNeuralNetworks.pdf},
+abstract={Current graph neural network (GNN) model-stealing methods rely heavily on queries to the victim model, assuming no hard query limits. However, in reality, the number of allowed queries can be severely limited. In this paper, we demonstrate how an adversary can extract the GNN with very limited interactions with the model. Our approach first enables the adversary to obtain the model backbone without making direct queries to the victim model and then to strategically utilize a fixed query limit to extract the most informative data.},
+tldr={We demonstrate how an adversary can extract the GNN with very limited interactions with the model.},
+}
 
+@inproceedings{kumar2026beautiful,
+title={Beautiful Images, Toxic Words: Understanding and Addressing Offensive Text in Generated Images},
+author={Aditya Kumar and Tom Blanchard and Adam Dziedzic and Franziska Boenisch },
+booktitle={The Fortieth AAAI Conference on Artificial Intelligence AI Alignment Track},
+year={2026},
+month={1},
+url={https://adam-dziedzic.com/static/assets/papers/BeautifulImages.pdf},
+abstract={State-of-the-art Diffusion Models (DMs) produce highly realistic images. While prior work has successfully mitigated Not Safe For Work (NSFW) content in the visual domain, we identify a novel threat: the generation of NSFW text embedded within images. This includes offensive language, such as insults, racial slurs, and sexually explicit terms, posing significant risks to users. We show that all state-of-the-art DMs (e.g., SD3, SDXL, Flux, DeepFloyd IF) are vulnerable to this issue. Through extensive experiments, we demonstrate that existing mitigation techniques, effective for visual content, fail to prevent harmful text generation while substantially degrading benign text generation. As an initial step toward addressing this threat, we introduce a novel fine-tuning strategy that targets only the text-generation layers in DMs. Therefore, we construct a safety fine-tuning dataset by pairing each NSFW prompt with two images: one with the NSFW term, and another where that term is replaced with a carefully crafted benign alternative while leaving the image unchanged otherwise. By training on this dataset, the model learns to avoid generating harmful text while preserving benign content and overall image quality. Finally, to advance research in the area, we release ToxicBench, an open-source benchmark for evaluating NSFW text generation in images. It includes our curated fine-tuning dataset, a set of harmful prompts, new evaluation metrics, and a pipeline that assesses both NSFW-ness and text and image quality. Our benchmark aims to guide future efforts in mitigating NSFW text generation in text-to-image models, thereby contributing to their safe deployment.},
+tldr={SOTA image generative models can embed NSFW text in images. Prior solutions are ineffective, so we propose a mitigation method and introduce a benchmark for future progress.},
+}
 
-
+@inproceedings{di2026demystifying,
+title={Demystifying Foreground-Background Memorization in Diffusion Models},
+author={Jimmy Z. Di and Yiwei Lu and Yaoliang Yu and Gautam Kamath and Adam Dziedzic and Franziska Boenisch},
+booktitle={The Fortieth AAAI Conference on Artificial Intelligence},
+year={2026},
+month={1},
+url={https://adam-dziedzic.com/static/assets/papers/demistify.pdf},
+abstract={Diffusion models (DMs) memorize training images and can reproduce near-duplicates during generation. Current detection methods identify verbatim memorization but fail to capture two critical aspects: quantifying partial memorization occurring in small image regions, and memorization patterns beyond specific prompt-image pairs. To address these limitations, we propose Foreground Background Memorization (FB-Mem), a novel segmentation-based metric that classifies and quantifies memorized regions within generated images. Our method reveals that memorization is more pervasive than previously understood: (1) individual generations from single prompts may be linked to clusters of similar training images, revealing complex memorization patterns that extend beyond one-to-one correspondences; and (2) existing modellevel mitigation methods, such as neuron deactivation and pruning, fail to eliminate local memorization, which persists particularly in foreground regions. Our work establishes an effective framework for measuring memorization in diffusion models, demonstrates the inadequacy of current mitigation approaches, and proposes a stronger mitigation method using a clustering approach.},
+tldr={We propose an effective framework to measure and mitigate different types of memorization in diffusion models.},
+}
 
 
 
