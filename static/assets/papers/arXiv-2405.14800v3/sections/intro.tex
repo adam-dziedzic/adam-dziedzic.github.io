@@ -1,0 +1,43 @@
+\section{Introduction}
+% \vspace{-3pt}
+
+Text-to-image diffusion models have achieved remarkable success in the guided generation of diverse, high-quality images based on text prompts, 
+such as Stable Diffusion \cite{rombach2022high, podell2023sdxl}, DALLE-2 \cite{ramesh2022hierarchical}, Imagen \cite{saharia2022photorealistic}, and DeepFloyd-IF \cite{DeepFloyd_IF}. 
+These models are increasingly adopted by users to create photorealistic images that align with desired semantics.
+Moreover, they can generate images of specific concepts \cite{Pokemon-Blip}  or styles  \cite{Wikiart} when fine-tuned on relevant datasets.
+However, the impressive generative capabilities of these models depend heavily on high-quality image-text datasets, which involve collecting image-text data from the web. 
+This practice raises significant privacy and copyright concerns in the community~\cite{carlini2023extracting,Generative_AI_Has}. 
+The pretraining and fine-tuning processes of text-to-image diffusion models can cause copyright infringement, as they utilize unauthorized datasets published by human artists or stock-image websites 
+\cite{bbc2022Art, cnn2022AI, washington2022AI, Reuters2023getty, Reuters2023Lawsuits}. 
+
+% MIA
+Membership inference (also known as the membership inference attack) is widely used for auditing privacy leakage of training data 
+\cite{shokri2017membership, carlini2022membership}, defined as determining whether a given data point has been used to train the target model. 
+Dataset owners can thus leverage membership inference to determine if their data is being used without authorization \cite{miao2021audio,dealcala2024my}.
+
+
+Previous works \cite{carlini2023extracting,duan2023diffusion,kong2023efficient,fu2023probabilistic,dubinski2024towards,matsumoto2023membership} have attempted membership inference on diffusion models. 
+\citet{carlini2023extracting} employ LiRA (Likelihood Ratio Attack)~\cite{carlini2022membership} to perform membership inference on diffusion models. 
+LiRA requires training multiple shadow models to estimate the likelihood ratios of a data point from different models, which incurs high training overhead (e.g., 16 shadow models for DDPM \cite{ho2020denoising} on CIFAR-10 \cite{krizhevsky2009learning}), making it neither scalable nor applicable to text-to-image diffusion models. Other query-based membership inference methods \cite{matsumoto2023membership,duan2023diffusion,kong2023efficient,fu2023probabilistic} design and compute indicators to evaluate whether a given data point belongs to the member set. These methods require only a few or even a single shadow model, making them scalable to larger text-to-image diffusion models. 
+However, these methods mainly estimate model memorization for data points and do not fully utilize the conditional distribution of image-text pairs.
+Consequently, they achieve limited success only under excessively high training steps and fail under real steps or common data augmentation methods (Tab.~\ref{table:results_real}), which do not reflect real training scenarios. 
+Text-to-image diffusion models have demonstrated excellent performance in zero-shot image generation \cite{rombach2022high, podell2023sdxl,bao2023one}, indicating their strong generalization, which makes it difficult to distinguish membership by directly measuring overfitting to data points.  
+And due to the stochasticity of diffusion training loss~\cite{ho2020denoising, rombach2022high}, this kind of measuring becomes more challenging.
+
+%%%%%%%%%%%%
+
+To address the challenges, we firstly identify a \textbf{Conditional Overfitting} phenomenon of text-to-image diffusion models with empirical validation, where the models exhibit more significant overfitting to the conditional distribution of the images given the corresponding text than the marginal distribution of the images only. It inspires the revealing of membership by leveraging the overfitting difference.
+Based on it, we propose to perform membership inference on text-to-image diffusion models via \textbf{C}onditional \textbf{Li}kelihood \textbf{D}iscrepancy (\textbf{CLiD}).
+Specifically, CLiD quantifies overfitting difference analytically by utilizing Kullback-Leibler (KL) divergence as the distance metric and derives a membership inference indicator that estimates the discrepancy between the conditional likelihood of image-text pairs and the likelihood of images only. 
+We approximate the likelihoods by employing Monte Carlo sampling on their ELBOs (Evidence Lower Bounds),
+and design two membership inference methods: a threshold-based method \clidth and a feature vector-based method \clidvec.
+
+
+We conduct extensive experiments on three text-to-image datasets~\cite{lin2014microsoft,young2014image,Pokemon-Blip} with various data distributions and dataset scales, using the mainstream open-sourced text-to-image diffusion models \cite{Stable-Diffusion-v1-4, Stable-Diffusion-v1-5} under both fine-tuning and pretraining settings. 
+%%% Revision
+First, our methods consistently outperform existing baselines across various data distributions and training scenarios, including fine-tuning settings and the pretraining setting. Second, our experiments on fine-tuning settings with different training steps (Sec.~\ref{sec:main_result}) reveal that excessively high step/image ratios cause overfitting, leading to hallucination success; and we develop a more realistic pretraining setting following \cite{dubinski2024towards,das2024blind}, where our experiments reveal the insufficient effect of existing membership inference works \cite{duan2023diffusion, kong2023efficient, fu2023probabilistic, matsumoto2023membership}.
+Third, our comparison experiment with varying training steps (Sec.~\ref{sec:vary_steps}) indicates that the effectiveness of membership inference grows with higher step/image ratios and should be evaluated under reasonable settings for realistic results.
+Next, ablation studies further demonstrate the effect of our CLiD indicator, even with fewer query count, our method still outperforms baseline methods (\cref{fig:auc_samples}).
+Last, experiments show that our methods exhibit stronger resistance to data augmentation, and exhibit resistance to even adaptive defenses. 
+
+

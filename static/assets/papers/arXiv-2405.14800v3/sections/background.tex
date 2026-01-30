@@ -1,0 +1,46 @@
+\vspace{-2pt}
+\section{Diffusion Model Preliminaries}
+\vspace{-1pt}
+
+\textbf{Denoising Diffusion Probabilistic Model (DDPM)} \cite{ho2020denoising} learns the data distribution 
+$\mathbf{x}_0 \sim q(\mathbf{x}) $ 
+by reversing the forward noise-adding process. 
+For the forward process, DDPM defines a Markov process of adding Gaussian noise step by step:
+\begin{equation}
+    q(\mathbf{x}_t | \mathbf{x}_{t-1}) := \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I}),
+    \label{eq:ddpm_forward}
+\end{equation}
+where $\beta_{t} \in (0, 1)$ is the hyperparameter controlling the variance. 
+For the reverse process, DDPM defines a learnable Markov chain starting at $p(\mathbf{x}_T)=\mathcal{N}(\mathbf{x}_T;\mathbf{0},\mathbf{I})$ to generate $\mathbf{x}_0$:
+\begin{equation}\label{eq:reverse}
+p_\theta(\mathbf{x}_{0}) =  \int_{\mathbf{x}_{1:T}} p(\mathbf{x}_T)\prod_{t=1}^T p_\theta(\mathbf{x}_{t-1}|\mathbf{x}_t)\  \mathrm{d}\mathbf{x}_{1:T}, 
+\qquad 
+    p_{\theta}(\mathbf{x}_{t-1} | \mathbf{x}_{t}) = \mathcal{N}(\mathbf{x}_{t-1}; \mathbf{\mu}_{\theta}(\mathbf{x}_{t}, t), \sigma_t^2),
+\end{equation}
+where $\sigma_t^2$ is the untrained time-dependent constant.\,$\theta$ represents the trainable parameters.
+To maximize $p_\theta(\mathbf{x}_0)$, DDPM optimizes the Evidence Lower Bound (ELBO) of the log-likelihood~\cite{ho2020denoising, li2023your}:
+\begin{equation}\label{eq:ddpm_elbo}
+       \log p_\theta (\mathbf{x}_0 )  
+       \geq \mathbb{E}_{q(\mathbf{x}_{1:T} \mid \mathbf{x}_0)}\left[\log \frac{p_\theta(\mathbf{x}_{0:T})}{q(\mathbf{x}_{1:T} \mid \mathbf{x}_0)}\right] 
+   = - \mathbb{E}_{ \mathbf{\epsilon}, t} \left[|| \mathbf{\epsilon}_{\theta}( \mathbf{x}_t    , t) - \epsilon ||^2 \right] + C,
+\end{equation}
+where $\epsilon \sim \mathcal{N}(0,\mathcal{I})$,  $t \sim \text{Uniform}({1,...,T}) $ and $C$ is a constant. $\mathbf{x}_t$ 
+is obtained from Eq.~\eqref{eq:ddpm_forward},
+and $\epsilon_\theta$ is 
+a function approximator intended to predict the noise $\epsilon$ from $\mathbf{x}_t$. Omitting the untrainable constant in Eq.~\eqref{eq:ddpm_elbo} and taking its negative yields the loss function of training DDPM.
+
+\textbf{Conditional diffusion models} \cite{ho2022classifier, nichol2021glide, rombach2022high}.
+To achieve controllable generation ability, text-to-image diffusion models
+incorporate the conditioning mechanism into the model, which are also known as conditional diffusion models, enabling them to learn conditional  probability as:
+\begin{equation}
+p_\theta(\mathbf{x}_0 |\mathbf{c}) = \int_{\mathbf{x}_{1:T}} p(\mathbf{x}_T) \prod_{t=1}^T p_\theta(\mathbf{x}_{t-1} | \mathbf{x}_t, \mathbf{c})\  \mathrm{d}\mathbf{x}_{1:T},
+\end{equation}
+where $\mathbf{c}$ denotes the embedding of condition. For text-to-image synthesis, $\mathbf{c}:=\mathcal{T}(\mathbf{y})$, where  $\mathbf{y}$ and $\mathcal{T}$ denote the text input and the text encoder, respectively.
+Similar to Eq.~\eqref{eq:ddpm_elbo}, through derivation \cite{li2023your}, we can obtain the ELBO of the conditional log-likelihood:
+\begin{equation}\label{eq:cdm_elbo}
+   \log p_\theta(\mathbf{x}_0 |\mathbf{c}) 
+   \geq
+   - \mathbb{E}_{ \mathbf{\epsilon}, t} \left[|| \mathbf{\epsilon}_{\theta}( \mathbf{x}_t    , t, \mathbf{c}) - \epsilon ||^2 \right] + C.
+\end{equation}
+
+
