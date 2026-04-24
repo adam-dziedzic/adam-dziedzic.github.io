@@ -1,6 +1,843 @@
 ---
-title: LSTMS
+title: LSTMs
 permalink: lstms/
 ---
 
-<h3>LSTMs</h3>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LSTMs: Long Short-Term Memory Networks | Lecture Materials</title>
+    <meta
+      name="description"
+      content="Lecture materials for LSTMs: abstract, overview, video, quiz, Google Form, blog, and additional learning resources."
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">LSTMs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#abstract">Abstract</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#overview">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#video">Video</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#questions">Questions</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#materials">Materials</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-section py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <div class="hero-card p-4 p-md-5">
+              <span class="badge bg-light text-primary mb-3 px-3 py-2"
+                >Deep Learning Lecture Materials</span
+              >
+              <h1 class="display-5 fw-bold mb-3">
+                Understanding LSTMs: Long Short-Term Memory Networks
+              </h1>
+              <p class="lead mb-4">
+                Learn why standard neural networks struggle with tasks that
+                require processing long sequences of vectors, such as language
+                translation, how RNNs introduce memory, and how LSTMs solve the
+                long-term dependency problem using cell states and gates.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a href="#quiz" class="btn btn-primary btn-lg">Take the Quiz</a>
+                <a
+                  href="https://adam-dziedzic.com/lstms"
+                  target="_blank"
+                  class="btn btn-outline-light btn-lg"
+                  >Lecture Website</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="info-card h-100 p-4">
+              <h5 class="fw-bold mb-3">Learning Goals</h5>
+              <ul class="mb-0">
+                <li>Understand why standard neural networks lack memory</li>
+                <li>Explain how RNNs process sequential data</li>
+                <li>Describe the long-term dependency problem</li>
+                <li>Understand the LSTM cell state and gates</li>
+                <li>
+                  Apply LSTM ideas to language translation and sentiment
+                  classification
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Abstract -->
+    <section id="abstract" class="section-padding">
+      <div class="container">
+        <div class="section-header mb-4">
+          <h2 class="fw-bold">Lecture Abstract</h2>
+          <p class="text-muted mb-0">
+            A concise summary of the lecture topic and its core ideas.
+          </p>
+        </div>
+
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <p>
+              This lecture introduces
+              <strong>Long Short-Term Memory Networks (LSTMs)</strong> as an
+              important extension of recurrent neural networks for processing
+              sequence data. Standard neural networks are effective for
+              fixed-size input-output problems such as image classification, but
+              they lack memory and therefore cannot naturally use earlier
+              context when making later predictions.
+            </p>
+            <p>
+              To solve this limitation, recurrent neural networks (RNNs) were
+              introduced to process sequences by maintaining a hidden state
+              across time steps. However, simple RNNs often struggle to learn
+              <strong>long-term dependencies</strong>, especially when the
+              relevant information appears far earlier in the sequence.
+            </p>
+            <p class="mb-0">
+              LSTMs address this issue with a specialized internal structure
+              based on a <strong>cell state</strong> and three main
+              <strong>gates</strong>: the forget gate, the input gate, and the
+              output gate. These mechanisms allow the network to decide what to
+              keep, what to discard, and what to output, making LSTMs highly
+              effective for tasks such as language modeling, translation,
+              sentiment analysis, and sequence prediction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header mb-4">
+          <h2 class="fw-bold">Lecture Overview</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-3">Plan of the Lecture</h4>
+                <ol class="mb-4">
+                  <li>
+                    Motivation: why standard neural networks are insufficient
+                  </li>
+                  <li>
+                    Operating on sequences of vectors and remembering the past
+                  </li>
+                  <li>RNNs: Recurrent Neural Networks</li>
+                  <li>LSTMs: Long Short-Term Memory Networks</li>
+                </ol>
+
+                <h5 class="fw-bold mb-3">Applications Discussed</h5>
+                <ul class="mb-0">
+                  <li>Image classification (one-to-one)</li>
+                  <li>Image captioning (one-to-many)</li>
+                  <li>Sentiment analysis (many-to-one)</li>
+                  <li>
+                    Language translation and video understanding over time
+                    (many-to-many)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-3">Important Ideas</h4>
+                <ul>
+                  <li>Standard networks have no memory of past inputs</li>
+                  <li>RNNs pass hidden states through time</li>
+                  <li>Simple RNNs struggle with long-term dependencies</li>
+                  <li>
+                    LSTMs introduce a cell state that carries information
+                    forward
+                  </li>
+                  <li>
+                    Gates regulate forgetting, adding, and outputting
+                    information
+                  </li>
+                </ul>
+
+                <h5 class="fw-bold mt-4 mb-3">Key Equations</h5>
+                <div class="equation-box mb-2">
+                  f<sub>t</sub> = σ(W<sub>f</sub>[h<sub>t-1</sub>,
+                  x<sub>t</sub>] + b<sub>f</sub>) (forget gate)
+                </div>
+                <div class="equation-box mb-2">
+                  i<sub>t</sub> = σ(W<sub>i</sub>[h<sub>t-1</sub>,
+                  x<sub>t</sub>] + b<sub>i</sub>) (input gate)
+                </div>
+                <div class="equation-box mb-2">
+                  C̃<sub>t</sub> = tanh(W<sub>c</sub>[h<sub>t-1</sub>,
+                  x<sub>t</sub>] + b<sub>c</sub>) (new cell state)
+                </div>
+                <div class="equation-box mb-2">
+                  C<sub>t</sub> = f<sub>t</sub> * C<sub>t-1</sub> + i<sub
+                    >t</sub
+                  >
+                  * C̃<sub>t</sub> (update cell state)
+                </div>
+                <div class="equation-box">
+                  h<sub>t</sub> = o<sub>t</sub> * tanh(C<sub>t</sub>) (generate
+                  output and next hidden state)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section id="video" class="section-padding">
+      <div class="container">
+        <div class="section-header mb-4">
+          <h2 class="fw-bold">Lecture Video</h2>
+          <p class="text-muted mb-0">
+            Watch the YouTube video to reinforce the concepts from the lecture.
+          </p>
+        </div>
+
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <div class="ratio ratio-16x9 rounded overflow-hidden mb-4">
+              <iframe
+                src="https://www.youtube.com/embed/qg3D_i7Ivsk"
+                title="LSTMs YouTube Video"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <a
+              href="https://youtu.be/qg3D_i7Ivsk"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              Open Video on YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions -->
+    <section id="questions" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header mb-4">
+          <h2 class="fw-bold">Submit Questions for the In-Person Meeting</h2>
+          <p class="text-muted mb-0">
+            Use the Google Form below to submit questions in advance.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-3">Google Form</h4>
+                <p>
+                  If anything about RNNs, LSTMs, long-term dependencies, cell
+                  states, or gates is unclear, please submit your question
+                  before the in-person session.
+                </p>
+                <a
+                  href="https://forms.gle/qww7Tn7PUEcDoQJc8"
+                  target="_blank"
+                  class="btn btn-primary"
+                >
+                  Submit a Question
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-3">Suggested Questions</h4>
+                <ul class="mb-0">
+                  <li>Why do standard neural networks not have memory?</li>
+                  <li>
+                    What is the difference between hidden state and cell state?
+                  </li>
+                  <li>Why are gates based on sigmoid activations?</li>
+                  <li>How does the forget gate help learning?</li>
+                  <li>
+                    Why do LSTMs perform better than simple RNNs on long
+                    sequences?
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section-padding">
+      <div class="container">
+        <div class="section-header mb-4">
+          <h2 class="fw-bold">Blog: Understanding LSTMs in Plain Language</h2>
+          <p class="text-muted mb-0">
+            A blog-style article students can read before or after class.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body p-4">
+                <h3 class="fw-bold mb-3">Why LSTMs Matter</h3>
+                <p>
+                  Human understanding depends on memory. When we hear or read
+                  language, we interpret each word based on the words that came
+                  before it. Traditional neural networks do not work this way.
+                  They process an input and produce an output, but they do not
+                  naturally remember earlier context.
+                </p>
+                <p>
+                  This becomes a major problem for sequence tasks. For example,
+                  in language translation, the meaning of a word often depends
+                  on earlier words in the sentence. In sentiment analysis, the
+                  final sentiment may depend on context built across many
+                  tokens. To handle such problems, recurrent neural networks
+                  were introduced.
+                </p>
+                <p>
+                  RNNs improve on standard neural networks by passing a hidden
+                  state from one time step to the next. This creates a form of
+                  memory. However, simple RNNs still struggle when the important
+                  information is far in the past. That is the long-term
+                  dependency problem.
+                </p>
+                <p>
+                  LSTMs solve this by introducing a dedicated memory pathway
+                  called the <strong>cell state</strong>. Instead of rewriting
+                  everything at each step, the network carefully controls what
+                  to forget, what new information to add, and what to output.
+                  This control happens through gates.
+                </p>
+                <p class="mb-0">
+                  Because of this design, LSTMs became a major breakthrough for
+                  sequence modeling and were widely used in natural language
+                  processing, speech recognition, and time-series analysis. Even
+                  today, they remain an essential concept for understanding how
+                  neural networks can model memory.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-3">Key Takeaways</h4>
+                <ul>
+                  <li>Standard neural networks have no built-in memory</li>
+                  <li>RNNs process sequences using hidden states</li>
+                  <li>Long-term dependencies are hard for simple RNNs</li>
+                  <li>LSTMs use gates to control memory flow</li>
+                  <li>The cell state is central to the LSTM architecture</li>
+                </ul>
+
+                <hr />
+
+                <h5 class="fw-bold">Best Mental Model</h5>
+                <p class="mb-0">
+                  Think of the cell state as a conveyor belt carrying useful
+                  information through time, while the gates act as controllers
+                  deciding what information is kept, removed, or revealed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header mb-4">
+          <h2 class="fw-bold">Student Quiz</h2>
+          <p class="text-muted mb-0">
+            Answer the questions below based on the lecture.
+          </p>
+        </div>
+
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <form id="quizForm">
+              <div class="quiz-item mb-4">
+                <h5>
+                  1. What is the major limitation of standard neural networks
+                  discussed in the lecture?
+                </h5>
+                <div>
+                  <input type="radio" name="q1" value="a" /> They cannot
+                  classify images
+                </div>
+                <div>
+                  <input type="radio" name="q1" value="b" /> They have no memory
+                  of previous inputs
+                </div>
+                <div>
+                  <input type="radio" name="q1" value="c" /> They are always
+                  recurrent
+                </div>
+                <div>
+                  <input type="radio" name="q1" value="d" /> They only work with
+                  text
+                </div>
+                <div class="feedback mt-2" id="f1"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>
+                  2. Which example from the lecture is a one-to-many mapping?
+                </h5>
+                <div>
+                  <input type="radio" name="q2" value="a" /> Sentiment analysis
+                </div>
+                <div>
+                  <input type="radio" name="q2" value="b" /> Language
+                  translation
+                </div>
+                <div>
+                  <input type="radio" name="q2" value="c" /> Image captioning
+                </div>
+                <div>
+                  <input type="radio" name="q2" value="d" /> Binary image
+                  classification
+                </div>
+                <div class="feedback mt-2" id="f2"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>
+                  3. What does an RNN pass from one time step to the next?
+                </h5>
+                <div>
+                  <input type="radio" name="q3" value="a" /> The hidden state
+                </div>
+                <div>
+                  <input type="radio" name="q3" value="b" /> The loss value
+                </div>
+                <div>
+                  <input type="radio" name="q3" value="c" /> Only the output
+                  label
+                </div>
+                <div>
+                  <input type="radio" name="q3" value="d" /> The training
+                  dataset
+                </div>
+                <div class="feedback mt-2" id="f3"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>
+                  4. Why do simple RNNs struggle with long-term dependencies?
+                </h5>
+                <div>
+                  <input type="radio" name="q4" value="a" /> They cannot process
+                  sequences
+                </div>
+                <div>
+                  <input type="radio" name="q4" value="b" /> They fail to learn
+                  useful information across large gaps in practice
+                </div>
+                <div>
+                  <input type="radio" name="q4" value="c" /> They do not use
+                  activation functions
+                </div>
+                <div>
+                  <input type="radio" name="q4" value="d" /> They only work for
+                  images
+                </div>
+                <div class="feedback mt-2" id="f4"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>5. What is the key component of an LSTM?</h5>
+                <div>
+                  <input type="radio" name="q5" value="a" /> Pooling layer
+                </div>
+                <div><input type="radio" name="q5" value="b" /> Cell state</div>
+                <div>
+                  <input type="radio" name="q5" value="c" /> Convolution filter
+                </div>
+                <div>
+                  <input type="radio" name="q5" value="d" /> Batch normalization
+                  layer
+                </div>
+                <div class="feedback mt-2" id="f5"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>6. What does the forget gate decide?</h5>
+                <div>
+                  <input type="radio" name="q6" value="a" /> What information to
+                  remove from the cell state
+                </div>
+                <div>
+                  <input type="radio" name="q6" value="b" /> The final loss
+                  value
+                </div>
+                <div>
+                  <input type="radio" name="q6" value="c" /> The batch size
+                </div>
+                <div>
+                  <input type="radio" name="q6" value="d" /> How many epochs to
+                  train
+                </div>
+                <div class="feedback mt-2" id="f6"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>
+                  7. Which activation function is mainly used in LSTM gates?
+                </h5>
+                <div><input type="radio" name="q7" value="a" /> ReLU</div>
+                <div><input type="radio" name="q7" value="b" /> Softmax</div>
+                <div><input type="radio" name="q7" value="c" /> Sigmoid</div>
+                <div><input type="radio" name="q7" value="d" /> Leaky ReLU</div>
+                <div class="feedback mt-2" id="f7"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>
+                  8. Which sentence from the lecture illustrates a long-term
+                  dependency?
+                </h5>
+                <div>
+                  <input type="radio" name="q8" value="a" /> “The clouds are in
+                  the sky.”
+                </div>
+                <div>
+                  <input type="radio" name="q8" value="b" /> “I grew up in
+                  France… I speak fluent French.”
+                </div>
+                <div>
+                  <input type="radio" name="q8" value="c" /> “The cat is on the
+                  mat.”
+                </div>
+                <div>
+                  <input type="radio" name="q8" value="d" /> “This film was
+                  good.”
+                </div>
+                <div class="feedback mt-2" id="f8"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>9. What does the output gate control?</h5>
+                <div>
+                  <input type="radio" name="q9" value="a" /> Which parts of the
+                  cell state become the output
+                </div>
+                <div>
+                  <input type="radio" name="q9" value="b" /> The optimizer
+                  learning rate
+                </div>
+                <div>
+                  <input type="radio" name="q9" value="c" /> The dataset split
+                </div>
+                <div>
+                  <input type="radio" name="q9" value="d" /> Only the input
+                  sequence length
+                </div>
+                <div class="feedback mt-2" id="f9"></div>
+              </div>
+
+              <div class="quiz-item mb-4">
+                <h5>10. What is the main conclusion of the lecture?</h5>
+                <div>
+                  <input type="radio" name="q10" value="a" /> Standard neural
+                  networks are enough for all sequence tasks
+                </div>
+                <div>
+                  <input type="radio" name="q10" value="b" /> LSTMs extend RNNs
+                  to better handle long-term dependencies
+                </div>
+                <div>
+                  <input type="radio" name="q10" value="c" /> Sequence data does
+                  not require memory
+                </div>
+                <div>
+                  <input type="radio" name="q10" value="d" /> LSTMs are only
+                  useful for images
+                </div>
+                <div class="feedback mt-2" id="f10"></div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="checkQuiz()"
+                >
+                  Check Answers
+                </button>
+                <button
+                  type="reset"
+                  class="btn btn-outline-secondary"
+                  onclick="resetQuiz()"
+                >
+                  Reset Quiz
+                </button>
+              </div>
+
+              <div id="quizResult" class="mt-4 fw-bold"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Materials -->
+    <section id="materials" class="section-padding">
+      <div class="container">
+        <div class="section-header mb-4">
+          <h2 class="fw-bold">Additional Materials</h2>
+          <p class="text-muted mb-0">
+            Recommended resources and activities to provide the best learning
+            experience.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h5 class="fw-bold">LSTM Cheat Sheet</h5>
+                <p class="mb-0">
+                  A one-page summary with the LSTM diagram, gates, and equations
+                  for quick review.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h5 class="fw-bold">Coding Notebook</h5>
+                <p class="mb-0">
+                  A Jupyter notebook in PyTorch or TensorFlow comparing a simple
+                  RNN and an LSTM on a toy task.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h5 class="fw-bold">Animated Gate Visualization</h5>
+                <p class="mb-0">
+                  A step-by-step animation showing how information moves through
+                  forget, input, and output gates.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h5 class="fw-bold">Glossary of Terms</h5>
+                <p class="mb-0">
+                  Definitions for hidden state, cell state, long-term
+                  dependency, sigmoid, tanh, and sequence mapping.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h5 class="fw-bold">Comparison Table</h5>
+                <p class="mb-0">
+                  A comparison of feedforward networks, RNNs, LSTMs, GRUs, and
+                  Transformers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h5 class="fw-bold">In-Class Activity</h5>
+                <p class="mb-0">
+                  Ask students to identify which earlier words must be
+                  remembered to predict a later word in example sentences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mt-4">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-3">Recommended Teaching Package</h4>
+            <ul class="mb-0">
+              <li>Slides PDF from the lecture</li>
+              <li>Embedded lecture video</li>
+              <li>Pre-class blog reading</li>
+              <li>Interactive quiz for self-assessment</li>
+              <li>Google Form for collecting questions</li>
+              <li>Optional coding lab or homework notebook</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 footer-custom">
+      <div class="container text-center">
+        <p class="mb-1 fw-semibold">
+          Understanding LSTMs: Long Short-Term Memory Networks
+        </p>
+        <p class="mb-0">
+          Lecture resource page based on the provided slides. Visit:
+          <a href="https://adam-dziedzic.com/lstms" target="_blank"
+            >adam-dziedzic.com/lstms</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Quiz Script -->
+    <script>
+      const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "a",
+        q4: "b",
+        q5: "b",
+        q6: "a",
+        q7: "c",
+        q8: "b",
+        q9: "a",
+        q10: "b",
+      };
+
+      const explanations = {
+        q1: "Standard neural networks process inputs independently and do not retain past context.",
+        q2: "Image captioning takes one image and generates a sequence of words.",
+        q3: "RNNs pass the hidden state from one time step to the next.",
+        q4: "In practice, simple RNNs struggle to learn useful information across long distances in a sequence.",
+        q5: "The cell state is the central memory pathway in an LSTM.",
+        q6: "The forget gate controls what information should be removed from the previous cell state.",
+        q7: "LSTM gates usually use sigmoid because it outputs values between 0 and 1.",
+        q8: "The France → French example requires remembering information from much earlier in the sequence.",
+        q9: "The output gate decides what part of the cell state becomes visible in the output/hidden state.",
+        q10: "This is the core message of the lecture.",
+      };
+
+      function checkQuiz() {
+        let score = 0;
+
+        for (let i = 1; i <= 10; i++) {
+          const q = "q" + i;
+          const selected = document.querySelector(`input[name="${q}"]:checked`);
+          const feedback = document.getElementById("f" + i);
+
+          if (!selected) {
+            feedback.innerHTML = `<span class="text-danger fw-semibold">No answer selected.</span> ${explanations[q]}`;
+            continue;
+          }
+
+          if (selected.value === answers[q]) {
+            score++;
+            feedback.innerHTML = `<span class="text-success fw-semibold">Correct.</span> ${explanations[q]}`;
+          } else {
+            feedback.innerHTML = `<span class="text-danger fw-semibold">Incorrect.</span> ${explanations[q]}`;
+          }
+        }
+
+        const result = document.getElementById("quizResult");
+        result.innerHTML = `Your score: <span class="text-primary">${score}/10</span>`;
+
+        if (score === 10) {
+          result.innerHTML += ` — Excellent!`;
+        } else if (score >= 7) {
+          result.innerHTML += ` — Very good. Review the feedback for the missed questions.`;
+        } else if (score >= 5) {
+          result.innerHTML += ` — Good start. Revisit the lecture overview and blog section.`;
+        } else {
+          result.innerHTML += ` — Please review the lecture sections carefully and try again.`;
+        }
+      }
+
+      function resetQuiz() {
+        document.getElementById("quizResult").innerHTML = "";
+        for (let i = 1; i <= 10; i++) {
+          document.getElementById("f" + i).innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
