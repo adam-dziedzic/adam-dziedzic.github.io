@@ -240,8 +240,14 @@
       <div class="container">
         <div class="section-header mb-4">
           <h2 class="fw-bold">Lecture Video</h2>
-          <p class="text-muted mb-0">
-            Watch the YouTube video to reinforce the concepts from the lecture.
+          <p class="text-muted mb-0">Watch the YouTube video on LSTMs.</p>
+          <p class="mb-0">
+            Lecture slides:
+            <a
+              href="https://adam-dziedzic.com/static/assets/slides/LSTMs.pdf"
+              target="_blank"
+              >adam-dziedzic.com/lstms/slides.pdf</a
+            >
           </p>
         </div>
 
@@ -325,17 +331,13 @@
     <section id="blog" class="section-padding">
       <div class="container">
         <div class="section-header mb-4">
-          <h2 class="fw-bold">Blog: Understanding LSTMs in Plain Language</h2>
-          <p class="text-muted mb-0">
-            A blog-style article students can read before or after class.
-          </p>
+          <h2 class="fw-bold">Executive Summary: Understanding LSTMs</h2>
         </div>
 
         <div class="row g-4">
           <div class="col-lg-8">
             <div class="card shadow-sm border-0 h-100">
               <div class="card-body p-4">
-                <h3 class="fw-bold mb-3">Why LSTMs Matter</h3>
                 <p>
                   Human understanding depends on memory. When we hear or read
                   language, we interpret each word based on the words that came
@@ -349,7 +351,7 @@
                   on earlier words in the sentence. In sentiment analysis, the
                   final sentiment may depend on context built across many
                   tokens. To handle such problems, recurrent neural networks
-                  were introduced.
+                  (RNNs) were introduced.
                 </p>
                 <p>
                   RNNs improve on standard neural networks by passing a hidden
@@ -359,11 +361,12 @@
                   dependency problem.
                 </p>
                 <p>
-                  LSTMs solve this by introducing a dedicated memory pathway
-                  called the <strong>cell state</strong>. Instead of rewriting
-                  everything at each step, the network carefully controls what
-                  to forget, what new information to add, and what to output.
-                  This control happens through gates.
+                  LSTMs (Long Short-Term Memory Networks) solve this by
+                  introducing a dedicated memory pathway called the
+                  <strong>cell state</strong>. Instead of rewriting everything
+                  at each step, the network carefully controls what to forget,
+                  what new information to add, and what to output. This control
+                  happens through gates.
                 </p>
                 <p class="mb-0">
                   Because of this design, LSTMs became a major breakthrough for
@@ -394,7 +397,7 @@
                 <p class="mb-0">
                   Think of the cell state as a conveyor belt carrying useful
                   information through time, while the gates act as controllers
-                  deciding what information is kept, removed, or revealed.
+                  deciding what information is forgotten, added, or output.
                 </p>
               </div>
             </div>
@@ -658,8 +661,8 @@
               <div class="card-body">
                 <h5 class="fw-bold">LSTM Cheat Sheet</h5>
                 <p class="mb-0">
-                  A one-page summary with the LSTM diagram, gates, and equations
-                  for quick review.
+                  Create a one-page summary with the LSTM diagram, gates, and
+                  equations for quick review.
                 </p>
               </div>
             </div>
@@ -670,8 +673,8 @@
               <div class="card-body">
                 <h5 class="fw-bold">Coding Notebook</h5>
                 <p class="mb-0">
-                  A Jupyter notebook in PyTorch or TensorFlow comparing a simple
-                  RNN and an LSTM on a toy task.
+                  Prepare a Jupyter notebook in PyTorch or TensorFlow comparing
+                  a simple RNN and an LSTM on a toy task.
                 </p>
               </div>
             </div>
@@ -682,8 +685,8 @@
               <div class="card-body">
                 <h5 class="fw-bold">Animated Gate Visualization</h5>
                 <p class="mb-0">
-                  A step-by-step animation showing how information moves through
-                  forget, input, and output gates.
+                  Create a step-by-step animation showing how information moves
+                  through forget, input, and output gates.
                 </p>
               </div>
             </div>
@@ -694,7 +697,7 @@
               <div class="card-body">
                 <h5 class="fw-bold">Glossary of Terms</h5>
                 <p class="mb-0">
-                  Definitions for hidden state, cell state, long-term
+                  Write down definitions for hidden state, cell state, long-term
                   dependency, sigmoid, tanh, and sequence mapping.
                 </p>
               </div>
@@ -706,8 +709,8 @@
               <div class="card-body">
                 <h5 class="fw-bold">Comparison Table</h5>
                 <p class="mb-0">
-                  A comparison of feedforward networks, RNNs, LSTMs, GRUs, and
-                  Transformers.
+                  Compose a comparison of feedforward networks, RNNs, LSTMs,
+                  GRUs, and Transformers.
                 </p>
               </div>
             </div>
@@ -718,25 +721,321 @@
               <div class="card-body">
                 <h5 class="fw-bold">In-Class Activity</h5>
                 <p class="mb-0">
-                  Ask students to identify which earlier words must be
-                  remembered to predict a later word in example sentences.
+                  Identify which variants of LSTMs (e.g., GRU) perform the best
+                  in practice due to their high performance and superior speed
+                  of execution.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- <div class="card shadow-sm border-0 mt-4">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-3">Recommended additional materials:</h4>
+            <ul class="mb-0">
+              <li>
+                The original paper on LSTMs:
+                https://www.researchgate.net/publication/13853244_Long_Short-Term_Memory
+              </li>
+              <li>
+                Blog by Christopher Olah:
+                https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+              </li>
+              <li>
+                Blog by Andrey Karpathy:
+                https://karpathy.github.io/2015/05/21/rnn-effectiveness/
+              </li>
+            </ul>
+          </div>
+        </div> -->
+
+        <!-- <div class="card shadow-sm border-0 mt-4">
+          <div class="card-body p-4">
+            <h4 id="recommended-materials" class="fw-bold mb-3">
+              Recommended additional materials
+            </h4>
+
+            <ol class="list-group list-group-numbered list-group-flush mb-0">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://doi.org/10.1162/neco.1997.9.8.1735"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Long Short-Term Memory
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Sepp Hochreiter &amp; J&uuml;rgen Schmidhuber,
+                    <em>Neural Computation</em>, 1997. Original LSTM paper.
+                  </div>
+                </div>
+                <span class="badge bg-primary rounded-pill">Paper</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Understanding LSTM Networks
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Christopher Olah, 2015. Clear visual explanation of LSTM
+                    cells and gates.
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">Blog</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      The Unreasonable Effectiveness of Recurrent Neural
+                      Networks
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Andrej Karpathy, 2015. Intuitive introduction to RNNs and
+                    sequence modeling.
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">Blog</span>
+              </li>
+            </ol>
+          </div>
+        </div> -->
+
+        <!-- <div class="card shadow-sm border-0 mt-4">
+          <div class="card-body p-4">
+            <h4 id="recommended-materials" class="fw-bold mb-3">
+              Recommended additional materials
+            </h4>
+
+            <ol class="list-group list-group-numbered list-group-flush mb-0">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://doi.org/10.1162/neco.1997.9.8.1735"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Long Short-Term Memory
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Sepp Hochreiter &amp; J&uuml;rgen Schmidhuber,
+                    <em>Neural Computation</em>, 1997. Original LSTM paper.
+                  </div>
+                </div>
+                <span class="badge bg-primary rounded-pill">Paper</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Understanding LSTM Networks
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Christopher Olah, 2015. Clear visual explanation of LSTM
+                    cells and gates.
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">Blog</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      The Unreasonable Effectiveness of Recurrent Neural
+                      Networks
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Andrej Karpathy, 2015. Intuitive introduction to RNNs and
+                    sequence modeling.
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">Blog</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://github.com/adam-dziedzic/char-rnn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      char-rnn: Character-Level Recurrent Neural Network
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Code based on Andrej Karpathy&rsquo;s character-level RNN
+                    implementation for training language models and generating
+                    text one character at a time.
+                  </div>
+                </div>
+                <span class="badge bg-dark rounded-pill">Code</span>
+              </li>
+            </ol>
+          </div>
+        </div> -->
+
         <div class="card shadow-sm border-0 mt-4">
           <div class="card-body p-4">
-            <h4 class="fw-bold mb-3">Recommended Teaching Package</h4>
-            <ul class="mb-0">
-              <li>Slides PDF from the lecture</li>
-              <li>Embedded lecture video</li>
-              <li>Pre-class blog reading</li>
-              <li>Interactive quiz for self-assessment</li>
-              <li>Google Form for collecting questions</li>
-              <li>Optional coding lab or homework notebook</li>
-            </ul>
+            <h4 id="recommended-materials" class="fw-bold mb-3">
+              Recommended additional materials
+            </h4>
+
+            <ol class="list-group list-group-numbered list-group-flush mb-0">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://doi.org/10.1162/neco.1997.9.8.1735"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Long Short-Term Memory
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Sepp Hochreiter &amp; J&uuml;rgen Schmidhuber,
+                    <em>Neural Computation</em>, 1997. Original LSTM paper.
+                  </div>
+                </div>
+                <span class="badge bg-primary rounded-pill">Paper</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Understanding LSTM Networks
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Christopher Olah, 2015. Clear visual explanation of LSTM
+                    cells and gates.
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">Blog</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      The Unreasonable Effectiveness of Recurrent Neural
+                      Networks
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Andrej Karpathy, 2015. Intuitive introduction to RNNs and
+                    sequence modeling.
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">Blog</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://github.com/adam-dziedzic/lstms/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      My (by Adam Dziedzic) simple code to train RNNs and LSTMs
+                      for Sentiment Analysis
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Code for creating, training, and running simple RNNs and
+                    LSTMs. The goal is sentiment analysis for movie reviews,
+                    demonstrating a many-to-one sequence mapping.
+                  </div>
+                </div>
+                <span class="badge bg-dark rounded-pill">Code</span>
+              </li>
+
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start px-0"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-semibold">
+                    <a
+                      href="https://github.com/adam-dziedzic/char-rnn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      char-rnn: Character-Level Recurrent Neural Network
+                    </a>
+                  </div>
+                  <div class="small text-muted">
+                    Code based on Andrej Karpathy&rsquo;s character-level RNN
+                    implementation for training language models and generating
+                    text one character at a time.
+                  </div>
+                </div>
+                <span class="badge bg-dark rounded-pill">Code</span>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
@@ -747,12 +1046,6 @@
       <div class="container text-center">
         <p class="mb-1 fw-semibold">
           Understanding LSTMs: Long Short-Term Memory Networks
-        </p>
-        <p class="mb-0">
-          Lecture resource page based on the provided slides. Visit:
-          <a href="https://adam-dziedzic.com/lstms" target="_blank"
-            >adam-dziedzic.com/lstms</a
-          >
         </p>
       </div>
     </footer>
