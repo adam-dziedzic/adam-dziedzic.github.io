@@ -18,15 +18,15 @@ An up-to-date list is available on <a
 
 
 <h3 id="2026" class="pubyear">2026</h3>
-<ol class="bibliography"><li><b>Curation Leaks: Membership Inference Attacks against Data Curation for Machine Learning</b><br />
+<ol class="bibliography"><li><b>Concept Removal for Frontier Image Generative Models</b><br />
   
- Dariush Wahdany,     
- Matthew Jagielski,     
+ Aditya Kumar,     
+ Pierre Joly,     
  Adam Dziedzic,     
  Franziska Boenisch   
 <br />
 
-<em>In The Fourteenth International Conference on Learning Representations</em>
+<em>In Forty-third International Conference on Machine Learning</em>
  
 <em> 2026 </em>
     
@@ -36,7 +36,7 @@ An up-to-date list is available on <a
   <a
     style="margin-top: 0.2em"
     class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/curation.pdf"
+    href="https://adam-dziedzic.com/static/assets/papers/block.pdf"
     target="_blank"
     role="button"
     ><img
@@ -54,9 +54,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-wahdany2026curation-tldr"
+    data-target="#collapse-kumar2026concept-tldr"
     aria-expanded="false"
-    aria-controls="collapse-wahdany2026curation-tldr"
+    aria-controls="collapse-kumar2026concept-tldr"
   >
     TL;DR
   </button>
@@ -66,9 +66,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-wahdany2026curation-abstract"
+    data-target="#collapse-kumar2026concept-abstract"
     aria-expanded="false"
-    aria-controls="collapse-wahdany2026curation-abstract"
+    aria-controls="collapse-kumar2026concept-abstract"
   >
     Abstract
   </button>
@@ -78,9 +78,261 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-wahdany2026curation-bibtex"
+    data-target="#collapse-kumar2026concept-bibtex"
     aria-expanded="false"
-    aria-controls="collapse-wahdany2026curation-bibtex"
+    aria-controls="collapse-kumar2026concept-bibtex"
+  >
+    BibTeX
+  </button>
+     
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://github.com/sprintml/block-concept-removal"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Code</a
+  >
+    
+</p>
+
+<div
+  class="collapse"
+  id="collapse-kumar2026concept-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">We leverage transcoders to selectively remove concepts from modern, state-of-the-art image generative models.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-kumar2026concept-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">Image generative models are trained on massive, largely uncurated internet-scale datasets that contain undesirable visual concepts. Efficiently removing such concepts from the model generations without degrading the quality of output images remains challenging. We introduce a novel concept removal method for frontier diffusion and image autoregressive models, such as, SD3.5, Flux, and Infinity. Our intervention replaces the internal bottleneck layer present in all these modern models with a transcoder that is trained to replicate the original layer while structuring it into distinct activation features. This in‑place substitution creates an integrated filter through which concept‑specific signals can be selectively disabled while preserving the rest of the model’s behavior. Since the intervention modifies the model backbone rather than attaching an external component, it remains persistent under white‑box access. Empirically, the approach achieves state‑of‑the‑art concept removal performance across modern diffusion and autoregressive models, maintains visual generation quality, provides robustness against adversarial prompts, and supports sequential removal of diverse concepts. This positions our method as a practical approach for concept removal in frontier image generative models.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-kumar2026concept-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{kumar2026concept,
+  title = {Concept Removal for Frontier Image Generative Models},
+  author = {Kumar, Aditya and Joly, Pierre and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {Forty-third International Conference on Machine Learning},
+  year = {2026}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
+<li><b>Finding DoRI: Discovery of Retained Images in Diffusion Models</b><br />
+  
+ Antoni Kowalczuk,     
+ Dominik Hintersdorf,     
+ Lukas Struppek,     
+ Kristian Kersting,     
+ Adam Dziedzic,     
+ Franziska Boenisch   
+<br />
+
+<em>In Forty-third International Conference on Machine Learning</em>
+ 
+<em> 2026 </em>
+    
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/dori.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kowalczuk2026finding-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-kowalczuk2026finding-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kowalczuk2026finding-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-kowalczuk2026finding-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kowalczuk2026finding-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-kowalczuk2026finding-bibtex"
+  >
+    BibTeX
+  </button>
+     
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://github.com/sprintml/finding_dori"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Code</a
+  >
+    
+</p>
+
+<div
+  class="collapse"
+  id="collapse-kowalczuk2026finding-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">We show that current memorization mitigation methods in diffusion models conceal the memorized images instead of removing them, and provide a robust mitigation method.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-kowalczuk2026finding-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">Text-to-image diffusion models (DMs) have achieved remarkable success in image generation. However, concerns about data privacy and intellectual property remain due to their potential to inadvertently memorize and replicate training data. Recent mitigation efforts have focused on identifying and pruning weights responsible for triggering verbatim training data replication, based on the assumption that memorization can be localized. We challenge this assumption and demonstrate that, even after such pruning, small perturbations to the text embeddings of previously mitigated prompts can re-trigger data replication, revealing the fragility of such methods. Our further analysis then provides multiple indications that memorization is indeed not inherently local: (1) replication triggers for memorized images are distributed throughout text embedding space; (2) embeddings yielding the same replicated image produce divergent model activations; and (3) different pruning methods identify inconsistent sets of memorization-related weights for the same image. Finally, we show that bypassing the locality assumption enables more robust mitigation through adversarial fine-tuning. These findings provide new insights into the fundamental nature of memorization in text-to-image DMs and inform the future development of more reliable mitigation methods against DM memorization.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-kowalczuk2026finding-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{kowalczuk2026finding,
+  title = {Finding Do{RI}: Discovery of Retained Images in Diffusion Models},
+  author = {Kowalczuk, Antoni and Hintersdorf, Dominik and Struppek, Lukas and Kersting, Kristian and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {Forty-third International Conference on Machine Learning},
+  year = {2026}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
+<li><b>Natural Identifiers for Privacy and Data Audits in Large Language Models</b><br />
+  
+ Lorenzo Rossi,     
+ Bartłomiej Marek,     
+ Franziska Boenisch,     
+ Adam Dziedzic   
+<br />
+
+<em>In The Fourteenth International Conference on Learning Representations</em>
+ 
+<em> 2026 </em>
+    
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/nids.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-rossi2026natural-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-rossi2026natural-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-rossi2026natural-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-rossi2026natural-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-rossi2026natural-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-rossi2026natural-bibtex"
   >
     BibTeX
   </button>
@@ -89,34 +341,146 @@ An up-to-date list is available on <a
 
 <div
   class="collapse"
-  id="collapse-wahdany2026curation-tldr"
+  id="collapse-rossi2026natural-tldr"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">Data curation pipelines leak private information, which we demontrate by introducing novel attacks against popular curation methods.</div>
+    <div class="card-body">We propose to leverage natural identifiers that are unique strings generated from random seeds, such as Ethereum addresses, to enable reliable privacy and data auditing of pretrained LLMs.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-wahdany2026curation-abstract"
+  id="collapse-rossi2026natural-abstract"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensitive data, which is known to leak information through model predictions, the private data is used only to guide the selection of useful public data. The resulting model is then trained solely on curated public data. It is tempting to assume that such a model is privacy-preserving because it has never seen the private data. Yet, we show that without further protection, curation pipelines can still leak private information. Specifically, we introduce novel attacks against popular curation methods, targeting every major step: the computation of curation scores, the selection of the curated subset, and the final trained model. We demonstrate that each stage reveals information about the private dataset and that even models trained exclusively on curated public data leak membership information about the private data that guided curation. These findings highlight the previously overlooked inherent privacy risks of data curation and show that privacy assessment must extend beyond the training procedure to include the data selection process. Our differentially private adaptations of curation methods effectively mitigate leakage, indicating that formal privacy guarantees for curation are a promising direction.</div>
+    <div class="card-body">Assessing the privacy of large language models (LLMs) presents significant challenges. In particular, most existing methods for auditing differential privacy require the insertion of specially crafted canary data during training, making them impractical for auditing already-trained models without costly retraining. Additionally, dataset inference, which audits whether a suspect dataset was used to train a model, is infeasible without access to a private non-member held-out dataset. Yet, such held-out datasets are often unavailable or difficult to construct for real-world cases since they have to be from the same distribution (IID) as the suspect data. These limitations severely hinder the ability to conduct scalable, post-hoc audits. To enable such audits, this work introduces natural identifiers (NIDs) as a novel solution to the above-mentioned challenges. NIDs are structured random strings, such as cryptographic hashes and shortened URLs, naturally occurring in common LLM training datasets. Their format enables the generation of unlimited additional random strings from the same distribution, which can act as alternative canaries for audits and as same-distribution held-out data for dataset inference. Our evaluation highlights that indeed, using NIDs, we can facilitate post-hoc differential privacy auditing without any retraining and enable dataset inference for any suspect dataset containing NIDs without the need for a private non-member held-out dataset.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-wahdany2026curation-bibtex"
+  id="collapse-rossi2026natural-bibtex"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
     <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{wahdany2026curation,
-  title = {Curation Leaks: Membership Inference Attacks against Data Curation for Machine Learning},
-  author = {Wahdany, Dariush and Jagielski, Matthew and Dziedzic, Adam and Boenisch, Franziska},
+      <pre style="margin-bottom: 0em">@inproceedings{rossi2026natural,
+  title = {Natural Identifiers for Privacy and Data Audits in Large Language Models},
+  author = {Rossi, Lorenzo and Marek, Bart{\l}omiej and Boenisch, Franziska and Dziedzic, Adam},
+  booktitle = {The Fourteenth International Conference on Learning Representations},
+  year = {2026}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
+<li><b>SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation</b><br />
+  
+ Jan Kociszewski,     
+ Hubert Jastrzębski,     
+ Tymoteusz Stępkowski,     
+ Filip Manijak,     
+ Krzysztof Rojek,     
+ Franziska Boenisch,     
+ Adam Dziedzic   
+<br />
+
+<em>In The Fourteenth International Conference on Learning Representations</em>
+ 
+<em> 2026 </em>
+    
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/serum.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kociszewski2026serum-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-kociszewski2026serum-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kociszewski2026serum-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-kociszewski2026serum-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kociszewski2026serum-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-kociszewski2026serum-bibtex"
+  >
+    BibTeX
+  </button>
+       
+</p>
+
+<div
+  class="collapse"
+  id="collapse-kociszewski2026serum-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">We propose a simple yet highly effective method for marking diffusion-based image generation by adding a unique watermark noise to the initial diffusion noise and training a lightweight detector to reliably identify watermarked images.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-kociszewski2026serum-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">We propose SERUM: an intriguingly simple yet highly effective method for marking images generated by diffusion models (DMs). We only add a unique watermark noise to the initial diffusion generation noise and train a lightweight detector to identify watermarked images, simplifying and unifying the strengths of prior approaches. SERUM provides robustness against any image augmentations or watermark removal attacks and is extremely efficient, all while maintaining negligible impact on image quality. In contrast to prior approaches, which are often only resilient to limited perturbations and incur significant training, injection, and detection costs, our SERUM achieves remarkable performance, with the highest true positive rate (TPR) at a 1% false positive rate (FPR) in most scenarios, along with fast injection and detection and low detector training overhead. Its decoupled architecture also seamlessly supports multiple users by embedding individualized watermarks with little interference between the marks. Overall, our method provides a practical solution to mark outputs from DMs and to reliably distinguish generated from natural images.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-kociszewski2026serum-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{kociszewski2026serum,
+  title = {{SERUM}: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation},
+  author = {Kociszewski, Jan and Jastrz{\k{e}}bski, Hubert and St{\k{e}}pkowski, Tymoteusz and Manijak, Filip and Rojek, Krzysztof and Boenisch, Franziska and Dziedzic, Adam},
   booktitle = {The Fourteenth International Conference on Learning Representations},
   year = {2026}
 }
@@ -228,115 +592,6 @@ An up-to-date list is available on <a
       <pre style="margin-bottom: 0em">@inproceedings{zhao2026data,
   title = {Data Provenance for Image Auto-Regressive Generation},
   author = {Zhao, Bihe and Kerner, Louis and Meintz, Michel and Bakr, Tameem and Boenisch, Franziska and Dziedzic, Adam},
-  booktitle = {The Fourteenth International Conference on Learning Representations},
-  year = {2026}
-}
-</pre>
-    </div>
-  </div>
-</div>
-
-
-</li>
-<li><b>Natural Identifiers for Privacy and Data Audits in Large Language Models</b><br />
-  
- Lorenzo Rossi,     
- Bartłomiej Marek,     
- Franziska Boenisch,     
- Adam Dziedzic   
-<br />
-
-<em>In The Fourteenth International Conference on Learning Representations</em>
- 
-<em> 2026 </em>
-    
-
-<p>
-  
-  <a
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/nids.pdf"
-    target="_blank"
-    role="button"
-    ><img
-      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
-      alt=""
-      width="15"
-      height="15"
-      title="PDF"
-    />
-    Paper</a
-  >
-     
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-rossi2026natural-tldr"
-    aria-expanded="false"
-    aria-controls="collapse-rossi2026natural-tldr"
-  >
-    TL;DR
-  </button>
-   
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-rossi2026natural-abstract"
-    aria-expanded="false"
-    aria-controls="collapse-rossi2026natural-abstract"
-  >
-    Abstract
-  </button>
-  
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-rossi2026natural-bibtex"
-    aria-expanded="false"
-    aria-controls="collapse-rossi2026natural-bibtex"
-  >
-    BibTeX
-  </button>
-       
-</p>
-
-<div
-  class="collapse"
-  id="collapse-rossi2026natural-tldr"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">We propose to leverage natural identifiers that are unique strings generated from random seeds, such as Ethereum addresses, to enable reliable privacy and data auditing of pretrained LLMs.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-rossi2026natural-abstract"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">Assessing the privacy of large language models (LLMs) presents significant challenges. In particular, most existing methods for auditing differential privacy require the insertion of specially crafted canary data during training, making them impractical for auditing already-trained models without costly retraining. Additionally, dataset inference, which audits whether a suspect dataset was used to train a model, is infeasible without access to a private non-member held-out dataset. Yet, such held-out datasets are often unavailable or difficult to construct for real-world cases since they have to be from the same distribution (IID) as the suspect data. These limitations severely hinder the ability to conduct scalable, post-hoc audits. To enable such audits, this work introduces natural identifiers (NIDs) as a novel solution to the above-mentioned challenges. NIDs are structured random strings, such as cryptographic hashes and shortened URLs, naturally occurring in common LLM training datasets. Their format enables the generation of unlimited additional random strings from the same distribution, which can act as alternative canaries for audits and as same-distribution held-out data for dataset inference. Our evaluation highlights that indeed, using NIDs, we can facilitate post-hoc differential privacy auditing without any retraining and enable dataset inference for any suspect dataset containing NIDs without the need for a private non-member held-out dataset.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-rossi2026natural-bibtex"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{rossi2026natural,
-  title = {Natural Identifiers for Privacy and Data Audits in Large Language Models},
-  author = {Rossi, Lorenzo and Marek, Bart{\l}omiej and Boenisch, Franziska and Dziedzic, Adam},
   booktitle = {The Fourteenth International Conference on Learning Representations},
   year = {2026}
 }
@@ -543,17 +798,15 @@ An up-to-date list is available on <a
 
 
 </li>
-<li><b>Demystifying Foreground-Background Memorization in Diffusion Models</b><br />
+<li><b>Curation Leaks: Membership Inference Attacks against Data Curation for Machine Learning</b><br />
   
- Jimmy Z. Di,     
- Yiwei Lu,     
- Yaoliang Yu,     
- Gautam Kamath,     
+ Dariush Wahdany,     
+ Matthew Jagielski,     
  Adam Dziedzic,     
  Franziska Boenisch   
 <br />
 
-<em>In The Fortieth AAAI Conference on Artificial Intelligence</em>
+<em>In The Fourteenth International Conference on Learning Representations</em>
  
 <em> 2026 </em>
     
@@ -563,7 +816,7 @@ An up-to-date list is available on <a
   <a
     style="margin-top: 0.2em"
     class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/demistify.pdf"
+    href="https://adam-dziedzic.com/static/assets/papers/curation.pdf"
     target="_blank"
     role="button"
     ><img
@@ -581,9 +834,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-di2026demystifying-tldr"
+    data-target="#collapse-wahdany2026curation-tldr"
     aria-expanded="false"
-    aria-controls="collapse-di2026demystifying-tldr"
+    aria-controls="collapse-wahdany2026curation-tldr"
   >
     TL;DR
   </button>
@@ -593,9 +846,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-di2026demystifying-abstract"
+    data-target="#collapse-wahdany2026curation-abstract"
     aria-expanded="false"
-    aria-controls="collapse-di2026demystifying-abstract"
+    aria-controls="collapse-wahdany2026curation-abstract"
   >
     Abstract
   </button>
@@ -605,9 +858,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-di2026demystifying-bibtex"
+    data-target="#collapse-wahdany2026curation-bibtex"
     aria-expanded="false"
-    aria-controls="collapse-di2026demystifying-bibtex"
+    aria-controls="collapse-wahdany2026curation-bibtex"
   >
     BibTeX
   </button>
@@ -616,35 +869,144 @@ An up-to-date list is available on <a
 
 <div
   class="collapse"
-  id="collapse-di2026demystifying-tldr"
+  id="collapse-wahdany2026curation-tldr"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">We propose an effective framework to measure and mitigate different types of memorization in diffusion models.</div>
+    <div class="card-body">Data curation pipelines leak private information, which we demontrate by introducing novel attacks against popular curation methods.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-di2026demystifying-abstract"
+  id="collapse-wahdany2026curation-abstract"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">Diffusion models (DMs) memorize training images and can reproduce near-duplicates during generation. Current detection methods identify verbatim memorization but fail to capture two critical aspects: quantifying partial memorization occurring in small image regions, and memorization patterns beyond specific prompt-image pairs. To address these limitations, we propose Foreground Background Memorization (FB-Mem), a novel segmentation-based metric that classifies and quantifies memorized regions within generated images. Our method reveals that memorization is more pervasive than previously understood: (1) individual generations from single prompts may be linked to clusters of similar training images, revealing complex memorization patterns that extend beyond one-to-one correspondences; and (2) existing modellevel mitigation methods, such as neuron deactivation and pruning, fail to eliminate local memorization, which persists particularly in foreground regions. Our work establishes an effective framework for measuring memorization in diffusion models, demonstrates the inadequacy of current mitigation approaches, and proposes a stronger mitigation method using a clustering approach.</div>
+    <div class="card-body">In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensitive data, which is known to leak information through model predictions, the private data is used only to guide the selection of useful public data. The resulting model is then trained solely on curated public data. It is tempting to assume that such a model is privacy-preserving because it has never seen the private data. Yet, we show that without further protection, curation pipelines can still leak private information. Specifically, we introduce novel attacks against popular curation methods, targeting every major step: the computation of curation scores, the selection of the curated subset, and the final trained model. We demonstrate that each stage reveals information about the private dataset and that even models trained exclusively on curated public data leak membership information about the private data that guided curation. These findings highlight the previously overlooked inherent privacy risks of data curation and show that privacy assessment must extend beyond the training procedure to include the data selection process. Our differentially private adaptations of curation methods effectively mitigate leakage, indicating that formal privacy guarantees for curation are a promising direction.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-di2026demystifying-bibtex"
+  id="collapse-wahdany2026curation-bibtex"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
     <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{di2026demystifying,
-  title = {Demystifying Foreground-Background Memorization in Diffusion Models},
-  author = {Di, Jimmy Z. and Lu, Yiwei and Yu, Yaoliang and Kamath, Gautam and Dziedzic, Adam and Boenisch, Franziska},
-  booktitle = {The Fortieth AAAI Conference on Artificial Intelligence},
+      <pre style="margin-bottom: 0em">@inproceedings{wahdany2026curation,
+  title = {Curation Leaks: Membership Inference Attacks against Data Curation for Machine Learning},
+  author = {Wahdany, Dariush and Jagielski, Matthew and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {The Fourteenth International Conference on Learning Representations},
+  year = {2026}
+}
+</pre>
+    </div>
+  </div>
+</div>
+
+
+</li>
+<li><b>Beautiful Images, Toxic Words: Understanding and Addressing Offensive Text in Generated Images</b><br />
+  
+ Aditya Kumar,     
+ Tom Blanchard,     
+ Adam Dziedzic,     
+ Franziska Boenisch   
+<br />
+
+<em>In The Fortieth AAAI Conference on Artificial Intelligence AI Alignment Track</em>
+ 
+<em> 2026 </em>
+    
+
+<p>
+  
+  <a
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    href="https://adam-dziedzic.com/static/assets/papers/BeautifulImages.pdf"
+    target="_blank"
+    role="button"
+    ><img
+      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
+      alt=""
+      width="15"
+      height="15"
+      title="PDF"
+    />
+    Paper</a
+  >
+     
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kumar2026beautiful-tldr"
+    aria-expanded="false"
+    aria-controls="collapse-kumar2026beautiful-tldr"
+  >
+    TL;DR
+  </button>
+   
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kumar2026beautiful-abstract"
+    aria-expanded="false"
+    aria-controls="collapse-kumar2026beautiful-abstract"
+  >
+    Abstract
+  </button>
+  
+  <button
+    style="margin-top: 0.2em"
+    class="btn btn-info btn-info-pad"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapse-kumar2026beautiful-bibtex"
+    aria-expanded="false"
+    aria-controls="collapse-kumar2026beautiful-bibtex"
+  >
+    BibTeX
+  </button>
+       
+</p>
+
+<div
+  class="collapse"
+  id="collapse-kumar2026beautiful-tldr"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">SOTA image generative models can embed NSFW text in images. Prior solutions are ineffective, so we propose a mitigation method and introduce a benchmark for future progress.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-kumar2026beautiful-abstract"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">State-of-the-art Diffusion Models (DMs) produce highly realistic images. While prior work has successfully mitigated Not Safe For Work (NSFW) content in the visual domain, we identify a novel threat: the generation of NSFW text embedded within images. This includes offensive language, such as insults, racial slurs, and sexually explicit terms, posing significant risks to users. We show that all state-of-the-art DMs (e.g., SD3, SDXL, Flux, DeepFloyd IF) are vulnerable to this issue. Through extensive experiments, we demonstrate that existing mitigation techniques, effective for visual content, fail to prevent harmful text generation while substantially degrading benign text generation. As an initial step toward addressing this threat, we introduce a novel fine-tuning strategy that targets only the text-generation layers in DMs. Therefore, we construct a safety fine-tuning dataset by pairing each NSFW prompt with two images: one with the NSFW term, and another where that term is replaced with a carefully crafted benign alternative while leaving the image unchanged otherwise. By training on this dataset, the model learns to avoid generating harmful text while preserving benign content and overall image quality. Finally, to advance research in the area, we release ToxicBench, an open-source benchmark for evaluating NSFW text generation in images. It includes our curated fine-tuning dataset, a set of harmful prompts, new evaluation metrics, and a pipeline that assesses both NSFW-ness and text and image quality. Our benchmark aims to guide future efforts in mitigating NSFW text generation in text-to-image models, thereby contributing to their safe deployment.</div>
+  </div>
+</div>
+
+<div
+  class="collapse"
+  id="collapse-kumar2026beautiful-bibtex"
+  style="padding-bottom: 1em"
+>
+  <div class="card bg-light">
+    <div class="card-body">
+      <pre style="margin-bottom: 0em">@inproceedings{kumar2026beautiful,
+  title = {Beautiful Images, Toxic Words: Understanding and Addressing Offensive Text in Generated Images},
+  author = {Kumar, Aditya and Blanchard, Tom and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {The Fortieth AAAI Conference on Artificial Intelligence AI Alignment Track},
   year = {2026}
 }
 </pre>
@@ -769,15 +1131,17 @@ An up-to-date list is available on <a
 
 
 </li>
-<li><b>Beautiful Images, Toxic Words: Understanding and Addressing Offensive Text in Generated Images</b><br />
+<li><b>Demystifying Foreground-Background Memorization in Diffusion Models</b><br />
   
- Aditya Kumar,     
- Tom Blanchard,     
+ Jimmy Z. Di,     
+ Yiwei Lu,     
+ Yaoliang Yu,     
+ Gautam Kamath,     
  Adam Dziedzic,     
  Franziska Boenisch   
 <br />
 
-<em>In The Fortieth AAAI Conference on Artificial Intelligence AI Alignment Track</em>
+<em>In The Fortieth AAAI Conference on Artificial Intelligence</em>
  
 <em> 2026 </em>
     
@@ -787,7 +1151,7 @@ An up-to-date list is available on <a
   <a
     style="margin-top: 0.2em"
     class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/BeautifulImages.pdf"
+    href="https://adam-dziedzic.com/static/assets/papers/demistify.pdf"
     target="_blank"
     role="button"
     ><img
@@ -805,9 +1169,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-kumar2026beautiful-tldr"
+    data-target="#collapse-di2026demystifying-tldr"
     aria-expanded="false"
-    aria-controls="collapse-kumar2026beautiful-tldr"
+    aria-controls="collapse-di2026demystifying-tldr"
   >
     TL;DR
   </button>
@@ -817,9 +1181,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-kumar2026beautiful-abstract"
+    data-target="#collapse-di2026demystifying-abstract"
     aria-expanded="false"
-    aria-controls="collapse-kumar2026beautiful-abstract"
+    aria-controls="collapse-di2026demystifying-abstract"
   >
     Abstract
   </button>
@@ -829,9 +1193,9 @@ An up-to-date list is available on <a
     class="btn btn-info btn-info-pad"
     type="button"
     data-toggle="collapse"
-    data-target="#collapse-kumar2026beautiful-bibtex"
+    data-target="#collapse-di2026demystifying-bibtex"
     aria-expanded="false"
-    aria-controls="collapse-kumar2026beautiful-bibtex"
+    aria-controls="collapse-di2026demystifying-bibtex"
   >
     BibTeX
   </button>
@@ -840,400 +1204,35 @@ An up-to-date list is available on <a
 
 <div
   class="collapse"
-  id="collapse-kumar2026beautiful-tldr"
+  id="collapse-di2026demystifying-tldr"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">SOTA image generative models can embed NSFW text in images. Prior solutions are ineffective, so we propose a mitigation method and introduce a benchmark for future progress.</div>
+    <div class="card-body">We propose an effective framework to measure and mitigate different types of memorization in diffusion models.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-kumar2026beautiful-abstract"
+  id="collapse-di2026demystifying-abstract"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
-    <div class="card-body">State-of-the-art Diffusion Models (DMs) produce highly realistic images. While prior work has successfully mitigated Not Safe For Work (NSFW) content in the visual domain, we identify a novel threat: the generation of NSFW text embedded within images. This includes offensive language, such as insults, racial slurs, and sexually explicit terms, posing significant risks to users. We show that all state-of-the-art DMs (e.g., SD3, SDXL, Flux, DeepFloyd IF) are vulnerable to this issue. Through extensive experiments, we demonstrate that existing mitigation techniques, effective for visual content, fail to prevent harmful text generation while substantially degrading benign text generation. As an initial step toward addressing this threat, we introduce a novel fine-tuning strategy that targets only the text-generation layers in DMs. Therefore, we construct a safety fine-tuning dataset by pairing each NSFW prompt with two images: one with the NSFW term, and another where that term is replaced with a carefully crafted benign alternative while leaving the image unchanged otherwise. By training on this dataset, the model learns to avoid generating harmful text while preserving benign content and overall image quality. Finally, to advance research in the area, we release ToxicBench, an open-source benchmark for evaluating NSFW text generation in images. It includes our curated fine-tuning dataset, a set of harmful prompts, new evaluation metrics, and a pipeline that assesses both NSFW-ness and text and image quality. Our benchmark aims to guide future efforts in mitigating NSFW text generation in text-to-image models, thereby contributing to their safe deployment.</div>
+    <div class="card-body">Diffusion models (DMs) memorize training images and can reproduce near-duplicates during generation. Current detection methods identify verbatim memorization but fail to capture two critical aspects: quantifying partial memorization occurring in small image regions, and memorization patterns beyond specific prompt-image pairs. To address these limitations, we propose Foreground Background Memorization (FB-Mem), a novel segmentation-based metric that classifies and quantifies memorized regions within generated images. Our method reveals that memorization is more pervasive than previously understood: (1) individual generations from single prompts may be linked to clusters of similar training images, revealing complex memorization patterns that extend beyond one-to-one correspondences; and (2) existing modellevel mitigation methods, such as neuron deactivation and pruning, fail to eliminate local memorization, which persists particularly in foreground regions. Our work establishes an effective framework for measuring memorization in diffusion models, demonstrates the inadequacy of current mitigation approaches, and proposes a stronger mitigation method using a clustering approach.</div>
   </div>
 </div>
 
 <div
   class="collapse"
-  id="collapse-kumar2026beautiful-bibtex"
+  id="collapse-di2026demystifying-bibtex"
   style="padding-bottom: 1em"
 >
   <div class="card bg-light">
     <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{kumar2026beautiful,
-  title = {Beautiful Images, Toxic Words: Understanding and Addressing Offensive Text in Generated Images},
-  author = {Kumar, Aditya and Blanchard, Tom and Dziedzic, Adam and Boenisch, Franziska},
-  booktitle = {The Fortieth AAAI Conference on Artificial Intelligence AI Alignment Track},
-  year = {2026}
-}
-</pre>
-    </div>
-  </div>
-</div>
-
-
-</li>
-<li><b>Concept Removal for Frontier Image Generative Models</b><br />
-  
- Aditya Kumar,     
- Pierre Joly,     
- Adam Dziedzic,     
- Franziska Boenisch   
-<br />
-
-<em>In Forty-third International Conference on Machine Learning</em>
- 
-<em> 2026 </em>
-    
-
-<p>
-  
-  <a
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/block.pdf"
-    target="_blank"
-    role="button"
-    ><img
-      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
-      alt=""
-      width="15"
-      height="15"
-      title="PDF"
-    />
-    Paper</a
-  >
-     
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kumar2026concept-tldr"
-    aria-expanded="false"
-    aria-controls="collapse-kumar2026concept-tldr"
-  >
-    TL;DR
-  </button>
-   
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kumar2026concept-abstract"
-    aria-expanded="false"
-    aria-controls="collapse-kumar2026concept-abstract"
-  >
-    Abstract
-  </button>
-  
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kumar2026concept-bibtex"
-    aria-expanded="false"
-    aria-controls="collapse-kumar2026concept-bibtex"
-  >
-    BibTeX
-  </button>
-     
-  <a
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    href="https://github.com/sprintml/block-concept-removal"
-    target="_blank"
-    role="button"
-    ><img
-      src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg"
-      alt=""
-      width="15"
-      height="15"
-      title="PDF"
-    />
-    Code</a
-  >
-    
-</p>
-
-<div
-  class="collapse"
-  id="collapse-kumar2026concept-tldr"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">We leverage transcoders to selectively remove concepts from modern, state-of-the-art image generative models.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-kumar2026concept-abstract"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">Image generative models are trained on massive, largely uncurated internet-scale datasets that contain undesirable visual concepts. Efficiently removing such concepts from the model generations without degrading the quality of output images remains challenging. We introduce a novel concept removal method for frontier diffusion and image autoregressive models, such as, SD3.5, Flux, and Infinity. Our intervention replaces the internal bottleneck layer present in all these modern models with a transcoder that is trained to replicate the original layer while structuring it into distinct activation features. This in‑place substitution creates an integrated filter through which concept‑specific signals can be selectively disabled while preserving the rest of the model’s behavior. Since the intervention modifies the model backbone rather than attaching an external component, it remains persistent under white‑box access. Empirically, the approach achieves state‑of‑the‑art concept removal performance across modern diffusion and autoregressive models, maintains visual generation quality, provides robustness against adversarial prompts, and supports sequential removal of diverse concepts. This positions our method as a practical approach for concept removal in frontier image generative models.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-kumar2026concept-bibtex"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{kumar2026concept,
-  title = {Concept Removal for Frontier Image Generative Models},
-  author = {Kumar, Aditya and Joly, Pierre and Dziedzic, Adam and Boenisch, Franziska},
-  booktitle = {Forty-third International Conference on Machine Learning},
-  year = {2026}
-}
-</pre>
-    </div>
-  </div>
-</div>
-
-
-</li>
-<li><b>SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation</b><br />
-  
- Jan Kociszewski,     
- Hubert Jastrzębski,     
- Tymoteusz Stępkowski,     
- Filip Manijak,     
- Krzysztof Rojek,     
- Franziska Boenisch,     
- Adam Dziedzic   
-<br />
-
-<em>In The Fourteenth International Conference on Learning Representations</em>
- 
-<em> 2026 </em>
-    
-
-<p>
-  
-  <a
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/serum.pdf"
-    target="_blank"
-    role="button"
-    ><img
-      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
-      alt=""
-      width="15"
-      height="15"
-      title="PDF"
-    />
-    Paper</a
-  >
-     
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kociszewski2026serum-tldr"
-    aria-expanded="false"
-    aria-controls="collapse-kociszewski2026serum-tldr"
-  >
-    TL;DR
-  </button>
-   
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kociszewski2026serum-abstract"
-    aria-expanded="false"
-    aria-controls="collapse-kociszewski2026serum-abstract"
-  >
-    Abstract
-  </button>
-  
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kociszewski2026serum-bibtex"
-    aria-expanded="false"
-    aria-controls="collapse-kociszewski2026serum-bibtex"
-  >
-    BibTeX
-  </button>
-       
-</p>
-
-<div
-  class="collapse"
-  id="collapse-kociszewski2026serum-tldr"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">We propose a simple yet highly effective method for marking diffusion-based image generation by adding a unique watermark noise to the initial diffusion noise and training a lightweight detector to reliably identify watermarked images.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-kociszewski2026serum-abstract"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">We propose SERUM: an intriguingly simple yet highly effective method for marking images generated by diffusion models (DMs). We only add a unique watermark noise to the initial diffusion generation noise and train a lightweight detector to identify watermarked images, simplifying and unifying the strengths of prior approaches. SERUM provides robustness against any image augmentations or watermark removal attacks and is extremely efficient, all while maintaining negligible impact on image quality. In contrast to prior approaches, which are often only resilient to limited perturbations and incur significant training, injection, and detection costs, our SERUM achieves remarkable performance, with the highest true positive rate (TPR) at a 1% false positive rate (FPR) in most scenarios, along with fast injection and detection and low detector training overhead. Its decoupled architecture also seamlessly supports multiple users by embedding individualized watermarks with little interference between the marks. Overall, our method provides a practical solution to mark outputs from DMs and to reliably distinguish generated from natural images.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-kociszewski2026serum-bibtex"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{kociszewski2026serum,
-  title = {{SERUM}: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation},
-  author = {Kociszewski, Jan and Jastrz{\k{e}}bski, Hubert and St{\k{e}}pkowski, Tymoteusz and Manijak, Filip and Rojek, Krzysztof and Boenisch, Franziska and Dziedzic, Adam},
-  booktitle = {The Fourteenth International Conference on Learning Representations},
-  year = {2026},
-  moth = {4}
-}
-</pre>
-    </div>
-  </div>
-</div>
-
-
-</li>
-<li><b>Finding DoRI: Discovery of Retained Images in Diffusion Models</b><br />
-  
- Antoni Kowalczuk,     
- Dominik Hintersdorf,     
- Lukas Struppek,     
- Kristian Kersting,     
- Adam Dziedzic,     
- Franziska Boenisch   
-<br />
-
-<em>In Forty-third International Conference on Machine Learning</em>
- 
-<em> 2026 </em>
-    
-
-<p>
-  
-  <a
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    href="https://adam-dziedzic.com/static/assets/papers/dori.pdf"
-    target="_blank"
-    role="button"
-    ><img
-      src="https://adam-dziedzic.github.io/static/assets/svgs/file.svg"
-      alt=""
-      width="15"
-      height="15"
-      title="PDF"
-    />
-    Paper</a
-  >
-     
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kowalczuk2026finding-tldr"
-    aria-expanded="false"
-    aria-controls="collapse-kowalczuk2026finding-tldr"
-  >
-    TL;DR
-  </button>
-   
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kowalczuk2026finding-abstract"
-    aria-expanded="false"
-    aria-controls="collapse-kowalczuk2026finding-abstract"
-  >
-    Abstract
-  </button>
-  
-  <button
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapse-kowalczuk2026finding-bibtex"
-    aria-expanded="false"
-    aria-controls="collapse-kowalczuk2026finding-bibtex"
-  >
-    BibTeX
-  </button>
-     
-  <a
-    style="margin-top: 0.2em"
-    class="btn btn-info btn-info-pad"
-    href="https://github.com/sprintml/finding_dori"
-    target="_blank"
-    role="button"
-    ><img
-      src="https://adam-dziedzic.github.io/static/assets/svgs/code.svg"
-      alt=""
-      width="15"
-      height="15"
-      title="PDF"
-    />
-    Code</a
-  >
-    
-</p>
-
-<div
-  class="collapse"
-  id="collapse-kowalczuk2026finding-tldr"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">We show that current memorization mitigation methods in diffusion models conceal the memorized images instead of removing them, and provide a robust mitigation method.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-kowalczuk2026finding-abstract"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">Text-to-image diffusion models (DMs) have achieved remarkable success in image generation. However, concerns about data privacy and intellectual property remain due to their potential to inadvertently memorize and replicate training data. Recent mitigation efforts have focused on identifying and pruning weights responsible for triggering verbatim training data replication, based on the assumption that memorization can be localized. We challenge this assumption and demonstrate that, even after such pruning, small perturbations to the text embeddings of previously mitigated prompts can re-trigger data replication, revealing the fragility of such methods. Our further analysis then provides multiple indications that memorization is indeed not inherently local: (1) replication triggers for memorized images are distributed throughout text embedding space; (2) embeddings yielding the same replicated image produce divergent model activations; and (3) different pruning methods identify inconsistent sets of memorization-related weights for the same image. Finally, we show that bypassing the locality assumption enables more robust mitigation through adversarial fine-tuning. These findings provide new insights into the fundamental nature of memorization in text-to-image DMs and inform the future development of more reliable mitigation methods against DM memorization.</div>
-  </div>
-</div>
-
-<div
-  class="collapse"
-  id="collapse-kowalczuk2026finding-bibtex"
-  style="padding-bottom: 1em"
->
-  <div class="card bg-light">
-    <div class="card-body">
-      <pre style="margin-bottom: 0em">@inproceedings{kowalczuk2026finding,
-  title = {Finding Do{RI}: Discovery of Retained Images in Diffusion Models},
-  author = {Kowalczuk, Antoni and Hintersdorf, Dominik and Struppek, Lukas and Kersting, Kristian and Dziedzic, Adam and Boenisch, Franziska},
-  booktitle = {Forty-third International Conference on Machine Learning},
+      <pre style="margin-bottom: 0em">@inproceedings{di2026demystifying,
+  title = {Demystifying Foreground-Background Memorization in Diffusion Models},
+  author = {Di, Jimmy Z. and Lu, Yiwei and Yu, Yaoliang and Kamath, Gautam and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {The Fortieth AAAI Conference on Artificial Intelligence},
   year = {2026}
 }
 </pre>
