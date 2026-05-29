@@ -108,3 +108,5 @@ ENV/
 
 *.DS_Store
 static/*.DS_Store
+
+Gemfile
