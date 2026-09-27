@@ -1,0 +1,20 @@
+\section{Supplement}
+
+\subsection{Implementation Details}
+We present details on the map reuse, CUDA implementation and shifting of the DC coefficient.
+
+\subsubsection{Map Reuse}
+We divide the input map M (with half of the map already removed due to the conjugate symmetry) into two parts: upper D1 and lower D2. We crop out the top-left (S1) corner from D1 and bottom-left (S2) corner from D2. The two compressed representations S1 and S2 can be maintained separately (small saving in computation time) or concatenated (more convenient) for the backward pass. In the backward pass, we pad the two corners S1 and S2 to their initial sizes D1 and D2, respectively. Finally, we concatenate D1 and D2 to get the FFT map M', where the high frequency coefficients are replaced with zeros.
+
+If the memory usage should be decreased as much as possible and the filter is small, we can trade the lower memory usage for the longer computation time and save the filter in the spatial domain at the end of the forward pass, followed by the FFT re-computation of the filter in the backward pass. The full frequency representation of the input map (after padding) is bigger than its spatial representation, thus the profitability of re-computing the input to save the GPU memory depends on the applied compression rate.
+
+We also contribute a fast shift of the DC coefficients either to the center or to the top-left corner. The code for the element-wise solution uses two for loops and copy each element separately. For the full FFT map, we divide it into quadrants (I - top-right, II - top-left, III - bottom-left, IV - bottom-right). Then, we permute the quadrants in the following way: I $\rightarrow$ III, II $\rightarrow$ IV, III $\rightarrow$ I, IV $\rightarrow$ II.
+
+
+\subsubsection{CUDA}
+We use \textit{$\text{min}(\text{max threads in block}, n^2$)} threads per block and the total number of GPU blocks is $Sf'$, where $S$
+is the mini-batch size,
+$f'$
+is the number of output channels, and $n$ is the height and width of the inputs. Each block of threads is used to compute a single output plane. Intuitively, each thread in a block of threads incrementally executes a complex multiplication and sums the result to an aggregate for all $f$ input channels to obtain a single output cell $(x,y)$.
+
+Additional optimizations, such as maintaining the filters only in the frequency domain or tiling, will be implemented in our future work.

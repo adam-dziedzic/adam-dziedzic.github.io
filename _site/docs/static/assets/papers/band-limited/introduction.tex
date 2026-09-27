@@ -1,0 +1,59 @@
+\section{Introduction}
+Convolutional layers are an integral part of neural network architectures for computer vision, natural language processing, and time-series analysis~\cite{KrizhevskyImageNet2012, KamperLivescu2016, binkowskiLong}.
+Convolutions are fundamental signal processing operations that amplify certain frequencies of the input and attenuate others.
+Recent results suggest that neural networks exhibit a {\em spectral bias}~\cite{rahaman2018spectral,xu2018training}; they ultimately learn filters with a strong bias towards lower frequencies. 
+Most input data, such as time-series and images, are also naturally biased towards lower frequencies~\cite{agrawal1993efficient,Faloutsos94,imageStatistics2003}. 
+This begs the question---does a convolutional neural network (CNN) need to explicitly represent the high-frequency components of its convolutional layers?
+We show that the answer to the question leads to some surprising new perspectives on: training time, resource management, model compression, and robustness to noisy inputs. 
+
+Consider a frequency domain implementation of the convolution function 
+that: (1) transforms the filter and the input into the frequency domain; (2) element-wise multiplies both frequency spectra; and (3) transforms the outcome product to the original domain. Let us assume that the final model is biased towards lower Fourier frequencies~\cite{rahaman2018spectral,xu2018training}. Then, it follows that discarding a significant number of the Fourier coefficients from high frequencies after step (1) should have a minimal effect. A smaller intermediate array size after step (1) reduces the number of multiplications in step (2) as well as the memory usage.
+This gives us a knob to tune the resource utilization, namely, memory and computation, as a function of how much of the high frequency spectrum we choose to represent.
+%We explore whether we can artificially enforce such a constraint %during model training. Specifically, during such \emph{band-limiting} %training, only a subset of the frequency spectra of the filter and %input data are exploited in the convolution operation. 
+Our primary research question is whether we can train CNNs using such {\em band-limited} convolutional layers, which only exploit a subset of the frequency spectra of the filter and input data.
+
+%Because of the inherent spectral bias in neural networks and the skewed spectrum of data,%~\footnote{A phenomenon defined in~\cite{spectralBias2018}, in which neural networks exhibit bias towards smooth functions; they can approximate arbitrary functions but favor low frequency ones.} in CNNs, 
+
+While there are several competing compression techniques, such as reduced precision arithmetic ~\cite{wang2018training, abergerhigh, hubara2017quantized}, weight pruning \cite{han2015deep}, or sparsification \cite{sparseWinograd},
+these techniques can be hard to operationalize.
+CNN optimization algorithms can be sensitive to the noise introduced during the training process, and training-time compression can require specialized libraries to avoid instability~\cite{wang2018training, abergerhigh}.
+Furthermore, pruning and sparsification techniques only reduce resource utilization during inference.
+In our experiments, surprisingly, band-limited training does not seem to suffer the same problems and gracefully degrades predictive performance as a function of compression rate.
+Band-limited CNNs can be trained with any gradient-based algorithm, where layer's gradient is projected onto the set of allowed frequencies.
+
+We implement an FFT-based convolutional layer that selectively constrains the Fourier spectrum utilized during both forward and backward passes. In addition, we apply standard techniques to improve the efficiency of FFT-based convolution~\cite{mathieu2013fast}, as well as new insights about exploiting the conjugate symmetry of 2D FFTs, as suggested in~\cite{rippel2015spectral}. 
+With this FFT-based implementation, we find competitive reductions in memory usage and floating point operations to reduced precision arithmetic (RPA) but with the added advantage of training stability and a continuum of compression rates.
+
+Band-limited training may additionally provide a new perspective on adversarial robustness~\cite{papernot2015distillation}. Adversarial attacks on neural networks tend to involve high-frequency perturbations of input data~\cite{huang2017adversarial, madry2017towards, papernot2015distillation}.
+Our experiments suggest that band-limited training produces models that can better reject noise than their full spectra counterparts. 
+
+ Our experimental results over CNN training for time-series and image classification tasks lead to several interesting findings. First, band-limited models retain their predictive accuracy, even though the approximation error in the individual convolution operations can be relatively high. This indicates that models trained with band-limited spectra \emph{learn to use low-frequency components}. Second, the amount of compression used during training should match the amount of compression used during inference to avoid significant losses in accuracy. Third, coefficient-based compression schemes (that discard a fixed number of Fourier coefficients) are more effective than ones that adaptively prune the frequency spectra (discard a fixed fraction of Fourier-domain mass). Finally, the test accuracy of the band-limited models gracefully degrades as a function of the compression rate.
+ % A number of experimental results suggest: (1) we observe that the amount of compression used during training should match the amount of compression used during inference to avoid significant losses in accuracy; (2) we observe that static compression schemes are more effective than ones that adaptively prune the frequency spectra; and (3) the test accuracy of the band-limited models gracefully degrades as a function of the compression ratio.  
+ 
+In summary, we contribute:
+%\newline
+% \begin{enumerate}
+%     \item A novel methodology for band-limited training and inference for CNNs that constrains the Fourier spectrum utilized during forward and backward passes.
+%     \item An efficient FFT-based implementation of the band-limited convolutional layer for 1D and 2D data that exploits conjugate symmetry, fast complex multiplication, and frequency map reuse. 
+%     \item An extensive experimental evaluation across 1D and 2D CNN training tasks that illustrates: (1) band-limited training can effectively control the resource usage (GPU and memory), (2) models trained with band-limited layers retain high prediction accuracy, and (3) our method requires no modification to existing training algorithms or neural network architecture, unlike other compression schemes.
+% \end{enumerate}
+%\begin{itemize}
+\begin{enumerate}[noitemsep]
+%\newline
+%\textbf{1.} 
+\item 
+\textbf{A novel methodology for band-limited training and inference of CNNs} 
+that constrains the Fourier spectrum utilized during both forward and backward passes. Our approach requires no modification of the  existing training algorithms or neural network architecture, unlike other compression schemes.
+%\newline
+%\textbf{2.} 
+\item 
+\textbf{An efficient FFT-based implementation of the band-limited convolutional layer} for 1D and 2D data that exploits conjugate symmetry, fast complex multiplication, and frequency map reuse. 
+%\newline
+%\textbf{3.}
+\item 
+\textbf{An extensive experimental evaluation across 1D and 2D CNN training tasks} that illustrates: (1) band-limited training can effectively control the resource usage (GPU and memory) and (2) models trained with band-limited layers retain high prediction accuracy.
+%\end{itemize}
+\end{enumerate}
+
+
+

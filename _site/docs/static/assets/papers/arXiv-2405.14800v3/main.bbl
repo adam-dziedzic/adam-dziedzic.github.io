@@ -1,0 +1,364 @@
+\begin{thebibliography}{69}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bao et~al.(2023)Bao, Nie, Xue, Li, Pu, Wang, Yue, Cao, Su, and Zhu]{bao2023one}
+Fan Bao, Shen Nie, Kaiwen Xue, Chongxuan Li, Shi Pu, Yaole Wang, Gang Yue, Yue Cao, Hang Su, and Jun Zhu.
+\newblock One transformer fits all distributions in multi-modal diffusion at scale.
+\newblock In \emph{International Conference on Machine Learning}, pages 1692--1717. PMLR, 2023.
+
+\bibitem[BBC(2022)]{bbc2022Art}
+BBC.
+\newblock {"Art is dead Dude" - the rise of the AI artists stirs debate}.
+\newblock 2022.
+\newblock URL \url{https://www.bbc.com/news/technology-62788725}.
+
+\bibitem[BIGWILLY(2024)]{Heart-of-Apple-XL}
+BIGWILLY.
+\newblock \emph{Heart of Apple XL}, 2024.
+\newblock \url{https://civitai.com/models/272440/heart-of-apple-xl-love}.
+
+\bibitem[Carlini et~al.(2022)Carlini, Chien, Nasr, Song, Terzis, and Tramer]{carlini2022membership}
+Nicholas Carlini, Steve Chien, Milad Nasr, Shuang Song, Andreas Terzis, and Florian Tramer.
+\newblock Membership inference attacks from first principles.
+\newblock In \emph{2022 IEEE Symposium on Security and Privacy (SP)}, pages 1897--1914. IEEE, 2022.
+
+\bibitem[Carlini et~al.(2023)Carlini, Hayes, Nasr, Jagielski, Sehwag, Tramer, Balle, Ippolito, and Wallace]{carlini2023extracting}
+Nicolas Carlini, Jamie Hayes, Milad Nasr, Matthew Jagielski, Vikash Sehwag, Florian Tramer, Borja Balle, Daphne Ippolito, and Eric Wallace.
+\newblock Extracting training data from diffusion models.
+\newblock In \emph{32nd USENIX Security Symposium (USENIX Security 23)}, pages 5253--5270, 2023.
+
+\bibitem[Chen et~al.(2020)Chen, Yu, Zhang, and Fritz]{chen2020gan}
+Dingfan Chen, Ning Yu, Yang Zhang, and Mario Fritz.
+\newblock Gan-leaks: A taxonomy of membership inference attacks against generative models.
+\newblock In \emph{Proceedings of the 2020 ACM SIGSAC conference on computer and communications security}, pages 343--362, 2020.
+
+\bibitem[Chen et~al.(2023)Chen, Dong, Wang, Yang, Duan, Su, and Zhu]{chen2023robust}
+Huanran Chen, Yinpeng Dong, Zhengyi Wang, Xiao Yang, Chengqi Duan, Hang Su, and Jun Zhu.
+\newblock Robust classification via a single diffusion model.
+\newblock \emph{arXiv preprint arXiv:2305.15241}, 2023.
+
+\bibitem[Chen et~al.(2024)Chen, Dong, Shao, Hao, Yang, Su, and Zhu]{chen2024your}
+Huanran Chen, Yinpeng Dong, Shitong Shao, Zhongkai Hao, Xiao Yang, Hang Su, and Jun Zhu.
+\newblock Your diffusion model is secretly a certifiably robust classifier.
+\newblock \emph{arXiv preprint arXiv:2402.02316}, 2024.
+
+\bibitem[Chen and Guestrin(2016)]{chen2016xgboost}
+Tianqi Chen and Carlos Guestrin.
+\newblock Xgboost: A scalable tree boosting system.
+\newblock In \emph{Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data mining}, pages 785--794, 2016.
+
+\bibitem[CNN(2022)]{cnn2022AI}
+CNN.
+\newblock {AI won an art contest, and artists are furious}.
+\newblock 2022.
+\newblock URL \url{https://www.cnn.com/2022/09/03/tech/ai-art-fair-winner-controversy/index.html}.
+
+\bibitem[CompVis(2024)]{Stable-Diffusion-v1-4}
+CompVis.
+\newblock {Stable-Diffusion-v1-4}.
+\newblock 2024.
+\newblock URL \url{https://huggingface.co/CompVis/stable-diffusion-v1-4}.
+
+\bibitem[Cui et~al.(2023)Cui, Ren, Lin, Xu, He, Xing, Fan, Liu, and Tang]{cui2023ft}
+Yingqian Cui, Jie Ren, Yuping Lin, Han Xu, Pengfei He, Yue Xing, Wenqi Fan, Hui Liu, and Jiliang Tang.
+\newblock Ft-shield: A watermark against unauthorized fine-tuning in text-to-image diffusion models.
+\newblock \emph{arXiv preprint arXiv:2310.02401}, 2023.
+
+\bibitem[Das et~al.(2024)Das, Zhang, and Tram{\`e}r]{das2024blind}
+Debeshee Das, Jie Zhang, and Florian Tram{\`e}r.
+\newblock Blind baselines beat membership inference attacks for foundation models.
+\newblock \emph{arXiv preprint arXiv:2406.16201}, 2024.
+
+\bibitem[DeAlcala et~al.(2024)DeAlcala, Morales, Mancera, Fierrez, Tolosana, and Ortega-Garcia]{dealcala2024my}
+Daniel DeAlcala, Aythami Morales, Gonzalo Mancera, Julian Fierrez, Ruben Tolosana, and Javier Ortega-Garcia.
+\newblock Is my data in your ai model? membership inference test with application to face images.
+\newblock \emph{arXiv preprint arXiv:2402.09225}, 2024.
+
+\bibitem[Duan et~al.(2023)Duan, Kong, Wang, Shi, and Xu]{duan2023diffusion}
+Jinhao Duan, Fei Kong, Shiqi Wang, Xiaoshuang Shi, and Kaidi Xu.
+\newblock Are diffusion models vulnerable to membership inference attacks?
+\newblock In \emph{International Conference on Machine Learning}, pages 8717--8730. PMLR, 2023.
+
+\bibitem[Dubi{\'n}ski et~al.(2024)Dubi{\'n}ski, Kowalczuk, Pawlak, Rokita, Trzci{\'n}ski, and Morawiecki]{dubinski2024towards}
+Jan Dubi{\'n}ski, Antoni Kowalczuk, Stanis{\l}aw Pawlak, Przemyslaw Rokita, Tomasz Trzci{\'n}ski, and Pawe{\l} Morawiecki.
+\newblock Towards more realistic membership inference attacks on large diffusion models.
+\newblock In \emph{Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision}, pages 4860--4869, 2024.
+
+\bibitem[Fu et~al.(2023)Fu, Wang, Gao, Liu, Li, and Jiang]{fu2023probabilistic}
+Wenjie Fu, Huandong Wang, Chen Gao, Guanghua Liu, Yong Li, and Tao Jiang.
+\newblock A probabilistic fluctuation based membership inference attack for generative models.
+\newblock \emph{arXiv preprint arXiv:2308.12143}, 2023.
+
+\bibitem[Gil~Appel and Schweidel(2023)]{Generative_AI_Has}
+Juliana~Neelbauer Gil~Appel and David~A. Schweidel.
+\newblock {Generative AI Has an Intellectual Property Problem}.
+\newblock 2023.
+\newblock URL \url{https://hbr.org/2023/04/generative-ai-has-an-intellectual-property-problem}.
+
+\bibitem[Hayes et~al.(2019)Hayes, Melis, Danezis, and De~Cristofaro]{hayes2019logan}
+Jamie Hayes, Luca Melis, George Danezis, and Emiliano De~Cristofaro.
+\newblock Logan: Membership inference attacks against generative models.
+\newblock \emph{Proceedings on Privacy Enhancing Technologies}, 2019.
+
+\bibitem[Heusel et~al.(2017)Heusel, Ramsauer, Unterthiner, Nessler, and Hochreiter]{heusel2017gans}
+Martin Heusel, Hubert Ramsauer, Thomas Unterthiner, Bernhard Nessler, and Sepp Hochreiter.
+\newblock Gans trained by a two time-scale update rule converge to a local nash equilibrium.
+\newblock \emph{Advances in neural information processing systems}, 30, 2017.
+
+\bibitem[Ho and Salimans(2022)]{ho2022classifier}
+Jonathan Ho and Tim Salimans.
+\newblock Classifier-free diffusion guidance.
+\newblock \emph{arXiv preprint arXiv:2207.12598}, 2022.
+
+\bibitem[Ho et~al.(2020)Ho, Jain, and Abbeel]{ho2020denoising}
+Jonathan Ho, Ajay Jain, and Pieter Abbeel.
+\newblock Denoising diffusion probabilistic models.
+\newblock \emph{Advances in neural information processing systems}, 33:\penalty0 6840--6851, 2020.
+
+\bibitem[Hoogeboom et~al.(2023)Hoogeboom, Heek, and Salimans]{hoogeboom2023simple}
+Emiel Hoogeboom, Jonathan Heek, and Tim Salimans.
+\newblock simple diffusion: End-to-end diffusion for high resolution images.
+\newblock In \emph{International Conference on Machine Learning}, pages 13213--13232. PMLR, 2023.
+
+\bibitem[Huggingface(2024{\natexlab{a}})]{text-to-image-ft}
+Huggingface.
+\newblock \emph{The training script of stable-diffusion}, 2024{\natexlab{a}}.
+\newblock URL \url{https://huggingface.co/docs/diffusers/training/text2image##launch-the-script}.
+\newblock Accessed: May 22, 2024.
+
+\bibitem[Huggingface(2024{\natexlab{b}})]{text-to-image-ft-python}
+Huggingface.
+\newblock \emph{The python code of fine-tuning stable-diffusion}, 2024{\natexlab{b}}.
+\newblock \url{https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image.py}.
+
+\bibitem[Jinhaoduan(2023)]{sec_implement}
+Jinhaoduan.
+\newblock Secmi, 2023.
+\newblock URL \url{https://github.com/jinhaoduan/SecMI/blob/main/mia_evals/secmia.py}.
+
+\bibitem[Kim et~al.(2022)Kim, Kwon, and Ye]{kim2022diffusionclip}
+Gwanghyun Kim, Taesung Kwon, and Jong~Chul Ye.
+\newblock Diffusionclip: Text-guided diffusion models for robust image manipulation.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 2426--2435, 2022.
+
+\bibitem[Kong et~al.(2024)Kong, Duan, Ma, Shen, Zhu, Shi, and Xu]{kong2023efficient}
+Fei Kong, Jinhao Duan, RuiPeng Ma, Heng~Tao Shen, Xiaofeng Zhu, Xiaoshuang Shi, and Kaidi Xu.
+\newblock An efficient membership inference attack for the diffusion model by proximal initialization.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+
+\bibitem[Kong13661(2023)]{pia_implement}
+Kong13661.
+\newblock Pia, 2023.
+\newblock URL \url{https://github.com/kong13661/PIA}.
+
+\bibitem[Krizhevsky et~al.(2009)Krizhevsky, Hinton, et~al.]{krizhevsky2009learning}
+Alex Krizhevsky, Geoffrey Hinton, et~al.
+\newblock Learning multiple layers of features from tiny images.
+\newblock 2009.
+
+\bibitem[Lab(2023)]{DeepFloyd_IF}
+DeepFloyd Lab.
+\newblock Deepfloyd if.
+\newblock \url{https://github.com/deep-floyd/IF}, 2023.
+
+\bibitem[Lambda(2023)]{Pokemon-Blip}
+Lambda.
+\newblock {Pokemon-blip-captions}.
+\newblock 2023.
+\newblock URL \url{https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions}.
+
+\bibitem[Li et~al.(2023)Li, Prabhudesai, Duggal, Brown, and Pathak]{li2023your}
+Alexander~C Li, Mihir Prabhudesai, Shivam Duggal, Ellis Brown, and Deepak Pathak.
+\newblock Your diffusion model is secretly a zero-shot classifier.
+\newblock In \emph{Proceedings of the IEEE/CVF International Conference on Computer Vision}, pages 2206--2217, 2023.
+
+\bibitem[Li et~al.(2022)Li, Li, Xiong, and Hoi]{li2022blip}
+Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi.
+\newblock Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation.
+\newblock In \emph{International conference on machine learning}, pages 12888--12900. PMLR, 2022.
+
+\bibitem[Lin et~al.(2014)Lin, Maire, Belongie, Hays, Perona, Ramanan, Doll{\'a}r, and Zitnick]{lin2014microsoft}
+Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll{\'a}r, and C~Lawrence Zitnick.
+\newblock Microsoft coco: Common objects in context.
+\newblock In \emph{Computer Vision--ECCV 2014: 13th European Conference, Zurich, Switzerland, September 6-12, 2014, Proceedings, Part V 13}, pages 740--755. Springer, 2014.
+
+\bibitem[Liu et~al.(2019)Liu, Xiao, Li, and Gao]{liu2019performing}
+Kin~Sum Liu, Chaowei Xiao, Bo~Li, and Jie Gao.
+\newblock Performing co-membership attacks against deep generative models.
+\newblock In \emph{2019 IEEE International Conference on Data Mining (ICDM)}, pages 459--467. IEEE, 2019.
+
+\bibitem[Lopez-Paz and Oquab(2016)]{lopez2016revisiting}
+David Lopez-Paz and Maxime Oquab.
+\newblock Revisiting classifier two-sample tests.
+\newblock \emph{arXiv preprint arXiv:1610.06545}, 2016.
+
+\bibitem[Matsumoto et~al.(2023)Matsumoto, Miura, and Yanai]{matsumoto2023membership}
+Tomoya Matsumoto, Takayuki Miura, and Naoto Yanai.
+\newblock Membership inference attacks against diffusion models.
+\newblock In \emph{2023 IEEE Security and Privacy Workshops (SPW)}, pages 77--83. IEEE, 2023.
+
+\bibitem[Miao et~al.(2021)Miao, Xue, Chen, Pan, Zhang, Zhao, Kaafar, and Xiang]{miao2021audio}
+Yuantian Miao, Minhui Xue, Chao Chen, Lei Pan, Jun Zhang, Benjamin Zi~Hao Zhao, Dali Kaafar, and Yang Xiang.
+\newblock The audio auditor: User-level membership inference in internet of things voice services.
+\newblock \emph{Proceedings on Privacy Enhancing Technologies}, 2021.
+
+\bibitem[Nichol et~al.(2021)Nichol, Dhariwal, Ramesh, Shyam, Mishkin, McGrew, Sutskever, and Chen]{nichol2021glide}
+Alex Nichol, Prafulla Dhariwal, Aditya Ramesh, Pranav Shyam, Pamela Mishkin, Bob McGrew, Ilya Sutskever, and Mark Chen.
+\newblock Glide: Towards photorealistic image generation and editing with text-guided diffusion models.
+\newblock \emph{arXiv preprint arXiv:2112.10741}, 2021.
+
+\bibitem[Pang and Wang(2023)]{pang2023black}
+Yan Pang and Tianhao Wang.
+\newblock Black-box membership inference attacks against fine-tuned diffusion models.
+\newblock \emph{arXiv preprint arXiv:2312.08207}, 2023.
+
+\bibitem[Podell et~al.(2023)Podell, English, Lacey, Blattmann, Dockhorn, M{\"u}ller, Penna, and Rombach]{podell2023sdxl}
+Dustin Podell, Zion English, Kyle Lacey, Andreas Blattmann, Tim Dockhorn, Jonas M{\"u}ller, Joe Penna, and Robin Rombach.
+\newblock Sdxl: Improving latent diffusion models for high-resolution image synthesis.
+\newblock \emph{arXiv preprint arXiv:2307.01952}, 2023.
+
+\bibitem[Ramesh et~al.(2022)Ramesh, Dhariwal, Nichol, Chu, and Chen]{ramesh2022hierarchical}
+Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, and Mark Chen.
+\newblock Hierarchical text-conditional image generation with clip latents.
+\newblock \emph{arXiv preprint arXiv:2204.06125}, 1\penalty0 (2):\penalty0 3, 2022.
+
+\bibitem[Reuters(2023{\natexlab{a}})]{Reuters2023Lawsuits}
+Reuters.
+\newblock {Lawsuits accuse AI content creators of misusing copyrighted work}.
+\newblock 2023{\natexlab{a}}.
+\newblock URL \url{https://www.reuters.com/legal/transactional/lawsuits-accuse-ai-content-creators-misusing-copyrighted-work-2023-01-17/}.
+
+\bibitem[Reuters(2023{\natexlab{b}})]{Reuters2023getty}
+Reuters.
+\newblock {Getty images lawsuit says stability ai misused photos to train ai}.
+\newblock 2023{\natexlab{b}}.
+\newblock URL \url{https://www.reuters.com/legal/getty-images-lawsuit-says-stability-ai-misused-photos-train-ai-2023-02-06/}.
+
+\bibitem[Rombach et~al.(2022)Rombach, Blattmann, Lorenz, Esser, and Ommer]{rombach2022high}
+Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Bj{\"o}rn Ommer.
+\newblock High-resolution image synthesis with latent diffusion models.
+\newblock In \emph{Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pages 10684--10695, 2022.
+
+\bibitem[Runwayml(2024)]{Stable-Diffusion-v1-5}
+Runwayml.
+\newblock {Stable-Diffusion-v1-5}.
+\newblock 2024.
+\newblock URL \url{https://huggingface.co/runwayml/stable-diffusion-v1-5}.
+
+\bibitem[Sablayrolles et~al.(2019)Sablayrolles, Douze, Schmid, Ollivier, and J{\'e}gou]{sablayrolles2019white}
+Alexandre Sablayrolles, Matthijs Douze, Cordelia Schmid, Yann Ollivier, and Herv{\'e} J{\'e}gou.
+\newblock White-box vs black-box: Bayes optimal strategies for membership inference.
+\newblock In \emph{International Conference on Machine Learning}, pages 5558--5567. PMLR, 2019.
+
+\bibitem[Saharia et~al.(2022)Saharia, Chan, Saxena, Li, Whang, Denton, Ghasemipour, Gontijo~Lopes, Karagol~Ayan, Salimans, et~al.]{saharia2022photorealistic}
+Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily~L Denton, Kamyar Ghasemipour, Raphael Gontijo~Lopes, Burcu Karagol~Ayan, Tim Salimans, et~al.
+\newblock Photorealistic text-to-image diffusion models with deep language understanding.
+\newblock \emph{Advances in neural information processing systems}, 35:\penalty0 36479--36494, 2022.
+
+\bibitem[Salman et~al.(2023)Salman, Khaddaj, Leclerc, Ilyas, and Madry]{salman2023raising}
+Hadi Salman, Alaa Khaddaj, Guillaume Leclerc, Andrew Ilyas, and Aleksander Madry.
+\newblock Raising the cost of malicious ai-powered image editing.
+\newblock In \emph{International Conference on Machine Learning}, pages 29894--29918. PMLR, 2023.
+
+\bibitem[Schuhmann et~al.(2022)Schuhmann, Beaumont, Vencu, Gordon, Wightman, Cherti, Coombes, Katta, Mullis, Wortsman, et~al.]{schuhmann2022laion}
+Christoph Schuhmann, Romain Beaumont, Richard Vencu, Cade Gordon, Ross Wightman, Mehdi Cherti, Theo Coombes, Aarush Katta, Clayton Mullis, Mitchell Wortsman, et~al.
+\newblock Laion-5b: An open large-scale dataset for training next generation image-text models.
+\newblock \emph{arXiv preprint arXiv:2210.08402}, 2022.
+
+\bibitem[Shan et~al.(2023)Shan, Cryan, Wenger, Zheng, Hanocka, and Zhao]{shan2023glaze}
+Shawn Shan, Jenna Cryan, Emily Wenger, Haitao Zheng, Rana Hanocka, and Ben~Y Zhao.
+\newblock Glaze: Protecting artists from style mimicry by $\{$Text-to-Image$\}$ models.
+\newblock In \emph{32nd USENIX Security Symposium (USENIX Security 23)}, pages 2187--2204, 2023.
+
+\bibitem[Shokri et~al.(2017)Shokri, Stronati, Song, and Shmatikov]{shokri2017membership}
+Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov.
+\newblock Membership inference attacks against machine learning models.
+\newblock In \emph{2017 IEEE symposium on security and privacy (SP)}, pages 3--18. IEEE, 2017.
+
+\bibitem[Song et~al.(2020)Song, Meng, and Ermon]{song2020denoising}
+Jiaming Song, Chenlin Meng, and Stefano Ermon.
+\newblock Denoising diffusion implicit models.
+\newblock In \emph{International Conference on Learning Representations}, 2020.
+
+\bibitem[Tang et~al.(2023)Tang, Liu, Pandey, Jiang, Yang, Kumar, Stenetorp, Lin, and T{\"u}re]{tang2023daam}
+Raphael Tang, Linqing Liu, Akshat Pandey, Zhiying Jiang, Gefei Yang, Karun Kumar, Pontus Stenetorp, Jimmy Lin, and Ferhan T{\"u}re.
+\newblock What the daam: Interpreting stable diffusion using cross attention.
+\newblock In \emph{Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pages 5644--5659, 2023.
+
+\bibitem[Wang et~al.(2023)Wang, Chen, Lyu, Metaxas, and Ma]{wang2023diagnosis}
+Zhenting Wang, Chen Chen, Lingjuan Lyu, Dimitris~N Metaxas, and Shiqing Ma.
+\newblock Diagnosis: Detecting unauthorized data usages in text-to-image diffusion models.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2023.
+
+\bibitem[Wang et~al.(2024)Wang, Huang, Song, Ma, and Zhang]{wang2024promptcharm}
+Zhijie Wang, Yuheng Huang, Da~Song, Lei Ma, and Tianyi Zhang.
+\newblock Promptcharm: Text-to-image generation through multi-modal prompting and refinement.
+\newblock \emph{arXiv preprint arXiv:2403.04014}, 2024.
+
+\bibitem[WashingtonPost(2022)]{washington2022AI}
+WashingtonPost.
+\newblock {He made a children’s book using AI. Then came the rage}.
+\newblock 2022.
+\newblock URL \url{https://www.washingtonpost.com/technology/2023/01/19/ai-childrens-book-controversy-chatgpt-midjourney/}.
+
+\bibitem[Wen et~al.(2024)Wen, Liu, Chen, and Lyu]{wen2024detecting}
+Yuxin Wen, Yuchen Liu, Chen Chen, and Lingjuan Lyu.
+\newblock Detecting, explaining, and mitigating memorization in diffusion models.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+
+\bibitem[Whitaker(2024)]{FT-CLOOB-Conditioned}
+Jonathan Whitaker.
+\newblock \emph{Fine-tuning a CLOOB-Conditioned Latent Diffusion Model on WikiArt}, 2024.
+\newblock \url{https://johnowhitaker.dev/dsc/2022-04-12-fine-tuning-a-cloob-conditioned-latent-diffusion-model-on-wikiart.html}.
+
+\bibitem[WikiArt(2024)]{Wikiart}
+WikiArt.
+\newblock {WikiArt}.
+\newblock 2024.
+\newblock URL \url{https://www.wikiart.org/}.
+
+\bibitem[Wu et~al.(2022)Wu, Yu, Li, Backes, and Zhang]{wu2022membership}
+Yixin Wu, Ning Yu, Zheng Li, Michael Backes, and Yang Zhang.
+\newblock Membership inference attacks against text-to-image generation models.
+\newblock \emph{arXiv preprint arXiv:2210.00968}, 2022.
+
+\bibitem[Xu et~al.(2018)Xu, Huang, Yuan, Guo, Sun, Wu, and Weinberger]{xu2018empirical}
+Qiantong Xu, Gao Huang, Yang Yuan, Chuan Guo, Yu~Sun, Felix Wu, and Kilian Weinberger.
+\newblock An empirical study on evaluation metrics of generative adversarial networks.
+\newblock \emph{arXiv preprint arXiv:1806.07755}, 2018.
+
+\bibitem[Yeh et~al.(2023)Yeh, Hsieh, Gao, Yang, Oh, and Gong]{yeh2023navigating}
+Shih-Ying Yeh, Yu-Guan Hsieh, Zhidong Gao, Bernard~BW Yang, Giyeong Oh, and Yanmin Gong.
+\newblock Navigating text-to-image customization: From lycoris fine-tuning to model evaluation.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2023.
+
+\bibitem[Yeom et~al.(2018)Yeom, Giacomelli, Fredrikson, and Jha]{yeom2018privacy}
+Samuel Yeom, Irene Giacomelli, Matt Fredrikson, and Somesh Jha.
+\newblock Privacy risk in machine learning: Analyzing the connection to overfitting.
+\newblock In \emph{2018 IEEE 31st computer security foundations symposium (CSF)}, pages 268--282. IEEE, 2018.
+
+\bibitem[Young et~al.(2014)Young, Lai, Hodosh, and Hockenmaier]{young2014image}
+Peter Young, Alice Lai, Micah Hodosh, and Julia Hockenmaier.
+\newblock From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 2:\penalty0 67--78, 2014.
+
+\bibitem[Zhai et~al.(2023)Zhai, Dong, Shen, Pu, Fang, and Su]{zhai2023text}
+Shengfang Zhai, Yinpeng Dong, Qingni Shen, Shi Pu, Yuejian Fang, and Hang Su.
+\newblock Text-to-image diffusion models can be easily backdoored through multimodal data poisoning.
+\newblock In \emph{Proceedings of the 31st ACM International Conference on Multimedia}, pages 1577--1587, 2023.
+
+\bibitem[Zhao et~al.(2023{\natexlab{a}})Zhao, Pang, Du, Yang, Cheung, and Lin]{zhao2023recipe}
+Yunqing Zhao, Tianyu Pang, Chao Du, Xiao Yang, Ngai-Man Cheung, and Min Lin.
+\newblock A recipe for watermarking diffusion models.
+\newblock \emph{arXiv preprint arXiv:2303.10137}, 2023{\natexlab{a}}.
+
+\bibitem[Zhao et~al.(2023{\natexlab{b}})Zhao, Duan, Hu, Xu, Wang, Zhang, Du, Guo, and Chen]{zhao2023unlearnable}
+Zhengyue Zhao, Jinhao Duan, Xing Hu, Kaidi Xu, Chenan Wang, Rui Zhang, Zidong Du, Qi~Guo, and Yunji Chen.
+\newblock Unlearnable examples for diffusion models: Protect data from unauthorized exploitation.
+\newblock \emph{arXiv preprint arXiv:2306.01902}, 2023{\natexlab{b}}.
+
+\end{thebibliography}

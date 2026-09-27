@@ -1,0 +1,588 @@
+\begin{thebibliography}{60}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aaronson(2022)]{aaronson_my_2022}
+Aaronson, S.
+\newblock My {{AI Safety Lecture}} for {{UT Effective Altruism}}, November
+  2022.
+\newblock URL \url{https://scottaaronson.blog/?p=6823}.
+
+\bibitem[Abdelnabi \& Fritz(2021)Abdelnabi and
+  Fritz]{abdelnabi_adversarial_2021}
+Abdelnabi, S. and Fritz, M.
+\newblock Adversarial {{Watermarking Transformer}}: {{Towards Tracing Text
+  Provenance}} with {{Data Hiding}}.
+\newblock In \emph{2021 {{IEEE Symposium}} on {{Security}} and {{Privacy}}
+  ({{SP}})}, pp.\  121--140, May 2021.
+\newblock \doi{10.1109/SP40001.2021.00083}.
+
+\bibitem[Adi et~al.(2018)Adi, Baum, Cisse, Pinkas, and
+  Keshet]{adi_turning_2018}
+Adi, Y., Baum, C., Cisse, M., Pinkas, B., and Keshet, J.
+\newblock Turning your weakness into a strength: Watermarking deep neural
+  networks by backdooring.
+\newblock In \emph{Proceedings of the 27th {{USENIX Conference}} on {{Security
+  Symposium}}}, {{SEC}}'18, pp.\  1615--1631, {USA}, August 2018. {USENIX
+  Association}.
+\newblock ISBN 978-1-931971-46-1.
+
+\bibitem[Atallah et~al.(2001)Atallah, Raskin, Crogan, Hempelmann, Kerschbaum,
+  Mohamed, and Naik]{atallah_natural_2001}
+Atallah, M.~J., Raskin, V., Crogan, M., Hempelmann, C., Kerschbaum, F.,
+  Mohamed, D., and Naik, S.
+\newblock Natural {{Language Watermarking}}: {{Design}}, {{Analysis}}, and a
+  {{Proof-of-Concept Implementation}}.
+\newblock In Moskowitz, I.~S. (ed.), \emph{Information {{Hiding}}}, Lecture
+  {{Notes}} in {{Computer Science}}, pp.\  185--200, {Berlin, Heidelberg},
+  2001. {Springer}.
+\newblock ISBN 978-3-540-45496-0.
+\newblock \doi{10.1007/3-540-45496-9_14}.
+
+\bibitem[Atallah et~al.(2003)Atallah, Raskin, Hempelmann, Karahan, Sion,
+  Topkara, and Triezenberg]{atallah_natural_2003}
+Atallah, M.~J., Raskin, V., Hempelmann, C.~F., Karahan, M., Sion, R., Topkara,
+  U., and Triezenberg, K.~E.
+\newblock Natural {{Language Watermarking}} and {{Tamperproofing}}.
+\newblock In Petitcolas, F. A.~P. (ed.), \emph{Information {{Hiding}}}, Lecture
+  {{Notes}} in {{Computer Science}}, pp.\  196--212, {Berlin, Heidelberg},
+  2003. {Springer}.
+\newblock ISBN 978-3-540-36415-3.
+\newblock \doi{10.1007/3-540-36415-3_13}.
+
+\bibitem[Bai et~al.(2022)Bai, Kadavath, Kundu, Askell, Kernion, Jones, Chen,
+  Goldie, Mirhoseini, McKinnon, Chen, Olsson, Olah, Hernandez, Drain, Ganguli,
+  Li, {Tran-Johnson}, Perez, Kerr, Mueller, Ladish, Landau, Ndousse, Lukosiute,
+  Lovitt, Sellitto, Elhage, Schiefer, Mercado, DasSarma, Lasenby, Larson,
+  Ringer, Johnston, Kravec, Showk, Fort, Lanham, {Telleen-Lawton}, Conerly,
+  Henighan, Hume, Bowman, {Hatfield-Dodds}, Mann, Amodei, Joseph, McCandlish,
+  Brown, and Kaplan]{bai_constitutional_2022}
+Bai, Y., Kadavath, S., Kundu, S., Askell, A., Kernion, J., Jones, A., Chen, A.,
+  Goldie, A., Mirhoseini, A., McKinnon, C., Chen, C., Olsson, C., Olah, C.,
+  Hernandez, D., Drain, D., Ganguli, D., Li, D., {Tran-Johnson}, E., Perez, E.,
+  Kerr, J., Mueller, J., Ladish, J., Landau, J., Ndousse, K., Lukosiute, K.,
+  Lovitt, L., Sellitto, M., Elhage, N., Schiefer, N., Mercado, N., DasSarma,
+  N., Lasenby, R., Larson, R., Ringer, S., Johnston, S., Kravec, S., Showk,
+  S.~E., Fort, S., Lanham, T., {Telleen-Lawton}, T., Conerly, T., Henighan, T.,
+  Hume, T., Bowman, S.~R., {Hatfield-Dodds}, Z., Mann, B., Amodei, D., Joseph,
+  N., McCandlish, S., Brown, T., and Kaplan, J.
+\newblock Constitutional {{AI}}: {{Harmlessness}} from {{AI Feedback}},
+  December 2022.
+\newblock URL \url{https://www.anthropic.com/constitutional.pdf}.
+
+\bibitem[Bender et~al.(2021)Bender, Gebru, {McMillan-Major}, and
+  Shmitchell]{bender_dangers_2021}
+Bender, E.~M., Gebru, T., {McMillan-Major}, A., and Shmitchell, S.
+\newblock On the {{Dangers}} of {{Stochastic Parrots}}: {{Can Language Models
+  Be Too Big}}?
+\newblock In \emph{Proceedings of the 2021 {{ACM Conference}} on {{Fairness}},
+  {{Accountability}}, and {{Transparency}}}, {{FAccT}} '21, pp.\  610--623,
+  {New York, NY, USA}, March 2021. {Association for Computing Machinery}.
+\newblock ISBN 978-1-4503-8309-7.
+\newblock \doi{10.1145/3442188.3445922}.
+\newblock URL \url{https://doi.org/10.1145/3442188.3445922}.
+
+\bibitem[Bergman et~al.(2022)Bergman, Abercrombie, Spruit, Hovy, Dinan,
+  Boureau, and Rieser]{bergman_guiding_2022}
+Bergman, A.~S., Abercrombie, G., Spruit, S., Hovy, D., Dinan, E., Boureau,
+  Y.-L., and Rieser, V.
+\newblock Guiding the {{Release}} of {{Safer E2E Conversational AI}} through
+  {{Value Sensitive Design}}.
+\newblock In \emph{Proceedings of the 23rd {{Annual Meeting}} of the {{Special
+  Interest Group}} on {{Discourse}} and {{Dialogue}}}, pp.\  39--52,
+  {Edinburgh, UK}, September 2022. {Association for Computational Linguistics}.
+\newblock URL \url{https://aclanthology.org/2022.sigdial-1.4}.
+
+\bibitem[Boenisch(2021)]{boenisch_systematic_2021}
+Boenisch, F.
+\newblock A {{Systematic Review}} on {{Model Watermarking}} for {{Neural
+  Networks}}.
+\newblock \emph{Frontiers in Big Data}, 4, 2021.
+\newblock ISSN 2624-909X.
+\newblock \doi{10.3389/fdata.2021.729663}.
+\newblock URL
+  \url{https://www.frontiersin.org/articles/10.3389/fdata.2021.729663}.
+
+\bibitem[Boucher et~al.(2022)Boucher, Shumailov, Anderson, and
+  Papernot]{boucher_bad_2022}
+Boucher, N., Shumailov, I., Anderson, R., and Papernot, N.
+\newblock Bad {{Characters}}: {{Imperceptible NLP Attacks}}.
+\newblock In \emph{2022 {{IEEE Symposium}} on {{Security}} and {{Privacy}}
+  ({{SP}})}, pp.\  1987--2004, May 2022.
+\newblock \doi{10.1109/SP46214.2022.9833641}.
+
+\bibitem[Butoi(2023)]{butoi_things_2023}
+Butoi, V.
+\newblock Things like {{GPTZero}} are scary. {{I}}'m sure the creator didn't
+  have the intention, but the fact that it's marketed as "a solution to
+  detecting {{AI}} written responses" even though there's no evidence to show
+  it works consistently and is nevertheless being {{EMPLOYED}} by schools, is
+  crazy., January 2023.
+\newblock URL \url{https://twitter.com/VictorButoi/status/1614779846210752512}.
+
+\bibitem[Chiang et~al.(2004)Chiang, Chang, Hsieh, and
+  Chen]{chiang_natural_2004}
+Chiang, Y.-L., Chang, L.-P., Hsieh, W.-T., and Chen, W.-C.
+\newblock Natural {{Language Watermarking Using Semantic Substitution}} for
+  {{Chinese Text}}.
+\newblock In Kalker, T., Cox, I., and Ro, Y.~M. (eds.), \emph{Digital
+  {{Watermarking}}}, Lecture {{Notes}} in {{Computer Science}}, pp.\  129--140,
+  {Berlin, Heidelberg}, 2004. {Springer}.
+\newblock ISBN 978-3-540-24624-4.
+\newblock \doi{10.1007/978-3-540-24624-4_10}.
+
+\bibitem[Christiano et~al.(2017)Christiano, Leike, Brown, Martic, Legg, and
+  Amodei]{christiano_deep_2017}
+Christiano, P., Leike, J., Brown, T.~B., Martic, M., Legg, S., and Amodei, D.
+\newblock Deep reinforcement learning from human preferences.
+\newblock \emph{arxiv:1706.03741[cs, stat]}, July 2017.
+\newblock \doi{10.48550/arXiv.1706.03741}.
+\newblock URL \url{http://arxiv.org/abs/1706.03741}.
+
+\bibitem[Crothers et~al.(2022)Crothers, Japkowicz, and
+  Viktor]{crothers_machine_2022}
+Crothers, E., Japkowicz, N., and Viktor, H.
+\newblock Machine {{Generated Text}}: {{A Comprehensive Survey}} of {{Threat
+  Models}} and {{Detection Methods}}.
+\newblock \emph{arxiv:2210.07321[cs]}, November 2022.
+\newblock \doi{10.48550/arXiv.2210.07321}.
+\newblock URL \url{http://arxiv.org/abs/2210.07321}.
+
+\bibitem[Dai \& Cai(2019)Dai and Cai]{dai_towards_2019}
+Dai, F. and Cai, Z.
+\newblock Towards {{Near-imperceptible Steganographic Text}}.
+\newblock In \emph{Proceedings of the 57th {{Annual Meeting}} of the
+  {{Association}} for {{Computational Linguistics}}}, pp.\  4303--4308,
+  {Florence, Italy}, July 2019. {Association for Computational Linguistics}.
+\newblock \doi{10.18653/v1/P19-1422}.
+\newblock URL \url{https://aclanthology.org/P19-1422}.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and
+  Toutanova]{devlin_bert_2019}
+Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K.
+\newblock {{BERT}}: {{Pre-training}} of {{Deep Bidirectional Transformers}} for
+  {{Language Understanding}}.
+\newblock \emph{arXiv:1810.04805 [cs]}, May 2019.
+\newblock URL \url{http://arxiv.org/abs/1810.04805}.
+
+\bibitem[Fang et~al.(2017)Fang, Jaggi, and Argyraki]{fang_generating_2017}
+Fang, T., Jaggi, M., and Argyraki, K.
+\newblock Generating {{Steganographic Text}} with {{LSTMs}}.
+\newblock In \emph{Proceedings of {{ACL}} 2017, {{Student Research Workshop}}},
+  pp.\  100--106, {Vancouver, Canada}, July 2017. {Association for
+  Computational Linguistics}.
+\newblock URL \url{https://aclanthology.org/P17-3017}.
+
+\bibitem[Folt{\'y}nek et~al.(2019)Folt{\'y}nek, Meuschke, and
+  Gipp]{foltynek_academic_2019}
+Folt{\'y}nek, T., Meuschke, N., and Gipp, B.
+\newblock Academic {{Plagiarism Detection}}: {{A Systematic Literature
+  Review}}.
+\newblock \emph{ACM Computing Surveys}, 52\penalty0 (6):\penalty0
+  112:1--112:42, October 2019.
+\newblock ISSN 0360-0300.
+\newblock \doi{10.1145/3345317}.
+\newblock URL \url{https://doi.org/10.1145/3345317}.
+
+\bibitem[Gabrilovich \& Gontmakher(2002)Gabrilovich and
+  Gontmakher]{gabrilovich_homograph_2002}
+Gabrilovich, E. and Gontmakher, A.
+\newblock The homograph attack.
+\newblock \emph{Communications of the ACM}, 45\penalty0 (2):\penalty0 128,
+  February 2002.
+\newblock ISSN 0001-0782, 1557-7317.
+\newblock \doi{10.1145/503124.503156}.
+\newblock URL \url{https://dl.acm.org/doi/10.1145/503124.503156}.
+
+\bibitem[Gambini et~al.(2022)Gambini, Fagni, Falchi, and
+  Tesconi]{gambini_pushing_2022}
+Gambini, M., Fagni, T., Falchi, F., and Tesconi, M.
+\newblock On pushing {{DeepFake Tweet Detection}} capabilities to the limits.
+\newblock In \emph{14th {{ACM Web Science Conference}} 2022}, {{WebSci}} '22,
+  pp.\  154--163, {New York, NY, USA}, June 2022. {Association for Computing
+  Machinery}.
+\newblock ISBN 978-1-4503-9191-7.
+\newblock \doi{10.1145/3501247.3531560}.
+\newblock URL \url{https://doi.org/10.1145/3501247.3531560}.
+
+\bibitem[Goodside(2023)]{goodside_there_2023}
+Goodside, R.
+\newblock There are adversarial attacks for that proposal as well \textemdash{}
+  in particular, generating with emojis after words and then removing them
+  before submitting defeats it., January 2023.
+\newblock URL \url{https://twitter.com/goodside/status/1610682909647671306}.
+
+\bibitem[Grinbaum \& Adomaitis(2022)Grinbaum and
+  Adomaitis]{grinbaum_ethical_2022}
+Grinbaum, A. and Adomaitis, L.
+\newblock The {{Ethical Need}} for {{Watermarks}} in {{Machine-Generated
+  Language}}.
+\newblock \emph{arxiv:2209.03118[cs]}, September 2022.
+\newblock \doi{10.48550/arXiv.2209.03118}.
+\newblock URL \url{http://arxiv.org/abs/2209.03118}.
+
+\bibitem[Gu et~al.(2022)Gu, Huang, Zheng, Chang, and
+  Hsieh]{gu_watermarking_2022}
+Gu, C., Huang, C., Zheng, X., Chang, K.-W., and Hsieh, C.-J.
+\newblock Watermarking {{Pre-trained Language Models}} with {{Backdooring}}.
+\newblock \emph{arxiv:2210.07543[cs]}, October 2022.
+\newblock \doi{10.48550/arXiv.2210.07543}.
+\newblock URL \url{http://arxiv.org/abs/2210.07543}.
+
+\bibitem[He et~al.(2022{\natexlab{a}})He, Xu, Lyu, Wu, and
+  Wang]{he_protecting_2022-1}
+He, X., Xu, Q., Lyu, L., Wu, F., and Wang, C.
+\newblock Protecting {{Intellectual Property}} of {{Language Generation APIs}}
+  with {{Lexical Watermark}}.
+\newblock \emph{Proceedings of the AAAI Conference on Artificial Intelligence},
+  36\penalty0 (10):\penalty0 10758--10766, June 2022{\natexlab{a}}.
+\newblock ISSN 2374-3468.
+\newblock \doi{10.1609/aaai.v36i10.21321}.
+\newblock URL \url{https://ojs.aaai.org/index.php/AAAI/article/view/21321}.
+
+\bibitem[He et~al.(2022{\natexlab{b}})He, Xu, Zeng, Lyu, Wu, Li, and
+  Jia]{he_cater_2022}
+He, X., Xu, Q., Zeng, Y., Lyu, L., Wu, F., Li, J., and Jia, R.
+\newblock {{CATER}}: {{Intellectual Property Protection}} on {{Text Generation
+  APIs}} via {{Conditional Watermarks}}.
+\newblock In \emph{Advances in {{Neural Information Processing Systems}}},
+  October 2022{\natexlab{b}}.
+\newblock URL \url{https://openreview.net/forum?id=L7P3IvsoUXY}.
+
+\bibitem[Helfrich \& Neff(2012)Helfrich and Neff]{helfrich_dual_2012}
+Helfrich, J.~N. and Neff, R.
+\newblock Dual canonicalization: {{An}} answer to the homograph attack.
+\newblock In \emph{2012 {{eCrime Researchers Summit}}}, pp.\  1--10, October
+  2012.
+\newblock \doi{10.1109/eCrime.2012.6489517}.
+
+\bibitem[Jalil \& Mirza(2009)Jalil and Mirza]{jalil_review_2009}
+Jalil, Z. and Mirza, A.~M.
+\newblock A {{Review}} of {{Digital Watermarking Techniques}} for {{Text
+  Documents}}.
+\newblock In \emph{2009 {{International Conference}} on {{Information}} and
+  {{Multimedia Technology}}}, pp.\  230--234, December 2009.
+\newblock \doi{10.1109/ICIMT.2009.11}.
+
+\bibitem[Jawahar et~al.(2020)Jawahar, {Abdul-Mageed}, and
+  Lakshmanan]{jawahar_automatic_2020}
+Jawahar, G., {Abdul-Mageed}, M., and Lakshmanan, V.S., L.
+\newblock Automatic {{Detection}} of {{Machine Generated Text}}: {{A Critical
+  Survey}}.
+\newblock In \emph{Proceedings of the 28th {{International Conference}} on
+  {{Computational Linguistics}}}, pp.\  2296--2309, {Barcelona, Spain
+  (Online)}, December 2020. {International Committee on Computational
+  Linguistics}.
+\newblock \doi{10.18653/v1/2020.coling-main.208}.
+\newblock URL \url{https://aclanthology.org/2020.coling-main.208}.
+
+\bibitem[Joshi et~al.(2017)Joshi, Choi, Weld, and
+  Zettlemoyer]{JoshiTriviaQA2017}
+Joshi, M., Choi, E., Weld, D.~S., and Zettlemoyer, L.
+\newblock Triviaqa: A large scale distantly supervised challenge dataset for
+  reading comprehension.
+\newblock In \emph{Proceedings of the 55th Annual Meeting of the Association
+  for Computational Linguistics}, Vancouver, Canada, July 2017. Association for
+  Computational Linguistics.
+
+\bibitem[Kaptchuk et~al.(2021)Kaptchuk, Jois, Green, and
+  Rubin]{kaptchuk2021meteor}
+Kaptchuk, G., Jois, T.~M., Green, M., and Rubin, A.~D.
+\newblock Meteor: Cryptographically secure steganography for realistic
+  distributions.
+\newblock In \emph{Proceedings of the 2021 ACM SIGSAC Conference on Computer
+  and Communications Security}, pp.\  1529--1548, 2021.
+
+\bibitem[Katzenbeisser \& Petitcolas(2000)Katzenbeisser and
+  Petitcolas]{katzenbeisser_information_2000}
+Katzenbeisser, S. and Petitcolas, F.~A.
+\newblock \emph{Information {{Hiding Techniques}} for {{Steganography}} and
+  {{Digital Watermarking}}}.
+\newblock {Artech House, Inc.}, {USA}, 1st edition, 2000.
+\newblock ISBN 978-1-58053-035-4.
+
+\bibitem[Liu et~al.(2019)Liu, Ott, Goyal, Du, Joshi, Chen, Levy, Lewis,
+  Zettlemoyer, and Stoyanov]{liu_roberta_2019}
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M.,
+  Zettlemoyer, L., and Stoyanov, V.
+\newblock {{RoBERTa}}: {{A Robustly Optimized BERT Pretraining Approach}}.
+\newblock \emph{arXiv:1907.11692 [cs]}, July 2019.
+\newblock URL \url{http://arxiv.org/abs/1907.11692}.
+
+\bibitem[Lu et~al.(2021)Lu, Wang, Zhong, and Rosin]{lu_large-capacity_2021}
+Lu, S.-P., Wang, R., Zhong, T., and Rosin, P.~L.
+\newblock Large-{{Capacity Image Steganography Based}} on {{Invertible Neural
+  Networks}}.
+\newblock In \emph{Proceedings of the {{IEEE}}/{{CVF Conference}} on {{Computer
+  Vision}} and {{Pattern Recognition}}}, pp.\  10816--10825, 2021.
+\newblock URL
+  \url{https://openaccess.thecvf.com/content/CVPR2021/html/Lu_Large-Capacity_Image_Steganography_Based_on_Invertible_Neural_Networks_CVPR_2021_paper.html}.
+
+\bibitem[Meral et~al.(2009)Meral, Sankur, Sumru~{\"O}zsoy, G{\"u}ng{\"o}r, and
+  Sevin{\c c}]{meral_natural_2009}
+Meral, H.~M., Sankur, B., Sumru~{\"O}zsoy, A., G{\"u}ng{\"o}r, T., and Sevin{\c
+  c}, E.
+\newblock Natural language watermarking via morphosyntactic alterations.
+\newblock \emph{Computer Speech \& Language}, 23\penalty0 (1):\penalty0
+  107--125, January 2009.
+\newblock ISSN 0885-2308.
+\newblock \doi{10.1016/j.csl.2008.04.001}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0885230808000284}.
+
+\bibitem[Mirsky et~al.(2023)Mirsky, Demontis, Kotak, Shankar, Gelei, Yang,
+  Zhang, Pintor, Lee, Elovici, and Biggio]{mirsky_threat_2023}
+Mirsky, Y., Demontis, A., Kotak, J., Shankar, R., Gelei, D., Yang, L., Zhang,
+  X., Pintor, M., Lee, W., Elovici, Y., and Biggio, B.
+\newblock The {{Threat}} of {{Offensive AI}} to {{Organizations}}.
+\newblock \emph{Computers \& Security}, 124:\penalty0 103006, January 2023.
+\newblock ISSN 0167-4048.
+\newblock \doi{10.1016/j.cose.2022.103006}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0167404822003984}.
+
+\bibitem[Muennighoff et~al.(2022)Muennighoff, Wang, Sutawika, Roberts,
+  Biderman, Scao, Bari, Shen, Yong, Schoelkopf,
+  et~al.]{muennighoff2022crosslingual}
+Muennighoff, N., Wang, T., Sutawika, L., Roberts, A., Biderman, S., Scao,
+  T.~L., Bari, M.~S., Shen, S., Yong, Z.-X., Schoelkopf, H., et~al.
+\newblock Crosslingual generalization through multitask finetuning.
+\newblock \emph{arXiv preprint arXiv:2211.01786}, 2022.
+
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright, Mishkin,
+  Zhang, Agarwal, Slama, Ray, Schulman, Hilton, Kelton, Miller, Simens, Askell,
+  Welinder, Christiano, Leike, and Lowe]{ouyang_training_2022}
+Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C.~L., Mishkin, P.,
+  Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton,
+  F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P., Leike,
+  J., and Lowe, R.
+\newblock Training language models to follow instructions with human feedback.
+\newblock \emph{arxiv:2203.02155[cs]}, March 2022.
+\newblock \doi{10.48550/arXiv.2203.02155}.
+\newblock URL \url{http://arxiv.org/abs/2203.02155}.
+
+\bibitem[Pajola \& Conti(2021)Pajola and Conti]{pajola_fall_2021}
+Pajola, L. and Conti, M.
+\newblock Fall of {{Giants}}: {{How}} popular text-based {{MLaaS}} fall against
+  a simple evasion attack.
+\newblock In \emph{2021 {{IEEE European Symposium}} on {{Security}} and
+  {{Privacy}} ({{EuroS}}\&{{P}})}, pp.\  198--211, September 2021.
+\newblock \doi{10.1109/EuroSP51992.2021.00023}.
+
+\bibitem[Petitcolas et~al.(1999)Petitcolas, Anderson, and
+  Kuhn]{petitcolas_information_1999}
+Petitcolas, F., Anderson, R., and Kuhn, M.
+\newblock Information hiding-a survey.
+\newblock \emph{Proceedings of the IEEE}, 87\penalty0 (7):\penalty0 1062--1078,
+  July 1999.
+\newblock ISSN 1558-2256.
+\newblock \doi{10.1109/5.771065}.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, and
+  Sutskever]{radford_language_2019}
+Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., and Sutskever, I.
+\newblock Language {{Models}} are {{Unsupervised Multitask Learners}}.
+\newblock \emph{OpenAI}, pp.\ ~24, 2019.
+
+\bibitem[Radford et~al.(2022)Radford, Kim, Xu, Brockman, McLeavey, and
+  Sutskever]{radford_robust_2022}
+Radford, A., Kim, J.~W., Xu, T., Brockman, G., McLeavey, C., and Sutskever, I.
+\newblock Robust {{Speech Recognition}} via {{Large-Scale Weak Supervision}}.
+\newblock \emph{arxiv:2212.04356[cs, eess]}, December 2022.
+\newblock \doi{10.48550/arXiv.2212.04356}.
+\newblock URL \url{http://arxiv.org/abs/2212.04356}.
+
+\bibitem[Raffel et~al.(2019)Raffel, Shazeer, Roberts, Lee, Narang, Matena,
+  Zhou, Li, and Liu]{2019t5}
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou,
+  Y., Li, W., and Liu, P.~J.
+\newblock Exploring the limits of transfer learning with a unified text-to-text
+  transformer.
+\newblock \emph{arXiv e-prints}, 2019.
+
+\bibitem[Raffel et~al.(2020)Raffel, Shazeer, Roberts, Lee, Narang, Matena,
+  Zhou, Li, and Liu]{raffel_exploring_2020}
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou,
+  Y., Li, W., and Liu, P.~J.
+\newblock Exploring the {{Limits}} of {{Transfer Learning}} with a {{Unified
+  Text-to-Text Transformer}}.
+\newblock \emph{arXiv:1910.10683 [cs, stat]}, July 2020.
+\newblock URL \url{http://arxiv.org/abs/1910.10683}.
+
+\bibitem[Schulman et~al.(2022)Schulman, Zoph, Kim, Hilton, Menick, Weng, Uribe,
+  Fedus, Metz, Pokorny, {Gontijo-Lopes}, Zhao, Vijayvergiya, Sigler, Perelman,
+  Voss, Heaton, Parish, Cummings, Nayak, Balcom, Schnurr, Kaftan, Hallacy,
+  Turley, Deutsch, Goel, Ward, Konstantinidis, Zaremba, Ouyang, Bogndonoff,
+  Gross, Medina, Yoo, Lee, Lowe, Mossing, Huizinga, Jiang, Wainwright, Almeida,
+  Lin, Zhang, Xiao, Slama, Bills, Gray, Leike, Pachocki, Tillet, Jain,
+  Brockman, and Ryder]{schulman_chatgpt_2022}
+Schulman, J., Zoph, B., Kim, C., Hilton, J., Menick, J., Weng, J., Uribe, J.
+  F.~C., Fedus, L., Metz, L., Pokorny, M., {Gontijo-Lopes}, R., Zhao, S.,
+  Vijayvergiya, A., Sigler, E., Perelman, A., Voss, C., Heaton, M., Parish, J.,
+  Cummings, D., Nayak, R., Balcom, V., Schnurr, D., Kaftan, T., Hallacy, C.,
+  Turley, N., Deutsch, N., Goel, V., Ward, J., Konstantinidis, A., Zaremba, W.,
+  Ouyang, L., Bogndonoff, L., Gross, J., Medina, D., Yoo, S., Lee, T., Lowe,
+  R., Mossing, D., Huizinga, J., Jiang, R., Wainwright, C., Almeida, D., Lin,
+  S., Zhang, M., Xiao, K., Slama, K., Bills, S., Gray, A., Leike, J., Pachocki,
+  J., Tillet, P., Jain, S., Brockman, G., and Ryder, N.
+\newblock {{ChatGPT}}: {{Optimizing Language Models}} for {{Dialogue}},
+  November 2022.
+\newblock URL \url{https://openai.com/blog/chatgpt/}.
+
+\bibitem[Tan et~al.(2020)Tan, Plummer, and Saenko]{tan_detecting_2020}
+Tan, R., Plummer, B., and Saenko, K.
+\newblock Detecting {{Cross-Modal Inconsistency}} to {{Defend Against Neural
+  Fake News}}.
+\newblock In \emph{Proceedings of the 2020 {{Conference}} on {{Empirical
+  Methods}} in {{Natural Language Processing}} ({{EMNLP}})}, pp.\  2081--2106,
+  {Online}, November 2020. {Association for Computational Linguistics}.
+\newblock \doi{10.18653/v1/2020.emnlp-main.163}.
+\newblock URL \url{https://aclanthology.org/2020.emnlp-main.163}.
+
+\bibitem[Tay et~al.(2020)Tay, Bahri, Zheng, Brunk, Metzler, and
+  Tomkins]{tay_reverse_2020}
+Tay, Y., Bahri, D., Zheng, C., Brunk, C., Metzler, D., and Tomkins, A.
+\newblock Reverse {{Engineering Configurations}} of {{Neural Text Generation
+  Models}}.
+\newblock In \emph{Proceedings of the 58th {{Annual Meeting}} of the
+  {{Association}} for {{Computational Linguistics}}}, pp.\  275--279, {Online},
+  July 2020. {Association for Computational Linguistics}.
+\newblock \doi{10.18653/v1/2020.acl-main.25}.
+\newblock URL \url{https://aclanthology.org/2020.acl-main.25}.
+
+\bibitem[Tay et~al.(2022)Tay, Dehghani, Tran, Garcia, Bahri, Schuster, Zheng,
+  Houlsby, and Metzler]{tay2022unifying}
+Tay, Y., Dehghani, M., Tran, V.~Q., Garcia, X., Bahri, D., Schuster, T., Zheng,
+  H.~S., Houlsby, N., and Metzler, D.
+\newblock Unifying language learning paradigms.
+\newblock \emph{arXiv preprint arXiv:2205.05131}, 2022.
+
+\bibitem[Tian(2023)]{tian_gptzero_2023}
+Tian, E.
+\newblock Gptzero update v1, January 2023.
+\newblock URL \url{https://gptzero.substack.com/p/gptzero-update-v1}.
+
+\bibitem[Topkara et~al.(2006{\natexlab{a}})Topkara, Riccardi,
+  {Hakkani-T{\"u}r}, and Atallah]{topkara_natural_2006}
+Topkara, M., Riccardi, G., {Hakkani-T{\"u}r}, D., and Atallah, M.~J.
+\newblock Natural language watermarking: Challenges in building a practical
+  system.
+\newblock In \emph{Security, {{Steganography}}, and {{Watermarking}} of
+  {{Multimedia Contents VIII}}}, volume 6072, pp.\  106--117. {SPIE}, February
+  2006{\natexlab{a}}.
+\newblock \doi{10.1117/12.643560}.
+\newblock URL
+  \url{https://www.spiedigitallibrary.org/conference-proceedings-of-spie/6072/60720A/Natural-language-watermarking-challenges-in-building-a-practical-system/10.1117/12.643560.full}.
+
+\bibitem[Topkara et~al.(2006{\natexlab{b}})Topkara, Topkara, and
+  Atallah]{topkara_hiding_2006}
+Topkara, U., Topkara, M., and Atallah, M.~J.
+\newblock The hiding virtues of ambiguity: Quantifiably resilient watermarking
+  of natural language text through synonym substitutions.
+\newblock In \emph{Proceedings of the 8th Workshop on {{Multimedia}} and
+  Security}, {{MM}}\&amp;{{Sec}} '06, pp.\  164--174, {New York, NY, USA},
+  September 2006{\natexlab{b}}. {Association for Computing Machinery}.
+\newblock ISBN 978-1-59593-493-2.
+\newblock \doi{10.1145/1161366.1161397}.
+\newblock URL \url{https://doi.org/10.1145/1161366.1161397}.
+
+\bibitem[Ueoka et~al.(2021)Ueoka, Murawaki, and
+  Kurohashi]{ueoka_frustratingly_2021}
+Ueoka, H., Murawaki, Y., and Kurohashi, S.
+\newblock Frustratingly {{Easy Edit-based Linguistic Steganography}} with a
+  {{Masked Language Model}}.
+\newblock In \emph{Proceedings of the 2021 {{Conference}} of the {{North
+  American Chapter}} of the {{Association}} for {{Computational Linguistics}}:
+  {{Human Language Technologies}}}, pp.\  5486--5492, {Online}, June 2021.
+  {Association for Computational Linguistics}.
+\newblock \doi{10.18653/v1/2021.naacl-main.433}.
+\newblock URL \url{https://aclanthology.org/2021.naacl-main.433}.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{vaswani_attention_2017}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
+  Kaiser, L., and Polosukhin, I.
+\newblock Attention {{Is All You Need}}.
+\newblock \emph{arXiv:1706.03762 [cs]}, December 2017.
+\newblock URL \url{http://arxiv.org/abs/1706.03762}.
+
+\bibitem[Venugopal et~al.(2011)Venugopal, Uszkoreit, Talbot, Och, and
+  Ganitkevitch]{venugopal_watermarking_2011}
+Venugopal, A., Uszkoreit, J., Talbot, D., Och, F., and Ganitkevitch, J.
+\newblock Watermarking the {{Outputs}} of {{Structured Prediction}} with an
+  application in {{Statistical Machine Translation}}.
+\newblock In \emph{Proceedings of the 2011 {{Conference}} on {{Empirical
+  Methods}} in {{Natural Language Processing}}}, pp.\  1363--1372, {Edinburgh,
+  Scotland, UK.}, July 2011. {Association for Computational Linguistics}.
+\newblock URL \url{https://aclanthology.org/D11-1126}.
+
+\bibitem[Wilson et~al.(2014)Wilson, Blunsom, and Ker]{wilson_linguistic_2014}
+Wilson, A., Blunsom, P., and Ker, A.~D.
+\newblock Linguistic steganography on {{Twitter}}: Hierarchical language
+  modeling with manual interaction.
+\newblock In \emph{Media {{Watermarking}}, {{Security}}, and {{Forensics}}
+  2014}, volume 9028, pp.\  9--25. {SPIE}, February 2014.
+\newblock \doi{10.1117/12.2039213}.
+\newblock URL
+  \url{https://www.spiedigitallibrary.org/conference-proceedings-of-spie/9028/902803/Linguistic-steganography-on-Twitter--hierarchical-language-modeling-with-manual/10.1117/12.2039213.full}.
+
+\bibitem[Wolf et~al.(2020)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac,
+  Rault, Louf, Funtowicz, Davison, Shleifer, {von Platen}, Ma, Jernite, Plu,
+  Xu, Scao, Gugger, Drame, Lhoest, and Rush]{wolf_huggingfaces_2020}
+Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P.,
+  Rault, T., Louf, R., Funtowicz, M., Davison, J., Shleifer, S., {von Platen},
+  P., Ma, C., Jernite, Y., Plu, J., Xu, C., Scao, T.~L., Gugger, S., Drame, M.,
+  Lhoest, Q., and Rush, A.~M.
+\newblock {{HuggingFace}}'s {{Transformers}}: {{State-of-the-art Natural
+  Language Processing}}.
+\newblock \emph{arXiv:1910.03771 [cs]}, July 2020.
+\newblock URL \url{http://arxiv.org/abs/1910.03771}.
+
+\bibitem[Wolff \& Wolff(2022)Wolff and Wolff]{wolff_attacking_2022}
+Wolff, M. and Wolff, S.
+\newblock Attacking {{Neural Text Detectors}}.
+\newblock \emph{arxiv:2002.11768[cs]}, January 2022.
+\newblock \doi{10.48550/arXiv.2002.11768}.
+\newblock URL \url{http://arxiv.org/abs/2002.11768}.
+
+\bibitem[Zellers et~al.(2019)Zellers, Holtzman, Rashkin, Bisk, Farhadi,
+  Roesner, and Choi]{zellers_defending_2019}
+Zellers, R., Holtzman, A., Rashkin, H., Bisk, Y., Farhadi, A., Roesner, F., and
+  Choi, Y.
+\newblock Defending {{Against Neural Fake News}}.
+\newblock In \emph{Advances in {{Neural Information Processing Systems}}},
+  volume~32. {Curran Associates, Inc.}, 2019.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2019/hash/3e9f0fc9b2f89e043bc6233994dfcf76-Abstract.html}.
+
+\bibitem[Zhang et~al.(2022)Zhang, Roller, Goyal, Artetxe, Chen, Chen, Dewan,
+  Diab, Li, Lin, Mihaylov, Ott, Shleifer, Shuster, Simig, Koura, Sridhar, Wang,
+  and Zettlemoyer]{zhang2022opt}
+Zhang, S., Roller, S., Goyal, N., Artetxe, M., Chen, M., Chen, S., Dewan, C.,
+  Diab, M., Li, X., Lin, X.~V., Mihaylov, T., Ott, M., Shleifer, S., Shuster,
+  K., Simig, D., Koura, P.~S., Sridhar, A., Wang, T., and Zettlemoyer, L.
+\newblock Opt: Open pre-trained transformer language models, 2022.
+
+\bibitem[Zhu et~al.(2018)Zhu, Kaplan, Johnson, and {Fei-Fei}]{zhu_hidden_2018}
+Zhu, J., Kaplan, R., Johnson, J., and {Fei-Fei}, L.
+\newblock {{HiDDeN}}: {{Hiding Data}} with {{Deep Networks}}.
+\newblock In \emph{Proceedings of the {{European Conference}} on {{Computer
+  Vision}} ({{ECCV}})}, pp.\  657--672, 2018.
+\newblock URL
+  \url{https://openaccess.thecvf.com/content_ECCV_2018/html/Jiren_Zhu_HiDDeN_Hiding_Data_ECCV_2018_paper.html}.
+
+\bibitem[Ziegler et~al.(2019)Ziegler, Deng, and Rush]{ziegler_neural_2019}
+Ziegler, Z., Deng, Y., and Rush, A.
+\newblock Neural {{Linguistic Steganography}}.
+\newblock In \emph{Proceedings of the 2019 {{Conference}} on {{Empirical
+  Methods}} in {{Natural Language Processing}} and the 9th {{International
+  Joint Conference}} on {{Natural Language Processing}} ({{EMNLP-IJCNLP}})},
+  pp.\  1210--1215, {Hong Kong, China}, November 2019. {Association for
+  Computational Linguistics}.
+\newblock \doi{10.18653/v1/D19-1115}.
+\newblock URL \url{https://aclanthology.org/D19-1115}.
+
+\end{thebibliography}

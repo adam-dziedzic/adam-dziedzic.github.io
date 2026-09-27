@@ -1,0 +1,15 @@
+\section{Conclusion and Future Work}
+Our main finding is that compressing a model in the frequency domain, called band-limiting, gracefully degrades the predictive accuracy as a function of the compression rate.
+In this study, we also develop principled schemes to reduce the resource consumption of neural network training.
+Neural networks are heavily over-parametrized and modern compression techniques exploit this redundancy.
+Reducing this footprint during training is more challenging than during inference due to the sensitivity of gradient-based optimization to noise.
+
+While implementing an efficient band-limited convolutional layer is not trivial, one has to exploit conjugate symmetry, cache locality, and fast complex arithmetic, no additional modification to the architecture or training procedure is needed. Band-limited training provides a continuous knob to trade-off resource utilization vs. predictive performance.
+But beyond computational performance, frequency restriction serves as a strong prior.
+If we know that our data has a biased frequency spectra or that the functions learned by the model should be smooth, band-limited training provides an efficient way to enforce those constraints.
+
+There are several exciting avenues for future work. Trading off latency/memory for accuracy is a key challenge in streaming applications of CNNs, such as in video processing. Smooth tradeoffs allow an application to tune a model for its own Quality of Service requirements. One can also imagine a similar analysis with a cosine basis using a Discrete Cosine Transform rather than an FFT. There is some reason to believe that results will be similar as this has been applied to input compression~\cite{dctUber2018NIPS} (as opposed to layer-wise compression in our work). Finally, we are interested in out-of-core neural network applications where intermediate results cannot fit in main-memory. Compression will be a key part for such applications. We believe that compression can make neural network architectures with larger filter sizes more practical to study.
+
+We are also interested in the applications of Band-limited training to learned control and reinforcement learning problems.
+Control systems are often characterized by the impulse response of their frequency domains.
+We believe that a similar strategy to that presented in this paper can be used for more efficient system identification or reinforcement algorithms.

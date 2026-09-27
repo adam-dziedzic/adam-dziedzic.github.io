@@ -1,0 +1,392 @@
+\documentclass{article}
+
+
+% if you need to pass options to natbib, use, e.g.:
+% \PassOptionsToPackage{numbers, compress}{natbib}
+\PassOptionsToPackage{numbers,sort,compress}{natbib}
+% before loading neurips_2024
+
+
+% ready for submission
+% \usepackage{neurips_2024}
+
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+    % \usepackage[preprint]{neurips_2024}
+
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+    \usepackage[final]{neurips_2024}
+
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2024}
+
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+% \usepackage[breaklinks=true,colorlinks,bookmarks=false]{hyperref}       % hyperlinks
+\usepackage[breaklinks=true,colorlinks,bookmarks=True]{hyperref} 
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+%%%%%%%%%%% mypackage %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eat}[1]{} 
+\newcommand{\blue}[1]{ {\textcolor{blue}{#1}}}
+\newcommand{\shortname}{CLiD-MI\xspace}
+\newcommand{\txtclid}{Conditional Likelihood Discrepancy (CLiD)}
+\newcommand{\clidth}{$\text{CLiD}_{th}$\xspace}
+\newcommand{\clidvec}{$\text{CLiD}_{vec}$\xspace}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\dsl}[1]{\dashuline{#1}}  %%% use dash underline
+
+
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{amsmath}
+\usepackage{amsthm}
+% \usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{xspace}
+\usepackage{textcomp}
+\usepackage{enumerate}
+\usepackage{threeparttable}
+\usepackage{soul}
+\def\SetClass{article}
+\usepackage{listings}
+\usepackage{multirow} 
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\makeatletter \renewcommand{\@thesubfigure}{\thesubfigure \space}%
+% \usepackage[normalem]{ulem}
+
+
+\usepackage{tabularx} % 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[capitalize]{cleveref}
+\crefname{section}{Sec.}{Secs.}
+\Crefname{section}{Section}{Sections}
+\Crefname{table}{Table}{Tables}
+\crefname{table}{Tab.}{Tabs.}
+
+
+\title{
+Membership Inference on Text-to-image Diffusion Models via Conditional Likelihood Discrepancy
+}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{
+%%%
+Shengfang Zhai$^{1,2}$,
+Huanran Chen$^{3,6}$, 
+Yinpeng Dong$^{3,6}$\thanks{Corresponding authors.}\;, 
+Jiajun Li$^{1,2}$,
+\and
+\textbf{
+Qingni Shen$^{1,2}$\footnotemark[1]\;, 
+Yansong Gao$^{4}$,
+Hang Su$^{3,5}$, Yang Liu$^{7}$} \\
+%%%
+$^{1}$School of Software and Microelectronics, Peking University 
+\\ %\quad
+$^{2}$PKU-OCTA Laboratory for Blockchain and Privacy Computing, Peking University \\
+$^{3}$Dept. of Comp. Sci. and Tech., Institute for AI, BNRist Center, THBI Lab, Tsinghua University\\
+$^{4}$The University of Western Australia \quad $^5$Zhongguancun Laboratory, Beijing, China \\
+$^{6}$RealAI \quad 
+$^{7}$Nanyang Technological University \\
+%%%
+\texttt{\{zhaisf,  jiajun.lee\}@stu.pku.edu.cn} \quad  
+\texttt{huanran.chen@outlook.com} \\  
+\texttt{\{dongyinpeng, suhangss\}@tsinghua.edu.cn} \\
+\texttt{qingnishen@ss.pku.edu.cn} \quad
+\texttt{garrison.gao@uwa.edu.au} \\  
+\texttt{yangliu@ntu.edu.sg} 
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+Text-to-image diffusion models have achieved tremendous success in the field of controllable image generation, while also coming along with issues of privacy leakage and data copyrights. Membership inference arises in these contexts as a potential auditing method for detecting unauthorized data usage. While some efforts have been made on diffusion models, they are not applicable to text-to-image diffusion models due to the high computation overhead and enhanced generalization capabilities. In this paper, we first identify a conditional overfitting phenomenon in text-to-image diffusion models, indicating that these models tend to overfit the conditional distribution of images given the corresponding text rather than the marginal distribution of images only. 
+Based on this observation, we derive an analytical indicator, namely \textbf{C}onditional \textbf{Li}kelihood \textbf{D}iscrepancy (\textbf{CLiD}), to perform membership inference, which reduces the stochasticity in estimating memorization of individual samples.
+Experimental results demonstrate that our method significantly outperforms previous methods across various data distributions and dataset scales. Additionally, our method shows superior resistance to overfitting mitigation strategies, such as early stopping and data augmentation.
+\end{abstract}
+
+
+\input{sections/intro}
+
+\input{sections/background}
+
+\input{sections/method}
+
+\input{sections/exp}
+
+% \vspace{-3pt}
+\section{Related Works}
+\vspace{-3pt}
+
+\textbf{Copyright protection in text-to-image synthesis.} 
+To protect the copyright of text-to-image models, several works~\cite{zhao2023recipe,zhai2023text} propose inserting backdoors to embed watermarks in text-to-image models.
+To protect the copyright of image-text datasets, some works~\cite{salman2023raising, zhao2023unlearnable, shan2023glaze} incorporate imperceptible perturbations to render the released datasets unusable.
+Other works~\cite{wang2023diagnosis, cui2023ft} utilize the backdoor or watermark to track the usage of image-text datasets.  
+In contrast, our method indicates the possibility of auditing the unauthorized usage of individual image-text data points utilizing membership inference.
+
+
+\textbf{Membership inference on diffusion models.} 
+In the grey-box or white-box setting, \citet{carlini2023extracting} firstly conduct membership inference on unconditional diffusion models by conducting LiRA (Likelihood Ratio Attack) \cite{carlini2022membership}, with the requirement of training multiple shadow models. \citet{matsumoto2023membership} make the first step by utilizing diffusion loss to conduct query-based membership inference. Some works~\cite{duan2023diffusion, kong2023efficient} leverage the DDIM~\cite{song2020denoising} deterministic forward process~\cite{kim2022diffusionclip} to access the posterior estimation errors of diffusion models. And \citet{fu2023probabilistic} leverage the probability fluctuations by perturbing image samples. Few works consider the black-box settings \cite{wu2022membership, pang2023black}. However, these studies either assume partial knowledge of member set data \cite{wu2022membership} or assume extensive fine-tuning steps~\cite{pang2023black} ($100 \sim 500$ epochs), both of which do not align with real-world scenarios.
+
+\textbf{Memorization detection in text-to-image models.}
+A similar work~\cite{wen2024detecting} 
+detects token memorization by inspecting the magnitude of text-conditional predictions, 
+but differs from ours by lacking in-depth rationale analysis and a rigorous membership inference setup with randomly selected member/hold-out sets.
+
+
+\vspace{-3pt}
+\section{Conclusion}\label{sec:conclusion}
+\vspace{-3pt}
+In this paper, we identify the phenomenon of conditional overfitting in text-to-image models and propose \textbf{CLiD-MI}, the membership inference framework on text-to-image diffusion models utilizing the derived indicator, conditional likelihood discrepancy. Experimental results demonstrate the superiority of our method and its resistance against early stopping and data augmentation. Our method aims to inspire a new direction for the community regarding unauthorized usage auditing.
+
+\textbf{Limitations:} 
+Due to the limited availability of open-source text-to-image diffusion models, evaluations under the pretraining setting are not sufficient. Considering fine-tuning setting involves a multi step/image ratio, 
+we acknowledge that the superiority of \textbf{CLiD-MI} over the baselines in the pretraining setting  is not as evident compared to fine-tuning setting.
+We emphasize our experiments under pretraining setting (Tab.~\ref{tab:wrap_pretrain}) reveal the hallucination success of existing works and encourage future research to focus on this more challenging and practical scenario.
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5pt}
+\section*{Acknowledgments}
+\vspace{-5pt}
+We thank anonymous reviewers for their valuable feedback. In addition, we thank Xin Zhang for his editorial comments.
+This work is supported by the National Key R\&D Program of China (No.2022YFB2703301), NSFC Projects (Nos.~92370124, 62076147). Y. Dong is also supported by the China National Postdoctoral Program for Innovative Talents and Shuimu Tsinghua Scholar Program. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+{
+\small
+% \normalem
+\bibliographystyle{plainnat}
+\bibliography{main}
+}
+\clearpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\setcounter{theorem}{0}
+
+\section{Validation of Assumption~\ref{theorem:assumption} }
+\label{appd:validation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/metrics4appd.pdf}
+    \caption{Metric values and the metric differences of synthetic images, with the same setting as Sec.~\ref{sec:key_i}. 
+    }
+    \label{fig:metric4appd}
+\end{figure}
+
+To extensively validate the effectiveness of Assumption~\ref{theorem:assumption}, we utilize additional metrics as the distances metric $D$ in Eq.~\eqref{eq:overfit_conditional}, including \textit{Wasserstein Distance}~\cite{xu2018empirical}, \textit{Kernel MMD (Maximum Mean Discrepancy)}~\cite{xu2018empirical} and  \textit{1-Nearest Neighbor Classifier (1-NN)}~\cite{lopez2016revisiting}, in addition to FID~\cite{heusel2017gans}. As observed in Fig.~\ref{fig:metric4appd}, regardless of the metric used for $D$, Assumption~\ref{theorem:assumption} consistently holds, thereby confirming the broad applicability of \textbf{Conditional Overfitting} phenomenon.
+
+
+
+
+
+\section{Proof of Theorem~\ref{theorem:theorem}}\label{appd: proof}
+\begin{proof}
+Eq.~\eqref{eq:overfit_conditional} is equivalent to:
+\begin{equation}
+   \begin{aligned}
+       & \mathbb{E}_{\vect{c}}[D(q_{\text{out}}(\vect{x}|\vect{c}), p(\vect{x}|\vect{c}))] -  D(q_{\text{out}}(\vect{x}), p(\vect{x})) \\     \geq  
+       &  \mathbb{E}_{\vect{c}}[D(q_{\text{mem}}(\vect{x}|\vect{c}), p(\vect{x}|\vect{c}))] - D(q_{\text{mem}}(\vect{x}), p(\vect{x})).
+   \end{aligned}
+\label{eq:overfit_conditional_change}
+\end{equation}
+Given that both the member set and the hold-out set are mixtures of Dirac distributions:
+\begin{equation}
+    q(\vect{x})=\frac{1}{|D_{set}|} \sum_{\vect{x}_i \in D_{set}} \delta(\vect{x}-\vect{x}_i),
+\end{equation}
+where \(D_{set}\) denotes the set of images in the corresponding dataset. We can derive the analytical form for the Kullback-Leibler (KL)  KL divergence when using \(D_{KL}\) as the distance metric:
+\begin{equation}
+    \begin{aligned}
+         D_{KL}(q(\vect{x}), p(\vect{x})) 
+         &=\int q(\vect{x}) \log \frac{q(\vect{x})}{p(\vect{x})}d\vect{x} \\
+        &=- \int (\frac{1}{|D_{set}|} \sum_{\vect{x}_i \in D_{set}} \delta(\vect{x}-\vect{x}_i)) \log p(\vect{x})dx + H(q(\vect{x})) \\
+        &=- \frac{1}{|D_{set}|} \sum_{\vect{x}_i \in D_{set}}  \int \delta(\vect{x}-\vect{x}_i) \log p(\vect{x})dx + H(q(\vect{x}))\\
+        &=- \frac{1}{|D_{set}|} \sum_{x_i \in D_{set}}  \log p(x_i) + H(q(\vect{x})).\\
+    \end{aligned}
+\end{equation}
+where  \(H\) is the entropy functional. Therefore, we have:
+\begin{equation}\label{eq:substi_dirac}
+    \begin{aligned}
+        &\mathbb{E}_{\vect{c}}[D_{KL}(q(\vect{x}|\vect{c}), p(\vect{x}|\vect{c}))] -  D_{KL}(q(\vect{x}), p(\vect{x})) \\
+        = &-\frac{1}{|D_{set}|} \sum_{\vect{x},\vect{c} \in D_{set}} [\log p(\vect{x}|\vect{c}) - \log p(\vect{x})] + \mathbb{E}_{\vect{c}}[H(q(\vect{x}|\vect{c}))]-H(q(\vect{x})),
+        % = &-  \mathbb{E}_{q(\vect{x}, \vect{c})} [\log p(\vect{x}|c) - \log p(\vect{x})] + \mathbb{E}_{c}[H(q(\vect{x}|c))]-H(q(\vect{x})) 
+    \end{aligned}
+\end{equation}
+where $D_{set}$ is the corresponding dataset (member set or hold-out set). Substituting Eq.~\eqref{eq:substi_dirac} into Eq.~\eqref{eq:overfit_conditional_change}, we can get:
+\begin{equation}\label{eq:proof_result0}
+    \begin{aligned}
+      & -\frac{1}{|D_{\text{out}}|} \sum_{\vect{x},\vect{c} \in D_{\text{out}}} [\log p(\vect{x}|\vect{c}) - \log p(\vect{x})]
+       + \mathbb{E}_{\vect{c}}[H(q_{\text{out}}(\vect{x}|\vect{c}))]-H(q_{\text{out}}(\vect{x}))
+    \\ \geq  
+       & -\frac{1}{|D_{\text{mem}}|} \sum_{\vect{x},\vect{c} \in D_{\text{mem}}} [\log p(\vect{x}|\vect{c}) - \log p(\vect{x})]
+       + \mathbb{E}_{\vect{c}}[H(q_{\text{mem}}(\vect{x}|\vect{c}))]-H(q_{\text{mem}}(\vect{x})).
+    \end{aligned}
+\end{equation}
+Eq.~\eqref{eq:proof_result0} is equivalent to:
+\begin{equation}\label{eq:proof_result1}
+    \begin{aligned}
+      & -  \mathbb{E}_{q_{\text{out}}(\mathbf{x}, \vect{c})} [\log p(\vect{x}|\vect{c}) - \log p(\vect{x})]
+       + \mathbb{E}_{\vect{c}}[H(q_{\text{out}}(\vect{x}|\vect{c}))]-H(q_{\text{out}}(\vect{x}))
+    \\ \geq  
+       & -  \mathbb{E}_{q_{\text{mem}}(\mathbf{x}, \vect{c})} [\log p(\vect{x}|\vect{c}) - \log p(\vect{x})]
+       + \mathbb{E}_{\vect{c}}[H(q_{\text{mem}}(\vect{x}|\vect{c}))]-H(q_{\text{mem}}(\vect{x})).
+    \end{aligned}
+\end{equation}
+Finally, we can get:
+\begin{equation}
+       \mathbb{E}_{q_{\text{mem}}(\vect{x}, \vect{c})}[\log p(\vect{x}|\vect{c}) - \log p(\vect{x})]
+          \geq        
+       \mathbb{E}_{q_{\text{out}}(\vect{x})}[\log p(\vect{x}|\vect{c}) - \log p(\vect{x})]
+       + \delta_{H},
+\end{equation}
+where
+\begin{equation}
+    \delta_H = H(q_{\text{out}}(\vect{x})) + \mathbb{E}_{\vect{c}}[H(q_{\text{mem}}(\vect{x}|\vect{c}))]
+       - H(q_{\text{mem}}(\vect{x})) - \mathbb{E}_{\vect{c}}[H(q_{\text{out}}(\vect{x}|\vect{c}))].
+\end{equation}
+\end{proof}
+
+
+
+\section{Metrics Discussion of \cref{sec:clid} }\label{appd:other_metric}
+In the derivation of \cref{sec:clid}, we also consider other metrics besides KL divergence. The results show that KL divergence yields the most easily computable analytical form. For instance, we briefly discuss Jensen–Shannon (JS) divergence as follows:
+
+% \zsf{polish}
+Recall the expression for Jensen-Shannon divergence:
+\begin{equation}
+    D_{JS}(q, p) = D_{KL}(q, \frac{1}{2}(q+ p)) + D_{KL}(p, \frac{1}{2}(q + p). 
+\end{equation}
+The first parameter of the KL divergence should be a simple distribution that is easy to compute; otherwise, deriving the analytical form for such divergence is typically difficult. 
+In Eq~\eqref{eq:overfit_conditional}, JS divergence cannot be efficiently computed because it includes \(D_{KL}(p, \frac{1}{2}(q + p))\), where $p$ denotes the model distribution.
+It needs to use the Monte Carlo method, which involves sampling images from both \(q\) and \(p\) to make an approximation. As a result,  this process is extremely time-consuming.
+
+
+
+\section{Experiment Details}\label{appd:detail}
+
+\subsection{Monte Carlo Sampling}
+
+
+In our method, the key to accurate membership inference lies in estimating ELBO with fewer sampling steps for better precision.
+To achieve this, firstly, we reduce the number of Monte Carlo samples by directly estimating the ELBO difference (Eq.~\eqref{eq:CLiD_loss}). Secondly, recalling Monte Carlo sampling using $(t_i, \epsilon_i)$ pairs with $\epsilon_i \sim \mathcal{N}(0,\mathbf{I})$ and  $t_i \sim [1,1000] $, we explore the effect of the sampling time $t_i$. 
+We conduct a single Monte Carlo sampling test using MS-COCO on \textit{real-word training} setting and report the AUC values in Fig.~\ref{fig:mtcl_1q}.
+
+In Fig.~\ref{fig:mtcl_1q}, we observe that the single Monte Carlo estimation achieves optimal accuracy when $t_i \in [400,500]$. Similar results are shown in \cite{li2023your}. Therefore, consistent with \cite{li2023your}, we sample at intervals of $10$ centered around the timestep $450$.
+In our experiments,   
+$M,N$ in Eq~\eqref{eq:clid_loss_reduction} are both uniformly set to $3$ (i.e., the estimation number
+is $3$), and we use the time list of $[440,450,460]$, resulting in the query count of 15.
+Note that \cite{carlini2023extracting,duan2023diffusion} indicate that for DDPM of Cifar-10~\cite{krizhevsky2009learning}, the best estimation timestep is around $100$. 
+This difference may arise from the different signal-to-noise ratios of images with various resolution~\cite{hoogeboom2023simple}.
+This finding suggests that the Monte Carlo sampling timestep should be designed differently for diffusion models of different scales.
+
+\subsection{Reduction Methods}
+
+
+
+In implementation, we actually diversely reduce the condition $\mathbf{c}$ to $\mathbf{c}^*$ and calculate $p_\theta(\mathbf{x} | \mathbf{c}^*)$ to approximate $p_\theta(\mathbf{x} )$.
+% (Sec.~\ref{sec:prac}). 
+In this part, we evaluate the effectiveness of different reduction methods. We consider three methods in Sec.~\ref{sec:prac}: (1) Simply Clipping. We simply use the first, middle, and last thirds of the sentences as text inputs. (2) Gaussian Noise. We add Gaussian noises with the scales of $50\%,70\%,90\%$ to the overall text embeddings. (3) Importance Clipping.  We calculate the importance of words in the text\footnote{\url{https://github.com/ma-labo/PromptCharm}}~\cite{tang2023daam, wang2024promptcharm} and replace them with “pad” tokens in descending order by varying proportions of $30\%,50\%,70\%$. For all three methods, we additionally use the null text as a $\mathbf{c}^*$. The experiments are conducted on the \textit{real-world training} setting with MS-COCO dataset. And we also employ null text solely to compute Eq.~\eqref{eq:clid_loss_reduction} without reduction methods for comparison. 
+
+In Tab.~\ref{tab:reduction}, we observe that \textit{Importance Clipping} achieves the best results due to its more deterministic reduction. So we adopt it as the reduction method used in our experiments. Additionally, we note that all three reduction methods exhibit satisfactory results, demonstrating the general applicability of our method. Comparing the results without the usage of reduction methods, the results validate the effectiveness of reduction methods in Sec.~\ref{sec:prac}.
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.6\columnwidth]{imgs/plt_var.pdf}
+\caption{Effectiveness of single  Monte Carlo estimation of various timesteps. Small $t_i$ corresponds to less noise added, and large $t_i$ corresponds to significant noise.  AUC value is highest when the timestep is around $450$.}
+\label{fig:mtcl_1q}
+\end{figure}
+
+\begin{table}[t]
+  \centering
+  \caption{The membership inference performance with different reduction methods. "Null" denotes employing null text solely to compute Eq.~\eqref{eq:clid_loss_reduction} without reduction methods.}
+    \begin{tabular}{lcccc}
+    \toprule
+    \multirow{2}[2]{*}{Reduction Methods} & \multicolumn{3}{c}{\clidth on MS-COCO} & \multirow{2}[2]{*}{Query} \\
+\cmidrule{2-4}          & ASR   & AUC   & TPR@1\%FPR &  \\
+    \midrule
+    Null (K=1) & 85.10  & 93.60  & 42.96  & 6 \\
+    Simply Clipping (K=4) & 88.02  & 95.90  & 66.53  & 15 \\
+    Gaussian Noise (K=4) & 86.58 & 94.79 & 56.78 & 15 \\
+    Importance Clipping (K=4) & \textbf{88.88} & \textbf{96.13}  & \textbf{67.52}  & 15 \\
+    \bottomrule
+    \end{tabular}%
+\label{tab:reduction}
+\end{table}%
+
+\section{Compute Overhead and Resources}\label{appd:compute}
+\textbf{Computational Overhead.} As a query-based member inference method, the computational efficiency of our method primarily depends on the number of queries. A lower query count signifies a more efficient member inference method. Our method significantly outperforms the baselines when the query count are about the same (such as SecMI and PFAMI in Sec.~\ref{sec:main_result}). Furthermore, even with a much lower query count such as $M=1, N=1 (Q=5)$ (Fig.~\ref{fig:auc_samples}), our method exhibits a noticeable improvement compared to the baselines.
+
+\textbf{Compute Resources.} 
+Our experiments are divided into two main parts: training (fine-tuning) and inference, both conducted on a single RTX A6000 GPU. The time of execution in the training phase depends on the training steps. For example, we perform $7,500$, $50,000$, and $200,000$ steps for Pokemon~\cite{Pokemon-Blip}, MS-COCO~\cite{lin2014microsoft} and Flickr~\cite{young2014image} dataset, which take about 2 hours, 12 hours, and 48 hours, respectively.
+The time of execution in inference time depends on the methods' query count. For example, with the query count of $15$,  our membership inference method on a dataset of size $2500/2500$ takes approximately $80$ minutes per run for all data points. Typically, we perform this inference once on the shadow model and once on the target model, resulting in a total time cost of $160$ minutes. 
+
+
+
+
+
+\section{Ethics Statements}\label{appd:ethics}
+Although the current threat models for membership inference methods include privacy attack scenarios and data auditing scenarios, we emphasize that for text-to-image diffusion models, the potential application of membership inference lies more in unauthorized data usage auditing than in data privacy leakage. This is because most training data is obtained by scraping open-source image-text pairs, which are more likely to pose copyright threats rather than privacy violations. So we emphasize that our method can make a positive societal impact for inspiring unauthorized usage auditing technologies of text-image datasets in the community.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
